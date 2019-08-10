@@ -4,7 +4,7 @@
 set -e
 
 # 生成静态文件
-vuepress build .
+vuepress build docs
 
 git add -A
 git commit -m 'deploy'
