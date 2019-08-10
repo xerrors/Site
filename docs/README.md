@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: docs/.vuepress/public/favicons.png
+heroImage: .vuepress/public/favicons.png
 heroText: Angor
 tagline: 安歌
 
