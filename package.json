@@ -1,0 +1,8 @@
+{
+  "name": "Site",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://git.dev.tencent.com/Xerrors/Site.git",
+  "author": "Xerrors <xerrors@163.com>",
+  "license": "MIT"
+}
