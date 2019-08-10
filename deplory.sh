@@ -10,7 +10,7 @@ vuepress build docs
 cd docs/.vuepress/dist
 
 # 如果是发布到自定义域名
-echo 'xerrors.fun' > CNAME
+echo 'blog.xerrors.fun' > CNAME
 git init
 git add -A
 git commit -m 'deploy'
