@@ -4,5 +4,8 @@
   "main": "index.js",
   "repository": "https://git.dev.tencent.com/Xerrors/Site.git",
   "author": "Xerrors <xerrors@163.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "vuepress-theme-ktquez": "^0.2.18"
+  }
 }
