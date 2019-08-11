@@ -5,7 +5,7 @@ heroText: Angor
 tagline: 安歌
 
 actionText: 博客
-actionLink: /blog
+actionLink: https://blog.xerrors.fun
 
 search: false
 
