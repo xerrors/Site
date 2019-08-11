@@ -6,7 +6,7 @@ module.exports = {
     nav: [
       { text: '主页', link: '/' },
       { text: '占位', link: '/placeholder/' },
-      { text: '日志', link: '/changelogs' },
+      { text: '日志', link: '/changelogs/' },
       { text: '博客', link: 'https://blog.xerrors.fun' },
       { text: 'Github', link: 'https://github.com/Xerrors' },
     ]

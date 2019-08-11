@@ -1,6 +1,5 @@
 ---
 search: false
-title: Blogging Like a Hacker
 ---
 
 #### 安装 zsh 并配置

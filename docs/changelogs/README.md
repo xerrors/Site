@@ -1,3 +1,6 @@
+---
+search: false
+---
 # Dev logs
 
 🏆🏆🏆 TODOs:
