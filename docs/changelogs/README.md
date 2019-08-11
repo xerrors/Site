@@ -16,8 +16,8 @@ search: false
 📅 2019年8月11日
 
 📢 网站的样子已经有了雏形，同时已经完成了网站的部署以及与博客之间的关联。现在可以通过 
-[主页-DEV](www.xerrors.fun:8080) | 
-[主页-DEMO](xerrors.coding.me) 进行访问。
+[主页-DEV](https://www.xerrors.fun:8080) | 
+[主页-DEMO](https://xerrors.coding.me) 进行访问。
 
 📅 2019年8月10日
 
