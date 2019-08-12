@@ -38,7 +38,18 @@ export default {
   },
 
   mounted() {
-    this.posts = this.$site.pages
+    this.posts = []
+    var temp = this.$site.pages
+    // 筛选标签中带有 blog 标志的文章
+    for (var i = 0; i < temp.length; i++) {
+      console.log(temp[i])
+      if (temp[i].frontmatter.tag) {
+        if (temp[i].frontmatter.tag == 'blog' || 'blog' in temp[i].frontmatter.tag){
+          this.posts.push(temp[i])
+        }
+      }
+    }
+    
     this.num = this.posts.length
   },
 

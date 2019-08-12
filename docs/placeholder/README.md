@@ -2,6 +2,7 @@
 title: "占位"
 search: false
 date: 2019/8/12 20:46:25
+tag: blog
 ---
 
 #### 安装 zsh 并配置
