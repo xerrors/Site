@@ -12,8 +12,8 @@ module.exports = {
       {
         text: '工具',
         items: [
-          { text: '寻密', link: '/tools/findpwd' },
-          { text: '寻密', link: '/tools/findpwd' }
+          { text: '寻密', link: '/findpwd' },
+          { text: '寻密', link: '/findpwd' }
         ]
       },
       { text: '博客', link: 'https://blog.xerrors.fun' },

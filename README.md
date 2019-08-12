@@ -5,14 +5,23 @@ search: false
 
 🏆🏆🏆 TODOs:
 
-- [ ] 配置主题 [ktquez](https://github.com/ktquez/vuepress-theme-ktquez)
+- [-] 配置主题 [ktquez](https://github.com/ktquez/vuepress-theme-ktquez)
 
-- [ ] 添加博客文章列表，最好是卡片式
+- [x] 添加博客文章列表，最好是卡片式
 
 - [ ] 使用 PWA 以及 Google-Analysis
 
 - [ ] 使用 Gittalk 添加评论系统
 
+- [ ] 实现粘贴板功能 [Clipboard](https://blog.csdn.net/Mr_EvanChen/article/details/81034065)
+
+- [ ] 使用自己的服务器或者七牛云做出图床
+
+
+📅 2019年8月11日
+
+📢 添加博客文章列表卡片式，
+  
 📅 2019年8月11日
 
 📢 网站的样子已经有了雏形，同时已经完成了网站的部署以及与博客之间的关联。现在可以通过 

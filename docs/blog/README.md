@@ -1,25 +1,28 @@
 ---
 title: "博客"
 permalink: "blog"
+search: false
 ---
 
-> 最近更新了下面这些文章 👇
+<!-->参考大佬的界面 https://xin-tan.com/guide/ <-->
+
+> 最近更新 👇
 
 
 <template>
     <div>
-        <ul class="page-guide-ul">
-          <li class="page-guide-row"
-              v-for="(post, index) in topPublishPosts"
-              :key="index"
-              href="post">
-          <a :href="post.regularPath">《{{post.title}}》</a>
-          <span>{{ post.formatDay }}</span>
-          </li>
-        </ul>
-        <div @click="loadMore" class="page-guide-btn" v-if="showBtn">
-          <div ref="btn">{{ btnInfo }}</div>
+      <el-card :body-style="{ padding: '5px' }" v-for="(post, index) in topPublishPosts">
+        <div style="padding: 14px;">
+          <span>{{ post.title }}</span>
+          <div class="bottom clearfix">
+            <span><small>{{ post.formatDay }}</small></span>
+            <el-link style="float: right;" :underline="false" :href="post.path" type="primary">阅读全文 ></el-link>
+          </div>
         </div>
+      </el-card>
+      <div @click="loadMore" class="page-guide-btn" v-if="showBtn">
+        <div ref="btn">{{ btnInfo }}</div>
+      </div>
     </div>
 </template>
 
@@ -43,8 +46,8 @@ export default {
     // 筛选标签中带有 blog 标志的文章
     for (var i = 0; i < temp.length; i++) {
       console.log(temp[i])
-      if (temp[i].frontmatter.tag) {
-        if (temp[i].frontmatter.tag == 'blog' || 'blog' in temp[i].frontmatter.tag){
+      if (temp[i].frontmatter.tag) {  
+        if (temp[i].frontmatter.tag == 'blog' || 'blog' == temp[i].frontmatter.tag[0]){
           this.posts.push(temp[i])
         }
       }
@@ -104,41 +107,8 @@ export default {
 
 
 <style scoped>
-.page-guide-ul {
-  padding-left: 0;
-}
-
-.page-guide-row {
-  line-height: 2;
-  display: inline-flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  position: relative;
-}
-
-.page-guide-row::after {
-  content: " ";
-  width: 100%;
-  border-bottom: 1px dashed #aaa;
-  position: absolute;
-  top: 50%;
-  right: 0;
-}
-
-.page-guide-row a, .page-guide-row span {
-  background: white;
-  z-index: 1;
-}
-
-.page-guide-row a {
-  max-width: 50%;
-  padding-right: 20px;
-}
-
-.page-guide-row span {
-  color: #aaa;
-  padding-left: 20px;
+.el-card {
+  margin-bottom: 10px;
 }
 
 .page-guide-btn {
