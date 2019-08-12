@@ -1,5 +1,6 @@
 ---
-search: false
+title: "占位"
+single: true
 ---
 
 #### 安装 zsh 并配置
