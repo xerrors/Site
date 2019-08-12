@@ -1,5 +1,6 @@
 ---
 search: false
+permalink: /changelogs
 ---
 # Dev logs
 

@@ -1,6 +1,7 @@
 ---
 title: "占位"
-single: true
+search: false
+date: 2019/8/12 20:46:25
 ---
 
 #### 安装 zsh 并配置

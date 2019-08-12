@@ -22,5 +22,11 @@ search: false
 📅 2019年8月10日
 
 📢 初始化项目目录并通过两个项目分别托管项目文件以及资源文件 
-[完整文件](https://git.dev.tencent.com/Xerrors/Site.git) 
-[资源文件](https://git.dev.tencent.com/Xerrors/docs.git)
+[完整文件](https://git.dev.tencent.com/Xerrors/Xerrors) 
+[资源文件](https://github.com/Xerrors/Xerrors.github.io)
+
+> 工具链接
+
+- [front matter](https://hexo.io/zh-cn/docs/front-matter.html)
+- [Element UI](https://element.eleme.cn/#/zh-CN/component/)
+- [IconFont](https://www.iconfont.cn)
