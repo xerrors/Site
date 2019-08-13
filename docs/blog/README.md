@@ -1,10 +1,9 @@
 ---
 title: "博客"
 permalink: "blog"
-search: false
 ---
 
-<!-->参考大佬的界面 https://xin-tan.com/guide/ <-->
+<!--参考大佬的界面 https://xin-tan.com/guide/-->
 
 > 最近更新 👇
 
@@ -46,7 +45,6 @@ export default {
     var temp = this.$site.pages
     // 筛选标签中带有 blog 标志的文章
     for (var i = 0; i < temp.length; i++) {
-      console.log(temp[i])
       if (temp[i].frontmatter.tag) {  
         if (temp[i].frontmatter.tag == 'blog' || 'blog' == temp[i].frontmatter.tag[0]){
           this.posts.push(temp[i])

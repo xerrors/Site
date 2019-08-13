@@ -1,5 +1,4 @@
 ---
-search: false
 permalink: '/findpwd'
 ---
 <templete>
@@ -44,9 +43,14 @@ export default {
 
       if (this.serial.length < 6) {
         this.$message.error('密钥长度过短');
-        result = 'error';
+        result = '';
       }else {
         result = domain + this.serial;
+        this.$notify({
+          title: '成功',
+          message: '密码已经成功生成',
+          type: 'success'
+        });
       }
 
       this.result = result;

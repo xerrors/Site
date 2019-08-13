@@ -1,7 +1,16 @@
 <template>
   <main class="page">
     <slot name="top"/>
-
+    <div class="my-title-box">
+      <h3 class="my-title" v-if="isBlog">{{ this.$page.title }}</h3>
+      <div v-if="this.$page.frontmatter.tag" style="text-align: center">
+        <el-tag 
+          size="small" 
+          v-for="tag in this.$page.frontmatter.tag"
+          style="margin: 5px;"
+          >{{ tag }}</el-tag>
+      </div>
+    </div>
     <Content class="theme-default-content"/>
 
     <footer class="page-edit">
@@ -68,6 +77,17 @@ export default {
   props: ['sidebarItems'],
 
   computed: {
+    isBlog () {
+      // 判断这篇文章是不是博客
+      if (this.$page.frontmatter.tag) {  
+        return this.$page.frontmatter.tag == 'blog' || 'blog' == this.$page.frontmatter.tag[0]
+      }
+      else {
+        return false
+      }
+      
+    },
+
     lastUpdated () {
       return this.$page.lastUpdated
     },
@@ -194,6 +214,12 @@ function flatten (items, res) {
 
 <style lang="stylus">
 @require '../styles/wrapper.styl'
+
+.my-title-box
+  margin: 5rem auto -3rem auto
+
+.my-title
+  text-align: center
 
 .page
   padding-bottom 2rem

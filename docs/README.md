@@ -4,10 +4,8 @@ heroImage: /favicon.png
 heroText: Angor
 tagline: 安歌
 permalink: /
-# actionText: 博客
-# actionLink: https://blog.xerrors.fun
-
-search: false
+actionText: 关于
+actionLink: /about/
 
 features:
 - title: 小破站

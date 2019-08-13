@@ -5,8 +5,7 @@ module.exports = {
   themeConfig: {
     lastUpdated: '上次更新',
     nav: [
-      { text: '主页', link: '/' },
-      { text: '内容', link: '/blog/' },
+      { text: '文章', link: '/blog/' },
       { text: '占位', link: '/placeholder/' },
       {
         text: '工具',

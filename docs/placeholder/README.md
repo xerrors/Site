@@ -1,8 +1,9 @@
 ---
-title: "占位"
-search: false
+title: "配置服务器常见操作"
 date: 2019/8/12 20:46:25
-tag: blog
+tag: 
+ - blog
+ - Test
 ---
 
 #### 安装 zsh 并配置
