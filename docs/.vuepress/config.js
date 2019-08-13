@@ -8,12 +8,11 @@ module.exports = {
       { text: '主页', link: '/' },
       { text: '内容', link: '/blog/' },
       { text: '占位', link: '/placeholder/' },
-      { text: '日志', link: '/changelogs/' },
       {
         text: '工具',
         items: [
-          { text: '寻密', link: '/findpwd' },
-          { text: '寻密', link: '/findpwd' }
+          { text: '寻密', link: '/tools/findpwd' },
+          { text: '寻密', link: '/tools/findpwd' }
         ]
       },
       { text: '博客', link: 'https://blog.xerrors.fun' },
