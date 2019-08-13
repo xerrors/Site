@@ -89,7 +89,11 @@ export default {
     },
 
     lastUpdated () {
-      return this.$page.lastUpdated
+      // 通过 hideLastUpdated 标签来判断是否隐藏该标签
+      if (this.$page.frontmatter.hideLastUpdated) {
+        return false
+      }
+      return this.$page.lastUpdated 
     },
 
     lastUpdatedText () {
