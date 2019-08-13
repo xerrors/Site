@@ -1,9 +1,12 @@
 ---
 title: "配置服务器常见操作"
-date: 2019/8/12 20:46:25
+date: 2019-8-12 20:46:25
 tag: 
  - blog
  - Test
+categories:
+ - Linux
+ - Note
 ---
 
 #### 安装 zsh 并配置

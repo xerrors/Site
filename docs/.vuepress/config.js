@@ -18,6 +18,14 @@ module.exports = {
       { text: 'Github', link: 'https://github.com/Xerrors' },
     ]
   },
+  plugins: [
+    [
+      '@vuepress/google-analytics',
+      {
+        'ga': 'UA-145620374-1' // UA-00000000-0
+      }
+    ]
+  ],
   configureWebpack: {
     resolve: {
       alias: {

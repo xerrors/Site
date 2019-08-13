@@ -1,5 +1,6 @@
 ---
 permalink: '/findpwd'
+hideLastUpdated: True
 ---
 <templete>
 <div style='margin-top: 100px;'>

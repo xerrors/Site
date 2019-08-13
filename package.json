@@ -9,6 +9,7 @@
     "element-ui": "^2.11.1"
   },
   "devDependencies": {
+    "@vuepress/plugin-google-analytics": "^1.0.0-rc.1",
     "vue-particles": "^1.0.9"
   },
   "scripts": {

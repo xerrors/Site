@@ -1,24 +1,24 @@
 # Dev logs
 
-🏆🏆🏆 TODOs:
+🏆🏆🏆 TODO:
 
 - [x] 配置主题 [主题继承](https://juejin.im/post/5d00bf28e51d4555e372a5d8)
 
 - [x] 添加博客文章列表，最好是卡片式
 
-- [ ] 使用 PWA 以及 Google-Analysis
+- [x] 添加返回最上的功能
 
-- [ ] 使用 Gittalk 添加评论系统 [参考](https://juejin.im/post/5c9e30fb6fb9a05e1c4cecf6)
+- [ ] 使用 PWA 以及 Google-Analysis
 
 - [ ] 实现粘贴板功能 [Clipboard](https://blog.csdn.net/Mr_EvanChen/article/details/81034065)
 
 - [ ] 使用自己的服务器或者七牛云做出图床
 
-- [x] 添加返回最上的功能
-
 - [ ] 设计一个好看的主页
 
 - [ ] 创建关于界面
+
+- [ ] 使用 Gittalk 添加评论系统 [参考](https://juejin.im/post/5c9e30fb6fb9a05e1c4cecf6) -- 因为项目暂时不打算放到Github上面，所以就暂时不搞了
 
 📅 2019年8月13日
 
@@ -28,7 +28,9 @@
 
 📅 2019年8月12日
 
-添加博客文章列表卡片式，同时使用 ElementUI 做出了密码生成工具的界面（算法还没写），而且切换组件的主题位 Vuepress 的主色调，看起来更加的统一和谐。
+- 添加博客文章列表卡片式。
+- 使用 ElementUI 做出了密码生成工具的界面（算法还没写）。
+- 切换组件的主题位 Vuepress 的主色调，看起来更加的统一和谐。
   
 📅 2019年8月11日
 

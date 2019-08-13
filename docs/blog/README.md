@@ -16,7 +16,7 @@ permalink: "blog"
           <div class="bottom clearfix">
             <br>
             <span><small>{{ post.formatDay }}</small></span>
-            <el-link style="float: right;" :underline="false" :href="post.path" type="primary">阅读全文 ></el-link>
+            <el-link style="float: right;" :href="post.path" type="primary" :underline="false">阅读全文</el-link>
           </div>
         </div>
       </el-card>
@@ -30,7 +30,7 @@ permalink: "blog"
 export default {
   data() {
     return {
-      step: 7,
+      step: 5,
       posts: [],
       page: 1,
       num: 0,
@@ -106,6 +106,10 @@ export default {
 
 
 <style scoped>
+.el-link {
+  text-decoration: none;
+}
+
 .el-card {
   margin-bottom: 10px;
 }

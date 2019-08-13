@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /favicon.png
+# heroImage: /favicon.png
 heroText: Angor
 tagline: 安歌
 permalink: /
