@@ -1,6 +1,6 @@
 ---
 search: false
-permalink: 'findpwd'
+permalink: '/findpwd'
 ---
 <templete>
 <div style='margin-top: 100px;'>

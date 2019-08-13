@@ -5,7 +5,7 @@ search: false
 
 🏆🏆🏆 TODOs:
 
-- [-] 配置主题 [主题继承](https://juejin.im/post/5d00bf28e51d4555e372a5d8)
+- [x] 配置主题 [主题继承](https://juejin.im/post/5d00bf28e51d4555e372a5d8)
 
 - [x] 添加博客文章列表，最好是卡片式
 
@@ -17,7 +17,7 @@ search: false
 
 - [ ] 使用自己的服务器或者七牛云做出图床
 
-- [ ] 添加返回最上的功能
+- [x] 添加返回最上的功能
 
 
 📅 2019年8月11日

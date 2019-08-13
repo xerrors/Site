@@ -6,11 +6,9 @@
   "author": "Xerrors <xerrors@163.com>",
   "license": "MIT",
   "dependencies": {
-    "element-ui": "^2.11.1",
-    "vuepress-theme-ktquez": "^0.2.18"
+    "element-ui": "^2.11.1"
   },
   "devDependencies": {
-    "vue-particles": "^1.0.9"
   },
   "scripts": {
     "deploy": "bash deploy.sh"
