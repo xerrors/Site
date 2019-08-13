@@ -9,6 +9,7 @@
     "element-ui": "^2.11.1"
   },
   "devDependencies": {
+    "vue-particles": "^1.0.9"
   },
   "scripts": {
     "deploy": "bash deploy.sh"
