@@ -13,8 +13,9 @@ search: false
     <div>
       <el-card :body-style="{ padding: '5px' }" v-for="(post, index) in topPublishPosts">
         <div style="padding: 14px;">
-          <span>{{ post.title }}</span>
+          <span><strong><el-link :underline="false" :href="post.path" type="primary">{{ post.title }}</el-link></strong></span>
           <div class="bottom clearfix">
+            <br>
             <span><small>{{ post.formatDay }}</small></span>
             <el-link style="float: right;" :underline="false" :href="post.path" type="primary">阅读全文 ></el-link>
           </div>
@@ -30,7 +31,7 @@ search: false
 export default {
   data() {
     return {
-      step: 15,
+      step: 7,
       posts: [],
       page: 1,
       num: 0,
