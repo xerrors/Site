@@ -13,7 +13,7 @@
     </div>
     <Content class="theme-default-content"/>
 
-    <footer class="page-edit">
+    <footer class="page-edit" v-if="showFooter">
       <div
         class="edit-link"
         v-if="editLink"
@@ -82,10 +82,11 @@ export default {
       if (this.$page.frontmatter.tag) {  
         return this.$page.frontmatter.tag == 'blog' || 'blog' == this.$page.frontmatter.tag[0]
       }
-      else {
-        return false
-      }
-      
+      return false
+    },
+
+    showFooter () {
+      return !this.$page.frontmatter.hideFooter
     },
 
     lastUpdated () {

@@ -4,6 +4,7 @@ permalink: "about"
 search: false
 navbar: false
 hideLastUpdated: True
+hideFooter: True
 # layout: About
 ---
 
@@ -11,7 +12,7 @@ hideLastUpdated: True
     <div id="app" class="my-main-container">
         <div class="my-container">
             <el-card v-show="show==0" class="my-card" :body-style="{ padding: '0px' }">
-              <el-image class="my-bg" :src="$withBase('/bg-1.jpg')"></el-image>
+              <img class="my-bg" :src="$withBase('/bg-1.jpg')"/>
               <img class="my-avatar" :src="$withBase('/avatar.jpg')">
               <h3 style="text-align: center">Angor</h3>
               <br>
@@ -45,8 +46,8 @@ hideLastUpdated: True
               <img class="my-avatar" :src="$withBase('/avatar.jpg')">
               <h3 style="text-align: center">友链占位 3</h3>
           </el-card>
-          <div class="my-button">
-            <el-button icon="el-icon-caret-bottom" circle @click="plusOne"></el-button>
+          <div class="my-button-box">
+            <el-button class="my-button" v-show="showButton" icon="el-icon-caret-bottom" circle @click="plusOne"></el-button>
           </div>
         </div>
     </div>
@@ -57,12 +58,17 @@ export default {
   data() {
     return {
       show: 0,
-      cardNum: 4
+      cardNum: 4,
+      showButton: true
     }
   },
   methods: {
     plusOne() {
-      this.show = (this.show + 1) % this.cardNum;
+        this.show = (this.show + 1) % this.cardNum;
+        this.showButton = false;
+        setTimeout(() => {
+            this.showButton = true;
+        }, 1000);
     }
   }
 };
@@ -76,6 +82,10 @@ export default {
 html, body{
     width: 100%;
     height: 100%;
+}
+
+h1, h2, h3, p {
+    color: #2c3e50;
 }
 
 .el-button {
@@ -96,8 +106,12 @@ html, body{
   text-align: center;
 }
 
-.my-button {
+.my-button-box {
   margin-top: 20px;
+}
+
+.my-button {
+    animation: showButton 1s forwards;
 }
 
 .my-card {
@@ -116,6 +130,8 @@ html, body{
 
 .my-bg {
   height: 150px;
+  width: 100%;
+  margin: 0;
 }
 
 .my-svg {
@@ -149,6 +165,15 @@ html, body{
   }
   100% {
     transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes showButton {
+  0% {
+    opacity: 0;
+  }
+  100% {
     opacity: 1;
   }
 }

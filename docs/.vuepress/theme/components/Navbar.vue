@@ -32,6 +32,10 @@
       />
       <SearchBox v-else-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false"/>
       <NavLinks class="can-hide"/>
+      <!-- 在这里添加了Girhub的 LOGO 比文字好看些 -->
+      <a :href="githubLink" style="display: flex; align-items: center; margin-left: 10px;">
+        <img class="my-svg" :src="$withBase('/svg/github.svg')" type="image/svg+xml" style="width: 1.4rem; height: 1.4rem;"/>
+      </a>
     </div>
   </header>
 </template>
@@ -73,6 +77,10 @@ export default {
 
     isAlgoliaSearch () {
       return this.algolia && this.algolia.apiKey && this.algolia.indexName
+    },
+    
+    githubLink () {
+      return this.$themeConfig.github || {}
     }
   }
 }

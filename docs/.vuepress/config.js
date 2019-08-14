@@ -3,6 +3,8 @@ module.exports = {
   description: 'Angor playground',
   permalink: "/:year/:month/:day/:slug",
   themeConfig: {
+    github: "https://github.com/Xerrors/Xerrors.github.io",
+    logo: '/avatar.jpg',
     lastUpdated: '上次更新',
     nav: [
       { text: '文章', link: '/blog/' },
@@ -15,7 +17,6 @@ module.exports = {
         ]
       },
       { text: '博客', link: 'https://blog.xerrors.fun' },
-      { text: 'Github', link: 'https://github.com/Xerrors' },
     ]
   },
   plugins: [

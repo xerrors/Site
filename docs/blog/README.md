@@ -1,6 +1,7 @@
 ---
 title: "博客"
 permalink: "blog"
+hideLastUpdated: True
 ---
 
 <!--参考大佬的界面 https://xin-tan.com/guide/-->
@@ -13,11 +14,12 @@ permalink: "blog"
       <el-card :body-style="{ padding: '5px' }" v-for="(post, index) in topPublishPosts">
         <div style="padding: 14px;">
           <span><el-link :underline="false" :href="post.path" type="primary">{{ post.title }}</el-link></span>
-          <div v-if="post.frontmatter.tag">
+          <div v-if="post.frontmatter.tag" style="display: inline-block; float: right;">
             <el-tag 
-              size="small" 
+              size="mini" 
               v-for="tag in post.frontmatter.tag"
-              style="margin: 5px;"
+              style="margin-left: 10px;"
+              type="info"
               >{{ tag }}</el-tag>
           </div>
           <div class="bottom clearfix">

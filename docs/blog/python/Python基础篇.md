@@ -8,7 +8,12 @@ tag:
 categories:
  - Python
  - Toturial
+hideLastUpdated: true
 ---
+
+大家都是有一定的 C语言的基础的，所以就先罗列一下 python 与 c 语言的区别；从某种角度上来说，python 是一种脚本语言
+
+<!-- more -->
 
 ### 写在前面
 > 以下演示脚本基于  Python 3.7.2
