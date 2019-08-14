@@ -12,7 +12,8 @@ hideFooter: True
     <div id="app" class="my-main-container">
         <div class="my-container">
             <el-card v-show="show==0" class="my-card" :body-style="{ padding: '0px' }">
-              <img class="my-bg" :src="$withBase('/bg-1.jpg')"/>
+              <div class="my-bg"></div>
+              <div style="height: 50px; margin: 0;"></div>
               <a class="my-avatar-link" @click="clickAvatar">
                   <img class="my-avatar" :src="$withBase('/avatar.jpg')">
               </a>
@@ -34,18 +35,27 @@ hideFooter: True
               </div>
           </el-card>
           <el-card v-show="show==1" class="my-card" :body-style="{ padding: '0px' }">
-              <el-image class="my-bg" :src="$withBase('/bg-1.jpg')"></el-image>
-              <img class="my-avatar" :src="$withBase('/avatar.jpg')">
+              <div class="my-bg"></div>
+              <div style="height: 50px; margin: 0;"></div>
+              <a class="my-avatar-link" @click="clickAvatar">
+                  <img class="my-avatar" :src="$withBase('/avatar.jpg')">
+              </a>
               <h3 style="text-align: center">友链占位 1</h3>
           </el-card>
           <el-card v-show="show==2" class="my-card" :body-style="{ padding: '0px' }">
-              <el-image class="my-bg" :src="$withBase('/bg-1.jpg')"></el-image>
-              <img class="my-avatar" :src="$withBase('/avatar.jpg')">
+              <div class="my-bg"></div>
+              <div style="height: 50px; margin: 0;"></div>
+              <a class="my-avatar-link" @click="clickAvatar">
+                  <img class="my-avatar" :src="$withBase('/avatar.jpg')">
+              </a>
               <h3 style="text-align: center">友链占位 2</h3>
           </el-card>
           <el-card v-show="show==3" class="my-card" :body-style="{ padding: '0px' }">
-              <el-image class="my-bg" :src="$withBase('/bg-1.jpg')"></el-image>
-              <img class="my-avatar" :src="$withBase('/avatar.jpg')">
+              <div class="my-bg"></div>
+              <div style="height: 50px; margin: 0;"></div>
+              <a class="my-avatar-link" @click="clickAvatar">
+                  <img class="my-avatar" :src="$withBase('/avatar.jpg')">
+              </a>
               <h3 style="text-align: center">友链占位 3</h3>
           </el-card>
           <div class="my-button-box">
@@ -106,7 +116,7 @@ export default {
 
 html, body{
     width: 100%;
-    height: 100%;
+    background-color: #cccccc;
 }
 
 h1, h2, h3, p {
@@ -154,9 +164,15 @@ h1, h2, h3, p {
 }
 
 .my-bg {
-  height: 150px;
-  width: 100%;
-  margin: 0;
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+    margin: 0;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    position: absolute;
+    z-index: -1;
 }
 
 .my-svg {
@@ -170,7 +186,7 @@ h1, h2, h3, p {
   position: relative;
   width: 100px;
   height: 100px;
-  margin: -50px auto 0 auto;
+  margin: 0 auto;
   border-radius:50%;
   border: 3px solid #ffffff
 }
@@ -181,6 +197,18 @@ h1, h2, h3, p {
 
 .my-something a {
   display: inline-block;
+}
+
+@keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 @keyframes showup {
