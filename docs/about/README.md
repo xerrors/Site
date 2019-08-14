@@ -13,7 +13,9 @@ hideFooter: True
         <div class="my-container">
             <el-card v-show="show==0" class="my-card" :body-style="{ padding: '0px' }">
               <img class="my-bg" :src="$withBase('/bg-1.jpg')"/>
-              <img class="my-avatar" :src="$withBase('/avatar.jpg')">
+              <a class="my-avatar-link" @click="clickAvatar">
+                  <img class="my-avatar" :src="$withBase('/avatar.jpg')">
+              </a>
               <h3 style="text-align: center">Angor</h3>
               <br>
               <p>不想学深度学习的前端狗</p>
@@ -59,7 +61,8 @@ export default {
     return {
       show: 0,
       cardNum: 4,
-      showButton: true
+      showButton: true,
+      count: 0
     }
   },
   methods: {
@@ -69,6 +72,28 @@ export default {
         setTimeout(() => {
             this.showButton = true;
         }, 1000);
+    },
+    clickAvatar() {
+        this.count += 1;
+          if (this.count > 10) {
+            this.count = 0;
+            this.$confirm('当当当当，恭喜你触发彩蛋，是否查看', 'Eggs', {
+            confirmButtonText: '当然看了',
+            cancelButtonText: '真无聊~',
+            type: 'success',
+            center: true
+          }).then(() => {
+            this.$message({
+              type: 'success',
+              message: '假装看完了!'
+            });
+          }).catch(() => {
+            this.$message({
+              type: 'info',
+              message: '已取消'
+            });
+          });
+        }
     }
   }
 };
