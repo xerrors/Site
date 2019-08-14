@@ -16,7 +16,9 @@ git add -A
 git commit -m 'deploy'
 git push -f git@git.dev.tencent.com:Xerrors/Xerrors.git master
 
-echo "\n\t成功将资源文件上传\n"
+echo " "
+echo "  >>> 成功将资源文件上传"
+echo " "
 
 cd -
 
@@ -24,6 +26,10 @@ git add -A
 git commit -m 'deploy'
 
 git push -f git@git.dev.tencent.com:Xerrors/Site.git master
-echo "\n\t成功将整体文件上传到 腾讯云\n"
+echo " "
+echo "  >>> 成功将整体文件上传到 腾讯云"
+echo " "
 git push -f git@github.com:Xerrors/Xerrors.github.io.git master
-echo "\n\t成功将资源文件上传到 Github\n"
+echo " "
+echo "  >>> 成功将资源文件上传到 Github"
+echo " "
