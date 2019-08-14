@@ -15,7 +15,6 @@ git init
 git add -A
 git commit -m 'deploy'
 git push -f git@git.dev.tencent.com:Xerrors/Xerrors.git master
-git push -f git@github.com:Xerrors/Xerrors.github.io.git master
 
 cd -
 
@@ -23,3 +22,4 @@ git add -A
 git commit -m 'deploy'
 
 git push -f git@git.dev.tencent.com:Xerrors/Site.git master
+git push -f git@github.com:Xerrors/Xerrors.github.io.git master
