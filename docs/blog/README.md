@@ -12,7 +12,14 @@ permalink: "blog"
     <div>
       <el-card :body-style="{ padding: '5px' }" v-for="(post, index) in topPublishPosts">
         <div style="padding: 14px;">
-          <span><strong><el-link :underline="false" :href="post.path" type="primary">{{ post.title }}</el-link></strong></span>
+          <span><el-link :underline="false" :href="post.path" type="primary">{{ post.title }}</el-link></span>
+          <div v-if="post.frontmatter.tag">
+            <el-tag 
+              size="small" 
+              v-for="tag in post.frontmatter.tag"
+              style="margin: 5px;"
+              >{{ tag }}</el-tag>
+          </div>
           <div class="bottom clearfix">
             <br>
             <span><small>{{ post.formatDay }}</small></span>
