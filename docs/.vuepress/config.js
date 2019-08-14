@@ -15,8 +15,7 @@ module.exports = {
           { text: '寻密', link: '/tools/findpwd' },
           { text: '寻密', link: '/tools/findpwd' }
         ]
-      },
-      { text: '博客', link: 'https://blog.xerrors.fun' },
+      }
     ]
   },
   plugins: [
