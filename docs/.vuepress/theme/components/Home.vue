@@ -7,6 +7,8 @@
         :alt="data.heroAlt || 'hero'"
       >
 
+      <div style="height: 100px;"></div>
+
       <h1 v-if="data.heroText !== null" id="main-title">{{ data.heroText || $title || 'Hello' }}</h1>
 
       <p class="description">
@@ -70,6 +72,7 @@ export default {
 }
 </script>
 
+
 <style lang="stylus">
 .home
   padding $navbarHeight 2rem 0
@@ -95,15 +98,15 @@ export default {
     .action-button
       display inline-block
       font-size 1.2rem
-      color #fff
-      background-color $accentColor
-      padding 0.8rem 1.6rem
-      border-radius 4px
-      transition background-color .1s ease
+      // color #fff
+      // background-color $accentColor
+      // padding 0.8rem 1.6rem
+      // border-radius 4px
+      // transition background-color .1s ease
       box-sizing border-box
-      border-bottom 1px solid darken($accentColor, 10%)
-      &:hover
-        background-color lighten($accentColor, 10%)
+      // border-bottom 1px solid darken($accentColor, 10%)
+      // &:hover
+      //   background-color lighten($accentColor, 10%)
   .features
     border-top 1px solid $borderColor
     padding 1.2rem 0
@@ -159,4 +162,22 @@ export default {
     .feature
       h2
         font-size 1.25rem
+</style>
+
+
+<style lang="stylus" scoped>
+// 为了不打扰前面的，我们在这里修改
+.home
+  .hero
+    .action-button
+      color #000
+      background-color rgba(0,0,0,0)
+      padding 0.4rem 1.6rem
+      border-radius 1.5rem
+      transition background-color .3s ease
+      box-sizing border-box
+      border: 2px solid #000
+      &:hover
+        color: #fff
+        background-color #000
 </style>
