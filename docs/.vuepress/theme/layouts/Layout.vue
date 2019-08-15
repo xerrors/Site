@@ -6,7 +6,7 @@
     @touchend="onTouchEnd"
   >
     <el-backtop></el-backtop>
-    <Navbar class="my-nav-gre"
+    <Navbar
       v-if="shouldShowNavbar"
       @toggle-sidebar="toggleSidebar"
     />
@@ -106,7 +106,8 @@ export default {
         {
           'no-navbar': !this.shouldShowNavbar,
           'sidebar-open': this.isSidebarOpen,
-          'no-sidebar': !this.shouldShowSidebar
+          'no-sidebar': !this.shouldShowSidebar,
+          'my-nav-gre': this.$page.frontmatter.home
         },
         userPageClass
       ]
@@ -148,8 +149,21 @@ export default {
 </script>
 
 
-<style scoped>
+<style>
+html, body {
+  height: 100%;
+}
+
+#app {
+  height: 100%;
+}
+
 .my-nav-gre {
+  height: 100%;
   background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+}
+
+.my-nav-gre * {
+  border: 0;
 }
 </style>

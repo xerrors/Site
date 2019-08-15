@@ -7,6 +7,8 @@ permalink: /
 actionText: 关于
 actionLink: /about/
 
+sidebar: false
+
 features:
 - title: 小破站
   details: 自己闲着没事做的小网站，没啥意思，就随便记录一点东西，做着玩的。

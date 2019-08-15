@@ -10,8 +10,6 @@ categories:
  - Note
 ---
 
-## Vuepress 主题改造
-
 Vuepress  原有的主题虽然好看，但是，感觉有点单调了，所以就利用之前学过的 Vue 相关的知识来改造一下这一个主题，由于是在默认主题的基础上修改的，所以需要用到主题的继承的功能。[官方说明文档](https://v1.vuepress.vuejs.org/zh/theme/inheritance.html#动机) 写的不够清楚，所以踩了很多的坑，怕自己以后忘记了，所以还是记录一下，也方便交流。
 
 #### 复制主题文件并设置继承
@@ -44,6 +42,16 @@ module.exports = {
 ```html {2}
 // docs/.vuepress/theme/layouts/Layout.vue
 <Navbar class="my-nav-gre"
+  v-if="shouldShowNavbar"
+  @toggle-sidebar="toggleSidebar"
+/>
+```
+
+Tips: 如果只想在主界面出现渐变色标题栏，可以修改为 
+
+```html {2}
+// docs/.vuepress/theme/layouts/Layout.vue
+<Navbar :class="{ 'my-nav-gre': $page.frontmatter.home }"
   v-if="shouldShowNavbar"
   @toggle-sidebar="toggleSidebar"
 />
@@ -83,4 +91,91 @@ module.exports = {
 然后就搞定了。。。（在此之前我修改了最后面的 GitHub 标志以及前面头像的圆角）
 
 ![预览](C:\Users\jayzh\Desktop\asset\nav-bar.png)
+
+#### 全局禁用 Sidebar
+
+我一直觉得 Sidebar 不太好看，但是有没有全局禁用的方式，所以就找到 Layout 文件里面，修改对应代码
+
+```js {4, 8}
+// docs/.vuepress/theme/layouts/Layout.vue
+shouldShowSidebar () {
+    const { frontmatter } = this.$page
+    const { themeConfig } = this.$site
+    return (
+    !frontmatter.home
+    && frontmatter.sidebar !== false
+    && themeConfig.sidebar !== false
+    && this.sidebarItems.length
+    )
+},
+``` 
+
+然后在主题配置中添加相应的配置：
+
+```js
+// docs/.vuepress/config.js 
+module.exports = {
+  ...
+  themeConfig: {
+    sidebar: false,
+    ...
+  },
+  ...
+}
+```
+
+
+#### 主页背景渐变
+
+很简单，套用上面 `my-nav-gre` 的 css 样式就可以，所以在 Layout 里面做下面修改
+
+```js {8}
+// docs/.vuepress/theme/layouts/Layout.vue
+pageClasses () {
+    const userPageClass = this.$page.frontmatter.pageClass
+    return [
+    {
+        'no-navbar': !this.shouldShowNavbar,
+        'sidebar-open': this.isSidebarOpen,
+        'no-sidebar': !this.shouldShowSidebar,
+        'my-nav-gre': this.$page.frontmatter.home // 添加新类
+    },
+    userPageClass
+    ]
+}
+```
+
+同时为了全屏渐变色我们需要将界面大小调整为 100%；并且把子元素的边框都去掉，不然影响观感。
+
+```html
+<style>
+html, body {
+  height: 100%;
+}
+
+#app {
+  height: 100%;
+}
+
+.my-nav-gre {
+  height: 100%;
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+}
+
+.my-nav-gre * {
+    border: 0;
+}
+</style>
+```
+
+现在可以看到主界面已经变成了渐变色，但是导航栏还没有变颜色，同样的道理，我们需要去调试工具里面看一下，发现已经设置了背景（估计官方是为了防止用户修改背景的时候不小心修改到了导航栏才这么设置的，但是咱们既然想要修改，那就去把这里给修改掉吧！注意这次的文件不在 `Navbar.vue` 而是在资源文件里面（注意看调试信息）
+
+```stylus {4}
+// docs/.vuepress/theme/styles/index.styl
+.navbar
+  ...
+  // background-color #fff
+  ...
+```
+
 
