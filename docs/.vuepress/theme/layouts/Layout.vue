@@ -6,7 +6,7 @@
     @touchend="onTouchEnd"
   >
     <el-backtop></el-backtop>
-    <Navbar
+    <Navbar class="my-nav-gre"
       v-if="shouldShowNavbar"
       @toggle-sidebar="toggleSidebar"
     />
@@ -146,3 +146,10 @@ export default {
   }
 }
 </script>
+
+
+<style scoped>
+.my-nav-gre {
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+}
+</style>
