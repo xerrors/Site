@@ -8,7 +8,7 @@ module.exports = {
     lastUpdated: '上次更新',
     nav: [
       { text: '文章', link: '/blog/' },
-      { text: '占位', link: '/about/eggs' },
+      { text: '占位', link: '/about/egg' },
       {
         text: '工具',
         items: [

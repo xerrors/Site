@@ -1,4 +1,4 @@
-<templete>
+<template>
     <div id="app">
         <div class="con">
             <div class="header">
@@ -227,7 +227,7 @@
             </div>
         </div>
     </div>
-</templete>
+</template>
 
 <style scoped>
 body, html {
