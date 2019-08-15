@@ -148,6 +148,7 @@ pageClasses () {
 同时为了全屏渐变色我们需要将界面大小调整为 100%；并且把子元素的边框都去掉，不然影响观感。
 
 ```html
+// docs/.vuepress/theme/layouts/Layout.vue
 <style>
 html, body {
   height: 100%;
@@ -168,14 +169,22 @@ html, body {
 </style>
 ```
 
-现在可以看到主界面已经变成了渐变色，但是导航栏还没有变颜色，同样的道理，我们需要去调试工具里面看一下，发现已经设置了背景（估计官方是为了防止用户修改背景的时候不小心修改到了导航栏才这么设置的，但是咱们既然想要修改，那就去把这里给修改掉吧！注意这次的文件不在 `Navbar.vue` 而是在资源文件里面（注意看调试信息）
+现在可以看到主界面已经变成了渐变色，但是导航栏还没有变颜色，同样的道理，我们需要去调试工具里面看一下，发现已经设置了背景（估计官方是为了防止用户修改背景的时候不小心修改到了导航栏才这么设置的，~~但是咱们既然想要修改，那就去把这里给修改掉吧！注意这次的文件不在 `Navbar.vue` 而是在资源文件里面（注意看调试信息）~~ 经过尝试之后，这里如果改了会修改全部的，导致后面的就全部透明了，所以还是单独修改这里吧。
 
-```stylus {4}
-// docs/.vuepress/theme/styles/index.styl
-.navbar
-  ...
-  // background-color #fff
-  ...
+```html {2}
+// docs/.vuepress/theme/layouts/Layout.vue
+<Navbar :class="{ 'my-nav-home': $page.frontmatter.home }"
+    v-if="shouldShowNavbar"
+    @toggle-sidebar="toggleSidebar"
+/>
 ```
+
+```css
+/* docs/.vuepress/theme/layouts/Layout.vue */
+.my-nav-home {
+  background-color: rgba(256, 256, 256, 0); /*修改透明度为 0*/
+}
+```
+
 
 

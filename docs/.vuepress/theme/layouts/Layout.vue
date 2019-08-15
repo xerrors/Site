@@ -6,7 +6,7 @@
     @touchend="onTouchEnd"
   >
     <el-backtop></el-backtop>
-    <Navbar
+    <Navbar :class="{ 'my-nav-home': $page.frontmatter.home }"
       v-if="shouldShowNavbar"
       @toggle-sidebar="toggleSidebar"
     />
@@ -107,7 +107,7 @@ export default {
           'no-navbar': !this.shouldShowNavbar,
           'sidebar-open': this.isSidebarOpen,
           'no-sidebar': !this.shouldShowSidebar,
-          'my-nav-gre': this.$page.frontmatter.home
+          'my-layout-container': this.$page.frontmatter.home
         },
         userPageClass
       ]
@@ -158,12 +158,31 @@ html, body {
   height: 100%;
 }
 
-.my-nav-gre {
+.my-layout-container {
   height: 100%;
-  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  /*background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);*/
+  background: linear-gradient(-45deg, #fff1eb, #ace0f9, #e9defa, #fbfcdb);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
 }
 
-.my-nav-gre * {
+.my-layout-container * {
   border: 0;
+}
+
+.my-nav-home {
+  background-color: rgba(256, 256, 256, 0);
+}
+
+@keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 </style>
