@@ -172,10 +172,12 @@ html, body {
 
 .my-nav-home {
   background-color: rgba(256, 256, 256, 0);
+  border: 0;
 }
 
 .my-nav {
   background-color: white;
+  border-bottom: 1px solid #ccc
 }
 
 @keyframes gradientBG {
