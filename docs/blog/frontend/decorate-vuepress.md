@@ -298,19 +298,21 @@ PS：这里多说一句，上面可以看到这个 `span` 绑定了一个类 can
 .home
   .hero
     h1
-      font-size: 6rem
+      font-size: 10rem
       color white 
       margin-top 6.5rem
+    p
+      color white
     .action-button
-      color black
+      color white
       background-color rgba(0,0,0,0)
       padding 0.4rem 1.6rem
       border-radius 1.5rem
-      transition background-color .5s ease
+      transition border-color .3s ease
       box-sizing border-box
-      border: 0.12rem solid black
+      border: 2px solid white
       &:hover
-        color: white
         background-color black
+        border-color black
 </style>
 ```

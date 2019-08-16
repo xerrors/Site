@@ -174,14 +174,14 @@ export default {
     p
       color white
     .action-button
-      color black
+      color white
       background-color rgba(0,0,0,0)
       padding 0.4rem 1.6rem
       border-radius 1.5rem
-      transition background-color .5s ease
+      transition border-color .3s ease
       box-sizing border-box
-      border: 0.12rem solid black
+      border: 2px solid white
       &:hover
-        color: white
         background-color black
+        border-color black
 </style>
