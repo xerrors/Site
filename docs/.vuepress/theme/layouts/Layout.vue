@@ -6,7 +6,7 @@
     @touchend="onTouchEnd"
   >
     <el-backtop></el-backtop>
-    <Navbar :class="{ 'my-nav-home': $page.frontmatter.home }"
+    <Navbar :class="{ 'my-nav-home': $page.frontmatter.home, 'my-nav': !$page.frontmatter.home }"
       v-if="shouldShowNavbar"
       @toggle-sidebar="toggleSidebar"
     />
@@ -163,7 +163,7 @@ html, body {
   /*background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);*/
   background: linear-gradient(-45deg, #fff1eb, #ace0f9, #e9defa, #fbfcdb);
   background-size: 400% 400%;
-  animation: gradientBG 15s ease infinite;
+  animation: gradientBG 10s ease infinite;
 }
 
 .my-layout-container * {
@@ -172,6 +172,10 @@ html, body {
 
 .my-nav-home {
   background-color: rgba(256, 256, 256, 0);
+}
+
+.my-nav {
+  background-color: white;
 }
 
 @keyframes gradientBG {

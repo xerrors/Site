@@ -170,14 +170,14 @@ export default {
 .home
   .hero
     .action-button
-      color #000
+      color black
       background-color rgba(0,0,0,0)
       padding 0.4rem 1.6rem
       border-radius 1.5rem
       transition background-color .3s ease
       box-sizing border-box
-      border: 2px solid #000
+      border: 2px solid black
       &:hover
-        color: #fff
-        background-color #000
+        color: white
+        background-color black
 </style>
