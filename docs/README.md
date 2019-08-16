@@ -4,7 +4,7 @@ home: true
 heroText: Angor
 tagline: 安歌
 permalink: /
-actionText: 关于
+actionText: 关 于
 actionLink: /about/
 
 sidebar: false

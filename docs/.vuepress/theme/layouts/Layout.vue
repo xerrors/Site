@@ -160,8 +160,8 @@ html, body {
 
 .my-layout-container {
   height: 100%;
-  /*background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);*/
-  background: linear-gradient(-45deg, #fff1eb, #ace0f9, #e9defa, #fbfcdb);
+  /*background: linear-gradient(-45deg, #fff1eb, #ace0f9, #e9defa, #fbfcdb);*/
+  background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
   background-size: 400% 400%;
   animation: gradientBG 10s ease infinite;
 }
@@ -177,7 +177,7 @@ html, body {
 
 .my-nav {
   background-color: white;
-  border-bottom: 1px solid #ccc
+  border-bottom: 1px solid #eee
 }
 
 @keyframes gradientBG {
