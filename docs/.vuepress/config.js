@@ -9,12 +9,12 @@ module.exports = {
     lastUpdated: '上次更新',
     nav: [
       { text: '文章', link: '/blog/' },
-      { text: '占位', link: '/about/egg' },
+      { text: '占位', link: '/blog/frontend/sources-guide.md' },
       {
         text: '工具',
         items: [
-          { text: '寻密', link: '/tools/findpwd' },
-          { text: '寻密', link: '/tools/findpwd' }
+          { text: '寻密', link: '/tools/findpwd.md' },
+          { text: '寻密', link: '/tools/findpwd.md' }
         ]
       }
     ]
