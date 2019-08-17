@@ -10,13 +10,13 @@
 
 - [x] 把搜索框和按钮换成其他样式的
 
-- [ ] 添加动画
+- [x] 添加动画
 
 - [ ] 网站备案
 
 - [ ] 使用 PWA
 
-- [ ] Google-Analysis -- 失败了，也懒得弄了
+- [ ] ~~Google-Analysis -- 失败了，也懒得弄了~~
 
 - [ ] 实现粘贴板功能 [Clipboard](https://blog.csdn.net/Mr_EvanChen/article/details/81034065)
 
@@ -30,13 +30,13 @@
 
 - [x] 添加渐变色主题
 
-- [ ] 设置导航栏自动隐藏
+- [ ] ~~设置导航栏自动隐藏 感觉没必要~~
 
-- [ ] 使用 Gittalk 添加评论系统 [参考](https://juejin.im/post/5c9e30fb6fb9a05e1c4cecf6) -- 因为项目暂时不打算放到Github上面，所以就暂时不搞了
+- [ ] ~~使用 Gittalk 添加评论系统 [参考](https://juejin.im/post/5c9e30fb6fb9a05e1c4cecf6) 因为项目暂时不打算放到Github上面，所以就暂时不搞了~~
 
 📅 2019年8月17日
 
-
+- 添加部分载入动画
 
 📅 2019年8月15日
 

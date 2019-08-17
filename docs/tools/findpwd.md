@@ -2,21 +2,26 @@
 permalink: '/findpwd'
 hideLastUpdated: True
 ---
-<templete>
-<div style='margin-top: 100px;'>
-  <el-image class='my-title-img'
-    :src="$withBase('/bank.png')"></el-image>
-  <br>
-  <br>
-  <el-row :gutter="20">
-    <el-col :span="10"><el-input placeholder="域名" v-model="domain" clearable></el-input></el-col>
-    <el-col :span="10"><el-input placeholder="密钥" v-model="serial" show-password></el-input></el-col>
-    <el-col :span="4"><el-button @click='calc' icon="el-icon-search" ></el-button></el-col>
-  </el-row>
-  <br>
-  <el-divider>{{ result }}</el-divider>
-</div>
-</templete>
+
+::: tip
+算法还没写，求有缘人写一个算法
+:::
+
+<template>
+  <div style='margin-top: 100px;'>
+    <el-image class='my-title-img'
+      :src="$withBase('/bank.png')"></el-image>
+    <br>
+    <br>
+    <el-row :gutter="20">
+      <el-col :span="10"><el-input placeholder="域名" v-model="domain" clearable></el-input></el-col>
+      <el-col :span="10"><el-input placeholder="密钥" v-model="serial" show-password></el-input></el-col>
+      <el-col :span="4"><el-button @click='calc' icon="el-icon-search" ></el-button></el-col>
+    </el-row>
+    <br>
+    <el-divider>{{ result }}</el-divider>
+  </div>
+</template>
 
 <style>
 .my-title-img {

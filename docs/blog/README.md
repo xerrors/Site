@@ -121,6 +121,7 @@ export default {
 
 .el-card {
   margin-bottom: 10px;
+  animation: showup 1s forwards;
 }
 
 .page-guide-btn {
@@ -142,5 +143,17 @@ export default {
 .page-guide-btn div:hover {
   background-color: #4abf8a;
   cursor: pointer;
+}
+
+
+@keyframes showup {
+  0% {
+    transform: translateY(3rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 </style>

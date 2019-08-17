@@ -203,7 +203,7 @@ h1, h2, h3, p {
 
 @keyframes showup {
   0% {
-    transform: translateY(100px);
+    transform: translateY(6rem);
     opacity: 0;
   }
   100% {
