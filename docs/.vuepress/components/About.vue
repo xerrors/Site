@@ -4,7 +4,11 @@
           <el-card v-show="show==0" class="my-card" :body-style="{ padding: '0px' }">
               <div class="my-bg"></div>
               <div style="height: 50px; margin: 0;"></div>
-              <a class="my-avatar-link" @click="clickAvatar">
+              <a 
+                class="my-avatar-link" 
+                @click="clickAvatar"
+                :class="{ 'my-rotate': canRotate }"
+                >
                   <img class="my-avatar" :src="$withBase('/avatar.jpg')">
               </a>
               <div class="my-title" style="text-align: center">Angor</div>
@@ -49,7 +53,12 @@
               <h3 style="text-align: center">友链占位 3</h3>
           </el-card>
           <div class="my-button-box">
-            <el-button class="my-button" v-show="showButton" icon="el-icon-caret-bottom" circle @click="plusOne"></el-button>
+            <el-button 
+              class="my-button" 
+              v-show="showButton" 
+              icon="el-icon-caret-bottom" 
+              circle @click="plusOne"
+              ></el-button>
           </div>
         </div>
     </div>
@@ -62,7 +71,8 @@ export default {
       show: 0,
       cardNum: 4,
       showButton: true,
-      count: 0
+      count: 0,
+      canRotate: false
     }
   },
   methods: {
@@ -76,24 +86,8 @@ export default {
     clickAvatar() {
         this.count += 1;
           if (this.count > 10) {
-            this.count = 0;
-            this.$confirm('当当当当，恭喜你触发彩蛋，是否查看', 'Eggs', {
-            confirmButtonText: '当然看了',
-            cancelButtonText: '真无聊~',
-            type: 'success',
-            center: true
-          }).then(() => {
-            this.$message({
-              type: 'success',
-              message: '假装看完了!'
-            });
-          }).catch(() => {
-            this.$message({
-              type: 'info',
-              message: '已取消'
-            });
-          });
-        }
+            this.canRotate = true;
+          }
     }
   }
 };
@@ -189,6 +183,10 @@ h1, h2, h3, p {
   display: inline-block;
 }
 
+.my-rotate {
+  animation: myrotate linear 2s infinite;
+}
+
 @keyframes gradientBG {
 	0% {
 		background-position: 0% 50%;
@@ -215,5 +213,10 @@ h1, h2, h3, p {
 @keyframes showbtn {
   from { opacity: 0; }
   to { opacity: 1; }
+}
+
+@keyframes myrotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 </style>
