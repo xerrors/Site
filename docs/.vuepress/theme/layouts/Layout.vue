@@ -161,7 +161,7 @@ html, body {
 .my-layout-container {
   height: 100%;
   /*background: linear-gradient(-45deg, #fff1eb, #ace0f9, #e9defa, #fbfcdb);*/
-  background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+  background-image: linear-gradient(-45deg, #00dbde 0%, #fc00ff 100%);
   background-size: 400% 400%;
   animation: gradientBG 10s ease infinite;
 }

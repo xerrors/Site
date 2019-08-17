@@ -5,11 +5,11 @@ search: false
 navbar: false
 hideLastUpdated: True
 hideFooter: True
-# layout: About
+layout: About
 ---
 
 <template>
-    <div id="app" class="my-main-container">
+    <div id="app">
         <div class="my-container">
             <el-card v-show="show==0" class="my-card" :body-style="{ padding: '0px' }">
               <div class="my-bg"></div>
@@ -17,7 +17,7 @@ hideFooter: True
               <a class="my-avatar-link" @click="clickAvatar">
                   <img class="my-avatar" :src="$withBase('/avatar.jpg')">
               </a>
-              <h3 style="text-align: center">Angor</h3>
+              <div class="my-title" style="text-align: center">Angor</div>
               <br>
               <p>不想学深度学习的前端狗</p>
               <p>不是一个好的 CTF 选手</p>
@@ -111,24 +111,7 @@ export default {
 
 <style scoped>
 #app{
-    height: 100%
-}
-
-html, body{
-    width: 100%;
-    background-color: #cccccc;
-}
-
-h1, h2, h3, p {
-    color: #2c3e50;
-}
-
-.el-button {
-  display: block;
-  margin: 0 auto;
-}
-
-.my-main-container {
+    height: 100%;
     display:flex;/*Flex布局*/
     display: -webkit-flex; /* Safari */
     align-items:center;/*指定垂直居中*/
@@ -136,8 +119,21 @@ h1, h2, h3, p {
     height: 100%;
 }
 
-.my-container {
+h1, h2, h3, p {
+    color: #eee;
+}
+.my-title {
+  color: #eee;
+  font-size: 2.5rem;
+}
+
+.el-button {
+  display: block;
   margin: 0 auto;
+}
+
+.my-container {
+  /* margin: 0 auto; */
   text-align: center;
 }
 
