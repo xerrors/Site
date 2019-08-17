@@ -106,6 +106,7 @@ export default {
     align-items: center;/*指定垂直居中*/
     width: 100%;
     height: 100vh;
+    background:url(../public/dark.png) #444
 }
 
 h1, h2, h3, p {
@@ -116,13 +117,16 @@ h1, h2, h3, p {
   font-size: 2.5rem;
 }
 
-.el-button {
+.my-button {
+  animation: showbtn 1s infinite alternate; 
   display: block;
   margin: 0 auto;
+  background: inherit;
+  border-width: 0;
 }
 
-.my-button {
-    animation: showbtn 1s 1s forwards;
+.my-button:hover{
+  border-width: 2px;
 }
 
 .my-button-box {

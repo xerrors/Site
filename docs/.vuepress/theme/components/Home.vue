@@ -168,12 +168,17 @@ export default {
 .home
   .hero
     h1
+      opacity: 0;
       font-size: 10rem
       color white 
       margin-top 6.5rem
+      animation: showup 1s forwards
     p
+      opacity: 0;
       color white
+      animation: opacityto1 0.5s 0.5s forwards
     .action-button
+      opacity: 0;
       color white
       background-color rgba(0,0,0,0)
       padding 0.4rem 1.6rem
@@ -181,7 +186,32 @@ export default {
       transition border-color .3s ease
       box-sizing border-box
       border: 2px solid white
+      animation: opacityto1 0.5s 1s forwards
+
       &:hover
         background-color black
         border-color black
+
+@media (max-width: $MQMobileNarrow)
+  .home
+    .hero
+      h1
+        font-size 6rem
+
+
+@keyframes showup {
+  0% {
+    transform: translateY(6rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes opacityto1 {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 </style>

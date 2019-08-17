@@ -33,8 +33,16 @@
       <SearchBox v-else-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false"/>
       <NavLinks class="can-hide"/>
       <!-- 在这里添加了Girhub的 LOGO 比文字好看些 -->
-      <a :href="githubLink" style="display: flex; align-items: center; margin-left: 10px;">
-        <img class="my-svg" :src="$withBase('/svg/github.svg')" type="image/svg+xml" style="width: 1.4rem; height: 1.4rem;"/>
+      <a 
+        :href="githubLink" 
+        class="can-hide"
+        style="display: flex; align-items: center; margin-left: 10px;">
+        <img 
+          class="my-svg" 
+          :src="$withBase('/svg/github.svg')" 
+          type="image/svg+xml" 
+          style="width: 1.4rem; height: 1.4rem;"
+          />
       </a>
     </div>
   </header>
@@ -131,6 +139,7 @@ $navbar-horizontal-padding = 1.5rem
   .navbar
     padding-left 4rem
     .can-hide
+      opacity: 0
       display none
     .links
       padding-left 1.5rem
