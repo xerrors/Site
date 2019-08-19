@@ -6,7 +6,7 @@ module.exports = {
     sidebar: false,
     github: "https://github.com/Xerrors/Xerrors.github.io",
     logo: '/avatar.jpg',
-    lastUpdated: '上次更新',
+    lastUpdated: '上次修改',
     nav: [
       { text: '文章', link: '/blog/' },
       { text: '占位', link: '/blog/frontend/sources-guide.html' },
