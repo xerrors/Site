@@ -164,6 +164,8 @@ html, body {
   background-image: linear-gradient(-45deg, #00dbde 0%, #fc00ff 100%);
   background-size: 400% 400%;
   animation: gradientBG 10s ease infinite;
+  
+  user-select:none;
 }
 
 .my-layout-container * {
