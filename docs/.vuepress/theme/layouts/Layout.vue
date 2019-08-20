@@ -6,6 +6,9 @@
     @touchend="onTouchEnd"
   >
     <el-backtop></el-backtop>
+
+    <div :class="{ 'my-bg-home': $page.frontmatter.home }"></div>
+
     <Navbar :class="{ 'my-nav-home': $page.frontmatter.home, 'my-nav': !$page.frontmatter.home }"
       v-if="shouldShowNavbar"
       @toggle-sidebar="toggleSidebar"
@@ -150,6 +153,14 @@ export default {
 
 
 <style>
+/* 隐藏滚动条 */
+::-webkit-scrollbar {
+  width: 0 !important;
+}
+::-webkit-scrollbar {
+  width: 0 !important;height: 0;
+}
+
 html, body {
   height: 100%;
 }
@@ -158,11 +169,28 @@ html, body {
   height: 100%;
 }
 
+.nav-bar a{
+  position: relative;
+}
+
 .my-layout-container {
   height: 100%;
   /*background: linear-gradient(-45deg, #fff1eb, #ace0f9, #e9defa, #fbfcdb);*/
+  /* 
   background-image: linear-gradient(-45deg, #00dbde 0%, #fc00ff 100%);
   background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+  
+  user-select:none;
+  */
+}
+
+.my-bg-home {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(-45deg, #00dbde 0%, #fc00ff 100%);
+  background-size: 400% 400vh;
   animation: gradientBG 10s ease infinite;
   
   user-select:none;
@@ -174,6 +202,7 @@ html, body {
 
 .my-nav-home {
   background-color: rgba(256, 256, 256, 0);
+  color: white;
   border: 0;
 }
 

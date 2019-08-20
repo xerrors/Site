@@ -3,14 +3,15 @@ title: "博客"
 permalink: "blog"
 hideLastUpdated: True
 ---
-
-<!--参考大佬的界面 https://xin-tan.com/guide/-->
-
+<!--参考大佬的界面 https://xin-tan.com/guide/-->  
 > 最近更新 👇
 
 
 <template>
     <div>
+      <div class="my-blog-head">
+        <h1 v-for="tag in tags">{{ tag }}</h1>
+      </div>
       <el-card :body-style="{ padding: '5px' }" v-for="(post, index) in topPublishPosts">
         <div style="padding: 14px;">
           <span><el-link :underline="false" :href="post.path" type="primary">{{ post.title }}</el-link></span>
@@ -24,8 +25,13 @@ hideLastUpdated: True
           </div>
           <div class="bottom clearfix">
             <br>
-            <span><small>{{ post.formatDay }}</small></span>
-            <el-link style="float: right;" :href="post.path" type="primary" :underline="false">阅读全文</el-link>
+            <span><small><i class="el-icon-time"></i>  {{ post.formatDay }}</small></span>
+            <el-link 
+              style="float: right;" 
+              :href="post.path" 
+              type="primary" 
+              :underline="false"
+            ><i class="el-icon-view"> 阅读全文</i></el-link>
           </div>
         </div>
       </el-card>
@@ -41,6 +47,7 @@ export default {
     return {
       step: 5,
       posts: [],
+      tags: [],
       page: 1,
       num: 0,
       btnInfo: '加载更多',
@@ -54,13 +61,18 @@ export default {
     var temp = this.$site.pages
     // 筛选标签中带有 blog 标志的文章
     for (var i = 0; i < temp.length; i++) {
-      if (temp[i].frontmatter.tag) {  
+      if (temp[i].frontmatter.tag) {
+        for (var tag = 0; tag < temp[i].frontmatter.tag.length; tag++){
+          if (!tag in this.tags){
+            this.tags.push(tag)
+          }
+        }
         if (temp[i].frontmatter.tag == 'blog' || 'blog' == temp[i].frontmatter.tag[0]){
           this.posts.push(temp[i])
         }
       }
     }
-    
+
     this.num = this.posts.length
   },
 
@@ -127,6 +139,7 @@ export default {
 .page-guide-btn {
   text-align: center;
   margin: 30px 0;
+  animation: showup 1s forwards;
 }
 
 .page-guide-btn div {

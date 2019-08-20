@@ -9,6 +9,12 @@ vuepress build docs
 # 进入生成的文件夹
 cd docs/.vuepress/dist
 
+cp -r ./* /www/wwwroot/www.xerrors.fun/
+
+echo " "
+echo "  >>> 成功将资源文件复制到网站根目录 /www/wwwroot/www.xerrors.fun/"
+echo " "
+
 # 如果是发布到自定义域名
 # echo 'blog.xerrors.fun' > CNAME
 git init
@@ -17,7 +23,7 @@ git commit -m 'deploy'
 git push -f git@git.dev.tencent.com:Xerrors/Xerrors.git master
 
 echo " "
-echo "  >>> 成功将资源文件上传"
+echo "  >>> 成功将资源文件上传到 git@git.dev.tencent.com:Xerrors/Xerrors.git"
 echo " "
 
 cd -

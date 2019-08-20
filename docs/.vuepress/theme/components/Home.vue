@@ -40,6 +40,13 @@
 
     <Content class="theme-default-content custom"/>
 
+    <div style="height:300px;"></div>
+    <div style="height:300px;"></div>
+    <div style="height:300px;"></div>
+    <div style="height:300px;"></div>
+    <div style="height:300px;"></div>
+    <div style="height:300px;"></div>
+
     <div
       class="footer"
       v-if="data.footer"
