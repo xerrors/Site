@@ -174,7 +174,6 @@ export default {
       // 获取背景的高度
       var bg = document.getElementById('my-bg');
       var bgHeight = bg.offsetHeight;
-      console.log(bgHeight);
       let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
       that.scrollTop = scrollTop
 

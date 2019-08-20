@@ -9,8 +9,13 @@ hideLastUpdated: True
 
 <template>
     <div>
+    <!--标签列表-->
       <div class="my-blog-head">
-        <h1 v-for="tag in tags">{{ tag }}</h1>
+        <el-button 
+          plain 
+          style="margin: 10px; height: 40px;"
+          @click="myFlitter( tag )"
+          v-for="tag in tags">{{ tag }}</el-button>
       </div>
       <el-card :body-style="{ padding: '5px' }" v-for="(post, index) in topPublishPosts">
         <div style="padding: 14px;">
@@ -18,10 +23,10 @@ hideLastUpdated: True
           <div v-if="post.frontmatter.tag" style="display: inline-block; float: right;">
             <el-tag 
               size="mini" 
-              v-for="tag in post.frontmatter.tag"
+              v-for="item in post.frontmatter.tag"
               style="margin-left: 10px;"
               type="info"
-              >{{ tag }}</el-tag>
+              >{{ item }}</el-tag>
           </div>
           <div class="bottom clearfix">
             <br>
@@ -35,7 +40,7 @@ hideLastUpdated: True
           </div>
         </div>
       </el-card>
-      <div @click="loadMore" class="page-guide-btn" v-if="showBtn">
+      <div @click="loadMore" class="page-guide-btn" v-show="showBtn">
         <div ref="btn">{{ btnInfo }}</div>
       </div>
     </div>
@@ -60,24 +65,34 @@ export default {
     this.posts = []
     var temp = this.$site.pages
     // 筛选标签中带有 blog 标志的文章
+
     for (var i = 0; i < temp.length; i++) {
       if (temp[i].frontmatter.tag) {
-        for (var tag = 0; tag < temp[i].frontmatter.tag.length; tag++){
-          if (!tag in this.tags){
-            this.tags.push(tag)
+        var tempTag = temp[i].frontmatter.tag
+
+        for (var j = 0; j < tempTag.length; j++){
+          var isInTags = false
+
+          for (var k = 0; k < this.tags.length; k++){
+            if (tempTag[j] === this.tags[k]){
+              isInTags = true
+            }
+          }
+          if (!isInTags) {
+            this.tags.push(tempTag[j])
           }
         }
-        if (temp[i].frontmatter.tag == 'blog' || 'blog' == temp[i].frontmatter.tag[0]){
+        if (tempTag == 'blog' || 'blog' == tempTag[0]){
           this.posts.push(temp[i])
         }
       }
     }
-
     this.num = this.posts.length
   },
 
   computed: {
     topPublishPosts() {
+      this.showBtn =  this.page * this.step < this.num
       return this.getTopKPosts(this.page * this.step)
     }
   },
@@ -109,17 +124,28 @@ export default {
     },
 
     loadMore() {
-      if (this.timeout) {
-        return
-      }
+      this.page += 1
+    },
 
-      if (this.page * this.step >= this.num) {
-        this.btnInfo = '加载完成'
-        this.$refs.btn.style.opacity = 0
-        this.timeout = setTimeout(() => this.showBtn = false, 300)
-      } else {
-        this.page += 1
+    myFlitter(tag) {
+      this.page = 1
+      this.posts = []
+      var temp = this.$site.pages
+
+      for (var i = 0; i < temp.length; i++) {
+        if (temp[i].frontmatter.tag) {
+          var tempTag = temp[i].frontmatter.tag
+
+          for (var j = 0; j < tempTag.length; j++) {
+            if (tempTag[j] === tag) {
+              this.posts.push(temp[i])
+              break
+            }
+          }
+        }
       }
+      // console.log(this.posts)
+      this.num = this.posts.length
     }
   }
 }
@@ -127,8 +153,11 @@ export default {
 
 
 <style scoped>
-.el-link {
-  text-decoration: none;
+.my-blog-head {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-flow: row || wrap;
 }
 
 .el-card {

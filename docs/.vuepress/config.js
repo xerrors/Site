@@ -14,7 +14,6 @@ module.exports = {
       {
         text: '工具',
         items: [
-          { text: '寻密', link: '/tools/findpwd.html' },
           { text: '寻密', link: '/tools/findpwd.html' }
         ]
       }
