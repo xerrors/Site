@@ -199,6 +199,10 @@ export default {
         background-color black
         border-color black
 
+.nav-bar {
+  background-color: white;
+}
+
 @media (max-width: $MQMobileNarrow)
   .home
     .hero
@@ -222,3 +226,5 @@ export default {
   to { opacity: 1; }
 }
 </style>
+
+ 

@@ -7,9 +7,12 @@
   >
     <el-backtop></el-backtop>
 
-    <div :class="{ 'my-bg-home': $page.frontmatter.home }"></div>
+    <div id="my-bg" :class="{ 'my-bg-home': $page.frontmatter.home }"></div>
 
-    <Navbar :class="{ 'my-nav-home': $page.frontmatter.home, 'my-nav': !$page.frontmatter.home }"
+    <Navbar :class="{
+          'my-nav-home': $page.frontmatter.home && !scrollFlag, 
+          'my-nav': !$page.frontmatter.home || scrollFlag
+        }"
       v-if="shouldShowNavbar"
       @toggle-sidebar="toggleSidebar"
     />
@@ -63,7 +66,8 @@ export default {
 
   data () {
     return {
-      isSidebarOpen: false
+      isSidebarOpen: false,
+      scrollFlag: false
     }
   },
 
@@ -114,13 +118,30 @@ export default {
         },
         userPageClass
       ]
+    },
+
+    navClasses () {
+      return [
+        {
+          'my-nav-home': this.$page.frontmatter.home && !this.scrollFlag, 
+          'my-nav': !this.$page.frontmatter.home || this.scrollFlag
+        }
+      ]
     }
   },
 
   mounted () {
+    // 监听滚动事件
+    window.addEventListener('scroll', this.myScroll)
+
     this.$router.afterEach(() => {
       this.isSidebarOpen = false
     })
+  },
+
+  
+  destroyed () {
+    window.removeEventListener('scroll', this.myScroll)
   },
 
   methods: {
@@ -146,6 +167,22 @@ export default {
           this.toggleSidebar(false)
         }
       }
+    },
+
+    myScroll () {
+      const that = this
+      // 获取背景的高度
+      var bg = document.getElementById('my-bg');
+      var bgHeight = bg.offsetHeight;
+      console.log(bgHeight);
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+      that.scrollTop = scrollTop
+
+      if (that.scrollTop > bgHeight) {
+        that.scrollFlag = true
+      } else {
+        that.scrollFlag = false
+      }
     }
   }
 }
@@ -161,43 +198,18 @@ export default {
   width: 0 !important;height: 0;
 }
 
-html, body {
-  height: 100%;
-}
-
-#app {
-  height: 100%;
-}
-
-.nav-bar a{
-  position: relative;
-}
-
 .my-layout-container {
-  height: 100%;
-  /*background: linear-gradient(-45deg, #fff1eb, #ace0f9, #e9defa, #fbfcdb);*/
-  /* 
-  background-image: linear-gradient(-45deg, #00dbde 0%, #fc00ff 100%);
-  background-size: 400% 400%;
-  animation: gradientBG 10s ease infinite;
-  
   user-select:none;
-  */
 }
 
 .my-bg-home {
   position: absolute;
   width: 100%;
   height: 100vh;
+  min-height: 42rem;
   background-image: linear-gradient(-45deg, #00dbde 0%, #fc00ff 100%);
   background-size: 400% 400vh;
   animation: gradientBG 10s ease infinite;
-  
-  user-select:none;
-}
-
-.my-layout-container * {
-  border: 0;
 }
 
 .my-nav-home {
