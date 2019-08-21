@@ -4,22 +4,27 @@ permalink: "blog"
 hideLastUpdated: True
 ---
 <!--参考大佬的界面 https://xin-tan.com/guide/-->  
-> 最近更新 👇
-
+<!-- > 最近更新 👇 -->
 
 <template>
     <div>
     <!--标签列表-->
       <div class="my-blog-head">
-        <el-button 
-          plain 
-          style="margin: 10px; height: 40px;"
-          @click="myFlitter( tag )"
-          v-for="tag in tags">{{ tag }}</el-button>
+        <h3>标签 </h3>
+        <div class="my-tag-box">
+          <el-button 
+            :class="{ 'select-tag': tag == selectedTag }"
+            @click="myFlitter( tag )"
+            v-for="tag in tags"
+            type="primary"
+            size="small"
+            style="margin: 5px;"
+            plain>{{ tag }}</el-button>
+        </div>
       </div>
       <el-card :body-style="{ padding: '5px' }" v-for="(post, index) in topPublishPosts">
         <div style="padding: 14px;">
-          <span><el-link :underline="false" :href="post.path" type="primary">{{ post.title }}</el-link></span>
+          <span><el-link :underline="false" :href="post.path" type="primary"><strong>{{ post.title }}</strong></el-link></span>
           <div v-if="post.frontmatter.tag" style="display: inline-block; float: right;">
             <el-tag 
               size="mini" 
@@ -50,14 +55,14 @@ hideLastUpdated: True
 export default {
   data() {
     return {
-      step: 5,
+      step: 15,
       posts: [],
       tags: [],
       page: 1,
       num: 0,
       btnInfo: '加载更多',
       showBtn: true,
-      timeout: null,
+      selectedTag: "blog"
     }
   },
 
@@ -128,6 +133,7 @@ export default {
     },
 
     myFlitter(tag) {
+      this.selectedTag = tag
       this.page = 1
       this.posts = []
       var temp = this.$site.pages
@@ -153,11 +159,17 @@ export default {
 
 
 <style scoped>
-.my-blog-head {
-  width: 100%;
+.my-tag-box {
   height: 100px;
   display: flex;
-  flex-flow: row || wrap;
+  flex-flow: row wrap;
+  align-content: flex-start
+}
+
+.select-tag {
+  color: white;
+  background: #46BD87;
+  border-color: #46BD87;
 }
 
 .el-card {

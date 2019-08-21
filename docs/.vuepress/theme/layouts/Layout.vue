@@ -197,6 +197,10 @@ export default {
   width: 0 !important;height: 0;
 }
 
+html {
+  background-color: #f4f5f5;
+}
+
 .my-layout-container {
   user-select:none;
 }

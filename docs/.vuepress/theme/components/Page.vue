@@ -1,8 +1,8 @@
 <template>
   <main class="page">
     <slot name="top"/>
-    <div class="my-title-box">
-      <h3 class="my-title" v-if="isBlog">{{ this.$page.title }}</h3>
+    <div ref="title" class="my-title-box" v-if="isBlog">
+      <h3 class="my-title">{{ this.$page.title }}</h3>
       <div v-if="this.$page.frontmatter.tag" style="text-align: center">
         <el-tag 
           size="small" 
@@ -11,6 +11,7 @@
           >{{ tag }}</el-tag>
       </div>
     </div>
+
     <Content class="theme-default-content"/>
 
     <footer class="page-edit" v-if="showFooter">
@@ -75,6 +76,11 @@ import { resolvePage, outboundRE, endingSlashRE } from '../util'
 
 export default {
   props: ['sidebarItems'],
+
+  mounted() {
+    var content = document.getElementsByClassName("theme-default-content")[0];
+    this.$refs.title.style.width = content.offsetWidth + 'px';
+  },
 
   computed: {
     isBlog () {
@@ -221,7 +227,9 @@ function flatten (items, res) {
 @require '../styles/wrapper.styl'
 
 .my-title-box
-  margin: 5rem auto -3rem auto
+  padding-top: 1.5rem
+  margin: 5rem auto -5rem auto
+  background: white
 
 .my-title
   text-align: center
@@ -229,6 +237,11 @@ function flatten (items, res) {
 .page
   padding-bottom 2rem
   display block
+  background #f4f5f5
+
+.theme-default-content
+  background white
+  margin-top 2rem
 
 .page-edit
   @extend $wrapper
