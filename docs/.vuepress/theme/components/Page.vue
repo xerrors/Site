@@ -77,11 +77,6 @@ import { resolvePage, outboundRE, endingSlashRE } from '../util'
 export default {
   props: ['sidebarItems'],
 
-  mounted() {
-    var content = document.getElementsByClassName("theme-default-content")[0];
-    this.$refs.title.style.width = content.offsetWidth + 'px';
-  },
-
   computed: {
     isBlog () {
       // 判断这篇文章是不是博客
@@ -228,8 +223,7 @@ function flatten (items, res) {
 
 .my-title-box
   padding-top: 1.5rem
-  margin: 5rem auto -5rem auto
-  background: white
+  margin: 3rem auto -4rem auto
 
 .my-title
   text-align: center
@@ -237,11 +231,6 @@ function flatten (items, res) {
 .page
   padding-bottom 2rem
   display block
-  background #f4f5f5
-
-.theme-default-content
-  background white
-  margin-top 2rem
 
 .page-edit
   @extend $wrapper

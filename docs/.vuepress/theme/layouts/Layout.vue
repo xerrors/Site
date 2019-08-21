@@ -197,10 +197,6 @@ export default {
   width: 0 !important;height: 0;
 }
 
-html {
-  background-color: #f4f5f5;
-}
-
 .my-layout-container {
   user-select:none;
 }
@@ -210,6 +206,7 @@ html {
   width: 100%;
   height: 100vh;
   min-height: 42rem;
+  max-height: 80rem;
   background-image: linear-gradient(-45deg, #00dbde 0%, #fc00ff 100%);
   background-size: 400% 400vh;
   animation: gradientBG 10s ease infinite;
@@ -223,7 +220,8 @@ html {
 
 .my-nav {
   background-color: white;
-  border-bottom: 1px solid #eee
+  border-bottom: 1px solid #eee;
+	box-shadow: 0 1px 2px 0 rgba(0,0,0,.05);
 }
 
 @keyframes gradientBG {

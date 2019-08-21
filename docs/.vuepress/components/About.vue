@@ -13,8 +13,8 @@
               </a>
               <div class="my-title" style="text-align: center">Angor</div>
               <br>
-              <p>不想学深度学习的前端狗</p>
-              <p>不是一个好的 CTF 选手</p>
+              <p><img class="my-svg" :src="$withBase('/svg/quote-left.svg')" type="image/svg+xml"/>不想学深度学习的前端狗</p>
+              <p>不是一个好的 CTF 选手<img class="my-svg" :src="$withBase('/svg/quote-right.svg')" type="image/svg+xml"/></p>
               <br>
               <div class="my-something">
                   <a href="https://github.com/Xerrors">
@@ -134,8 +134,8 @@ h1, h2, h3, p {
 }
 
 .my-card {
-    width: 350px;
-    height: 450px;
+    width: 370px;
+    height: 600px;
     margin: 0 auto;
     border: 0px;
     opacity: 0;
@@ -163,6 +163,7 @@ h1, h2, h3, p {
   margin: 5px;
   width: 25px; 
   height: 25px;
+  display: inline-block;
 }
 
 .my-avatar {
