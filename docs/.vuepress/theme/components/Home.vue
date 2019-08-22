@@ -167,7 +167,7 @@ export default {
     text-align center
     color lighten($textColor, 25%)
     // add styles
-    background-color #f4f5f5f
+    background-color #f4f5f5
 
 @media (max-width: $MQMobile)
   .home

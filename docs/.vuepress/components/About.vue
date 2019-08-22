@@ -13,8 +13,19 @@
               </a>
               <div class="my-title" style="text-align: center">Angor</div>
               <br>
-              <p><img class="my-svg" :src="$withBase('/svg/quote-left.svg')" type="image/svg+xml"/>不想学深度学习的前端狗</p>
-              <p>不是一个好的 CTF 选手<img class="my-svg" :src="$withBase('/svg/quote-right.svg')" type="image/svg+xml"/></p>
+              <p>大三本科在读</p>
+              <p>计算机科学与技术专业</p>
+              <br>
+              <p>
+                <img class="my-svg" :src="$withBase('/svg/quote-left.svg')" type="image/svg+xml"/>
+                  不想学深度学习的前端狗
+                <img class="my-svg" :src="$withBase('/svg/quote-right.svg')" type="image/svg+xml"/>
+              </p>
+              <p>
+                <img class="my-svg" :src="$withBase('/svg/quote-left.svg')" type="image/svg+xml"/>
+                  不是一个好的 CTF 选手
+                <img class="my-svg" :src="$withBase('/svg/quote-right.svg')" type="image/svg+xml"/>
+              </p>
               <br>
               <div class="my-something">
                   <a href="https://github.com/Xerrors">
@@ -27,30 +38,6 @@
                     <img class="my-svg" :src="$withBase('/svg/tencent.svg')" type="image/svg+xml"/>
                   </a>
               </div>
-          </el-card>
-          <el-card v-show="show==1" class="my-card" :body-style="{ padding: '0px' }">
-              <div class="my-bg"></div>
-              <div style="height: 50px; margin: 0;"></div>
-              <a class="my-avatar-link" @click="clickAvatar">
-                  <img class="my-avatar" :src="$withBase('/avatar.jpg')">
-              </a>
-              <h3 style="text-align: center">友链占位 1</h3>
-          </el-card>
-          <el-card v-show="show==2" class="my-card" :body-style="{ padding: '0px' }">
-              <div class="my-bg"></div>
-              <div style="height: 50px; margin: 0;"></div>
-              <a class="my-avatar-link" @click="clickAvatar">
-                  <img class="my-avatar" :src="$withBase('/avatar.jpg')">
-              </a>
-              <h3 style="text-align: center">友链占位 2</h3>
-          </el-card>
-          <el-card v-show="show==3" class="my-card" :body-style="{ padding: '0px' }">
-              <div class="my-bg"></div>
-              <div style="height: 50px; margin: 0;"></div>
-              <a class="my-avatar-link" @click="clickAvatar">
-                  <img class="my-avatar" :src="$withBase('/avatar.jpg')">
-              </a>
-              <h3 style="text-align: center">友链占位 3</h3>
           </el-card>
           <div class="my-button-box">
             <el-button 
@@ -69,7 +56,7 @@ export default {
   data() {
     return {
       show: 0,
-      cardNum: 4,
+      cardNum: 1,
       showButton: true,
       count: 0,
       canRotate: false
@@ -138,6 +125,7 @@ h1, h2, h3, p {
     height: 600px;
     margin: 0 auto;
     border: 0px;
+    border-radius: 1rem;
     opacity: 0;
     animation: showup 1s forwards;
 }
@@ -152,9 +140,9 @@ h1, h2, h3, p {
     height: 100%;
     color: #fff;
     margin: 0;
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background: linear-gradient(-45deg, #833923, #9e2b57, #156683, #157c64);
     background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
+    animation: gradientBG 8s ease infinite;
     position: absolute;
     z-index: -1;
 }
