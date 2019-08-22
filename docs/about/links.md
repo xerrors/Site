@@ -14,10 +14,10 @@ hideLastUpdated: True
     <br>
     <div class="my-links">
         <el-card class="link-card" shadow="hover" v-for="link in links">
-          <img class="link-card__avatar" :src="$withBase('/avatar.jpg')"/>
-          <h3 class="link-card__title">Angor</h3>
-          <p>敬畏代码，敬畏技术</p>
-          <a href="https://xerrors.coding.me" target="_blank"><el-button class="link-card__button" round>去看看</el-button></a>
+          <img class="link-card__avatar" :src="link.avatar"/>
+          <h3 class="link-card__title">{{ link.title }}</h3>
+          <p>{{ link.description }}</p>
+          <a :href="link.site" target="_blank"><el-button class="link-card__button" round>去看看</el-button></a>
         </el-card>
         <el-card class="link-card" shadow="hover">
           欢迎互加友链
@@ -38,37 +38,14 @@ export default {
           "description": "敬畏代码，敬畏技术"
         },
         {
-          "title": "Angor",
-          "avatar": "https://xerrors.coding.me/avatar.jpg",
-          "site": "https://xerrors.coding.me",
-          "description": "敬畏代码，敬畏技术"
-        },
-        {
-          "title": "Angor",
-          "avatar": "https://xerrors.coding.me/avatar.jpg",
-          "site": "https://xerrors.coding.me",
-          "description": "敬畏代码，敬畏技术"
-        },
-        {
-          "title": "Angor",
-          "avatar": "https://xerrors.coding.me/avatar.jpg",
-          "site": "https://xerrors.coding.me",
-          "description": "敬畏代码，敬畏技术"
-        },
-        {
-          "title": "Angor",
-          "avatar": "https://xerrors.coding.me/avatar.jpg",
-          "site": "https://xerrors.coding.me",
-          "description": "敬畏代码，敬畏技术"
+          "title": "兰州小红鸡",
+          "avatar": "https://me.idealli.com/images/head.png",
+          "site": "https://me.idealli.com/",
+          "description": "代码记录成长"
         }
       ]
     }
-  },
-
-  mounted() {
-    console.log(this.$page)
   }
-
 }
 </script>
 
