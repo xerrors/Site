@@ -1,5 +1,5 @@
 ---
-permalink: '/findpwd'
+permalink: '/tools/findpwd'
 hideLastUpdated: True
 ---
 <template>

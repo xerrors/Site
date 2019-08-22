@@ -177,7 +177,7 @@ export default {
       let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
       that.scrollTop = scrollTop
 
-      if (that.scrollTop > bgHeight) {
+      if (that.scrollTop > bgHeight / 5) {
         that.scrollFlag = true
       } else {
         that.scrollFlag = false
@@ -206,10 +206,11 @@ export default {
   width: 100%;
   height: 100vh;
   min-height: 42rem;
-  max-height: 80rem;
+  max-height: 70rem;
   background-image: linear-gradient(-45deg, #00dbde 0%, #fc00ff 100%);
   background-size: 400% 400vh;
   animation: gradientBG 10s ease infinite;
+  z-index: -1;
 }
 
 .my-nav-home {

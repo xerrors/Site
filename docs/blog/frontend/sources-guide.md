@@ -92,3 +92,8 @@ Vue 在这几年是非常火的，也非常适合个人开发者学习。由于�
 
 - [阿里图标库](https://www.iconfont.cn/)
 - [超强的素材导航](http://www.uiqdw.com/zydh/sczy/)
+- [Drawkit](https://www.drawkit.io/) 超好看的平面插画,小型插画
+- [Humaaans](https://www.humaaans.com/)  特点是可以自定义
+- [Manpixels](https://gallery.manypixels.co/) 可以自定义颜色的场景插画
+- [IRAdesign](https://iradesign.io/gallery/illustrations) 自定义颜色的带背景插画
+- [unDraw](https://undraw.co/illustrations) 类似于Manpixels，人物多一点

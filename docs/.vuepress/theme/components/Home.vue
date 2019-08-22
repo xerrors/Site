@@ -1,11 +1,14 @@
 <template>
+<div>
   <main class="home" aria-labelledby="main-title">
     <header class="hero">
+      <!--
       <img
         v-if="data.heroImage"
         :src="$withBase(data.heroImage)"
         :alt="data.heroAlt || 'hero'"
       >
+      -->
 
       <h1 v-if="data.heroText !== null" id="main-title">{{ data.heroText || $title || 'Hello' }}</h1>
 
@@ -33,27 +36,26 @@
         v-for="(feature, index) in data.features"
         :key="index"
       >
-        <h2>{{ feature.title }}</h2>
-        <p>{{ feature.details }}</p>
+        <img
+          v-if="feature.image"
+          :src="$withBase(feature.image)"
+        >
+        <div class="my-text-box">
+          <h2>{{ feature.title }}</h2>
+          <p>{{ feature.details }}</p>
+        </div>
       </div>
     </div>
 
     <Content class="theme-default-content custom"/>
-
-    <div style="height:300px;"></div>
-    <div style="height:300px;"></div>
-    <div style="height:300px;"></div>
-    <div style="height:300px;"></div>
-    <div style="height:300px;"></div>
-    <div style="height:300px;"></div>
-
-    <div
+  </main>
+  <div
       class="footer"
       v-if="data.footer"
     >
-      {{ data.footer }}
-    </div>
-  </main>
+      <el-divider>{{ data.footer }}</el-divider>
+  </div>
+</div>
 </template>
 
 <script>
@@ -113,18 +115,39 @@ export default {
       &:hover
         background-color lighten($accentColor, 10%)
   .features
-    border-top 1px solid $borderColor
-    padding 1.2rem 0
+    // border-top 1px solid $borderColor
+    // padding 1.2rem 0
     margin-top 2.5rem
-    display flex
-    flex-wrap wrap
-    align-items flex-start
-    align-content stretch
-    justify-content space-between
+    // display flex
+    // flex-wrap wrap
+    // align-items flex-start
+    // align-content stretch
+    // justify-content space-between
+
+    // added below
+    // box-shadow 0 1px 2px 0 rgba(0,0,0,.05)
+    padding 2rem 0
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,0.1);
+    margin-top 20rem
+    border-radius 5px
+    background white
+    animation: showup 0.5s 2s forwards
   .feature
     flex-grow 1
     flex-basis 30%
-    max-width 30%
+    // max-width 30%
+    // add feature styles
+    width 100%
+    display flex
+    align-items center
+    justify-content center
+    // add img tag style
+    img
+      max-width 50%
+      margin 5rem auto
+      display block
+      height 12rem
+      object-fit contain
     h2
       font-size 1.4rem
       font-weight 500
@@ -133,19 +156,33 @@ export default {
       color lighten($textColor, 10%)
     p
       color lighten($textColor, 25%)
+    // add style of my-title-box
+    .my-text-box
+      text-align: left
+      width 50%
+
   .footer
     padding 2.5rem
     border-top 1px solid $borderColor
     text-align center
     color lighten($textColor, 25%)
+    // add styles
+    background-color #f4f5f5f
 
 @media (max-width: $MQMobile)
   .home
     .features
-      flex-direction column
+      // flex-direction column
     .feature
-      max-width 100%
-      padding 0 2.5rem
+      // max-width 100%
+      // padding 0 2.5rem
+      
+      // add styles
+      flex-direction column
+          // add style of my-title-box
+      .my-text-box
+        width 100%
+        text-align center
 
 @media (max-width: $MQMobileNarrow)
   .home
