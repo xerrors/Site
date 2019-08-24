@@ -8,16 +8,15 @@ module.exports = {
     logo: '/avatar.jpg',
     lastUpdated: '修改于',
     nav: [
-      { text: '文章', link: '/blog/' },
-      { text: '友链', link: '/about/links.html' },
-      { text: '更新内容', link: '/about/changelog.html' },
+      { text: '📃文章', link: '/blog/' },
+      { text: '🔗友链', link: '/about/links.html' },
       {
-        text: '工具',
+        text: '🔨工具',
         items: [
-          { text: '寻密', link: '/tools/findpwd.html' }
+          { text: '🔐寻密', link: '/tools/findpwd.html' }
         ]
       },
-      { text: '稳定版', link: 'https://xerrors.coding.me' }
+      { text: '🏆稳定版', link: 'https://xerrors.coding.me' }
     ]
   },
   // plugins: [

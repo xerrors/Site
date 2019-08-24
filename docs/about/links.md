@@ -8,7 +8,7 @@ hideLastUpdated: True
   <div>
     <h3>友链</h3>
     <p>
-      <a href="mailto:xerrors@163.com?subject=申请友链&body=网站标题： 网站头像链接： 网站描述： 网站地址：">申请友链</a>
+      <a href="mailto:xerrors@163.com?subject=申请友链&body=网站标题： 网站头像链接： 网站描述： 网站地址：">💌申请友链</a>
       请按照格式申请友链，并确保你的网站已经添加本站为友链
     </p>
     <br>
@@ -17,10 +17,12 @@ hideLastUpdated: True
           <img class="link-card__avatar" :src="link.avatar"/>
           <h3 class="link-card__title">{{ link.title }}</h3>
           <p>{{ link.description }}</p>
-          <a :href="link.site" target="_blank"><el-button class="link-card__button" round>去看看</el-button></a>
+          <a :href="link.site" target="_blank">
+            <el-button class="link-card__button" round>去看看 🚀
+          </el-button></a>
         </el-card>
         <el-card class="link-card" shadow="hover">
-          欢迎互加友链
+          欢迎互加友链😎
         </el-card>
     </div>
   </div>

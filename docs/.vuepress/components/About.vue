@@ -13,8 +13,8 @@
               </a>
               <div class="my-title" style="text-align: center">Angor</div>
               <br>
-              <p>大三本科在读</p>
-              <p>计算机科学与技术专业</p>
+              <p>📚大三本科在读</p>
+              <p>💻计算机科学与技术专业</p>
               <br>
               <p>
                 <img class="my-svg" :src="$withBase('/svg/quote-left.svg')" type="image/svg+xml"/>

@@ -53,7 +53,8 @@
       class="footer"
       v-if="data.footer"
     >
-      <el-divider>{{ data.footer }}</el-divider>
+      <!--<el-divider>{{ data.footer }}</el-divider>-->
+      {{ data.footer }}
   </div>
 </div>
 </template>
@@ -128,7 +129,7 @@ export default {
     // box-shadow 0 1px 2px 0 rgba(0,0,0,.05)
     padding 2rem 0
     box-shadow: 0 2px 12px 0 rgba(0,0,0,0.1);
-    margin-top 20rem
+    margin 20rem 0 10rem 0
     border-radius 5px
     background white
     animation: showup 0.5s 2s forwards
@@ -161,13 +162,13 @@ export default {
       text-align: left
       width 50%
 
-  .footer
-    padding 2.5rem
-    border-top 1px solid $borderColor
-    text-align center
-    color lighten($textColor, 25%)
-    // add styles
-    background-color #f4f5f5
+.footer
+  padding 2.5rem
+  border-top 1px solid $borderColor
+  text-align center
+  color lighten($textColor, 25%)
+  // add styles
+  // background-color #f4f5f5
 
 @media (max-width: $MQMobile)
   .home
