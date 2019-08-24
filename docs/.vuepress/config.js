@@ -16,7 +16,13 @@ module.exports = {
           { text: '🔐寻密', link: '/tools/findpwd.html' }
         ]
       },
-      { text: '🏆稳定版', link: 'https://xerrors.coding.me' }
+      { 
+        text: '🏆稳定版',
+        items: [
+          { text: '🔮静态版', link: 'https://xerrors.coding.me' },
+          { text: '🎉完整版（备案中）', link: 'https://www.xerrors.fun'}
+        ]
+      }
     ]
   },
   // plugins: [
