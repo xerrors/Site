@@ -225,6 +225,10 @@ export default {
 	box-shadow: 0 1px 2px 0 rgba(0,0,0,.05);
 }
 
+.nav-dropdown {
+  color:  #2c3e50;
+}
+
 @keyframes gradientBG {
 	0% {
 		background-position: 0% 50%;
