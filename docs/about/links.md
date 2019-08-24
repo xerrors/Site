@@ -84,8 +84,9 @@ export default {
       &:hover
         transform:rotate(-1deg);
 
-@media (max-width: 1000px)
+@media (max-width: 600px)
   .my-links
     flex-direction column
-    justify-content center
+    .link-card
+      margin 1rem auto
 </style>

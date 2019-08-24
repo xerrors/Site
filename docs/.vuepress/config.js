@@ -19,7 +19,8 @@ module.exports = {
       { 
         text: '🏆稳定版',
         items: [
-          { text: '🔮静态版', link: 'https://xerrors.coding.me' },
+          { text: '🔮静态版（Coding）', link: 'https://xerrors.coding.me' },
+          { text: '🎨静态版（GitHub）', link: 'https://xerrors.github.io' },
           { text: '🎉完整版（备案中）', link: 'https://www.xerrors.fun'}
         ]
       }
