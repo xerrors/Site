@@ -1,12 +1,14 @@
 ---
+title: 动态
 permalink: /zone
+hideLastUpdated: True
 ---
 
 <template>
     <div>
       <div class="my-head">
         <!-- <h3 class="my-head__title">动态</h3> -->
-        <img class="my-head__svg" :src="$withBase('/svg/zone-bg.svg')" type="image/svg+xml" />
+        <img class="my-head__svg" :src="$withBase('/svg/zone-bg.svg')" type="image/svg+xml" draggable="false"/>
       </div>
       <div class="my-input">
         <div class="my-input__content">
@@ -60,7 +62,15 @@ export default {
           date: new Date(2019, 7, 25, 0, 0, 4),
           msg: '该死的备案，网站突然没法 https 访问了，可以 http 访问，我查了一大堆资料，花费了四五个小时，一直报错 ERR_CONNECTION_RESET，我还没学到计算机网络呢，哪里看得懂啊！最后才知道是因为没备案。。。',
           status: '😫'
-        }
+        }, {
+          date: new Date(2019, 7, 25, 0, 0, 3),
+          msg: '该死的备案，网站突然没法 https 访问了，可以 http 访问，我查了一大堆资料，花费了四五个小时，一直报错 ERR_CONNECTION_RESET，我还没学到计算机网络呢，哪里看得懂啊！最后才知道是因为没备案。。。',
+          status: '😫'
+        }, {
+          date: new Date(2019, 7, 25, 0, 0, 2),
+          msg: '该死的备案，网站突然没法 https 访问了，可以 http 访问，我查了一大堆资料，花费了四五个小时，一直报错 ERR_CONNECTION_RESET，我还没学到计算机网络呢，哪里看得懂啊！最后才知道是因为没备案。。。',
+          status: '😫'
+        },
       ],
       options: ['😄', '😎', '😫', '😏', '😡', '😨' ],
     } 
@@ -68,7 +78,7 @@ export default {
 
   methods: {
     submit() { 
-      if (!this.newMsg.msg || this.newMsg.status) {
+      if (!this.newMsg.msg || !this.newMsg.status) {
         this.$message.error('🤔状态或者内容不能为空哦~');
         return
       }
@@ -110,8 +120,6 @@ export default {
     display block
 
 .my-input
-  width 80%
-  margin-left 5rem
   margin-bottom 2rem
   border-radius 3px
 
@@ -130,8 +138,6 @@ export default {
   width 100%
 
   .my-msg
-    width 80%
-    margin-left 5rem
     margin-bottom 2.5rem
     border: 1px solid #d1d5da;
     border-radius 3px
@@ -153,10 +159,4 @@ export default {
     
     &__body
       padding 1rem
-
-@media (max-width: 719px)
-  .my-msg
-    width 100%
-    margin-left 0
-
 </style>

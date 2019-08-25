@@ -39,6 +39,7 @@
         <img
           v-if="feature.image"
           :src="$withBase(feature.image)"
+          draggable="false"
         >
         <div class="my-text-box">
           <h2>{{ feature.title }}</h2>
