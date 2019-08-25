@@ -49,6 +49,8 @@ hideLastUpdated: True
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   data() {
     return {
@@ -57,26 +59,45 @@ export default {
         msg: '',
         status: ''
       },
-      msgs: [
-        {
-          date: new Date(2019, 7, 25, 0, 0, 4),
-          msg: '该死的备案，网站突然没法 https 访问了，可以 http 访问，我查了一大堆资料，花费了四五个小时，一直报错 ERR_CONNECTION_RESET，我还没学到计算机网络呢，哪里看得懂啊！最后才知道是因为没备案。。。',
-          status: '😫'
-        }, {
-          date: new Date(2019, 7, 25, 0, 0, 3),
-          msg: '该死的备案，网站突然没法 https 访问了，可以 http 访问，我查了一大堆资料，花费了四五个小时，一直报错 ERR_CONNECTION_RESET，我还没学到计算机网络呢，哪里看得懂啊！最后才知道是因为没备案。。。',
-          status: '😫'
-        }, {
-          date: new Date(2019, 7, 25, 0, 0, 2),
-          msg: '该死的备案，网站突然没法 https 访问了，可以 http 访问，我查了一大堆资料，花费了四五个小时，一直报错 ERR_CONNECTION_RESET，我还没学到计算机网络呢，哪里看得懂啊！最后才知道是因为没备案。。。',
-          status: '😫'
-        },
-      ],
+      msgs: [],
       options: ['😄', '😎', '😫', '😏', '😡', '😨' ],
     } 
   },
 
   methods: {
+    getMsgs() {
+      axios.get('http://116.62.110.131:8000/api/zone/getData')
+      .then(res=>{
+        // console.log(res);
+        for (var item of res.data.data) {
+          item.date = new Date(Date.parse(item.date))
+        }
+        this.msgs = res.data.data;
+      })
+      .catch(function (error) {
+        console.log(error);
+      })
+    },
+
+    uploadMsg(data) {
+      axios({
+            method: 'post',
+            url: 'http://116.62.110.131:8000/api/zone/upload',
+            data: JSON.stringify(data)
+      }).then(res=>{
+        // console.log(res)
+        // 本地改变数据
+        if (res.data.code != 200 ) {
+          this.$message.error(res.data.message);
+        } else {
+          this.msgs.splice(0, 0, data.data);
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+      })
+    },
+
     submit() { 
       if (!this.newMsg.msg || !this.newMsg.status) {
         this.$message.error('🤔状态或者内容不能为空哦~');
@@ -88,12 +109,20 @@ export default {
           inputPattern: /^[A-Za-z0-9]{5,13}$/,
           inputErrorMessage: 'Token 格式不正确😕'
         }).then(({ value }) => {
-          this.msgs.splice(0, 0, {
-            date: new Date(),
-            msg: this.newMsg.msg,
-            status: this.newMsg.status,
+          // 创建临时变量
+          var temp = {
+            data: {
+              date: new Date(),
+              msg: this.newMsg.msg,
+              status: this.newMsg.status,
+              // status: 'happy',
+            },
             token: value
-          })
+          }
+          // 发起 axios 请求
+          this.uploadMsg(temp)
+
+          // 消息清空
           this.newMsg.msg = ''
           this.newMsg.status = ''
         }).catch(() => {
@@ -103,6 +132,10 @@ export default {
           });       
         });
     }
+  },
+
+  mounted() {
+    this.getMsgs();
   }
 }
 </script>
