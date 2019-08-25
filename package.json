@@ -6,6 +6,7 @@
   "author": "Xerrors <xerrors@163.com>",
   "license": "MIT",
   "dependencies": {
+    "clipboard": "^2.0.4",
     "element-ui": "^2.11.1",
     "js-md5": "^0.7.3"
   },
