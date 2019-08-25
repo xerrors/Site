@@ -4,7 +4,7 @@
 
 - [ ] 动态功能点赞功能
 
-- [x] 使用 Nodejs 设置后端
+- [x] 使用 Nodejs 设置后端 [博客](https://blog.csdn.net/zhaoxiang66/article/details/79894209) [教程](https://www.runoob.com/nodejs/node-js-get-post.html)
 
 - [ ] 使用数据库管理后端内容
 
