@@ -154,4 +154,9 @@ export default {
     &__body
       padding 1rem
 
+@media (max-width: 719px)
+  .my-msg
+    width 100%
+    margin-left 0
+
 </style>
