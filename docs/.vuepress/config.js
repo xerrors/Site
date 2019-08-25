@@ -10,6 +10,7 @@ module.exports = {
     nav: [
       { text: '📃文章', link: '/blog/' },
       { text: '🔗友链', link: '/about/links.html' },
+      { text: '🤪动态', link: '/cool/zone.html' },
       {
         text: '🔨工具',
         items: [
