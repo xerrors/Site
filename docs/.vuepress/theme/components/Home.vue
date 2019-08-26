@@ -211,11 +211,8 @@ export default {
     .hero
       h1
         font-size 6rem
-    .features
-      // flex-direction column
     .feature
       flex-direction column
-      // add style of my-title-box
       img 
         margin 3rem auto
       .my-text-box
