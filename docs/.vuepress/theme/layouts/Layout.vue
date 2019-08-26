@@ -229,6 +229,13 @@ export default {
   color:  #2c3e50;
 }
 
+@media (max-width: 410px){
+  .my-bg-home {
+    min-height: 30rem;
+    max-height: 50rem;
+  }
+}
+
 @keyframes gradientBG {
 	0% {
 		background-position: 0% 50%;

@@ -170,42 +170,6 @@ export default {
   color lighten($textColor, 25%)
   // add styles
   // background-color #f4f5f5
-
-@media (max-width: $MQMobile)
-  .home
-    .features
-      // flex-direction column
-    .feature
-      // max-width 100%
-      // padding 0 2.5rem
-      
-      // add styles
-      flex-direction column
-          // add style of my-title-box
-      .my-text-box
-        width 100%
-        text-align center
-
-@media (max-width: $MQMobileNarrow)
-  .home
-    padding-left 1.5rem
-    padding-right 1.5rem
-    .hero
-      img
-        max-height 210px
-        margin 2rem auto 1.2rem
-      h1
-        font-size 2rem
-      h1, .description, .action
-        margin 1.2rem auto
-      .description
-        font-size 1.2rem
-      .action-button
-        font-size 1rem
-        padding 0.6rem 1.2rem
-    .feature
-      h2
-        font-size 1.25rem
 </style>
 
 
@@ -242,12 +206,38 @@ export default {
   background-color: white;
 }
 
-@media (max-width: $MQMobileNarrow)
+@media (max-width: 700px)
   .home
     .hero
       h1
         font-size 6rem
+    .features
+      // flex-direction column
+    .feature
+      flex-direction column
+      // add style of my-title-box
+      img 
+        margin 3rem auto
+      .my-text-box
+        width 80%
+        text-align center
 
+@media (max-width: 419px)
+  .home
+    padding-left 1.5rem
+    padding-right 1.5rem
+    .hero
+      h1, .description, .action
+        margin 1.2rem auto
+      .description
+        font-size 1.2rem
+      .action-button
+        font-size 1rem
+        padding 0.6rem 1.2rem
+    .featureflex-direction column
+      // add style of my-title-box
+      h2
+        font-size 1.25rem
 
 @keyframes showup {
   0% {
