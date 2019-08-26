@@ -82,7 +82,7 @@ export default {
     uploadMsg(data) {
       axios({
             method: 'post',
-            url: 'http://116.62.110.131:8000/api/zone/upload',
+            url: 'https://116.62.110.131:8001/api/zone/upload',
             data: JSON.stringify(data)
       }).then(res=>{
         // console.log(res)

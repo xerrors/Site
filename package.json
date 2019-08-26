@@ -8,6 +8,7 @@
   "dependencies": {
     "clipboard": "^2.0.4",
     "element-ui": "^2.11.1",
+    "express": "^4.17.1",
     "js-md5": "^0.7.3"
   },
   "devDependencies": {
