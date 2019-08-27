@@ -83,7 +83,8 @@ export default {
 
       &:hover
         transform:rotate(-1deg);
-
+        text-decoration none
+        
 @media (max-width: 600px)
   .my-links
     flex-direction column
