@@ -27,26 +27,29 @@ tabs:
     links:
     - name: i春秋
       description: 比赛以及练习平台
-      link: www.ichunqiu.com
+      link: https://www.ichunqiu.com
 
 - label: 前端
   name: three
   classes:
   - title: 速查平台
     links: 
-    - name: W3School
-      description: 好用的网站
-      link: www.google.com
+    - name: W3CSchool
+      description: 词典网站
+      link: https://www.w3cschool.cn/dict/
   
 
 - label: 深度学习
   name: four
   classes:
-  - title: 速查平台
+  - title: 课程
     links: 
-    - name: W3School
-      description: 好用的网站
-      link: www.google.com
+    - name: 吴恩达
+      description: 全面、基础
+      link: https://study.163.com/course/courseMain.htm?courseId=1004570029
+    - name: 课程笔记
+      description: 吴恩达课程的笔记 
+      link: https://github.com/fengdu78/Coursera-ML-AndrewNg-Notes
 
 - label: Python
   name: five
