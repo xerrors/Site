@@ -3,6 +3,7 @@ title: "导航"
 permalink: "guide"
 hideLastUpdated: True
 
+
 tabs: 
 - label: 计算机
   name: one
@@ -18,6 +19,12 @@ tabs:
     - name: Aliyun
       description: 云服务器
       link: https://cn.aliyun.com
+
+- title: 电子读物
+  links:
+  - name: 程序员的自我修养
+    description: 基础读物
+    link: https://legacy.gitbook.com/book/leohxj/a-programmer-prepares/details
       
 
 - label: 网络安全
@@ -37,7 +44,28 @@ tabs:
     - name: W3CSchool
       description: 词典网站
       link: https://www.w3cschool.cn/dict/
-  
+
+    - name: 印记中文
+      description: 前端文档资源
+      link: https://docschina.org/
+
+  - title: 资源平台
+    links:
+    - name: IconFont
+      description: 阿里图标库
+      link: https://iconfont.cn/
+
+    - name: ColorHunt
+      description: 配色参考网站
+      link: https://colorhunt.co
+
+    - name: Tools
+      description: 前端工具推荐
+      link: https://illustration.tools/
+
+    - name: IRA
+      description: 插画推荐
+      link: https://iradesign.io/
 
 - label: 深度学习
   name: four
@@ -70,8 +98,8 @@ tabs:
           <div class="my-classes-box">
             <a :href="link.link" v-for="link in myClass.links" target="_blank">
               <div class="my-link-box">
-                <span style="font-size: small; margin-bottom: 5px;">{{ link.name }}</span>
-                <span style="font-size: xsmall; color: #8f8f8f;">{{ link.description }}</span>
+                <span style="margin-bottom: 5px;">{{ link.name }}</span>
+                <span style="font-size: smaller; color: #8f8f8f;">{{ link.description }}</span>
               </div>
             </a>
           </div>
