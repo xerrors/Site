@@ -3,7 +3,6 @@ title: "导航"
 permalink: "guide"
 hideLastUpdated: True
 
-
 tabs: 
 - label: 计算机
   name: one
@@ -20,11 +19,11 @@ tabs:
       description: 云服务器
       link: https://cn.aliyun.com
 
-- title: 电子读物
-  links:
-  - name: 程序员的自我修养
-    description: 基础读物
-    link: https://legacy.gitbook.com/book/leohxj/a-programmer-prepares/details
+  - title: 电子读物
+    links:
+    - name: 程序员的自我修养
+      description: 基础读物
+      link: https://legacy.gitbook.com/book/leohxj/a-programmer-prepares/details
       
 
 - label: 网络安全
@@ -94,7 +93,7 @@ tabs:
     <el-tabs v-model="activeName">
       <el-tab-pane v-for="tab in tabs" :label="tab.label" :name="tab.name">
         <div v-for="myClass in tab.classes">
-          <h3>{{ myClass.title }}</h3>
+          <h4>{{ myClass.title }}</h4>
           <div class="my-classes-box">
             <a :href="link.link" v-for="link in myClass.links" target="_blank">
               <div class="my-link-box">
