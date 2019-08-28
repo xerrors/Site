@@ -87,7 +87,8 @@ export default {
     align-items: center;/*指定垂直居中*/
     width: 100%;
     height: 100vh;
-    background:url(../public/dark.png) #444
+    background:url(../public/dark.png) #444;
+    user-select: none;
 }
 
 h1, h2, h3, p {

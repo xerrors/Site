@@ -1,4 +1,8 @@
 module.exports = {
+  head: [
+    ['link', { rel: 'manifest', href: '/manifest.json' }],
+    ['link', { rel: 'apple-touch-icon', href: '/favicon.png' }],
+  ],
   title: 'Angor',
   description: 'Angor playground',
   permalink: "/:year/:month/:day/:slug",
@@ -28,6 +32,7 @@ module.exports = {
       }
     ]
   },
+  // plugins: ['@vuepress/pwa'],
   // plugins: [
   //   [
   //     '@vuepress/google-analytics',
