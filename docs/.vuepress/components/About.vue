@@ -122,6 +122,7 @@ h1, h2, h3, p {
 }
 
 .my-card {
+    color: #c9e4d7;
     width: 370px;
     height: 600px;
     margin: 0 auto;
@@ -129,6 +130,10 @@ h1, h2, h3, p {
     border-radius: 1rem;
     opacity: 0;
     animation: showup 1s forwards;
+}
+
+.el-card__body{
+  height: 100%;
 }
 
 .my-card *{
@@ -139,9 +144,10 @@ h1, h2, h3, p {
 .my-bg {
     width: 100%;
     height: 100%;
-    color: #fff;
+    color: #c8e3d6;
     margin: 0;
-    background: linear-gradient(-45deg, #833923, #9e2b57, #156683, #157c64);
+    background-color: #028080;
+    background-image: linear-gradient(116deg, #028080 8%, #931c1e 92%);
     background-size: 400% 400%;
     animation: gradientBG 8s ease infinite;
     position: absolute;
@@ -167,6 +173,7 @@ h1, h2, h3, p {
 
 .my-something {
   margin: 0 auto;
+  align-self: flex-end;
 }
 
 .my-something a {
