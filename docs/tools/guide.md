@@ -70,8 +70,8 @@ tabs:
           <div class="my-classes-box">
             <a :href="link.link" v-for="link in myClass.links" target="_blank">
               <div class="my-link-box">
-                <span style="margin-bottom: 5px;">{{ link.name }}</span>
-                <span style="font-size: small; color: #8f8f8f;">{{ link.description }}</span>
+                <span style="font-size: small; margin-bottom: 5px;">{{ link.name }}</span>
+                <span style="font-size: xsmall; color: #8f8f8f;">{{ link.description }}</span>
               </div>
             </a>
           </div>
