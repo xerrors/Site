@@ -26,6 +26,10 @@ tabs:
       description: 代码截图工具
       link: https://carbon.now.sh/
 
+    - name: NICRTOOL+
+      description: 常用工具合集
+      link: http://www.nicetool.net/
+
   - title: 电子读物
     links:
     - name: 程序员的自我修养
@@ -50,6 +54,15 @@ tabs:
       description: 比赛以及练习平台
       link: https://www.ichunqiu.com
 
+  - title: 工具
+    links: 
+    - name: 在线工具
+      description: CTF 在线工具集
+      link: 
+
+    - name: quipqiup
+      description: 词频分析
+      link: https://quipqiup.com/
 
 - label: 前端
   name: three
@@ -68,6 +81,10 @@ tabs:
     - name: IconFont
       description: 阿里图标库
       link: https://iconfont.cn/
+
+    - name: EasyIcon
+      description: 比较全的图标库
+      link: https://www.easyicon.net
 
     - name: Tools
       description: 前端工具推荐
