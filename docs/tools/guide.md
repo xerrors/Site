@@ -191,9 +191,9 @@ export default {
 }
 
 .my-link-box{
-  width: 8rem;
+  width: 8.3rem;
   height: 4rem;
-  margin: 1.4rem;
+  margin: 0.4rem;
   border: 1px solid #d1d5da;
   border-radius: 3px;
   text-align: center;

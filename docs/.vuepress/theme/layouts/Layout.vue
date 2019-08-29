@@ -197,6 +197,12 @@ export default {
   width: 0 !important;height: 0;
 }
 
+/**修改选中的颜色以及背景 */
+::selection {
+  color: #fff;
+  background: #282c34;
+}
+
 .my-layout-container {
   user-select:none;
 }
