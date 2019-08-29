@@ -27,6 +27,10 @@ tabs:
 
   - title: 工具
     links: 
+    - name: 语雀
+      description: 文档协作平台
+      link: https://www.yuque.com/
+
     - name: Carbon
       description: 代码截图工具
       link: https://carbon.now.sh/
