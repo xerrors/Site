@@ -6,11 +6,15 @@
 
 - [ ] 标签云
 
+- [ ] 网站备案
+
+- [ ] 使用 PWA
+
 - [ ] 动态功能点赞功能
 
-- [x] 使用 Nodejs 设置后端 [博客](https://blog.csdn.net/zhaoxiang66/article/details/79894209) [教程](https://www.runoob.com/nodejs/node-js-get-post.html)
-
 - [ ] 使用数据库管理后端内容
+
+- [x] 使用 Nodejs 设置后端 [博客](https://blog.csdn.net/zhaoxiang66/article/details/79894209) [教程](https://www.runoob.com/nodejs/node-js-get-post.html)
 
 - [x] 配置主题 [主题继承](https://juejin.im/post/5d00bf28e51d4555e372a5d8)
 
@@ -21,12 +25,6 @@
 - [x] 把搜索框和按钮换成其他样式的
 
 - [x] 添加动画
-
-- [ ] 网站备案
-
-- [ ] 使用 PWA
-
-- [ ] ~~Google-Analysis -- 失败了，也懒得弄了~~
 
 - [x] 实现粘贴板功能 [Clipboard.js](https://clipboardjs.com/) [教程](https://juejin.im/post/5c80754ef265da2da23d5624)
 
@@ -39,6 +37,8 @@
 - [x] 创建关于界面
 
 - [x] 添加渐变色主题
+
+- [ ] ~~Google-Analysis -- 失败了，也懒得弄了~~
 
 - [ ] ~~设置导航栏自动隐藏 感觉没必要~~
 

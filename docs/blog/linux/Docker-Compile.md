@@ -200,6 +200,9 @@ $ docker run -it -p 8080:8080 -v /Site/docs:/root/vuepress node bash
 #### 安装环境
 
 ```sh
+# 切换路径
+$ cd /root/vuepress
+
 # 安装 Vuepress
 $ npm install -g vuepress
 
