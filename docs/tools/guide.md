@@ -41,8 +41,8 @@ tabs:
 
   - title: 电子读物
     links:
-    - name: 程序员的自我修养
-      description: 基础读物
+    - name: 自我修养
+      description: 闲来读物
       link: https://legacy.gitbook.com/book/leohxj/a-programmer-prepares/details
 
     - name: Markdown
@@ -73,6 +73,7 @@ tabs:
       description: 词频分析
       link: https://quipqiup.com/
 
+      
 - label: 前端
   name: three
   classes:
