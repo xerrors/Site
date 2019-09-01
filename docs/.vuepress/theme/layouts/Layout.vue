@@ -189,12 +189,10 @@ export default {
 
 
 <style>
-/* 隐藏滚动条 */
+/* 隐藏滚动条 */ 
 ::-webkit-scrollbar {
   width: 0 !important;
-}
-::-webkit-scrollbar {
-  width: 0 !important;height: 0;
+  height: 0;
 }
 
 /**修改选中的颜色以及背景 */
