@@ -25,8 +25,17 @@ tabs:
       description: 技术论坛
       link: https://www.infoq.cn/
 
+    - name: iData
+      description: 仿知网
+      link: https://www.cn-ki.net/
+
+    - name: Creative
+      description: 灵感与创意
+      link: https://creativemass.cn/#/
+
   - title: 工具
     links: 
+
     - name: 语雀
       description: 文档协作平台
       link: https://www.yuque.com/
@@ -42,7 +51,7 @@ tabs:
   - title: 电子读物
     links:
     - name: 自我修养
-      description: 闲来读物
+      description: 基础读物
       link: https://legacy.gitbook.com/book/leohxj/a-programmer-prepares/details
 
     - name: Markdown
@@ -50,7 +59,7 @@ tabs:
       link: https://shd101wyy.github.io/markdown-preview-enhanced/#/zh-cn/
 
     - name: Docker
-      description: Docker 从入门到实践
+      description: 从入门到实践
       link: https://legacy.gitbook.com/book/yeasy/docker_practice/details
       
 
@@ -73,7 +82,6 @@ tabs:
       description: 词频分析
       link: https://quipqiup.com/
 
-      
 - label: 前端
   name: three
   classes:
@@ -107,6 +115,10 @@ tabs:
     - name: Khroma
       description: 利用AI训练颜色*
       link: http://khroma.co/
+
+    - name: Grabient
+      description: 渐变色调色
+      link: https://www.grabient.com/
 
     - name: Grabient
       description: 渐变色调色
@@ -149,13 +161,13 @@ tabs:
     <el-tabs v-model="activeName">
       <el-tab-pane v-for="tab in tabs" :label="tab.label" :name="tab.name">
         <div v-for="myClass in tab.classes">
-          <h4>{{ myClass.title }}</h4>
+          <div class="my-class-title">{{ myClass.title }}</div>
           <div class="my-classes-box">
             <a :href="link.link" v-for="link in myClass.links" target="_blank">
-              <div class="my-link-box">
-                <span style="margin-bottom: 5px;">{{ link.name }}</span>
-                <span style="font-size: smaller; color: #8f8f8f;">{{ link.description }}</span>
-              </div>
+              <el-card class="my-link-box">
+                <div style="margin-bottom: 5px;">{{ link.name }}</div>
+                <div style="font-size: smaller; color: #8f8f8f; text-overflow: ellipsis;">{{ link.description }}</div>
+              </el-card>
             </a>
           </div>
         </div>
@@ -183,6 +195,7 @@ export default {
 
 <style scoped>
 .my-classes-box {
+  padding: 1rem;
   display: flex;
   flex-wrap: wrap;
   a {
@@ -195,19 +208,37 @@ export default {
   text-decoration: none;
 }
 
-.my-link-box{
+.my-class-title {
+  width: 5rem;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  color: white;
+  background-color: #0093E9;
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+  border-radius: 4px;
+  text-align: center;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+  user-select: none;
+}
+
+.my-link-box {
   width: 8.3rem;
   height: 4rem;
   margin: 0.4rem;
-  border: 1px solid #d1d5da;
-  border-radius: 3px;
+  /* border: 1px solid #f1f1f1; */
+  /* border-radius: 3px; */
   text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  transition:all 0.1s;
 }
 
 .my-link-box:hover {
-  background: #a3f78c20
+  transform:scale(1.05);
+  border-color: #fff;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
 }
 </style>

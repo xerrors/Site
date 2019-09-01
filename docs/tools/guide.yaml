@@ -20,8 +20,17 @@ tabs:
       description: 技术论坛
       link: https://www.infoq.cn/
 
+    - name: iData
+      description: 仿知网
+      link: https://www.cn-ki.net/
+
+    - name: Creative
+      description: 灵感与创意
+      link: https://creativemass.cn/#/
+
   - title: 工具
     links: 
+
     - name: 语雀
       description: 文档协作平台
       link: https://www.yuque.com/
@@ -37,7 +46,7 @@ tabs:
   - title: 电子读物
     links:
     - name: 自我修养
-      description: 闲来读物
+      description: 基础读物
       link: https://legacy.gitbook.com/book/leohxj/a-programmer-prepares/details
 
     - name: Markdown
@@ -45,7 +54,7 @@ tabs:
       link: https://shd101wyy.github.io/markdown-preview-enhanced/#/zh-cn/
 
     - name: Docker
-      description: Docker 从入门到实践
+      description: 从入门到实践
       link: https://legacy.gitbook.com/book/yeasy/docker_practice/details
       
 
@@ -68,7 +77,6 @@ tabs:
       description: 词频分析
       link: https://quipqiup.com/
 
-      
 - label: 前端
   name: three
   classes:
@@ -102,6 +110,10 @@ tabs:
     - name: Khroma
       description: 利用AI训练颜色*
       link: http://khroma.co/
+
+    - name: Grabient
+      description: 渐变色调色
+      link: https://www.grabient.com/
 
     - name: Grabient
       description: 渐变色调色

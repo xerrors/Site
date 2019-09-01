@@ -191,8 +191,18 @@ export default {
 <style>
 /* 隐藏滚动条 */ 
 ::-webkit-scrollbar {
-  width: 0 !important;
-  height: 0;
+  width: 0.5rem !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #f2f2f2;
+  border-radius: 0.25rem;
+  transition: .3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #c2c2c2;
+  cursor: pointer;
 }
 
 /**修改选中的颜色以及背景 */
