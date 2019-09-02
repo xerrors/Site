@@ -191,7 +191,7 @@ export default {
 <style>
 /* 隐藏滚动条 */ 
 ::-webkit-scrollbar {
-  width: 0.5rem !important;
+  width: 0.3rem !important;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -240,7 +240,7 @@ export default {
 .my-nav {
   background-color: white;
   border-bottom: 1px solid #eee;
-	box-shadow: 0 1px 2px 0 rgba(0,0,0,.05);
+	box-shadow: 0 1px 12px 0 rgba(0,0,0,.05);
 }
 
 .nav-dropdown {

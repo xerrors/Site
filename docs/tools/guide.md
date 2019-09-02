@@ -158,10 +158,10 @@ tabs:
 
 <template>
   <div class="my-guide-container">
-    <el-tabs v-model="activeName">
+    <el-tabs v-model="activeName" type="card">
       <el-tab-pane v-for="tab in tabs" :label="tab.label" :name="tab.name">
         <div v-for="myClass in tab.classes">
-          <div class="my-class-title">{{ myClass.title }}</div>
+          <div class="my-class-title"><strong>{{ myClass.title }}</strong></div>
           <div class="my-classes-box">
             <a :href="link.link" v-for="link in myClass.links" target="_blank">
               <el-card class="my-link-box">
@@ -233,12 +233,10 @@ export default {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  transition:all 0.1s;
+  transition:all 0.3s;
 }
 
 .my-link-box:hover {
-  transform:scale(1.05);
-  border-color: #fff;
-  box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+  transform: scale(1.05);
 }
 </style>

@@ -11,23 +11,24 @@ module.exports = {
     github: "https://github.com/Xerrors/Xerrors.github.io",
     logo: '/avatar.jpg',
     lastUpdated: '修改于',
+    search: false,
     nav: [
-      { text: '📃文章', link: '/blog/' },
-      { text: '🔗友链', link: '/about/links.html' },
-      { text: '🤪动态', link: '/cool/zone.html' },
+      { text: '📃 文章', link: '/blog/' },
+      { text: '🤪 动态', link: '/cool/zone.html' },
+      { text: '🔗 友链', link: '/about/links.html' },
       {
-        text: '🔨工具',
+        text: '🔨 工具',
         items: [
-          { text: '🔐寻密', link: '/tools/findpwd.html' },
-          { text: '🚥导航', link: '/tools/guide.html' }
+          { text: '🔐 寻密', link: '/tools/findpwd.html' },
+          { text: '🚥 导航', link: '/tools/guide.html' }
         ]
       },
       { 
-        text: '🏆稳定版',
+        text: '🏆 稳定版',
         items: [
-          { text: '🔮静态版（Coding）', link: 'https://xerrors.coding.me' },
-          { text: '🎨静态版（GitHub）', link: 'https://xerrors.github.io' },
-          { text: '🎉完整版（备案中）', link: 'https://www.xerrors.fun'}
+          { text: '🔮 静态版（Coding）', link: 'https://xerrors.coding.me' },
+          { text: '🎨 静态版（GitHub）', link: 'https://xerrors.github.io' },
+          { text: '🎉 完整版（备案中）', link: 'https://www.xerrors.fun'}
         ]
       }
     ]
