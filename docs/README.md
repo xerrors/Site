@@ -21,5 +21,5 @@ features:
   details: 当有开心的事情的时候，一定要跟朋友分享；
 
 
-footer: Copyright © 2019-present Angor
+footer: Copyright © 2019-present ❤️ Angor
 ---

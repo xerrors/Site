@@ -36,6 +36,14 @@ tabs:
   - title: 工具
     links: 
 
+    - name: ProcessOn
+      description: 在线作图
+      link: https://www.processon.com/
+
+    - name: GitMind
+      description: 在线脑图
+      link: https://app.gitmind.cn/
+
     - name: 语雀
       description: 文档协作平台
       link: https://www.yuque.com/

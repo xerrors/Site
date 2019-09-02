@@ -237,6 +237,10 @@ export default {
   border: 0;
 }
 
+.my-nav-home .site-name {
+  color: white
+}
+
 .my-nav {
   background-color: white;
   border-bottom: 1px solid #eee;
