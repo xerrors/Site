@@ -1,18 +1,21 @@
 <template>
   <main class="page">
     <slot name="top"/>
-    <div ref="title" class="my-title-box" v-if="isBlog">
-      <h3 class="my-title">{{ this.$page.title }}</h3>
-      <div v-if="this.$page.frontmatter.tag" style="text-align: center">
-        <el-tag 
-          size="small" 
-          v-for="tag in this.$page.frontmatter.tag"
-          style="margin: 5px;"
-          >{{ tag }}</el-tag>
+    <!--<div class="my-top-box" style="height: 5rem;"></div>-->
+    <div class="my-main">
+      <div ref="title" class="my-title-box" v-if="isBlog">
+        <h3 class="my-title">{{ this.$page.title }}</h3>
+        <div v-if="this.$page.frontmatter.tag" style="text-align: center">
+          <el-tag 
+            size="small" 
+            v-for="tag in this.$page.frontmatter.tag"
+            style="margin: 5px;"
+            >{{ tag }}</el-tag>
+        </div>
       </div>
-    </div>
 
-    <Content class="theme-default-content"/>
+      <Content class="theme-default-content"/>
+    </div>
 
     <footer class="page-edit" v-if="showFooter">
       <div
@@ -220,6 +223,13 @@ function flatten (items, res) {
 
 <style lang="stylus">
 @require '../styles/wrapper.styl'
+
+.my-main
+  // 刨坑保留
+  // max-width 740px
+  // min-height 100vh
+  // margin: 0 auto;
+  // background-color white
 
 .my-title-box
   padding-top: 1.5rem
