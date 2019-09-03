@@ -44,6 +44,10 @@ tabs:
       description: 在线脑图
       link: https://app.gitmind.cn/
 
+    - name: CN-Office
+      description: 在线格式转换
+      link: https://cn.office-converter.com
+
     - name: 语雀
       description: 文档协作平台
       link: https://www.yuque.com/
@@ -139,6 +143,10 @@ tabs:
     - name: Whoosh
       description: 有趣的插画
       link: https://www.ls.graphics/whoosh
+
+    - name: Cssfx
+      description: 即拿即用的CSS
+      link: https://cssfx.dev/
       
 
 - label: 深度学习
