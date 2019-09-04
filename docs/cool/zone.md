@@ -66,7 +66,7 @@ export default {
 
   methods: {
     getMsgs() {
-      axios.get('https://116.62.110.131:8001/api/zone/getData')
+      axios.get('https://www.xerrors.fun:8001/api/zone/getData')
       .then(res=>{
         // console.log(res);
         for (var item of res.data.data) {
@@ -82,7 +82,7 @@ export default {
     uploadMsg(data) {
       axios({
             method: 'post',
-            url: 'https://116.62.110.131:8001/api/zone/upload',
+            url: 'https://www.xerrors.fun:8001/api/zone/upload',
             data: data
       }).then(res=>{
         // console.log(res)

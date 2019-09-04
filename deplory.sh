@@ -53,4 +53,4 @@ echo " "
 
 cd ~/Nodejs 
 
-node zone.js
+forever start zone.js
