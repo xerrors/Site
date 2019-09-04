@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-cd /Site
+cd ~/Site
 
 # 确保脚本抛出遇到的错误
 set -e
