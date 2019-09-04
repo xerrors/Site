@@ -50,3 +50,7 @@ git push -f git@github.com:Xerrors/Site.git master
 echo " "
 echo "  >>> 成功将资源文件上传到 GitHub [ git@github.com:Xerrors/Site.git ]"
 echo " "
+
+cd ~/Nodejs 
+
+node zone.js
