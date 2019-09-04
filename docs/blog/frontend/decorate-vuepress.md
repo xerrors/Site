@@ -70,7 +70,7 @@ Tips: 如果只想在主界面出现渐变色标题栏，可以修改为
 
 其中第四行是我选择的渐变颜色，修改之后可以看到导航栏已经变色，但是后面的文字链接的背景却依然是白色。
 
-![预览](C:\Users\jayzh\Desktop\asset\nav-bar-2.png)
+![mark](http://src.xerrors.fun/blog/20190904/H7Bbc7zwQyqv.png)
 
 ##### 修改 Navlink.vue
 
@@ -90,7 +90,7 @@ Tips: 如果只想在主界面出现渐变色标题栏，可以修改为
 
 然后就搞定了。。。（在此之前我修改了最后面的 GitHub 标志以及前面头像的圆角）
 
-![预览](C:\Users\jayzh\Desktop\asset\nav-bar.png)
+![mark](http://src.xerrors.fun/blog/20190904/vFg8D9n9uyLT.png)
 
 #### 全局禁用 Sidebar
 
@@ -192,11 +192,11 @@ html, body {
 
 从最终结果来看是可以的，但是当部署上线的时候就会发现，`index.styl` 的优先级是更高的。第一张图是在 Dev Mode 的情况下，可以看到，`.my-nav-home` 的优先级是高于 `.navbar` 的。
 
-![1565923400516](C:\Users\jayzh\Desktop\asset\debug1)
+![mark](http://src.xerrors.fun/blog/20190904/4rv4ENUYKbWj.png)
 
 但是在生产环境下，`.my-nav-home` 的优先级是低于 `.navbar` 的 :arrow_down_small:
 
-![1565923464284](C:\Users\jayzh\Desktop\asset\debug2.png)
+![mark](http://src.xerrors.fun/blog/20190904/rCc8bX81OaEF.png)
 
 ##### 尝试二
 
@@ -244,7 +244,7 @@ html, body {
 
 先看效果图：
 
-![1565933952279](C:\Users\jayzh\Desktop\asset\home.png)
+![mark](http://src.xerrors.fun/blog/20190904/v9R82Kfpjos2.png?imageslim)
 
 我这里的渐变色做了调整，更加适合全屏，同时加入了动态渐变色。
 
