@@ -23,14 +23,6 @@ module.exports = {
           { text: '🚥 导航', link: '/tools/guide.html' }
         ]
       },
-      { 
-        text: '🏆 稳定版',
-        items: [
-          { text: '🔮 静态版（Coding）', link: 'https://xerrors.coding.me' },
-          { text: '🎨 静态版（GitHub）', link: 'https://xerrors.github.io' },
-          { text: '🎉 完整版', link: 'https://www.xerrors.fun'}
-        ]
-      }
     ]
   },
   // plugins: ['@vuepress/pwa'],
