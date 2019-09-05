@@ -233,7 +233,7 @@ export default {
   background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
   border-radius: 4px;
   text-align: center;
-  box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+  /* box-shadow: 0 2px 12px 0 rgba(0,0,0,.1); */
   user-select: none;
 }
 
@@ -249,7 +249,7 @@ export default {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  transition:all 0.3s;
+  transition:all 0.2s;
 }
 
 .my-link-box:hover {

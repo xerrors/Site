@@ -30,7 +30,7 @@ hideLastUpdated: True
     </el-divider>
     <el-collapse>
       <el-collapse-item title="关于">
-        <p>密码长度时恒定的 16 位，如果部分平台不支持这个长度，就各取所需。</p>
+        <p>密码长度是恒定的 16 位，且包含特殊字符，如果部分平台不支持这个长度，就各取所需。</p>
         <p>密钥请妥善保管，加密算法公开。</p>
         <p>密码根据密钥本地生成，不涉及数据上传，平台也不保存密码。</p>
       </el-collapse-item>
