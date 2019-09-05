@@ -174,7 +174,7 @@ export default {
 
 .el-card {
   margin-bottom: 10px;
-  animation: showup 1s forwards;
+  animation: showup .6s forwards;
 }
 
 .page-guide-btn {
