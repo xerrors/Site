@@ -45,8 +45,7 @@ hideLastUpdated: True
 
 <style>
 .my-title-img {
-  width: 100px; 
-  height: 100px; 
+  width: 20rem; 
   margin: 0 auto;
   display: block;
 }
