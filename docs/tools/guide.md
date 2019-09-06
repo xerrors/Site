@@ -181,13 +181,13 @@ tabs:
     <el-tabs v-model="activeName" type="card">
       <el-tab-pane v-for="tab in tabs" :label="tab.label" :name="tab.name">
         <div v-for="myClass in tab.classes">
-          <div class="my-class-title"><strong>{{ myClass.title }}</strong></div>
+          <div class="my-class-title">{{ myClass.title }}</div>
           <div class="my-classes-box">
             <a :href="link.link" v-for="link in myClass.links" target="_blank">
-              <el-card class="my-link-box">
+              <div class="my-link-box">
                 <div style="margin-bottom: 5px;">{{ link.name }}</div>
                 <div style="font-size: smaller; color: #8f8f8f; text-overflow: ellipsis;">{{ link.description }}</div>
-              </el-card>
+              </div>
             </a>
           </div>
         </div>
@@ -230,14 +230,13 @@ export default {
 
 .my-class-title {
   width: 5rem;
-  padding: 0.5rem;
-  margin: 1rem 0;
+  padding: 0.2rem;
+  margin: 1rem 0 0 0;
   color: white;
   background-color: #0093E9;
   background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
-  border-radius: 4px;
+  border-radius: 2px;
   text-align: center;
-  /* box-shadow: 0 2px 12px 0 rgba(0,0,0,.1); */
   user-select: none;
 }
 
@@ -245,8 +244,9 @@ export default {
   width: 8.3rem;
   height: 4rem;
   margin: 0.4rem;
-  /* border: 1px solid #f1f1f1; */
-  /* border-radius: 3px; */
+  background-color: #fcfcfc;
+  border: 1px solid #f1f1f1;
+  border-radius: 3px;
   text-align: center;
   white-space: nowrap;
   text-overflow: ellipsis;

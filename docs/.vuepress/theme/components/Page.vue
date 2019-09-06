@@ -234,7 +234,7 @@ function flatten (items, res) {
 
 .my-title-box
   padding-top: 1.5rem
-  margin: 0rem auto -4rem auto
+  margin: 0rem auto
 
 .my-title
   text-align: center

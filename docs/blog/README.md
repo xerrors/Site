@@ -12,17 +12,16 @@ hideLastUpdated: True
       <div class="my-blog-head">
         <h3>标签 </h3>
         <div class="my-tag-box">
-          <el-button 
-            :class="{ 'select-tag': tag == selectedTag }"
+          <div
+            class='my-tags' 
+            :class="{ 'select-tag': tag == selectedTag, 'normal-tag': tag != selectedTag }"
             @click="myFlitter( tag )"
             v-for="tag in tags"
-            type="primary"
-            size="small"
-            style="margin: 5px;"
-            plain>{{ tag }}</el-button>
+            style="margin: 5px;">{{ tag }}</div>
         </div>
       </div>
-      <el-card :body-style="{ padding: '5px' }" v-for="(post, index) in topPublishPosts">
+      <el-divider></el-divider>
+      <div class="my-card" :body-style="{ padding: '5px' }" v-for="(post, index) in topPublishPosts">
         <div style="padding: 14px;">
           <span><el-link :underline="false" :href="post.path" type="primary"><strong>{{ post.title }}</strong></el-link></span>
           <div v-if="post.frontmatter.tag" style="display: inline-block; float: right;">
@@ -44,7 +43,7 @@ hideLastUpdated: True
             ><i class="el-icon-view"> 阅读全文</i></el-link>
           </div>
         </div>
-      </el-card>
+      </div>
       <div @click="loadMore" class="page-guide-btn" v-show="showBtn">
         <div ref="btn">{{ btnInfo }}</div>
       </div>
@@ -160,20 +159,32 @@ export default {
 
 <style scoped>
 .my-tag-box {
-  height: 100px;
+  /* height: 100px; */
   display: flex;
   flex-flow: row wrap;
   align-content: flex-start
 }
 
-.select-tag {
-  color: white;
-  background: #46BD87;
-  border-color: #46BD87;
+.my-tags {
+  padding: 0.3rem .5rem;
+  display: inline-block;
+  cursor: pointer;
+  font-size: XX-SMALL;
 }
 
-.el-card {
-  margin-bottom: 10px;
+.my-tags:hover {
+  color: white;
+  background: #282C34;
+  border-color: #282C34;
+}
+
+.select-tag {
+  color: white;
+  background: #282C34;
+  border-color: #282C34;
+}
+
+.my-card {
   animation: showup .6s forwards;
 }
 
