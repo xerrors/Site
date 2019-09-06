@@ -186,6 +186,7 @@ export default {
 
 .my-card {
   animation: showup .6s forwards;
+  border-bottom: 1px solid #f2f2f2;
 }
 
 .page-guide-btn {

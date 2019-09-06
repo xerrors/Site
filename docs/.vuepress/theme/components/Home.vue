@@ -168,8 +168,6 @@ export default {
   border-top 1px solid $borderColor
   text-align center
   color lighten($textColor, 25%)
-  // add styles
-  // background-color #f4f5f5
 </style>
 
 
