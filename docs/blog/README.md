@@ -170,6 +170,7 @@ export default {
   display: inline-block;
   cursor: pointer;
   font-size: XX-SMALL;
+  transition: all 0.5s ease;
 }
 
 .my-tags:hover {
