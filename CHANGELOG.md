@@ -6,13 +6,15 @@
 
 - [ ] 标签云
 
-- [x] 网站备案
-
 - [ ] 使用 PWA
 
 - [ ] 动态功能点赞功能
 
 - [ ] 使用数据库管理后端内容
+
+- [x] 更改网站主题为黑白博客色调
+
+- [x] 网站备案
 
 - [x] 使用 Nodejs 设置后端 [博客](https://blog.csdn.net/zhaoxiang66/article/details/79894209) [教程](https://www.runoob.com/nodejs/node-js-get-post.html)
 
