@@ -226,14 +226,15 @@ function flatten (items, res) {
 
 .my-main
   // 刨坑保留
-  // max-width 740px
-  // min-height 100vh
-  // margin: 0 auto;
-  // background-color white
+  max-width 53rem
+  min-height 100vh
+  margin: 0 auto;
+  background-color white
+  box-shadow: 0 1px 2px 0 rgba(34,36,38,.15);
 
 .my-title-box
   padding-top: 1.5rem
-  margin: 3rem auto -4rem auto
+  margin: 0rem auto -4rem auto
 
 .my-title
   text-align: center
@@ -241,6 +242,7 @@ function flatten (items, res) {
 .page
   padding-bottom 2rem
   display block
+  background #f0f2f5
 
 .page-edit
   @extend $wrapper

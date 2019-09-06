@@ -38,19 +38,23 @@
 
     <Home v-if="$page.frontmatter.home"/>
 
-    <Page
-      v-else
-      :sidebar-items="sidebarItems"
-    >
-      <slot
-        name="page-top"
-        slot="top"
-      />
-      <slot
-        name="page-bottom"
-        slot="bottom"
-      />
-    </Page>
+    
+    <div v-else>
+      <div style="height: 4.5rem; width: 100%; background: #f0f2f5;"></div>
+
+      <Page
+        :sidebar-items="sidebarItems"
+      >
+        <slot
+          name="page-top"
+          slot="top"
+        />
+        <slot
+          name="page-bottom"
+          slot="bottom"
+        />
+      </Page>
+    </div>
   </div>
 </template>
 
@@ -223,9 +227,6 @@ export default {
   max-height: 70rem;
   background-color: #028080;
   background-image: linear-gradient(116deg, #028080 5%, #931c1e 95%);
-
-
-
   background-size: 400% 400vh;
   animation: gradientBG 20s ease infinite;
   z-index: -1;
@@ -243,7 +244,7 @@ export default {
 
 .my-nav {
   background-color: white;
-  border-bottom: 1px solid #eee;
+  /*box-shadow: 0 1px 2px 0 rgba(34,36,38,.15);*/
 	box-shadow: 0 1px 12px 0 rgba(0,0,0,.05);
 }
 
