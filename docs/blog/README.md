@@ -169,7 +169,7 @@ export default {
   padding: 0.3rem .5rem;
   display: inline-block;
   cursor: pointer;
-  font-size: XX-SMALL;
+  font-size: 1rem;
   transition: all 0.5s ease;
 }
 

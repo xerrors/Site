@@ -246,6 +246,7 @@ export default {
   background-color: white;
   /*box-shadow: 0 1px 2px 0 rgba(34,36,38,.15);*/
 	box-shadow: 0 1px 12px 0 rgba(0,0,0,.05);
+  transition: all 0.5s ease;
 }
 
 .nav-dropdown {
