@@ -11,7 +11,7 @@ vuepress build docs
 # 进入生成的文件夹
 cd docs/.vuepress/dist
 
-cp -r ./* /www/wwwroot/www.xerrors.fun/
+cp -r ./* /www/wwwroot/www.xerrors.fun
 
 echo " "
 echo "  >>> 成功将资源文件复制到网站根目录 /www/wwwroot/www.xerrors.fun/"
