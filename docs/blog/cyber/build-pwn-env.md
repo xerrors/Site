@@ -68,6 +68,6 @@ $ sudo apt-get install gdb
 安装 `PEDA` 插件 [其他插件](https://blog.csdn.net/gatieme/article/details/63254211)
 
 ```bash
-git clone https://github.com/longld/peda.git ~/peda
-echo "source ~/peda/peda.py" >> ~/.gdbinit
+git clone https://github.com/longld/peda.git ~/.peda
+echo "source ~/.peda/peda.py" >> ~/.gdbinit
 ```

