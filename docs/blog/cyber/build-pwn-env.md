@@ -31,8 +31,6 @@ $ python3 --version
 
 ### [默认版本](https://github.com/Gallopsled/pwntools/)
 
-默认 pwntools 经尝试已经无法安装，使用[官方教程](https://github.com/Gallopsled/pwntools#readme)安装：
-
 ```bash
 apt-get update
 apt-get install python-dev git libssl-dev libffi-dev build-essential
@@ -40,11 +38,17 @@ pip install --upgrade pip
 pip install --upgrade pwntools
 ```
 
-这里安装的时候出现了一个问题
+如果使用的是阿里云的服务器，或者是设置了 pip 源为阿里云的话，可能会出现下面的问题。
 
 > ERROR: Package 'more-itertools' requires a different Python: 2.7.15 not in '>=3.4'
 
-pwntools 所依赖的一个库在一次更新中选择了弃用 Python2 不再支持 Python2。
+不过我们可以在安装的时候指定镜像源：
+
+```bash
+pip install --upgrade pwntools -i https://pypi.tuna.tsinghua.edu.cn/simple
+```
+
+解决！
 
 ### [Python3 开发版本](https://github.com/Gallopsled/pwntools/tree/dev3)
 
@@ -68,6 +72,18 @@ $ sudo apt-get install gdb
 安装 `PEDA` 插件 [其他插件](https://blog.csdn.net/gatieme/article/details/63254211)
 
 ```bash
-git clone https://github.com/longld/peda.git ~/.peda
-echo "source ~/.peda/peda.py" >> ~/.gdbinit
+$ git clone https://github.com/longld/peda.git ~/.peda
+$ echo "source ~/.peda/peda.py" >> ~/.gdbinit
+```
+
+但是在运行的时候会产生 `peda-session` 文件，所以需要编辑一下
+
+```bash
+$ vim lib/config.py
+```
+
+把第 35 行，`autosave` `on` 改成 `off`
+
+```python
+"autosave"  : ("on", "auto saving peda session, e.g: on|off"),
 ```
