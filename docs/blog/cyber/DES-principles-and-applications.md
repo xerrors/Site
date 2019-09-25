@@ -2,7 +2,8 @@
 title: DES 原理以及应用
 permalink: /DES-principles-and-applications
 date: 2019-09-09 10:59:30
-tags: 
+tag: 
+ - blog
  - 密码学
  - 网安
 categories:
