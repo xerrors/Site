@@ -232,6 +232,48 @@ float_bits float_f2i(float_bits f) {
 }
 ```
 
+### 检验程序
+
+```c
+int main() {
+   float_bits f = 0;
+   float_bits f_nan = 0x7F988a89;
+   float_bits f_pos = 0x79898a89;
+   float_bits f_neg = 0x99898a89;
+   printf("原数：\t\tNaN:%X\t正数:%X\t负数:%X\n", f_nan, f_pos, f_neg);
+   printf("绝对值：\tNaN:%X\t正数:%X\t负数:%X\n", 
+           float_abs(f_nan), float_abs(f_pos), float_abs(f_neg));
+   printf("取反：\t\tNaN:%X\t正数:%X\t负数:%X\n", 
+           float_neg(f_nan), float_neg(f_pos), float_neg(f_neg));
+   printf("减半：\t\tNaN:%X\t正数:%X\t负数:%X\n", 
+           float_half(f_nan), float_half(f_pos), float_half(f_neg));
+   printf("两倍\t\tNaN:%X\t正数:%X\t负数:%X\n", 
+           float_twice(f_nan), float_twice(f_pos), float_twice(f_neg));
+   /*
+   100 = 0x1100100 => 0 1000 0101 10010000000000000000000
+                   => 0100 0010 1100 1000 0000 0000 0000 0000
+                   => 4   2   C   8   0   0   0   0
+                   => 42C80000
+   */
+   printf("int: \t %d \t\t- > float:\t %X\n", 100, float_i2f(100));
+   printf("float: \t %X \t- > int:\t %d\n\n", 
+           float_i2f(100), float_f2i(float_i2f(100)));
+
+   printf("int: \t %d \t- > float:\t %X\n", -2147483648, float_i2f(-2147483648));
+   printf("float: \t %X \t\t- > int:\t %d\n", 
+           float_i2f(-2147483648), float_f2i(float_i2f(-2147483648)));
+   return 0;
+}
+```
+
+前面的检验都没有什么问题，直到最后的时候，我对一个特殊值进行检验，`- 2^32 ` 这个数是在int 的表示范围的，所以就用这个数表示一下，但是，当输出的时候就出现了意外。两次`printf`函数，结构是一样的，输出形式是一样的，但是结果却不一样。
+
+![mark](http://src.xerrors.fun/blog/20191024/j9rRPvKnwkcY.png?imageslim)
+
+具体原因不清楚！没搞懂
+
+ 
+
 ## 总结
 
 在编程的过程中，掩码的操作需要在脑子里或者纸上演示才能得到最后的效果。当直接去操作二进制的时候也就有更高的灵活性。
