@@ -44,6 +44,12 @@ export default {
           "avatar": "https://me.idealli.com/images/head.png",
           "site": "https://me.idealli.com/",
           "description": "代码记录成长"
+        },
+        {
+          "title": "故事胶片",
+          "avatar": "https://toc.lieme.cn/img/avatar.gif",
+          "site": "https://toc.lieme.cn/",
+          "description": "用胶片定格故事的乐趣"
         }
       ]
     }
