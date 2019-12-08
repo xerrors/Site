@@ -9,7 +9,8 @@
     "clipboard": "^2.0.4",
     "element-ui": "^2.11.1",
     "express": "^4.17.1",
-    "js-md5": "^0.7.3"
+    "js-md5": "^0.7.3",
+    "md564": "^0.2.1"
   },
   "devDependencies": {
     "@vuepress/plugin-google-analytics": "^1.0.0-rc.1",

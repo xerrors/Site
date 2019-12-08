@@ -19,7 +19,7 @@ layout: About
               </a>
               <div class="my-title" style="text-align: center">Angor</div>
               <br>
-              <p>不想学深度学习的前端狗</p>
+              <p>不想学深度学习的前端</p>
               <p>不是一个好的 CTF 选手</p>
               <br>
               <div class="my-something">
