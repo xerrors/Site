@@ -227,7 +227,7 @@ function flatten (items, res) {
 .my-main
   // 刨坑保留
   max-width 53rem
-  min-height 100vh
+  min-height 80vh
   margin: 0 auto;
   background-color white
   box-shadow: 0 1px 2px 0 rgba(34,36,38,.15);
