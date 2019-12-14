@@ -205,10 +205,43 @@ export default {
     };
   },
 
+  methods: {
+    getGuides() {
+      axios.get('https://www.xerrors.fun:8001/api/guide/getData')
+      .then(res=>{
+        // console.log(res);
+        console.log(res.data.data);
+      })
+      .catch(function (error) {
+        console.log(error);
+      })
+    },
+
+    uploadMsg(data) {
+      axios({
+            method: 'post',
+            url: 'https://www.xerrors.fun:8001/api/zone/upload',
+            data: data
+      }).then(res=>{
+        // console.log(res)
+        // 本地改变数据
+        if (res.data.code != 200 ) {
+          this.$message.error(res.data.message);
+        } else {
+          this.msgs.splice(0, 0, data.data);
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+      })
+    },
+  },
+
   mounted() {
+    this.getGuides();
     // this.getTabs();
     this.tabs = this.$page.frontmatter.tabs;
-    console.log(this.$page);
+    // console.log(this.$page);
   }
 };
 </script>
