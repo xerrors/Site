@@ -18,7 +18,7 @@ hideLastUpdated: True
               </div>
             </a>
             <div class="my-link-box" @click="addLink(ind1, ind2)">
-              {{ ind1 }} - {{ ind2 }} - {{ ind3 }}
+              添加链接
             </div>
           </div>
         </div>
