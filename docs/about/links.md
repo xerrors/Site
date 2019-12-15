@@ -10,6 +10,10 @@ hideLastUpdated: True
     <p>
       <a href="mailto:xerrors@163.com?subject=申请友链&body=网站标题： 网站头像链接： 网站描述： 网站地址：">💌申请友链</a>
       请按照格式申请友链，并确保你的网站已经添加本站为友链
+      <p> "title": "Angor", </p>
+      <p> "avatar": "https://www.xerrors.fun/avatar.jpg",</p>
+      <p> "site": "https://www.xerrors.fun",</p>
+      <p> "description": "敬畏代码，敬畏技术"</p>
     </p>
     <br>
     <div class="my-links">
@@ -35,8 +39,8 @@ export default {
       links: [
         {
           "title": "Angor",
-          "avatar": "https://xerrors.coding.me/avatar.jpg",
-          "site": "https://xerrors.coding.me",
+          "avatar": "https://www.xerrors.fun/avatar.jpg",
+          "site": "https://www.xerrors.fun",
           "description": "敬畏代码，敬畏技术"
         },
         {
