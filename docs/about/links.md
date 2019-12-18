@@ -10,10 +10,10 @@ hideLastUpdated: True
     <p>
       <a href="mailto:xerrors@163.com?subject=申请友链&body=网站标题： 网站头像链接： 网站描述： 网站地址：">💌申请友链</a>
       请按照格式申请友链，并确保你的网站已经添加本站为友链
-      <div style="border: 1px solid #f3f3f3; border-radius: 3px; padding: 2rem;">
-        "title": "Angor",
-        "avatar": "https://www.xerrors.fun/avatar.jpg",
-        "site": "https://www.xerrors.fun",
+      <div style="border: 1px solid #f3f3f3; border-radius: 3px; padding: 2rem; font-weight: 600;">
+        "title": "Angor",<br>
+        "avatar": "https://www.xerrors.fun/avatar.jpg",<br>
+        "site": "https://www.xerrors.fun",<br>
         "description": "敬畏代码，敬畏技术"
       </div>
     </p>
@@ -56,6 +56,12 @@ export default {
           "avatar": "https://toc.lieme.cn/img/avatar.gif",
           "site": "https://toc.lieme.cn/",
           "description": "用胶片定格故事的乐趣"
+        },
+        {
+          "title": "mghio",
+          "avatar": "http://q2epkjatk.bkt.clouddn.com/blog_mghio.png",
+          "site": "https://www.mghio.cn",
+          "description": "JAVA 搬运工 & 终身学习者"
         }
       ]
     }
