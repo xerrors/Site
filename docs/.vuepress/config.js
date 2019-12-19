@@ -14,7 +14,7 @@ module.exports = {
     search: false,
     nav: [
       { text: '📃 文章', link: '/blog/' },
-      // { text: '🎵 音乐', link: '/cool/music.html' },
+      { text: '🎵 音乐', link: '/cool/music.html' },
       { text: '🤪 动态', link: '/cool/zone.html' },
       { text: '🔗 友链', link: '/about/links.html' },
       {
