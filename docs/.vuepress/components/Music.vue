@@ -1,5 +1,6 @@
 <template>
   <!-- https://github.com/muhammederdem/mini-player/ -->
+  <!-- TODO: 输入歌单以及显示歌单信息 -->
   <div class="container">
     <div class="wrapper">
       <div class="player">
