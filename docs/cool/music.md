@@ -6,13 +6,12 @@ hideLastUpdated: True
 ---
 
 <template>
-  <!-- <music></music> -->
-  挖坑待补！
+  <music></music>
 </template>
 
 <script>
-// import Music from '../.vuepress/components/Music.vue'
-// export default {
-//   components: { Music }
-// }
+import Music from '../.vuepress/components/Music.vue'
+export default {
+  components: { Music }
+}
 </script>

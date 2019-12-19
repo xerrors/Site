@@ -1,4 +1,5 @@
 <template>
+  <!-- https://github.com/muhammederdem/mini-player/ -->
   <div class="container">
     <div class="wrapper">
       <div class="player">
@@ -193,21 +194,12 @@ export default {
           favorited: false
         }
       ],
-      currentTrack: null,
+      currentTrack: {},
       currentTrackIndex: 0,
       transitionName: null
     };
   },
   methods: {
-    getTracks() {
-      axios.get('http://music.163.com/api/playlist/detail?id=3071496583')
-      .then(res=>{
-        console.log(res);
-      })
-      .catch(function (error) {
-        console.log(error);
-      })
-    },
     play() {
       if (this.audio.paused) {
         this.audio.play();
@@ -302,10 +294,10 @@ export default {
       ].favorited;
     }
   },
-  created() {
+  beforeMount() {
     let vm = this;
     this.currentTrack = this.tracks[0];
-    this.audio = new Audio(require(this.currentTrack.source));
+    this.audio = new Audio();
     this.audio.src = this.currentTrack.source;
     this.audio.ontimeupdate = function() {
       vm.generateTime();
