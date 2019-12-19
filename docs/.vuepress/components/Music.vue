@@ -114,14 +114,23 @@ import axios from 'axios'
 export default {
     data() {
     return {
-      inited: false,
+      loading: true,
       audio: null,
       circleLeft: null,
       barWidth: null,
       duration: null,
       currentTime: null,
       isTimerPlaying: false,
-      tracks: new Array(),
+      tracks: [
+        {
+          name: 'Merry Christmas Mr. Lawrence',
+          artist: '坂本龍一',
+          source: "https://m8.music.126.net/20191220010817/be72ddac33615cd6e17342a53bf5435e/ymusic/e765/043f/18f1/22c700483eac1205d84788e64b2091bc.mp3",
+          cover: "https://p2.music.126.net/woiqainQI-orV_RuUuOVRw==/716881581353216.jpg",
+          url: '',
+          favorited: true
+        }
+      ],
       currentTrack: {},
       currentTrackIndex: 0,
       transitionName: null,
@@ -135,7 +144,7 @@ export default {
       .then((res) => {
         // console.log(res)
         var pl = res.data.playlist.tracks;
-        console.log(pl)
+        // console.log(pl)
         for (var i=0; i<pl.length; i++) {
           let src;
           let newTrack = {
@@ -160,7 +169,7 @@ export default {
       .catch((err) => {
         console.log(err)
       })
-      console.log(this.tracks)
+      this.loading = false
     },
     play() {
       if (this.audio.paused) {
@@ -262,6 +271,7 @@ export default {
   mounted() {
     let vm = this;
     this.currentTrack = this.tracks[0];
+    console.log(this.currentTrack)
     this.audio = new Audio();
     this.audio.src = this.currentTrack.source;
     this.audio.ontimeupdate = function() {
