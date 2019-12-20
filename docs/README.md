@@ -21,5 +21,5 @@ features:
   details: 当有开心的事情的时候，记得分享；
 
 
-footer: Copyright © 2019-present ❤️ Angor | 皖 ICP 备 19016269 号
+footer: Copyright © 2019-present ❤️ Hanna | 皖 ICP 备 19016269 号
 ---

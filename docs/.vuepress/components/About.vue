@@ -13,8 +13,9 @@
               </a>
               <div class="my-title" style="text-align: center">张辰</div>
               <br>
-              <p>📚大三本科在读</p>
-              <p>💻计算机科学与技术专业</p>
+              <p>1033170621</p>
+              <p>物联网工程学院</p>
+              <p>计科1706班</p>
               <br>
               <p>
                 <img class="my-svg" :src="$withBase('/svg/quote-left.svg')" type="image/svg+xml"/>
