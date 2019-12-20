@@ -3,33 +3,27 @@ module.exports = {
     ['link', { rel: 'manifest', href: '/manifest.json' }],
     ['link', { rel: 'apple-touch-icon', href: '/favicon.png' }],
   ],
-  title: 'Hanna',
-  description: 'Hanna playground',
+  title: 'Angor',
+  description: 'Angor playground',
   permalink: "/:year/:month/:day/:slug",
   themeConfig: {
     sidebar: false,
-    // github: "https://github.com/Xerrors/Xerrors.github.io",
+    github: "https://github.com/Xerrors/Xerrors.github.io",
     logo: '/avatar.jpg',
     lastUpdated: '修改于',
     search: false,
     nav: [
-      // { text: '📃 文章', link: '/blog/' },
-      // { text: '🎵 音乐', link: '/cool/music.html' },
-      // { text: '🤪 动态', link: '/cool/zone.html' },
-      // { text: '🔗 友链', link: '/about/links.html' },
-      // {
-      //   text: '🔨 工具',
-      //   items: [
-      //     { text: '🔐 寻密', link: '/tools/findpwd.html' },
-      //     { text: '🚥 导航', link: '/tools/guide.html' }
-      //   ]
-      // },
       { text: '📃 文章', link: '/blog/' },
       { text: '🎵 音乐', link: '/cool/music.html' },
-      // { text: '🤪 动态', link: '/cool/zone.html' },
-      // { text: '🔗 友链', link: '/about/links.html' },
-      { text: '🔐 寻密', link: '/tools/findpwd.html' },
-      { text: '🚥 导航', link: '/tools/guide.html' }
+      { text: '🤪 动态', link: '/cool/zone.html' },      
+      { text: '🚥 导航', link: '/tools/guide.html' },
+      {
+        text: '🔨 工具',
+        items: [
+          { text: '🔐 寻密', link: '/tools/findpwd.html' },
+          { text: '🔗 友链', link: '/about/links.html' }
+        ]
+      }
     ]
   },
   // plugins: ['@vuepress/pwa'],

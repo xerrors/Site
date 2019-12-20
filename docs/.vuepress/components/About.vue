@@ -11,11 +11,10 @@
                 >
                   <img class="my-avatar" :src="$withBase('/avatar.jpg')">
               </a>
-              <div class="my-title" style="text-align: center">张辰</div>
+              <div class="my-title" style="text-align: center">Angor</div>
               <br>
-              <p>1033170621</p>
-              <p>物联网工程学院</p>
-              <p>计科1706班</p>
+              <p>计科大三在读</p>
+              <p>菜鸡 弱鸡 垃圾</p>
               <br>
               <p>
                 <img class="my-svg" :src="$withBase('/svg/quote-left.svg')" type="image/svg+xml"/>
@@ -28,7 +27,7 @@
                 <img class="my-svg" :src="$withBase('/svg/quote-right.svg')" type="image/svg+xml"/>
               </p>
               <br>
-              <!-- <div class="my-something">
+              <div class="my-something">
                   <a href="https://github.com/Xerrors">
                     <img class="my-svg" :src="$withBase('/svg/github.svg')" type="image/svg+xml"/>
                   </a>
@@ -38,7 +37,7 @@
                   <a href="https://dev.tencent.com/u/Xerrors">
                     <img class="my-svg" :src="$withBase('/svg/tencent.svg')" type="image/svg+xml"/>
                   </a>
-              </div> -->
+              </div>
           </el-card>
           <div class="my-button-box">
             <el-button 
@@ -193,8 +192,8 @@ h1, h2, h3, p {
     color: #c8e3d6;
     margin: 0;
     background-color: #028080;
-    /* background-image: linear-gradient(116deg, #028080 8%, #931c1e 92%); */
-    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    background-image: linear-gradient(116deg, #028080 8%, #931c1e 92%);
+    /* background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); */
     background-size: 400% 400%;
     animation: gradientBG 8s ease infinite;
     position: absolute;

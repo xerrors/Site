@@ -51,6 +51,6 @@ echo " "
 echo "  >>> 成功将资源文件上传到 GitHub [ git@github.com:Xerrors/Site.git ]"
 echo " "
 
-cd Node
+cd ../Node
 
 forever start zone.js
