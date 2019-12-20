@@ -11,23 +11,23 @@
                 >
                   <img class="my-avatar" :src="$withBase('/avatar.jpg')">
               </a>
-              <div class="my-title" style="text-align: center">Angor</div>
+              <div class="my-title" style="text-align: center">张辰</div>
               <br>
               <p>📚大三本科在读</p>
               <p>💻计算机科学与技术专业</p>
               <br>
               <p>
                 <img class="my-svg" :src="$withBase('/svg/quote-left.svg')" type="image/svg+xml"/>
-                  不想学深度学习的前端狗
+                  竹仗芒鞋随缘化
                 <img class="my-svg" :src="$withBase('/svg/quote-right.svg')" type="image/svg+xml"/>
               </p>
               <p>
                 <img class="my-svg" :src="$withBase('/svg/quote-left.svg')" type="image/svg+xml"/>
-                  不是一个好的 CTF 选手
+                  烟蓑雨笠卷单行
                 <img class="my-svg" :src="$withBase('/svg/quote-right.svg')" type="image/svg+xml"/>
               </p>
               <br>
-              <div class="my-something">
+              <!-- <div class="my-something">
                   <a href="https://github.com/Xerrors">
                     <img class="my-svg" :src="$withBase('/svg/github.svg')" type="image/svg+xml"/>
                   </a>
@@ -37,7 +37,7 @@
                   <a href="https://dev.tencent.com/u/Xerrors">
                     <img class="my-svg" :src="$withBase('/svg/tencent.svg')" type="image/svg+xml"/>
                   </a>
-              </div>
+              </div> -->
           </el-card>
           <div class="my-button-box">
             <el-button 
