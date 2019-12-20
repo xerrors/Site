@@ -115,7 +115,6 @@ import axios from 'axios'
 export default {
     data() {
     return {
-      loading: true,
       audio: null,
       circleLeft: null,
       barWidth: null,
@@ -170,7 +169,6 @@ export default {
       .catch((err) => {
         console.log(err)
       })
-      this.loading = false
     },
     play() {
       if (this.audio.paused) {

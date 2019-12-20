@@ -1,8 +1,8 @@
 ---
 home: true
 # heroImage: /favicon.png
-heroText: Angor
-tagline: 安歌
+heroText: Hanna
+tagline: 多媒体大作业实验
 permalink: /
 actionText: 关 于
 actionLink: /about/

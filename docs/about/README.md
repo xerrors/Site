@@ -17,12 +17,12 @@ layout: About
               <a class="my-avatar-link" @click="clickAvatar">
                   <img class="my-avatar" :src="$withBase('/avatar.jpg')">
               </a>
-              <div class="my-title" style="text-align: center">Angor</div>
+              <div class="my-title" style="text-align: center">Hanna</div>
               <br>
-              <p>不想学深度学习的前端</p>
-              <p>不是一个好的 CTF 选手</p>
+              <p>竹仗芒鞋随缘化</p>
+              <p>烟蓑雨笠卷单行</p>
               <br>
-              <div class="my-something">
+              <!-- <div class="my-something">
                   <a href="https://github.com/Xerrors">
                     <img class="my-svg" :src="$withBase('/svg/github.svg')" type="image/svg+xml"/>
                   </a>
@@ -32,31 +32,7 @@ layout: About
                   <a href="https://dev.tencent.com/u/Xerrors">
                     <img class="my-svg" :src="$withBase('/svg/tencent.svg')" type="image/svg+xml"/>
                   </a>
-              </div>
-          </el-card>
-          <el-card v-show="show==1" class="my-card" :body-style="{ padding: '0px' }">
-              <div class="my-bg"></div>
-              <div style="height: 50px; margin: 0;"></div>
-              <a class="my-avatar-link" @click="clickAvatar">
-                  <img class="my-avatar" :src="$withBase('/avatar.jpg')">
-              </a>
-              <h3 style="text-align: center">友链占位 1</h3>
-          </el-card>
-          <el-card v-show="show==2" class="my-card" :body-style="{ padding: '0px' }">
-              <div class="my-bg"></div>
-              <div style="height: 50px; margin: 0;"></div>
-              <a class="my-avatar-link" @click="clickAvatar">
-                  <img class="my-avatar" :src="$withBase('/avatar.jpg')">
-              </a>
-              <h3 style="text-align: center">友链占位 2</h3>
-          </el-card>
-          <el-card v-show="show==3" class="my-card" :body-style="{ padding: '0px' }">
-              <div class="my-bg"></div>
-              <div style="height: 50px; margin: 0;"></div>
-              <a class="my-avatar-link" @click="clickAvatar">
-                  <img class="my-avatar" :src="$withBase('/avatar.jpg')">
-              </a>
-              <h3 style="text-align: center">友链占位 3</h3>
+              </div> -->
           </el-card>
           <div class="my-button-box">
             <el-button class="my-button" v-show="showButton" icon="el-icon-caret-bottom" circle @click="plusOne"></el-button>
