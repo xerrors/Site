@@ -54,3 +54,7 @@ echo " "
 cd ../Node
 
 forever start zone.js
+
+cd ~/Chen/docs/.vuepress/dist/
+
+http-server -p 5000
