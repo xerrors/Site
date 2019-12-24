@@ -201,7 +201,6 @@ export default {
   color: black;
   background-color: white;
   padding: 0.6rem 1.2rem;
-  border-radius: 3px;
   transition: all 0.3s ease;
   box-sizing: border-box;
   border: 1px solid black;
