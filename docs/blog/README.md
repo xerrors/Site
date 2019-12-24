@@ -59,7 +59,7 @@ export default {
       tags: [],
       page: 1,
       num: 0,
-      btnInfo: '加载更多',
+      btnInfo: '🔔 加载更多',
       showBtn: true,
       selectedTag: "blog"
     }
@@ -198,17 +198,17 @@ export default {
 
 .page-guide-btn div {
   display: inline-block;
-  color: #fff;
-  background-color: #3eaf7c;
+  color: black;
+  background-color: white;
   padding: 0.6rem 1.2rem;
-  border-radius: 4px;
+  border-radius: 3px;
   transition: all 0.3s ease;
   box-sizing: border-box;
-  border-bottom: 1px solid #389d70;
+  border: 1px solid #389d70;
 }
 
 .page-guide-btn div:hover {
-  background-color: #4abf8a;
+  background-color: #f5f5f5;
   cursor: pointer;
 }
 
