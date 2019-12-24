@@ -204,7 +204,7 @@ export default {
   border-radius: 3px;
   transition: all 0.3s ease;
   box-sizing: border-box;
-  border: 1px solid #389d70;
+  border: 1px solid black;
 }
 
 .page-guide-btn div:hover {
