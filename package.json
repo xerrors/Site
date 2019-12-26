@@ -11,7 +11,8 @@
     "express": "^4.17.1",
     "js-md5": "^0.7.3",
     "md564": "^0.2.1",
-    "serialize-javascript": "^2.1.1"
+    "serialize-javascript": "^2.1.1",
+    "vuepress-plugin-medium-zoom": "^1.1.8"
   },
   "devDependencies": {
     "@vuepress/plugin-google-analytics": "^1.0.0-rc.1",

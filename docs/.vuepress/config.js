@@ -27,14 +27,20 @@ module.exports = {
     ]
   },
   // plugins: ['@vuepress/pwa'],
-  // plugins: [
-  //   [
-  //     '@vuepress/google-analytics',
-  //     {
-  //       'ga': 'UA-145620374-1' // UA-00000000-0
-  //     }
-  //   ]
-  // ],
+  plugins: [
+    [
+      'vuepress-plugin-medium-zoom',
+      {
+        selector: '.my-wrapper .my-img',
+        delay: 1000,
+        options: {
+          margin: 24,
+          background: '#BADA55',
+          scrollOffset: 0,
+        },
+      },
+    ],
+  ],
   configureWebpack: {
     resolve: {
       alias: {
