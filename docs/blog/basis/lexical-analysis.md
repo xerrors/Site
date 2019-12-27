@@ -10,10 +10,15 @@ categories:
 ---
 
 这篇文章是记录我在学习编译原理实验的时候遇到的一些问题以及自己的做法。记录一下自己踩过的坑！第一个题目比较简单，是基于 flex 构造词法分析器，只要掌握一些 flex 的基础就可以完成。
-<!-- more -->
-在开始之前先分享一个我认为比较好的 flex 的教程，[南京大学-词法分析和语法分析课件](https://cs.nju.edu.cn/daixinyu/1006.pdf) 这个课件可以说是科班学生做实验的时候的一份良好的材料了，里面不仅包含词法分析器所需要用到的 flex 教程，也包含后面语法分析所需要的 bison 教程，值得一读！
 
+<!-- more -->
+
+在开始之前先分享一个我认为比较好的 flex 的教程，
+
+[南京大学-词法分析和语法分析课件](https://cs.nju.edu.cn/daixinyu/1006.pdf)
 [windows平台下flex下载地址](https://sourceforge.net/projects/winflexbison/)
+
+这个课件可以说是科班学生做实验的时候的一份极好的材料了，里面不仅包含词法分析器所需要用到的 flex 教程，也包含后面语法分析所需要的 bison 教程，值得一读！
 
 ## 题目一
 
@@ -29,7 +34,7 @@ categories:
 
 代码详情：
 
-```lex
+```c
 %option noyywrap
 %{
     #include <stdio.h>
