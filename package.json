@@ -6,6 +6,7 @@
   "author": "Xerrors <xerrors@163.com>",
   "license": "MIT",
   "dependencies": {
+    "animate.css": "^3.7.2",
     "clipboard": "^2.0.4",
     "element-ui": "^2.11.1",
     "express": "^4.17.1",

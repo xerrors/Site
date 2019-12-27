@@ -40,16 +40,9 @@
               </div>
           </el-card>
           <div class="my-button-box">
-            <el-button 
-              v-if="cardNum != 1"
-              class="my-button" 
-              v-show="showButton" 
-              icon="el-icon-caret-bottom" 
-              circle @click="plusOne"
-              ></el-button>
-              <div v-else class="my-go-home">
-                <router-link to="/">Home</router-link>
-              </div>
+            <div class="my-go-home">
+              <router-link to="/" style="color: white;">Home</router-link>
+            </div>
           </div>
         </div>
     </div>
@@ -103,62 +96,15 @@ h1, h2, h3, p {
   font-size: 2.5rem;
 }
 
-.my-go-home {
-  z-index: 1;
-  width: 3rem;
-  margin: 0 auto;
-  position: relative;
-  font-size: inherit;
-  font-family: inherit;
-  padding: 0.5em 1em;
-  border-radius: 1rem;
-  overflow: hide;
-  background-color: hsl(236, 32%, 26%);
-}
-
-.my-go-home a {
-  color: white;
-}
-
-.my-go-home::before {
-  content: '';
-  z-index: -1;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  border-radius: 1rem;
-  background-color: #26da80;
-  transform-origin: center top;
-  transform: scaleY(0);
-  transition: transform 0.25s ease-in-out;
-}
-
-.my-go-home:hover {
-  cursor: pointer;
-}
-
-.my-go-home:hover::before {
-  transform-origin: center bottom;
-  transform: scaleY(1);
-}
-
-.my-button {
-  animation: showbtn 1s infinite alternate; 
-  display: block;
-  margin: 0 auto;
-  background: inherit;
-  border-width: 0;
-}
-
-.my-button:hover{
-  border-width: 2px;
-}
-
 .my-button-box {
   margin-top: 2rem;
   height: 3rem;
+}
+
+.my-go-home {
+  opacity: 0;
+  animation: showup 1s 0.5s forwards;
+  color: white;
 }
 
 .my-container {
@@ -172,7 +118,7 @@ h1, h2, h3, p {
     height: 600px;
     margin: 0 auto;
     border: 0px;
-    border-radius: 1rem;
+    border-radius: 4px;
     opacity: 0;
     animation: showup 1s forwards;
 }

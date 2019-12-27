@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[35],{349:function(t,e,n){"use strict";n.r(e);var s={components:{Music:n(341).default}},o=n(9),i=Object(o.a)(s,(function(){var t=this.$createElement,e=this._self._c||t;return e("ContentSlotsDistributor",{attrs:{"slot-key":this.$parent.slotKey}},[[e("div",[e("music")],1)]],2)}),[],!1,null,null,null);e.default=i.exports}}]);

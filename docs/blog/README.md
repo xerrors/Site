@@ -73,10 +73,8 @@ export default {
     for (var i = 0; i < temp.length; i++) {
       if (temp[i].frontmatter.tag) {
         var tempTag = temp[i].frontmatter.tag
-
         for (var j = 0; j < tempTag.length; j++){
           var isInTags = false
-
           for (var k = 0; k < this.tags.length; k++){
             if (tempTag[j] === this.tags[k]){
               isInTags = true
@@ -110,9 +108,9 @@ export default {
           const execs = re.exec(post.relativePath)
           return {
             ...post,
-            updateTimestamp: (new Date(post.lastUpdated)).getTime(),
+            updateTimestamp: (new Date(post.frontmatter.date)).getTime(),
             filename: execs ? execs['1'] : '',
-            formatDay: this.formatDate(new Date(post.lastUpdated))
+            formatDay: this.formatDate(new Date(post.frontmatter.date))
           }
         })
         .sort((a, b) => b.updateTimestamp - a.updateTimestamp)

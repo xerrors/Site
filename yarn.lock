@@ -1206,6 +1206,11 @@ alphanum-sort@^1.0.0:
   resolved "https://registry.yarnpkg.com/alphanum-sort/-/alphanum-sort-1.0.2.tgz#97a1119649b211ad33691d9f9f486a8ec9fbe0a3"
   integrity sha1-l6ERlkmyEa0zaR2fn0hqjsn74KM=
 
+animate.css@^3.7.2:
+  version "3.7.2"
+  resolved "https://registry.yarnpkg.com/animate.css/-/animate.css-3.7.2.tgz#e73e0d50e92cb1cfef1597d9b38a9481020e08ea"
+  integrity sha512-0bE8zYo7C0KvgOYrSVfrzkbYk6IOTVPNqkiHg2cbyF4Pq/PXzilz4BRWA3hwEUBoMp5VBgrC29lQIZyhRWdBTw==
+
 ansi-colors@^3.0.0:
   version "3.2.4"
   resolved "https://registry.yarnpkg.com/ansi-colors/-/ansi-colors-3.2.4.tgz#e3a3da4bfbae6c86a9c285625de124a234026fbf"
@@ -4575,6 +4580,11 @@ media-typer@0.3.0:
   resolved "https://registry.yarnpkg.com/media-typer/-/media-typer-0.3.0.tgz#8710d7af0aa626f8fffa1ce00168545263255748"
   integrity sha1-hxDXrwqmJvj/+hzgAWhUUmMlV0g=
 
+medium-zoom@^1.0.4:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/medium-zoom/-/medium-zoom-1.0.5.tgz#81413dda20ccdd857141ff420cfab788dd32e20e"
+  integrity sha512-aLGa6WlTuFKWvH88bqTrY5ztJMN+D0hd8UX6BYc4YSoPayppzETjZUcdVcksgaoQEMg4cZSmXPg846fTp2rjRQ==
+
 mem@^4.0.0:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/mem/-/mem-4.3.0.tgz#461af497bc4ae09608cdb2e60eefb69bff744178"
@@ -7358,6 +7368,13 @@ vuepress-plugin-container@^2.0.0:
   integrity sha512-SrGYYT7lkie7xlIlAVhn+9sDW42MytNCoxWL/2uDr+q9wZA4h1uYlQvfc2DVjy+FsM9PPPSslkeo/zCpYVY82g==
   dependencies:
     markdown-it-container "^2.0.0"
+
+vuepress-plugin-medium-zoom@^1.1.8:
+  version "1.1.8"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-medium-zoom/-/vuepress-plugin-medium-zoom-1.1.8.tgz#bb1ea5cdd50efd218b385b5f5fe46c3e1d2d4ec1"
+  integrity sha512-G6s/kDw7obUqaTNhg94+wbuMYPLmPRS4jZ8voJPO/SHyKq/myzDdTL9OzYq3EMVz/P1pROYhN+jNCT7KpdaAZg==
+  dependencies:
+    medium-zoom "^1.0.4"
 
 vuepress@^1.0.4:
   version "1.0.4"
