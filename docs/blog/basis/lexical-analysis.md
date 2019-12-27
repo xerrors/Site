@@ -1,6 +1,6 @@
 ---
-title: 
-permalink:
+title: 编译原理-构造词法分析器
+permalink: lexical-analysis
 date: 2019-12-28 00:04:58
 tag: 
  - blog
@@ -15,7 +15,7 @@ categories:
 
 [windows平台下flex下载地址](https://sourceforge.net/projects/winflexbison/)
 
-## 先看题目
+## 题目一
 
 【问题描述】设计c语言常见单词的正规式，编制lex源文件，利用flex编译得到词法分析的.c文件，继而对该文件编译得到词法分析器。
 
@@ -24,4 +24,81 @@ categories:
 【输出形式】各类单词的token字，或者给出程序中的单词错误。
 
 这次的实验算是简单一点的，只需要掌握一些 flex 的基本使用方法就可以完成。
+
+挖坑待补!!!
+
+代码详情：
+
+```lex
+%option noyywrap
+%{
+    #include <stdio.h>
+    #include <stdlib.h>
+    #include <string.h>
+    int line=1;    
+    typedef struct Msg {
+        int line;
+        char token[100];
+        char word[100];
+        struct Msg* next;
+    }Msg, *pMsg;
+
+    pMsg m, p;
+    int error = 0;
+
+    void push(int line, const char* token, const char* word) {
+        pMsg tmp = (pMsg)malloc(sizeof(Msg));
+        tmp->line = line;
+        strcpy(tmp->token, token);
+        strcpy(tmp->word, word);
+        p->next = tmp;
+        p = p->next;
+    }
+%}
+DIGIT [0-9]
+OINTEGER [1-9]{DIGIT}*
+INTEGER ("+"|"-")?({OINTEGER}|0)
+DECIMAL {INTEGER}(.(0)*{OINTEGER})?
+FLOAT {DECIMAL}(e{INTEGER})
+LETTER [a-zA-Z]
+ID ({LETTER}|_)({LETTER}|_|{DIGIT})*
+OPT ("+="|"-="|"*="|"/="|"+"|"-"|"*"|"/"|">="|"<="|"=="|"="|">"|"<")
+KEYWORD ("if"|"else"|"scanf"|"for"|"printf"|"return"|"sqrt"|"abs"|"main"|"float")
+TI [%|&]{LETTER}
+ERROR_FLOAT {DIGIT}*.{DIGIT}{DIGIT}*e
+%%
+\n {++line;}
+(void|int|double|short|char) {push(line, "type", yytext);}
+{INTEGER} {push(line, "integer", yytext);}
+{DECIMAL} {push(line, "decimal", yytext);}
+{FLOAT} {push(line, "float", yytext);}
+{ERROR_FLOAT} {error = 1; printf("Error at Line %d: Illegal floating point number \"%s\".\n", line, yytext);}
+{KEYWORD} {push(line, "keyword", yytext);}
+{ID} {push(line, "identify", yytext);}
+("("|")"|"{"|"}"|"["|"]"|"\""|","|";") {push(line, "bracket", yytext);}
+{OPT} {push(line, "OPT", yytext);}
+{TI} {push(line, "typeidentify", yytext);}
+"//".*  {}
+[/][*][^*]*[*]+([^*/][^*]*[*]+)*[/]       {}
+. {}
+%%
+int printmsg() {
+    if (error)
+        return 0;
+    p = m;
+    p = p->next;
+    while(p) {
+        printf("line%d:(%s, %s)\n", p->line, p->token, p->word);
+        p = p->next;
+    }
+}
+
+int main() {
+    m = (pMsg)malloc(sizeof(Msg));
+    p = m;
+    yyin=stdin;
+    yylex();
+    printmsg();
+}
+```
 
