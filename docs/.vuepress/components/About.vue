@@ -118,7 +118,6 @@ h1, h2, h3, p {
     height: 600px;
     margin: 0 auto;
     border: 0px;
-    border-radius: 4px;
     opacity: 0;
     animation: showup 1s forwards;
 }
@@ -137,9 +136,9 @@ h1, h2, h3, p {
     height: 100%;
     color: #c8e3d6;
     margin: 0;
-    background-color: #028080;
-    background-image: linear-gradient(116deg, #028080 8%, #931c1e 92%);
-    /* background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); */
+    background-color: #191a1b;
+    /* background-image: linear-gradient(116deg, #028080 8%, #931c1e 92%);
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); */
     background-size: 400% 400%;
     animation: gradientBG 8s ease infinite;
     position: absolute;
