@@ -14,6 +14,8 @@ categories:
 
 <!-- more -->
 
+[使用VS Code编辑LaTex](https://zhuanlan.zhihu.com/p/38178015)
+
 ## 基础使用
 
 ### 1. 让 LaTeX 支持中文
