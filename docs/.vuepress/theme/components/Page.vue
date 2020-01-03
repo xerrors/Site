@@ -116,21 +116,33 @@ export default {
       if (prev === false) {
         return
       } else if (prev) {
-        return resolvePage(this.$site.pages, prev, this.$route.path)
-      } else {
-        return resolvePrev(this.$page, this.sidebarItems)
+        return prev
       }
+      // if (prev === false) {
+      //   return
+      // } else if (prev) {
+      //   return resolvePage(this.$site.pages, prev, this.$route.path)
+      // } else {
+      //   return resolvePrev(this.$page, this.sidebarItems)
+      // }
     },
 
     next () {
+      // 修改部分逻辑
       const next = this.$page.frontmatter.next
       if (next === false) {
         return
       } else if (next) {
-        return resolvePage(this.$site.pages, next, this.$route.path)
-      } else {
-        return resolveNext(this.$page, this.sidebarItems)
+        return next
       }
+      // if (next === false) {
+      //   return
+      // } else if (next) {
+      //   this.$router.push(next)
+      //   return resolvePage(this.$site.pages, next, this.$route.path)
+      // } else {
+      //   return resolveNext(this.$page, this.sidebarItems)
+      // }
     },
 
     editLink () {
@@ -227,8 +239,8 @@ function flatten (items, res) {
 .my-main
   // 刨坑保留
   max-width 53rem
-  min-height 80vh
-  margin: 0 auto;
+  min-height 90vh
+  margin 0 auto
   background-color white
   box-shadow: 0 1px 2px 0 rgba(34,36,38,.15);
 
@@ -243,6 +255,7 @@ function flatten (items, res) {
   padding-bottom 2rem
   display block
   background #f0f2f5
+  min-height 100vh
 
 .page-edit
   @extend $wrapper

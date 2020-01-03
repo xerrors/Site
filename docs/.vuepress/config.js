@@ -14,10 +14,10 @@ module.exports = {
     search: false,
     nav: [
       { text: '📃 文章', link: '/blog/' },
-      { text: '📃 专栏', link: '/zhuanlan/' },
-      { text: '🎵 音乐', link: '/music' },
-      { text: '🤪 动态', link: '/zone' },      
-      { text: '🚥 导航', link: '/guide' },
+      { text: '📰 专栏Alpha', link: '/zhuanlan/' },
+      { text: '🎵 音乐', link: '/music/' },
+      { text: '🤪 动态', link: '/zone/' },      
+      { text: '🚥 导航', link: '/guide/' },
       {
         text: '🔨 工具',
         items: [

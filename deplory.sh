@@ -21,7 +21,7 @@ echo " "
 # echo 'blog.xerrors.fun' > CNAME
 git init
 git add -A
-git commit -m 'deploy'
+git commit -m 'init zhuanlan'
 git push -f git@git.dev.tencent.com:Xerrors/Xerrors.git master
 
 echo " "
