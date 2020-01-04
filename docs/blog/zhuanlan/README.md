@@ -8,6 +8,10 @@ hideLastUpdated: True
 <template>
   <div class="zhuanlan-ctn">
     <h1 class="zl-head">专栏</h1>
+    <img
+      style="height: 15rem; margin: 1rem auto; display:block;"
+      :src="$withBase('/ills/zhuanlan.svg')"
+      type="image/svg+xml" draggable="false"/>
     <div class="zl-item" v-for="(item, ind) in zhuanlan" :key="ind">
       <!-- 所有封面大小或者比例为 900 * 330 约 2.35 ：1 -->
       <div @click=lookup(item)>
