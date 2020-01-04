@@ -8,6 +8,7 @@ tag:
 categories:
  - Python
  - Toturial
+zhuanlan: python-base
 ---
 
 ### 其他的数据类型

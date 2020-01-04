@@ -8,6 +8,7 @@ tag:
 categories:
  - Python
  - Toturial
+zhuanlan: python-base
 hideLastUpdated: true
 ---
 

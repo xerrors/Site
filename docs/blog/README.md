@@ -22,7 +22,7 @@ hideLastUpdated: True
       </div>
       <el-divider></el-divider>
       <div class="my-card" :body-style="{ padding: '5px' }" v-for="(post, index) in topPublishPosts">
-        <div style="padding: 14px;">
+        <div style="padding: 1rem;">
           <span><el-link :underline="false" :href="post.path" type="primary"><strong>{{ post.title }}</strong></el-link></span>
           <div v-if="post.frontmatter.tag" style="display: inline-block; float: right;">
             <el-tag 
