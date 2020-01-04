@@ -2,7 +2,6 @@
 title: "Python 面向对象学习笔记"
 date: "2018-07-04"
 permalink: /python-oop-note
-zhuanlan: python-base
 tag: 
  - blog
  - Python

@@ -37,7 +37,7 @@ echo " "
 cd -
 
 git add -A
-git commit -m 'npm install vuepress-plugin-medium-zoom'
+git commit -m 'finished zhuanlan page'
 
 git push -f git@git.dev.tencent.com:Xerrors/Site.git master
 

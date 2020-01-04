@@ -16,9 +16,10 @@ hideLastUpdated: True
         <p class="zl-item__info">共 {{ item.num }} 篇 · 发布于：{{ item.date }}</p>
       </div>
       <div v-if="item.showDetail" class="zl-item__pages">
-        <div v-for="page in item.pages" class="animated faster slideInDown">
-          <el-link underline=false :href="page.path" type="primary">
-            {{ page.title }}
+        <div v-for="(page, ind) in item.pages" class="animated faster slideInDown">
+          <el-link :underline="false" :href="page.path" type="primary"
+            style="font-size: 1rem; font-weight: 500; line-height: 2rem; text-decorate: none;">
+            {{ ind+1 }} - {{ page.title }} >>
           </el-link>
         </div>
       </div>
@@ -41,7 +42,7 @@ export default {
   },
   mounted () {
     this.zhuanlan = [{
-      cover: "http://src.xerrors.fun/blog/20200104/ovQBUxdx1Gsp.jpg?imageslim",
+      cover: "http://src.xerrors.fun/blog/20200105/zpJoCBLkleTs.png",
       link: "python-base",
       title: "Python 简单讲解",
       date: "2019-10-07",
@@ -54,15 +55,17 @@ export default {
     for (var i = 0; i < temp.length; i++) {
       const tempzl = temp[i].frontmatter.zhuanlan
       if (tempzl) {
-        console.log("exist", i, tempzl)
         for (var j = 0; j < this.zhuanlan.length; j++){
           if (tempzl === this.zhuanlan[j].link) {
-            console.log("yes", temp[i])
             this.zhuanlan[j].pages.push(temp[i])
             this.zhuanlan[j].num++
           }
         }
       }
+    }
+    for (var k = 0; k < this.zhuanlan.length; k++) {
+      this.zhuanlan[k].pages.sort((a, b) => 
+        (new Date(a.frontmatter.date)).getTime() - (new Date(b.frontmatter.date)).getTime())
     }
   }
 }
@@ -93,9 +96,8 @@ export default {
     float right
     color #aaa
   &__pages
-    font-size 1rem
-    padding-bottom 1rem
-    padding-left 1rem
+    padding-bottom 2rem
+    padding-left 1.5rem
     animation slow-in .5s
 
 @keyframes slow-in
