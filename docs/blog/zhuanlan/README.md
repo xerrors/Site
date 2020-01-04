@@ -7,7 +7,6 @@ hideLastUpdated: True
 
 <template>
   <div class="zhuanlan-ctn">
-    <h1 class="zl-head">专栏</h1>
     <img
       style="height: 15rem; margin: 1rem auto; display:block;"
       :src="$withBase('/ills/zhuanlan.svg')"
