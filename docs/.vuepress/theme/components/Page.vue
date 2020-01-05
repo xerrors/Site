@@ -65,7 +65,6 @@
         </div>
       </div>
       <div v-if="isBlog" class="my-menu">
-        <img src="http://i2.hdslb.com/bfs/archive/fc51e9c1a057bcd5eef4bdbdbad97afb114ac624.jpg" alt="ad" style="width: 100%;">
         <div class="my-menu__item">
           <h3>目录</h3>
           <div v-for="menu in renderMenus">
@@ -95,7 +94,7 @@ export default {
       return this.$page.headers
     },
     isBlog () {
-      console.log(this.$page)
+      // console.log(this.$page)
       // 判断这篇文章是不是博客
       if (this.$page.frontmatter.tag) {  
         return this.$page.frontmatter.tag == 'blog' || 'blog' == this.$page.frontmatter.tag[0]

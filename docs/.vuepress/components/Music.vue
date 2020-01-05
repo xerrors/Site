@@ -160,7 +160,7 @@ export default {
             // console.log(srs);
             src = srs.data.data[0].url.replace('\\', '');
             newTrack.source = src;
-            console.log(newTrack)
+            // console.log(newTrack)
             vm.tracks.push(newTrack)
             vm.inited = true;
           })
@@ -270,7 +270,7 @@ export default {
   mounted() {
     let vm = this;
     this.currentTrack = this.tracks[0];
-    console.log(this.currentTrack)
+    // console.log(this.currentTrack)
     this.audio = new Audio();
     this.audio.src = this.currentTrack.source;
     this.audio.ontimeupdate = function() {
