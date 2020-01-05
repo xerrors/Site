@@ -50,7 +50,7 @@ export default {
       cover: "http://src.xerrors.fun/blog/20200105/zpJoCBLkleTs.png",
       link: "python-base",
       decription: "这个专栏主要从Python的几个基础的地方来阐述，理解难度很低，并且可帮助有C语言基础的同学快速掌握Python的基础语法知识以及用法，平时写一些字符串处理脚本还是没有问题的；与此同时，该内容也可以帮助学习更深层次的Python的时候，打下一个基础。",
-      title: "Python 简单讲解",
+      title: "Python 快速扫盲",
       date: "2019-10-07",
       showDetail: false,
       num: 0,
