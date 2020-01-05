@@ -1,7 +1,7 @@
 ---
 title: "Python 字符串与数据处理"
-date: "2019-04-09"
 permalink: /python-str
+date: "2019-04-09"
 tag: 
  - blog
  - Python
@@ -9,6 +9,12 @@ categories:
  - Python
  - Toturial
 zhuanlan: python-base
+next: 
+  path: /python-venv/
+  title: Python 虚拟环境创建以及管理
+prev:
+  path: /python-io/
+  title: Python 输入与输出
 ---
 
 ### 其他的数据类型

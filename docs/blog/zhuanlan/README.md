@@ -19,6 +19,8 @@ hideLastUpdated: True
         <p class="zl-item__info">共 {{ item.num }} 篇 · 发布于：{{ item.date }}</p>
       </div>
       <div v-if="item.showDetail" class="zl-item__pages">
+        <div style="font-size: .9rem; color: #666;">{{ item.decription }}</div>
+        <el-divider></el-divider>
         <div v-for="(page, ind) in item.pages" class="animated faster slideInDown">
           <el-link :underline="false" :href="page.path" type="primary"
             style="font-size: 1rem; font-weight: 500; line-height: 2rem; text-decorate: none;">
@@ -47,6 +49,7 @@ export default {
     this.zhuanlan = [{
       cover: "http://src.xerrors.fun/blog/20200105/zpJoCBLkleTs.png",
       link: "python-base",
+      decription: "这个专栏主要从Python的几个基础的地方来阐述，理解难度很低，并且可帮助有C语言基础的同学快速掌握Python的基础语法知识以及用法，平时写一些字符串处理脚本还是没有问题的；与此同时，该内容也可以帮助学习更深层次的Python的时候，打下一个基础。",
       title: "Python 简单讲解",
       date: "2019-10-07",
       showDetail: false,
@@ -101,6 +104,7 @@ export default {
   &__pages
     padding-bottom 2rem
     padding-left 1.5rem
+    padding-right 1.5rem
     animation slow-in .5s
 
 @keyframes slow-in

@@ -9,6 +9,12 @@ categories:
  - Python
  - Toturial
 zhuanlan: python-base
+next: 
+  path: /python-str/
+  title: Python 字符串与数据处理
+prev:
+  path: /python-basics/
+  title: Python 基础篇
 ---
 
 ### 获取输入

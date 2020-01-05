@@ -9,6 +9,9 @@ categories:
  - Python
  - Note
 zhuanlan: python-base
+prev:
+  title: "Python 字符串与数据处理"
+  path: /python-str/
 ---
 
  Python 作为一个计科的学生经常使用的一个工具会用在不同的地方，比如科学计算、Flask 后端、机器学习、CTF 等等，但是各种库安装在一起可能会出现冲突的问题，所以一个理想的办法就是使用虚拟环境的 Python 环境。

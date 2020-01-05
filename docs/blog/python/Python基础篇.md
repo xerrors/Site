@@ -9,6 +9,9 @@ categories:
  - Python
  - Toturial
 zhuanlan: python-base
+next:
+  path: /python-io/
+  title: Python 输入与输出
 hideLastUpdated: true
 ---
 
