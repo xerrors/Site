@@ -37,7 +37,7 @@ echo " "
 cd -
 
 git add -A
-git commit -m 'finished zhuanlan page'
+git commit -m 'changed page style'
 
 git push -f git@git.dev.tencent.com:Xerrors/Site.git master
 

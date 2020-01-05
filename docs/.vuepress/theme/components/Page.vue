@@ -5,12 +5,13 @@
     <div class="my-main">
       <div ref="title" class="my-title-box" v-if="isBlog">
         <h3 class="my-title">{{ this.$page.title }}</h3>
-        <div v-if="this.$page.frontmatter.tag" style="text-align: center">
-          <el-tag 
+        <div style="text-align: center; color: #aaa">
+          发布于：{{ this.$page.frontmatter.date }}
+          <!-- <el-tag 
             size="small" 
             v-for="tag in this.$page.frontmatter.tag"
             style="margin: 5px;"
-            >{{ tag }}</el-tag>
+            >{{ tag }}</el-tag> -->
         </div>
       </div>
 
@@ -238,7 +239,7 @@ function flatten (items, res) {
 
 .my-main
   // 刨坑保留
-  max-width 53rem
+  max-width 55rem
   min-height 90vh
   margin 0 auto
   background-color white
@@ -246,7 +247,7 @@ function flatten (items, res) {
 
 .my-title-box
   padding-top: 1.5rem
-  margin: 0rem auto
+  margin: 0rem auto -2rem auto
 
 .my-title
   text-align: center

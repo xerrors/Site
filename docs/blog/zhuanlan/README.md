@@ -6,7 +6,7 @@ hideLastUpdated: True
 
 
 <template>
-  <div class="zhuanlan-ctn">
+  <div class="zhuanlan-ctn" style="width: 100%;">
     <img
       style="height: 15rem; margin: 1rem auto; display:block;"
       :src="$withBase('/ills/zhuanlan.svg')"
@@ -24,7 +24,7 @@ hideLastUpdated: True
         <div v-for="(page, ind) in item.pages" class="animated faster slideInDown">
           <el-link :underline="false" :href="page.path" type="primary"
             style="font-size: 1rem; font-weight: 500; line-height: 2rem; text-decorate: none;">
-            {{ ind+1 }} - {{ page.title }} >>
+            📄{{ page.title }} >>
           </el-link>
         </div>
       </div>
