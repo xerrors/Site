@@ -13,6 +13,7 @@
               </a>
               <div class="my-title" style="text-align: center">Yuchuan</div>
               <br>
+              <p>🚩</p>
               <p>计科大三在读</p>
               <p>菜鸡 弱鸡 垃圾</p>
               <br>
@@ -21,6 +22,9 @@
                   敬畏代码 敬畏技术
                 <img class="my-svg" :src="$withBase('/svg/quote-right.svg')" type="image/svg+xml"/>
               </p>
+              <br>
+              <p>💒</p>
+              <p>江苏 · 无锡</p>
               <br>
               <div class="my-something">
                   <a href="https://github.com/Xerrors">
