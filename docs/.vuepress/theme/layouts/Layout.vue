@@ -38,8 +38,8 @@
 
     <Home v-if="$page.frontmatter.home"/>
 
-    
     <div v-else>
+      <!-- 为了正常显示文章详情，所以在顶部加一个填充 -->
       <div style="height: 4.5rem; width: 100%; background: #f0f2f5;"></div>
 
       <Page

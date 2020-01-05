@@ -24,7 +24,7 @@ hideLastUpdated: True
         <div v-for="(page, ind) in item.pages" class="animated faster slideInDown">
           <el-link :underline="false" :href="page.path" type="primary"
             style="font-size: 1rem; font-weight: 500; line-height: 2rem; text-decorate: none;">
-            📄{{ page.title }} >>
+            📄{{ page.title }}
           </el-link>
         </div>
       </div>
@@ -106,6 +106,14 @@ export default {
     padding-left 1.5rem
     padding-right 1.5rem
     animation slow-in .5s
+
+@media (max-width: $MQMobile)
+  .zl-item
+    width 100%
+    &__info
+      display none
+    .el-link
+      font-size .8rem
 
 @keyframes slow-in
   0%

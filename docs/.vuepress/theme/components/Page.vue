@@ -3,72 +3,81 @@
     <slot name="top"/>
     <!--<div class="my-top-box" style="height: 5rem;"></div>-->
     <div class="my-main">
-      <div ref="title" class="my-title-box" v-if="isBlog">
-        <h3 class="my-title">{{ this.$page.title }}</h3>
-        <div style="text-align: center; color: #aaa">
-          发布于：{{ this.$page.frontmatter.date }}
-          <!-- <el-tag 
-            size="small" 
-            v-for="tag in this.$page.frontmatter.tag"
-            style="margin: 5px;"
-            >{{ tag }}</el-tag> -->
+      <div class="my-main-left" :class="{'notBlog':!isBlog}">
+        <div ref="title" class="my-title-box" v-if="isBlog">
+          <h3 style="text-align: center;">{{ this.$page.title }}</h3>
+          <div style="text-align: center; color: #aaa">
+            发布于：{{ this.$page.frontmatter.date }}
+          </div>
+        </div>
+        <Content class="theme-default-content"/>
+        <footer class="page-edit" v-if="showFooter">
+          <div
+            class="edit-link"
+            v-if="editLink"
+          >
+            <a
+              :href="editLink"
+              target="_blank"
+              rel="noopener noreferrer"
+            >{{ editLinkText }}</a>
+            <OutboundLink/>
+          </div>
+
+          <div
+            class="last-updated"
+            v-if="lastUpdated"
+          >
+            <span class="prefix">{{ lastUpdatedText }}: </span>
+            <span class="time">{{ lastUpdated }}</span>
+          </div>
+        </footer>
+
+        <div class="page-nav" v-if="prev || next">
+          <p class="inner">
+            <span
+              v-if="prev"
+              class="prev"
+            >
+              ←
+              <router-link
+                v-if="prev"
+                class="prev"
+                :to="prev.path"
+              >
+                {{ prev.title || prev.path }}
+              </router-link>
+            </span>
+
+            <span
+              v-if="next"
+              class="next"
+            >
+              <router-link
+                v-if="next"
+                :to="next.path"
+              >
+                {{ next.title || next.path }}
+              </router-link>
+              →
+            </span>
+          </p>
         </div>
       </div>
-
-      <Content class="theme-default-content"/>
-    </div>
-
-    <footer class="page-edit" v-if="showFooter">
-      <div
-        class="edit-link"
-        v-if="editLink"
-      >
-        <a
-          :href="editLink"
-          target="_blank"
-          rel="noopener noreferrer"
-        >{{ editLinkText }}</a>
-        <OutboundLink/>
+      <div v-if="isBlog" class="my-menu">
+        <img src="http://i2.hdslb.com/bfs/archive/fc51e9c1a057bcd5eef4bdbdbad97afb114ac624.jpg" alt="ad" style="width: 100%;">
+        <div class="my-menu__item">
+          <h3>目录</h3>
+          <div v-for="menu in renderMenus">
+            <a :href="$page.path + '#' + menu.slug"
+              style="line-height: 1rem;"
+              :class="{
+                'my-menu__lv2': menu.level===2,
+                'my-menu__lv3': menu.level===3,
+                }">{{ menu.title }}</a>
+          </div>
+        </div>
       </div>
-
-      <div
-        class="last-updated"
-        v-if="lastUpdated"
-      >
-        <span class="prefix">{{ lastUpdatedText }}: </span>
-        <span class="time">{{ lastUpdated }}</span>
-      </div>
-    </footer>
-
-    <div class="page-nav" v-if="prev || next">
-      <p class="inner">
-        <span
-          v-if="prev"
-          class="prev"
-        >
-          ←
-          <router-link
-            v-if="prev"
-            class="prev"
-            :to="prev.path"
-          >
-            {{ prev.title || prev.path }}
-          </router-link>
-        </span>
-
-        <span
-          v-if="next"
-          class="next"
-        >
-          <router-link
-            v-if="next"
-            :to="next.path"
-          >
-            {{ next.title || next.path }}
-          </router-link>
-          →
-        </span>
-      </p>
     </div>
 
     <slot name="bottom"/>
@@ -82,7 +91,11 @@ export default {
   props: ['sidebarItems'],
 
   computed: {
+    renderMenus() {
+      return this.$page.headers
+    },
     isBlog () {
+      console.log(this.$page)
       // 判断这篇文章是不是博客
       if (this.$page.frontmatter.tag) {  
         return this.$page.frontmatter.tag == 'blog' || 'blog' == this.$page.frontmatter.tag[0]
@@ -239,18 +252,47 @@ function flatten (items, res) {
 
 .my-main
   // 刨坑保留
-  max-width 55rem
+  max-width 70rem
   min-height 90vh
   margin 0 auto
-  background-color white
-  box-shadow: 0 1px 2px 0 rgba(34,36,38,.15);
+  position relative
 
 .my-title-box
   padding-top: 1.5rem
   margin: 0rem auto -2rem auto
 
-.my-title
-  text-align: center
+.notBlog
+  margin 0 auto
+
+.my-main-left
+  position relative
+  max-width 53rem
+  background-color white
+  box-shadow: 0 1px 2px 0 rgba(34,36,38,.15);
+  padding-bottom 2rem
+
+.my-menu
+  position absolute
+  top 0
+  right 0
+  margin-left 1rem
+  width 250px
+  &__lv3
+    padding-left 1rem
+    font-size small
+  &__lv2
+    margin-top 1rem
+  &__item
+    position fixed
+    background white
+    padding 1rem
+    box-shadow 0 1px 2px 0 rgba(34,36,38,0.15)
+
+@media (max-width: 1250px)
+  .my-main-left
+    margin 0 auto
+  .my-menu
+    display none
 
 .page
   padding-bottom 2rem
