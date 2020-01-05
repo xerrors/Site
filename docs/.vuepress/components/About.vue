@@ -18,12 +18,7 @@
               <br>
               <p>
                 <img class="my-svg" :src="$withBase('/svg/quote-left.svg')" type="image/svg+xml"/>
-                  竹仗芒鞋随缘化
-                <img class="my-svg" :src="$withBase('/svg/quote-right.svg')" type="image/svg+xml"/>
-              </p>
-              <p>
-                <img class="my-svg" :src="$withBase('/svg/quote-left.svg')" type="image/svg+xml"/>
-                  烟蓑雨笠卷单行
+                  敬畏代码 敬畏技术
                 <img class="my-svg" :src="$withBase('/svg/quote-right.svg')" type="image/svg+xml"/>
               </p>
               <br>
