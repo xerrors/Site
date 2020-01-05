@@ -1,7 +1,7 @@
 ---
 home: true
-heroText: Angor
-tagline: 安歌
+heroText: Yuchuan
+tagline: 玉川
 permalink: /
 actionText: 关 于
 actionLink: /about/
@@ -20,5 +20,5 @@ features:
   details: 当有开心的事情的时候，记得分享；
 
 
-footer: Copyright © 2019-present ❤️ Angor | 皖 ICP 备 19016269 号
+footer: Copyright © 2019-present ❤️ Yuchuan | 皖 ICP 备 19016269 号
 ---

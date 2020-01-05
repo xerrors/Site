@@ -11,7 +11,7 @@
                 >
                   <img class="my-avatar" :src="$withBase('/avatar.jpg')">
               </a>
-              <div class="my-title" style="text-align: center">Angor</div>
+              <div class="my-title" style="text-align: center">Yuchuan</div>
               <br>
               <p>计科大三在读</p>
               <p>菜鸡 弱鸡 垃圾</p>
