@@ -25,12 +25,9 @@ hideLastUpdated: True
         <div style="padding: 1rem;">
           <span><el-link :underline="false" :href="post.path" type="primary"><strong>{{ post.title }}</strong></el-link></span>
           <div v-if="post.frontmatter.tag" style="display: inline-block; float: right;">
-            <el-tag 
-              size="mini" 
+            <span class="this-tag"
               v-for="item in post.frontmatter.tag"
-              style="margin-left: 10px;"
-              type="info"
-              >{{ item }}</el-tag>
+              ># {{ item }}</span>
           </div>
           <div class="bottom clearfix">
             <br>
@@ -186,6 +183,12 @@ export default {
 .my-card {
   animation: showup .6s forwards;
   border-bottom: 1px solid #f2f2f2;
+}
+
+.this-tag {
+  font-size: small;
+  color: #777;
+  margin-left: 10px;
 }
 
 .page-guide-btn {

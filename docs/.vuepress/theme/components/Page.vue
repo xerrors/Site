@@ -64,17 +64,18 @@
           </p>
         </div>
       </div>
-      <div v-if="isBlog" class="my-menu">
+      <div v-show="isBlog" class="my-menu">
         <div class="my-menu__item">
           <h3>目录</h3>
-          <div v-for="menu in renderMenus">
-            <a :href="$page.path + '#' + menu.slug"
-              style="line-height: 1rem;"
+            <a
+              v-for="menu in renderMenus"
+              :href="$page.path + '#' + menu.slug"
+              style="line-height: 1rem; display: block;"
               :class="{
                 'my-menu__lv2': menu.level===2,
                 'my-menu__lv3': menu.level===3,
-                }">{{ menu.title }}</a>
-          </div>
+              }">
+              {{ menu.title }}</a>
         </div>
       </div>
     </div>
@@ -277,12 +278,15 @@ function flatten (items, res) {
   margin-left 1rem
   width 250px
   &__lv3
+    margin-top 5px
     padding-left 1rem
     font-size small
   &__lv2
-    margin-top 1rem
+    margin-top 10px
   &__item
     position fixed
+    max-width 250px
+    min-width 250px
     background white
     padding 1rem
     box-shadow 0 1px 2px 0 rgba(34,36,38,0.15)
