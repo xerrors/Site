@@ -47,20 +47,20 @@ export default {
   },
   mounted () {
     this.zhuanlan = [{
-      cover: "http://src.xerrors.fun/blog/20200105/zpJoCBLkleTs.png",
-      link: "python-base",
-      decription: "这个专栏主要从Python的几个基础的地方来阐述，理解难度很低，并且可帮助有C语言基础的同学快速掌握Python的基础语法知识以及用法，平时写一些字符串处理脚本还是没有问题的；与此同时，该内容也可以帮助学习更深层次的Python的时候，打下一个基础。",
-      title: "Python 快速扫盲",
-      date: "2019-10-07",
-      showDetail: false,
-      num: 0,
-      pages: []
-    }, {
       cover: "http://src.xerrors.fun/blog/20200107/F07JEvkIXiSC.png",
       link: "compile",
       decription: "这个专栏涉及到词法分析器以及语法分析器的构建，从 flex 开始讲起，直到后面的 bison 来构造语法分析器，一步一个脚印来将自己学习的知识应用到实践中去；",
       title: "编译原理：语法分析与词法分析",
       date: "2019-11-15",
+      showDetail: false,
+      num: 0,
+      pages: []
+    }, {
+      cover: "http://src.xerrors.fun/blog/20200105/zpJoCBLkleTs.png",
+      link: "python-base",
+      decription: "这个专栏主要从Python的几个基础的地方来阐述，理解难度很低，并且可帮助有C语言基础的同学快速掌握Python的基础语法知识以及用法，平时写一些字符串处理脚本还是没有问题的；与此同时，该内容也可以帮助学习更深层次的Python的时候，打下一个基础。",
+      title: "Python 快速扫盲",
+      date: "2019-10-07",
       showDetail: false,
       num: 0,
       pages: []

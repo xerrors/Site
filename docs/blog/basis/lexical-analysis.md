@@ -7,6 +7,7 @@ tag:
  - 基础
 categories:
  - 基础
+zhuanlan: compile
 next:
   title: 手动构造词法分析器
   path: /lexical-analysis-2/
