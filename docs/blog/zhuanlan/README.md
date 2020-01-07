@@ -55,6 +55,15 @@ export default {
       showDetail: false,
       num: 0,
       pages: []
+    }, {
+      cover: "http://src.xerrors.fun/blog/20200107/F07JEvkIXiSC.png",
+      link: "compile",
+      decription: "这个专栏涉及到词法分析器以及语法分析器的构建，从 flex 开始讲起，直到后面的 bison 来构造语法分析器，一步一个脚印来将自己学习的知识应用到实践中去；",
+      title: "编译原理：语法分析与词法分析",
+      date: "2019-11-15",
+      showDetail: false,
+      num: 0,
+      pages: []
     }]
     var temp = this.$site.pages
     // 筛选标签中带有 zhuanlan 标志的文章
