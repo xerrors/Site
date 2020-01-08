@@ -1,5 +1,5 @@
 <template>
-  <div class="page">
+  <div class="page" style="background: white;">
     <section class="page-edit">
       <div>
         <!-- id 将作为查询条件 -->
