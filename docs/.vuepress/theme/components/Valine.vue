@@ -9,10 +9,6 @@
           <i class="leancloud-visitors-count"></i>
         </span>
       </div>
-      <h3>
-        <a href="javascript:;"></a>
-        评 论：
-      </h3>
       <div id="vcomments"></div>
     </section>
   </div>
