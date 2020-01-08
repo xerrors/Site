@@ -13,6 +13,7 @@
     "js-md5": "^0.7.3",
     "md564": "^0.2.1",
     "serialize-javascript": "^2.1.2",
+    "vuepress-plugin-comment": "^0.7.2",
     "vuepress-plugin-medium-zoom": "^1.1.8"
   },
   "devDependencies": {
