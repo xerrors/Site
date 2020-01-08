@@ -1,5 +1,5 @@
 <template>
-  <div class="page">
+  <div class="page" style="background: white; box-shadow: 0 1px 2px 0 rgba(34,36,38,0.15);">
     <section class="page-edit">
       <div>
         <!-- id 将作为查询条件 -->
