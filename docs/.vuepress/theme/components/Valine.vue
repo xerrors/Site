@@ -1,5 +1,5 @@
 <template>
-  <div class="page" style="background: white;">
+  <div style="background: white;">
     <section class="page-edit">
       <div>
         <!-- id 将作为查询条件 -->
@@ -8,6 +8,7 @@
           <em class="post-meta-item-text">阅读量： </em>
           <i class="leancloud-visitors-count"></i>
         </span>
+        <br>
       </div>
       <div id="vcomments"></div>
     </section>
