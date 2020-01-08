@@ -62,6 +62,12 @@ export default {
           "avatar": "http://q2epkjatk.bkt.clouddn.com/blog_mghio.png",
           "site": "https://www.mghio.cn",
           "description": "JAVA 搬运工 & 终身学习者"
+        },
+        {
+          "title": "tcrush",
+          "avatar": "http://tcrush.github.io/uploads/avatar.jpg",
+          "site": "http://tcrush.github.io/",
+          "description": "淡泊以明志、宁静以致远"
         }
       ]
     }

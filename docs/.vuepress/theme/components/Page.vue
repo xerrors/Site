@@ -278,11 +278,12 @@ function flatten (items, res) {
   margin-left 1rem
   width 250px
   &__lv3
-    margin-top 5px
+    margin-top 8px
     padding-left 1rem
-    font-size small
+    &::before
+      content: '·'
   &__lv2
-    margin-top 10px
+    margin-top 16px
   &__item
     position fixed
     max-width 250px

@@ -28,20 +28,13 @@ module.exports = {
     ]
   },
   // plugins: ['@vuepress/pwa'],
-  plugins: [
-    [
-      'vuepress-plugin-medium-zoom',
-      {
-        selector: '.my-wrapper .my-img',
-        delay: 1000,
-        options: {
-          margin: 24,
-          background: '#BADA55',
-          scrollOffset: 0,
-        },
-      },
-    ],
-  ],
+  plugins: {
+    '@vuepress/medium-zoom': {
+      options: {
+        margin: 16
+      }
+    }
+  },
   configureWebpack: {
     resolve: {
       alias: {
