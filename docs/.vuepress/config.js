@@ -30,6 +30,7 @@ module.exports = {
   // plugins: ['@vuepress/pwa'],
   plugins: {
     '@vuepress/medium-zoom': {
+      selector: '.need-zoom :not(a) > img',
       options: {
         margin: 16
       }

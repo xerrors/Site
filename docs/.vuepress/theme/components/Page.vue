@@ -1,5 +1,5 @@
 <template>
-  <main class="page">
+  <main class="page" :class="{'need-zoom': isBlog}">
     <slot name="top"/>
     <!--<div class="my-top-box" style="height: 5rem;"></div>-->
     <div class="my-main">
