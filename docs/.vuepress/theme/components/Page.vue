@@ -63,6 +63,7 @@
             </span>
           </p>
         </div>
+        <valine></valine>
       </div>
       <div v-show="isBlog" class="my-menu">
         <div class="my-menu__item">
@@ -86,10 +87,11 @@
 
 <script>
 import { resolvePage, outboundRE, endingSlashRE } from '../util'
+import Valine from '@theme/components/Valine.vue'
 
 export default {
   props: ['sidebarItems'],
-
+  components: { Valine },
   computed: {
     renderMenus() {
       return this.$page.headers
