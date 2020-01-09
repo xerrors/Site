@@ -189,6 +189,7 @@ export default {
   font-size: small;
   color: #777;
   margin-left: 10px;
+  background: linear-gradient(120deg,#fff 50%,#f1f6f5 0);
 }
 
 .page-guide-btn {
