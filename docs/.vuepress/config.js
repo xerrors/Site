@@ -15,7 +15,6 @@ module.exports = {
     nav: [
       { text: '📃 文章', link: '/blog/' },
       { text: '📰 专栏', link: '/zhuanlan/' },
-      { text: '🎵 音乐', link: '/music/' },
       { text: '🤪 动态', link: '/zone/' },      
       { text: '🚥 导航', link: '/guide/' },
       {

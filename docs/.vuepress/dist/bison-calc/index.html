@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>基于WINDOWS下FLEX与BISON的计算器实现 | Yuchuan</title>
+    <meta name="description" content="Yuchuan playground">
+    <link rel="manifest" href="/manifest.json">
+  <link rel="apple-touch-icon" href="/favicon.png">
+    
+    <link rel="preload" href="/assets/css/0.styles.e960f1f7.css" as="style"><link rel="preload" href="/assets/js/app.6b933b54.js" as="script"><link rel="preload" href="/assets/js/6.a90dabf6.js" as="script"><link rel="preload" href="/assets/js/24.b802e7c3.js" as="script"><link rel="prefetch" href="/assets/js/1.72c7925f.js"><link rel="prefetch" href="/assets/js/10.ceb88b49.js"><link rel="prefetch" href="/assets/js/11.00e44e88.js"><link rel="prefetch" href="/assets/js/12.5afd7fd2.js"><link rel="prefetch" href="/assets/js/13.9204043e.js"><link rel="prefetch" href="/assets/js/14.88cfc1cd.js"><link rel="prefetch" href="/assets/js/15.44a8b2f8.js"><link rel="prefetch" href="/assets/js/16.812fcac3.js"><link rel="prefetch" href="/assets/js/17.7deee4f5.js"><link rel="prefetch" href="/assets/js/18.761e8411.js"><link rel="prefetch" href="/assets/js/19.bc3a878e.js"><link rel="prefetch" href="/assets/js/2.128757f9.js"><link rel="prefetch" href="/assets/js/20.d3fa193b.js"><link rel="prefetch" href="/assets/js/21.3cd195bf.js"><link rel="prefetch" href="/assets/js/22.1c1325cb.js"><link rel="prefetch" href="/assets/js/23.82d14666.js"><link rel="prefetch" href="/assets/js/25.717c5c79.js"><link rel="prefetch" href="/assets/js/26.e77159b0.js"><link rel="prefetch" href="/assets/js/27.b5a35fce.js"><link rel="prefetch" href="/assets/js/28.24a0bc83.js"><link rel="prefetch" href="/assets/js/29.94e9e4f9.js"><link rel="prefetch" href="/assets/js/30.6f4fbb7b.js"><link rel="prefetch" href="/assets/js/31.d05e8947.js"><link rel="prefetch" href="/assets/js/32.51532678.js"><link rel="prefetch" href="/assets/js/33.95a100c0.js"><link rel="prefetch" href="/assets/js/34.886e5fc6.js"><link rel="prefetch" href="/assets/js/35.d1d5f65a.js"><link rel="prefetch" href="/assets/js/36.94151ff7.js"><link rel="prefetch" href="/assets/js/37.147851bb.js"><link rel="prefetch" href="/assets/js/38.18dff800.js"><link rel="prefetch" href="/assets/js/39.9eee45c2.js"><link rel="prefetch" href="/assets/js/4.fb7c5279.js"><link rel="prefetch" href="/assets/js/40.b31c2bd4.js"><link rel="prefetch" href="/assets/js/41.d4147430.js"><link rel="prefetch" href="/assets/js/42.8e6dc6ed.js"><link rel="prefetch" href="/assets/js/43.336ed462.js"><link rel="prefetch" href="/assets/js/44.95adcda9.js"><link rel="prefetch" href="/assets/js/5.2b7b5a68.js"><link rel="prefetch" href="/assets/js/7.7a5ca1da.js"><link rel="prefetch" href="/assets/js/8.28c6643e.js"><link rel="prefetch" href="/assets/js/9.df1fb134.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e960f1f7.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><!----> <div id="my-bg"></div> <header class="navbar my-nav"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/avatar.jpg" alt="Yuchuan" class="logo"> <span class="site-name can-hide">Yuchuan</span></a> <div class="links"><!----> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link">📃 文章</a></div><div class="nav-item"><a href="/zhuanlan/" class="nav-link">📰 专栏</a></div><div class="nav-item"><a href="/zone/" class="nav-link">🤪 动态</a></div><div class="nav-item"><a href="/guide/" class="nav-link">🚥 导航</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">🔨 工具</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/tools/findpwd.html" class="nav-link">🔐 寻密</a></li><li class="dropdown-item"><!----> <a href="/about/links.html" class="nav-link">🔗 友链</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link">📃 文章</a></div><div class="nav-item"><a href="/zhuanlan/" class="nav-link">📰 专栏</a></div><div class="nav-item"><a href="/zone/" class="nav-link">🤪 动态</a></div><div class="nav-item"><a href="/guide/" class="nav-link">🚥 导航</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">🔨 工具</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/tools/findpwd.html" class="nav-link">🔐 寻密</a></li><li class="dropdown-item"><!----> <a href="/about/links.html" class="nav-link">🔗 友链</a></li></ul></div></div> <!----></nav>  <!----> </aside> <div><div style="height:4.5rem;width:100%;background:#f0f2f5;"></div> <main class="page need-zoom"> <div class="my-main"><div class="my-main-left"><div class="my-title-box"><h3 style="text-align: center;">基于WINDOWS下FLEX与BISON的计算器实现</h3> <div style="text-align: center; color: #bbb"><span data-flag-title="Your Article Title" class="leancloud-visitors"><span class="post-meta-item-text">阅读量： </span> <span class="leancloud-visitors-count"></span> |  
+        发布于：2020-1-10 
+      </span></div></div> <div class="theme-default-content content__default"><p>之前咱们所设计的语法分析器是使用C++自己编写的，尽管我们只是实现了一个简单的功能，但是还是费了九牛二虎之力，那么这一节，我们就开始使用Bison工具快速为我们创建一个功能强啊的语法分析器，话不多说，各位同学往下看吧！</p> <p><strong>软件及可参考资源</strong></p> <p><a href="https://cs.nju.edu.cn/daixinyu/1006.pdf" target="_blank" rel="noopener noreferrer">南京大学-词法分析和语法分析课件<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p><a href="https://sourceforge.net/projects/winflexbison/" target="_blank" rel="noopener noreferrer">windows平台下flex和Bison下载地址<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <h2 id="_1-题目描述"><a href="#_1-题目描述" aria-hidden="true" class="header-anchor">#</a> 1. 题目描述</h2> <p>基于词法分析程序自动构造工具Flex与语法分析程序自动构造工具Bison，编制简单的计算器程序。</p> <p>参考示例程序, 用Flex和Bison实现一个功能更为强大的计算器，尽可能多的包含以下运算（支持浮点数）：</p> <ul><li>加、减、乘、除运算</li> <li>乘方power、开方sqrt运算</li> <li>三角函数运算 – sin、cos...</li> <li>求阶乘</li> <li>求log以10为底的对数</li></ul> <h3 id="题目分析"><a href="#题目分析" aria-hidden="true" class="header-anchor">#</a> 题目分析</h3> <p>题目看起来还挺复杂的，而且还用到了没接触过的Bison工具。</p> <h2 id="_2-代码总览"><a href="#_2-代码总览" aria-hidden="true" class="header-anchor">#</a> 2. 代码总览</h2> <blockquote><p>calc.y</p></blockquote> <div class="language-y extra-class"><pre class="language-text"><code>%{
+# include &lt;stdio.h&gt;
+# include &lt;stdlib.h&gt;
+# include &lt;math.h&gt;
+# define YYSTYPE float
+# define PI acos(-1)
+int yylex();
+int yyerror();
+float deg(int n);
+%}
+
+// %union {
+//   int type_int;
+//   float type_float;
+//   double type_double;
+// }
+
+/* declare tokens*/
+// %token &lt;type_int&gt; NUMBER
+// %token &lt;type_float&gt; FLOAT
+%token NUMBER FLOAT
+%token ADD SUB MUL DIV ABS
+%token OP CP CO EOL
+%token POW SQRT LOG SIN COS DEG
+
+// %type &lt;type_double&gt; calclist exp factor term
+
+%%
+ 
+calclist: /*nothing */ 
+ | calclist exp { printf(&quot;%g&quot;, $2); return 0;}
+ ;
+exp: factor
+ | exp ADD exp { $$ = $1 + $3; }
+ | exp SUB factor { $$ = $1 - $3; }
+ ;
+ 
+factor: term
+ | factor MUL term { $$ = $1 * $3; }
+ | factor DIV term { $$ = $1 / $3; }
+ ;
+ 
+term: NUMBER { $$ = $1;}
+ | FLOAT { $$ = $1;}
+ | term DEG { $$ = deg($1);}
+ | OP exp CP { $$ = $2; }
+ | SQRT OP term CP { $$ = sqrt($3); }
+ | LOG OP term CP { $$ = log10($3); }
+ | SIN OP term CP { $$ = sin($3 / 180 * PI); }
+ | COS OP term CP { $$ = cos($3 / 180 * PI); }
+ | OP exp CP OP exp CP { $$ = $2 * $5; }
+ | POW OP term CO term CP { $$ = pow($3, $5); }
+ ;
+%%
+
+float deg(int n) {
+  if (n == 1) {
+    return 1;
+  } else {
+    return n * deg(n-1);
+  }
+}
+
+int main() {
+  yyparse();
+}
+ 
+int yyerror(char *s) {
+  fprintf(stderr, &quot;error: %s\n&quot;, s);
+}
+</code></pre></div><blockquote><p>calc.l</p></blockquote> <div class="language-l extra-class"><pre class="language-text"><code>%option noyywrap
+%{
+# include&quot;calc.tab.h&quot;
+%}
+
+DIGIT [0-9]+
+FLOAT {DIGIT}[.]{DIGIT}
+
+%%
+&quot;+&quot;  { return ADD; }
+&quot;-&quot;   { return SUB; }
+&quot;*&quot;  { return MUL; }
+&quot;/&quot;   { return DIV; }
+&quot;(&quot;     { return OP; }
+&quot;)&quot;     { return CP; }
+&quot;,&quot;     { return CO; }
+&quot;!&quot;     { return DEG; }
+
+{DIGIT} { yylval = (YYSTYPE)atoi(yytext); return NUMBER; }
+{FLOAT} { yylval = (YYSTYPE)atof(yytext); return FLOAT; }
+
+&quot;pow&quot; { return POW; }
+&quot;sqrt&quot; { return SQRT; }
+&quot;sin&quot; { return SIN; }
+&quot;cos&quot; { return COS; }
+&quot;log&quot; { return LOG; }
+
+&quot;//&quot;.* 
+[ \t]   { /* ignore white space */ }
+.      { yyerror(&quot;Mystery character&quot;); }
+%%
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+            ←
+            <a href="/parsing-in-LR-table/" class="prev">
+              基于LR分析表编写语法分析器
+            </a></span> <!----></p></div> <div style="background:white;"><section class="page-edit"><div><span data-flag-title="Your Article Title" class="leancloud-visitors" style="display: block; color: #999;"><span class="post-meta-item-text">阅读量： </span> <span class="leancloud-visitors-count"></span></span> <br></div> <div id="vcomments"></div></section></div></div> <div class="my-menu" style="display:;"><div class="my-menu__item"><h4 style="margin-top: 0;">目录</h4> <a href="/bison-calc/#_1-题目描述" class="my-menu__lv2" style="line-height: 1rem; display: block;">
+            1. 题目描述</a><a href="/bison-calc/#题目分析" class="my-menu__lv3" style="line-height: 1rem; display: block;">
+            题目分析</a><a href="/bison-calc/#_2-代码总览" class="my-menu__lv2" style="line-height: 1rem; display: block;">
+            2. 代码总览</a></div></div></div> </main></div></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.6b933b54.js" defer></script><script src="/assets/js/6.a90dabf6.js" defer></script><script src="/assets/js/24.b802e7c3.js" defer></script>
+  </body>
+</html>

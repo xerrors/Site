@@ -12,6 +12,8 @@ prev:
   title: 手动构造词法分析器
   path: /lexical-analysis-2/
 next:
+  title: 基于WINDOWS下FLEX与BISON的计算器实现
+  path: /bison-calc/
 ---
 前面两篇文章已经介绍了词法分析的手动和自动两个办法，接下来两篇文章会介绍手动和自动构建语法分析器；这里假定你已经具备了语法分析的理论知识，包括但不限于LR分析方法，LR分析表的构建；如果基础不是很好的话，也可以看一下这一篇文章：[编译原理——LR分析表（简书）](https://www.jianshu.com/p/dd89025f95c1)
 
