@@ -6,8 +6,12 @@
       <div class="my-main-left" :class="{'notBlog':!isBlog}">
         <div ref="title" class="my-title-box" v-if="isBlog">
           <h3 style="text-align: center;">{{ this.$page.title }}</h3>
-          <div style="text-align: center; color: #aaa">
-            发布于：{{ this.$page.frontmatter.date }}
+          <div style="text-align: center; color: #bbb">
+            <span class="leancloud-visitors" data-flag-title="Your Article Title">
+          <span class="post-meta-item-text">阅读量： </span>
+          <span class="leancloud-visitors-count"></span> |  
+          发布于：{{ formatDate(this.$page.frontmatter.date) }} 
+        </span>
           </div>
         </div>
         <Content class="theme-default-content"/>
@@ -67,7 +71,7 @@
       </div>
       <div v-show="isBlog" class="my-menu">
         <div class="my-menu__item">
-          <h3>目录</h3>
+          <h4 style="margin-top: 0;">目录</h4>
             <a
               v-for="menu in renderMenus"
               :href="$page.path + '#' + menu.slug"
@@ -214,6 +218,11 @@ export default {
         + (docsDir ? docsDir.replace(endingSlashRE, '') + '/' : '')
         + path
       )
+    },
+    formatDate(date) {
+      date = new Date(date)
+
+      return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`
     }
   }
 }

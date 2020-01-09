@@ -195,7 +195,8 @@ export default {
 <style>
 /* 隐藏滚动条 */ 
 ::-webkit-scrollbar {
-  width: 0.3rem !important;
+  width: 0.4rem !important;
+  width: 0.4rem !important;
 }
 
 ::-webkit-scrollbar-thumb {

@@ -27,7 +27,7 @@ hideLastUpdated: True
           <div v-if="post.frontmatter.tag" style="display: inline-block; float: right;">
             <span class="this-tag"
               v-for="item in post.frontmatter.tag"
-              ># {{ item }}</span>
+              >{{ item }}</span>
           </div>
           <div class="bottom clearfix">
             <br>
