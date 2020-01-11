@@ -8,8 +8,7 @@ hideLastUpdated: True
   <div>
     <h3>友链</h3>
     <p>
-      <a href="mailto:xerrors@163.com?subject=申请友链&body=网站标题： 网站头像链接： 网站描述： 网站地址：">💌申请友链</a>
-      请按照格式申请友链，并确保你的网站已经添加本站为友链
+      请按照格式申请友链，并确保你的网站已经添加本站为友链，友链申请方式：在下方评论区留言。格式如下：
       <div style="border: 1px solid #f3f3f3; border-radius: 3px; padding: 2rem; font-weight: 600;">
         "title": "Yuchuan",<br>
         "avatar": "https://www.xerrors.fun/avatar.jpg",<br>
