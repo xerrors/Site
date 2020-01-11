@@ -19,7 +19,7 @@ hideLastUpdated: True
     <br>
     <div class="my-links">
         <el-card class="link-card" shadow="hover" v-for="link in links">
-          <img class="link-card__avatar" :src="link.avatar"/>
+          <img class="link-card__avatar" :src="link.avatar" alt="头像未加载"/>
           <h3 class="link-card__title">{{ link.title }}</h3>
           <p>{{ link.description }}</p>
           <a :href="link.site" target="_blank">
