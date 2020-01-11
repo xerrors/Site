@@ -4,6 +4,7 @@ date: "2019-08-15"
 permalink: /decorate-vuepress
 tag: 
  - blog
+ - Vuepress
  - 前端
 categories:
  - 前端

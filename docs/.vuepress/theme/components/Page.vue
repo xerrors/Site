@@ -8,8 +8,7 @@
           <h3 style="text-align: center;">{{ this.$page.title }}</h3>
           <div style="text-align: center; color: #bbb">
             <span class="leancloud-visitors" data-flag-title="Your Article Title">
-          {{ formatDate(this.$page.frontmatter.date) }} · <i class="el-icon-view">
-          <span class="leancloud-visitors-count"></span>
+          {{ formatDate(this.$page.frontmatter.date) }} · <i class="el-icon-view"> · <span class="leancloud-visitors-count"></span>
         </span>
           </div>
         </div>
@@ -298,9 +297,9 @@ function flatten (items, res) {
     position fixed
     max-width 250px
     min-width 250px
-    background white
+    // background white
     padding 1rem
-    box-shadow 0 1px 2px 0 rgba(34,36,38,0.15)
+    // box-shadow 0 1px 2px 0 rgba(34,36,38,0.15)
 
 @media (max-width: 1250px)
   .my-main-left

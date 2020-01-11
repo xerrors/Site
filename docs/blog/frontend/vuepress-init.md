@@ -4,6 +4,7 @@ date: "2019-08-10"
 permalink: /vuepress-init
 tag: 
  - blog
+ - Vuepress
  - 前端
 categories:
  - 前端
