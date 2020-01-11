@@ -8,9 +8,8 @@
           <h3 style="text-align: center;">{{ this.$page.title }}</h3>
           <div style="text-align: center; color: #bbb">
             <span class="leancloud-visitors" data-flag-title="Your Article Title">
-          <span class="post-meta-item-text">阅读量： </span>
-          <span class="leancloud-visitors-count"></span> |  
-          发布于：{{ formatDate(this.$page.frontmatter.date) }} 
+          {{ formatDate(this.$page.frontmatter.date) }} · <i class="el-icon-view">
+          <span class="leancloud-visitors-count"></span>
         </span>
           </div>
         </div>
