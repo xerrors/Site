@@ -32,12 +32,12 @@ hideLastUpdated: True
           <div class="bottom clearfix">
             <br>
             <span><small><i class="el-icon-time"></i>  {{ post.formatDay }}</small></span>
-            <el-link 
-              style="float: right;" 
+            <el-link
+              class="read-more"
               :href="post.path" 
               type="primary" 
               :underline="false"
-            ><i class="el-icon-view"> 阅读全文</i></el-link>
+            >阅读全文</el-link>
           </div>
         </div>
       </div>
@@ -191,6 +191,13 @@ export default {
   color: #777;
   margin-left: 10px;
   background: linear-gradient(120deg,#fff 50%,#f1f6f5 0);
+}
+
+.read-more {
+  float: right;
+  background: #f2f2f2;
+  padding: 5px 10px;
+  border-radius: 3px;
 }
 
 .page-guide-btn {
