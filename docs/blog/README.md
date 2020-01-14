@@ -196,7 +196,7 @@ export default {
 .read-more {
   float: right;
   background: #f2f2f2;
-  padding: 5px 10px;
+  padding: 3px 10px;
   border-radius: 3px;
 }
 
