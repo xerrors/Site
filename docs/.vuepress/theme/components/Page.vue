@@ -8,7 +8,7 @@
           <h3 style="text-align: center;">{{ this.$page.title }}</h3>
           <div style="text-align: center; color: #bbb">
             <span class="leancloud-visitors" data-flag-title="Your Article Title">
-          {{ formatDate(this.$page.frontmatter.date) }} · <i class="el-icon-view"> · <span class="leancloud-visitors-count"></span>
+          {{ formatDate(this.$page.frontmatter.date) }} · <i class="el-icon-view">&ensp;<span class="leancloud-visitors-count"></span>
         </span>
           </div>
         </div>
@@ -73,7 +73,7 @@
             <a
               v-for="menu in renderMenus"
               :href="$page.path + '#' + menu.slug"
-              style="line-height: 1rem; display: block;"
+              style="line-height: 1rem; display: block; color: #777;"
               :class="{
                 'my-menu__lv2': menu.level===2,
                 'my-menu__lv3': menu.level===3,
@@ -286,11 +286,12 @@ function flatten (items, res) {
   right 0
   margin-left 1rem
   width 250px
+  color #777
   &__lv3
     margin-top 8px
     padding-left 1rem
     &::before
-      content: '·'
+      content: '· '
   &__lv2
     margin-top 16px
   &__item
@@ -354,5 +355,4 @@ function flatten (items, res) {
       font-size .8em
       float none
       text-align left
-
 </style>
