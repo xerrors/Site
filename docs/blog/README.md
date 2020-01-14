@@ -166,6 +166,7 @@ export default {
   cursor: pointer;
   font-size: 1rem;
   transition: all 0.5s ease;
+  border-radius: 3px;
 }
 
 .my-tags:hover {
