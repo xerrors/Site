@@ -93,6 +93,7 @@ export default {
 .zl-item
   width 80%
   margin 2rem auto
+  transition .3s
   box-shadow: 0 1px 2px 0 rgba(34,36,38,.15);
   &:hover
     cursor pointer
