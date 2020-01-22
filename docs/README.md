@@ -1,7 +1,7 @@
 ---
 home: true
 heroText: Xerrors
-tagline: 玉川
+tagline: love & peace
 permalink: /
 actionText: 关 于
 actionLink: /about/
