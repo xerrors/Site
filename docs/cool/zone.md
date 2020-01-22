@@ -172,7 +172,7 @@ export default {
 
   .my-msg
     margin-bottom 2.5rem
-    border: 1px solid #d1d5da;
+    border 1px solid #d1d5da
     border-radius 3px
 
     // test
@@ -181,14 +181,15 @@ export default {
       padding 0.5rem
       background-color #f6f8fa
       border-bottom: 1px solid #d1d5da
-      display flex
-      align-items center
+      /* display flex
+      align-items center */
 
     &__status
       margin 0 0.5rem
 
     &__date
       margin 0 0.5rem
+      float right
     
     &__body
       padding 1rem
