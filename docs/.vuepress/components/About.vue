@@ -118,7 +118,7 @@ h1, h2, h3, p {
     margin: 0 auto;
     border: 0px;
     opacity: 0;
-    animation: showup 1s forwards;
+    /* animation: showup 1s forwards; */
 }
 
 .el-card__body{
@@ -139,7 +139,7 @@ h1, h2, h3, p {
     /* background-image: linear-gradient(116deg, #028080 8%, #931c1e 92%);
     background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); */
     background-size: 400% 400%;
-    animation: gradientBG 8s ease infinite;
+    /* animation: gradientBG 8s ease infinite; */
     position: absolute;
     z-index: -1;
 }
