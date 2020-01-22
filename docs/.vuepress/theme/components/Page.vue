@@ -6,9 +6,9 @@
       <div class="my-main-left" :class="{'notBlog':!isBlog}">
         <div ref="title" class="my-title-box" v-if="isBlog">
           <h3 style="text-align: center;">{{ this.$page.title }}</h3>
-          <div style="text-align: center; color: #bbb">
+          <div style="text-align: center; color: #A0A0A0; fon-size: 14px;">
             <span class="leancloud-visitors" data-flag-title="Your Article Title">
-          {{ formatDate(this.$page.frontmatter.date) }} · <i class="el-icon-view">&ensp;<span class="leancloud-visitors-count"></span>
+          {{ formatDate(this.$page.frontmatter.date) }} · <i class="el-icon-view">&ensp;<span class="leancloud-visitors-count"></span>浏览
         </span>
           </div>
         </div>
