@@ -27,6 +27,7 @@ hideLastUpdated: True
           <div v-if="post.frontmatter.tag" style="display: inline-block; float: right;">
             <span class="this-tag"
               v-for="item in post.frontmatter.tag"
+              @click="myFlitter( item )"
               >{{ item }}</span>
           </div>
           <div class="bottom clearfix">
@@ -51,12 +52,12 @@ hideLastUpdated: True
 export default {
   data() {
     return {
-      step: 15,
+      step: 12,
       posts: [],
       tags: [],
       page: 1,
       num: 0,
-      btnInfo: '🔔 加载更多',
+      btnInfo: '加载更多',
       showBtn: true,
       selectedTag: "blog"
     }
@@ -190,7 +191,13 @@ export default {
   font-size: small;
   color: #777;
   margin-left: 10px;
-  background: linear-gradient(120deg,#fff 50%,#f1f6f5 0);
+  /* background: linear-gradient(120deg,#fff 50%,#f1f6f5 0); */
+}
+
+.this-tag:hover {
+  cursor: pointer;
+  color: black;
+  border-bottom: 1px dotted black;
 }
 
 .read-more {
@@ -214,6 +221,7 @@ export default {
   transition: all 0.3s ease;
   box-sizing: border-box;
   border: 1px solid black;
+  border-radius: 3px;
 }
 
 .page-guide-btn div:hover {
