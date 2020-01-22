@@ -1,6 +1,6 @@
 ---
 home: true
-heroText: Yuchuan
+heroText: Xerrors
 tagline: 玉川
 permalink: /
 actionText: 关 于
@@ -20,5 +20,5 @@ features:
   details: 当有开心的事情的时候，记得分享；
 
 
-footer: Copyright © 2019-present ❤️ Yuchuan | 皖 ICP 备 19016269 号
+footer: Copyright © 2019-present ❤️ Xerrors | 皖 ICP 备 19016269 号
 ---

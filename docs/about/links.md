@@ -10,7 +10,7 @@ hideLastUpdated: True
     <p>
       请按照格式申请友链，并确保你的网站已经添加本站为友链，友链申请方式：在下方评论区留言。格式如下：
       <div style="border: 1px solid #f3f3f3; border-radius: 3px; padding: 2rem; font-weight: 600;">
-        "title": "Yuchuan",<br>
+        "title": "Xerrors",<br>
         "avatar": "https://www.xerrors.fun/avatar.jpg",<br>
         "site": "https://www.xerrors.fun",<br>
         "description": "敬畏代码，敬畏技术"
@@ -39,7 +39,7 @@ export default {
     return {
       links: [
         {
-          "title": "Yuchuan",
+          "title": "Xerrors",
           "avatar": "https://www.xerrors.fun/avatar.jpg",
           "site": "https://www.xerrors.fun",
           "description": "敬畏代码，敬畏技术"

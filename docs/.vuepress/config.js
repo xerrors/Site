@@ -3,8 +3,8 @@ module.exports = {
     ['link', { rel: 'manifest', href: '/manifest.json' }],
     ['link', { rel: 'apple-touch-icon', href: '/favicon.png' }],
   ],
-  title: 'Yuchuan',
-  description: 'Yuchuan playground',
+  title: 'Xerrors',
+  description: 'Xerrors playground',
   permalink: "/:year/:month/:day/:slug",
   themeConfig: {
     sidebar: false,
