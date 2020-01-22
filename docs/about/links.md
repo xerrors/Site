@@ -58,7 +58,7 @@ export default {
         },
         {
           "title": "mghio",
-          "avatar": "http://q2epkjatk.bkt.clouddn.com/blog_mghio.png",
+          "avatar": "https://i.loli.net/2020/01/12/8qITJvhw2R9HN7M.png",
           "site": "https://www.mghio.cn",
           "description": "JAVA 搬运工 & 终身学习者"
         },
