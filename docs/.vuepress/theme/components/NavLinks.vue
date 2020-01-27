@@ -121,8 +121,8 @@ export default {
   a
     line-height 1.4rem
     color inherit
-    &:hover
-      color $accentColor
+    // &:hover
+    //   color $accentColor
     // &:hover, &.router-link-active
     //   color $accentColor
   .nav-item
