@@ -4,7 +4,7 @@ heroText: Xerrors
 tagline: love & peace
 permalink: /
 actionText: 关 于
-actionLink: /about/
+actionLink: https://github.com/Xerrors
 
 sidebar: false
 

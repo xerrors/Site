@@ -1,8 +1,7 @@
 <template>
     <div class="my-main-container">
         <div class="my-container">
-          <el-card v-show="show==0" class="my-card" :body-style="{ padding: '0px' }">
-              <div class="my-bg"></div>
+          <el-card class="my-card" :body-style="{ padding: '0px' }">
               <div style="height: 50px; margin: 0;"></div>
               <a 
                 class="my-avatar-link" 
@@ -51,26 +50,16 @@
 export default {
   data() {
     return {
-      show: 0,
-      cardNum: 1,
-      showButton: true,
       count: 0,
       canRotate: false
     }
   },
   methods: {
-    plusOne() {
-        this.show = (this.show + 1) % this.cardNum;
-        this.showButton = false;
-        setTimeout(() => {
-            this.showButton = true;
-        }, 1000);
-    },
     clickAvatar() {
-        this.count += 1;
-          if (this.count > 10) {
-            this.canRotate = true;
-          }
+      this.count += 1
+      if (this.count > 10) {
+        this.canRotate = true
+      }
     }
   }
 };
@@ -117,7 +106,6 @@ h1, h2, h3, p {
     height: 600px;
     margin: 0 auto;
     border: 0px;
-    opacity: 0;
     /* animation: showup 1s forwards; */
 }
 
@@ -128,20 +116,6 @@ h1, h2, h3, p {
 .my-card *{
   display: block;
   margin: 5px auto;
-}
-
-.my-bg {
-    width: 100%;
-    height: 100%;
-    color: #c8e3d6;
-    margin: 0;
-    background-color: #191a1b;
-    /* background-image: linear-gradient(116deg, #028080 8%, #931c1e 92%);
-    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); */
-    background-size: 400% 400%;
-    /* animation: gradientBG 8s ease infinite; */
-    position: absolute;
-    z-index: -1;
 }
 
 .my-svg {

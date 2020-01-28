@@ -21,7 +21,7 @@ module.exports = {
         items: [    
           { text: '🚥 导航', link: '/guide/' },
           { text: '🔐 寻密', link: '/tools/findpwd.html' },
-          { text: '🔗 友链', link: '/about/links.html' }
+          { text: '🔗 友链', link: '/tools/links.html' }
         ]
       }
     ]
