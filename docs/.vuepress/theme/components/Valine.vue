@@ -1,15 +1,6 @@
 <template>
   <div style="background: white;">
     <section class="page-edit">
-      <div>
-        <!-- id 将作为查询条件 -->
-        <span class="leancloud-visitors" data-flag-title="Your Article Title"
-          style="display: block; color: #999;">
-          <span class="post-meta-item-text">阅读量： </span>
-          <span class="leancloud-visitors-count"></span>
-        </span>
-        <br>
-      </div>
       <div id="vcomments"></div>
     </section>
   </div>
