@@ -34,16 +34,18 @@ hideLastUpdated: True
         </div>
       </div>
       <div class="my-msgs-container">
-        <div class="my-msg" v-for="msg in msgs">
-            <div class="my-msg__head">
-                <span class="my-msg__status">{{ msg.status }}</span>
-                <span class="my-msg__date">📅 {{ msg.date.toLocaleDateString() }}</span>
-                <span class="my-msg__date">🕒 {{ msg.date.toLocaleTimeString() }}</span>
-            </div>  
-            <div class="my-msg__body">
-                <p class="my-msg__msg">{{ msg.msg }}</P>
-            </div>  
+        <div class="my-msg" v-for="msg in topMsgs">
+          <div class="my-msg__head">
+              <span class="my-msg__status">{{ msg.status }}</span>
+              <span class="my-msg__date">📅 {{ msg.formatDay }}</span>
+          </div>  
+          <div class="my-msg__body">
+              <p class="my-msg__msg">{{ msg.msg }}</P>
+          </div>  
         </div>
+        <div @click="loadMore" class="page-guide-btn" v-show="showBtn">
+        <div ref="btn">加载更多</div>
+      </div>
     </div>
     </div>
 </template>
@@ -54,6 +56,9 @@ import axios from 'axios'
 export default {
   data() {
     return {
+      step: 20,
+      page: 1,
+      showBtn: false,
       newMsg: {
         date: '',
         msg: '',
@@ -62,6 +67,13 @@ export default {
       msgs: [],
       options: ['😄', '😎', '😫', '😏', '😡', '😨' ],
     } 
+  },
+
+  computed: {
+    topMsgs() {
+      this.showBtn =  this.page * this.step < this.msgs.length
+      return this.getTopKMsgs(this.page * this.step)
+    }
   },
 
   methods: {
@@ -96,6 +108,31 @@ export default {
       .catch(function (error) {
         console.log(error);
       })
+    },
+
+    getTopKMsgs(num) {
+      return this.msgs
+        .map(msg => {
+          return {
+            ...msg,
+            submitTime: (new Date(msg.date)).getTime(),
+            formatDay: this.formatDate(new Date(msg.date))
+          }
+        })
+        .sort((a, b) => b.submitTime - a.submitTime)
+        .slice(0, num)
+    },
+
+    formatDate(date) {
+      if (!(date instanceof Date)) {
+        return 
+      }
+
+      return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`
+    },
+
+    loadMore() {
+      this.page += 1
     },
 
     submit() { 
@@ -193,4 +230,25 @@ export default {
     
     &__body
       padding 1rem
+
+.page-guide-btn {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.page-guide-btn div {
+  display: inline-block;
+  color: black;
+  background-color: white;
+  padding: 0.6rem 1.2rem;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+.page-guide-btn div:hover {
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
 </style>

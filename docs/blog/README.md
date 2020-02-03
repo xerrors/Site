@@ -43,7 +43,7 @@ hideLastUpdated: True
         </div>
       </div>
       <div @click="loadMore" class="page-guide-btn" v-show="showBtn">
-        <div ref="btn">{{ btnInfo }}</div>
+        <div ref="btn">加载更多</div>
       </div>
     </div>
 </template>
@@ -57,7 +57,6 @@ export default {
       tags: [],
       page: 1,
       num: 0,
-      btnInfo: '加载更多',
       showBtn: true,
       selectedTag: "blog"
     }
