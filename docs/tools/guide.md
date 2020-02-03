@@ -134,16 +134,15 @@ export default {
 }
 
 .my-class-title {
-  width: 5rem;
-  padding: 0.2rem;
-  margin: 1rem 0 0 0;
-  background: linear-gradient(0deg,#f0f2f5 30%,#ffffff 0);
-  /* color: white;
-  background-color: #0093E9;
-  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%); */
-  border-radius: 2px;
-  /* text-align: center; */
-  user-select: none;
+    width: 4rem;
+    padding: .4rem 1rem;
+    margin: 1rem 0 0;
+    font-weight: 600;
+    background: linear-gradient(0deg,#e4e4e4 40%,#fff 0);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .my-link-box {

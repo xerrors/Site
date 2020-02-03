@@ -7,6 +7,7 @@
         <div ref="title" class="my-title-box" v-if="isBlog">
           <h3 style="text-align: center;">{{ this.$page.title }}</h3>
           <div style="text-align: center; color: #A0A0A0; font-size: 14px;">
+            <!-- 标题下面的信息栏 -->
             <span class="leancloud-visitors" data-flag-title="Your Article Title">
               <span>{{ formatDate(this.$page.frontmatter.date) }} &ensp;</span>
               <i class="el-icon-view" style="margin-right: 3px;"/>
