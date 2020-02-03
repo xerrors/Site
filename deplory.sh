@@ -1,6 +1,11 @@
 #!/usr/bin/env sh
 
-message="change-compile-cover"
+if test -z $0
+then
+  message="commited-by-VSCode"
+else
+  message=$0
+fi
 
 cd ~/Site
 
@@ -8,7 +13,7 @@ cd ~/Site
 set -e
 
 # 生成静态文件
-# vuepress build docs
+vuepress build docs
 
 # 进入生成的文件夹
 cd docs/.vuepress/dist
