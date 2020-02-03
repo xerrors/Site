@@ -15,7 +15,7 @@ hideLastUpdated: True
       <div @click=lookup(item)>
         <img :src="item.cover" style="width: 100%; border-radius: 4px 4px 0 0;"/>
         <h4 class="zl-item__title">{{ item.title }}</h4>
-        <p class="zl-item__info">共 {{ item.num }} 篇 · 发布于：{{ item.date }}</p>
+        <p class="zl-item__info">共 {{ item.num }} 篇 · 🕓 {{ item.date }}</p>
       </div>
       <div v-if="item.showDetail" class="zl-item__pages">
         <div style="font-size: .9rem; color: #666;">{{ item.decription }}</div>
@@ -23,7 +23,7 @@ hideLastUpdated: True
         <div v-for="(page, ind) in item.pages" class="animated faster slideInDown">
           <el-link :underline="false" :href="page.path" type="primary"
             style="font-size: 1rem; font-weight: 500; line-height: 2rem; text-decorate: none;">
-            📄{{ page.title }}
+            📄 {{ page.title }}
           </el-link>
         </div>
       </div>

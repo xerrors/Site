@@ -37,8 +37,8 @@ hideLastUpdated: True
         <div class="my-msg" v-for="msg in msgs">
             <div class="my-msg__head">
                 <span class="my-msg__status">{{ msg.status }}</span>
-                <span class="my-msg__date">{{ msg.date.toLocaleDateString() }}</span>
-                <span class="my-msg__date">{{ msg.date.toLocaleTimeString() }}</span>
+                <span class="my-msg__date">📅 {{ msg.date.toLocaleDateString() }}</span>
+                <span class="my-msg__date">🕒 {{ msg.date.toLocaleTimeString() }}</span>
             </div>  
             <div class="my-msg__body">
                 <p class="my-msg__msg">{{ msg.msg }}</P>
