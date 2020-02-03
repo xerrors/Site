@@ -1,12 +1,14 @@
 #!/usr/bin/env sh
 
+message="change-compile-cover"
+
 cd ~/Site
 
 # 确保脚本抛出遇到的错误
 set -e
 
 # 生成静态文件
-vuepress build docs
+# vuepress build docs
 
 # 进入生成的文件夹
 cd docs/.vuepress/dist
@@ -21,7 +23,7 @@ echo " "
 # echo 'blog.xerrors.fun' > CNAME
 git init
 git add -A
-git commit -m 'change page style'
+git commit -m $message
 git push -f git@git.dev.tencent.com:Xerrors/Xerrors.git master
 
 echo " "
@@ -37,7 +39,7 @@ echo " "
 cd -
 
 git add -A
-git commit -m 'changed page style'
+git commit -m $message
 
 git push -f git@git.dev.tencent.com:Xerrors/Site.git master
 
