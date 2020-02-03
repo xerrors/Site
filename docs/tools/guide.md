@@ -165,3 +165,11 @@ export default {
   transform: scale(1.05);
 }
 </style>
+
+<style>
+.el-tabs--card>.el-tabs__header .el-tabs__item.is-active {
+  border-bottom-color: #fff;
+  /* color: red; */
+  font-weight: 600;
+}
+</style>
