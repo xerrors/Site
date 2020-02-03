@@ -1,10 +1,10 @@
 #!/usr/bin/env sh
 
-if test -z $0
+if test -z $1
 then
   message="commited-by-VSCode"
 else
-  message=$0
+  message=$1
 fi
 
 cd ~/Site
