@@ -110,7 +110,8 @@ export default {
     display inline-block
     padding-right 1rem
     float right
-    color #aaa
+    font-size 15px
+    color #6c757d
   &__pages
     padding-bottom 2rem
     padding-left 1.5rem
