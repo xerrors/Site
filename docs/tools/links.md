@@ -67,6 +67,12 @@ export default {
           "avatar": "https://tcrusher.github.io/uploads/avatar.jpg",
           "site": "http://tcrusher.github.io/",
           "description": "淡泊以明志、宁静以致远"
+        },
+        {
+          "title": "tcrush",
+          "avatar": "https://www.skypyb.com/favicon.ico",
+          "site": "https://www.skypyb.com/",
+          "description": "淡泊以明志、宁静以致远"
         }
       ]
     }
