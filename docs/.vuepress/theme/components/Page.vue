@@ -8,8 +8,11 @@
           <h3 style="text-align: center;">{{ this.$page.title }}</h3>
           <div style="text-align: center; color: #A0A0A0; font-size: 14px;">
             <span class="leancloud-visitors" data-flag-title="Your Article Title">
-          {{ formatDate(this.$page.frontmatter.date) }} &ensp; <i class="el-icon-view" style="margin-right: 3px;"> <span class="leancloud-visitors-count"></span> 次浏览
-        </span>
+              <span>{{ formatDate(this.$page.frontmatter.date) }} &ensp;</span>
+              <i class="el-icon-view" style="margin-right: 3px;"/>
+              <span class="leancloud-visitors-count"></span>
+              <span>次浏览</span>
+            </span>
           </div>
         </div>
         <Content class="theme-default-content"/>
