@@ -1,9 +1,9 @@
 ---
 home: true
 heroText: Xerrors
-tagline: Love & Peace
+tagline: LOVE AND PEACE
 permalink: /
-actionText: 关 于
+actionText: ABOUT
 actionLink: https://github.com/Xerrors
 
 sidebar: false

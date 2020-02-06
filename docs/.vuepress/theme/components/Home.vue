@@ -205,8 +205,8 @@ export default {
         border-color black
 
     .description
+      font-size 1.2rem
       font-weight 300
-      text-decoration: underline;
 .nav-bar {
   background-color: white;
 }
