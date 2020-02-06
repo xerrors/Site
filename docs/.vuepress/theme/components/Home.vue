@@ -180,6 +180,8 @@ export default {
       font-weight 500
       font-size: 10rem
       color: #0d302c;
+      outline: 2px solid black;
+      outline-offset: -11px;
       background linear-gradient(45deg, #b3feff, #ffa9ab)
       font-family algerian
       margin-top 6.5rem
@@ -191,18 +193,20 @@ export default {
     .action-button
       opacity: 0;
       color white
-      background-color rgba(0,0,0,0)
-      padding 0.3rem 4rem
+      outline: 1px solid white;
+      outline-offset: -.4rem;
+      background-color black
+      padding 0.5rem 5rem
       border-radius 0
       transition: border-color .2s cubic-bezier(0, 0.58, 0, 0.79);
       box-sizing border-box
-      border: 1px solid white
+      // border: 1px solid white
       font-weight 300
       animation: opacityto1 0.5s 1s ease forwards
 
-      &:hover
-        background-color black
-        border-color black
+      // &:hover
+      //   background-color black
+      //   border-color black
 
     .description
       font-size 1.2rem
