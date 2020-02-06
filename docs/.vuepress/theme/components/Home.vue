@@ -176,7 +176,8 @@ export default {
 .home
   .hero
     h1
-      opacity: 0;
+      opacity: 0
+      font-weight 500
       font-size: 10rem
       color: #0d302c;
       background linear-gradient(45deg, #b3feff, #ffa9ab)
