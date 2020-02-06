@@ -191,9 +191,9 @@ export default {
       opacity: 0;
       color white
       background-color rgba(0,0,0,0)
-      padding 0.4rem 1.6rem
-      border-radius 3px
-      transition border-color .3s ease
+      padding 0.3rem 4rem
+      border-radius 0
+      transition: border-color .2s cubic-bezier(0, 0.58, 0, 0.79);
       box-sizing border-box
       border: 2px solid white
       animation: opacityto1 0.5s 1s ease forwards
@@ -201,7 +201,8 @@ export default {
       &:hover
         background-color black
         border-color black
-
+    .description
+      text-decoration: underline;
 .nav-bar {
   background-color: white;
 }
