@@ -186,7 +186,7 @@ export default {
     p
       opacity 0
       color white
-      animation: opacityto1 0.5s 0.5s ease
+      animation: opacityto1 0.5s 0.5s ease forwards
     .action-button
       opacity: 0;
       color white
@@ -196,7 +196,7 @@ export default {
       transition border-color .3s ease
       box-sizing border-box
       border: 2px solid white
-      animation: opacityto1 0.5s 1s ease
+      animation: opacityto1 0.5s 1s ease forwards
 
       &:hover
         background-color black
