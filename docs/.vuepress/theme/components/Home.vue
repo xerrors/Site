@@ -211,6 +211,8 @@ export default {
     .description
       font-size 1.2rem
       font-weight 300
+      font-family monospace
+      letter-spacing 8px
 .nav-bar {
   background-color: white;
 }
