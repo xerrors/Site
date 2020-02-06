@@ -195,13 +195,16 @@ export default {
       border-radius 0
       transition: border-color .2s cubic-bezier(0, 0.58, 0, 0.79);
       box-sizing border-box
-      border: 2px solid white
+      border: 1px solid white
+      font-weight 300
       animation: opacityto1 0.5s 1s ease forwards
 
       &:hover
         background-color black
         border-color black
+
     .description
+      font-weight 300
       text-decoration: underline;
 .nav-bar {
   background-color: white;
