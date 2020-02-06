@@ -202,6 +202,8 @@ export default {
       box-sizing border-box
       // border: 1px solid white
       font-weight 300
+      font-family monospace
+      letter-spacing 8px
       animation: opacityto1 0.5s 1s ease forwards
 
       // &:hover
