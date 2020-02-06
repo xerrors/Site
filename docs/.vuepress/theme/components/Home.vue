@@ -178,14 +178,15 @@ export default {
     h1
       opacity: 0;
       font-size: 10rem
-      color white 
+      color: #0d302c;
+      background linear-gradient(45deg, #b3feff, #ffa9ab)
+      font-family algerian
       margin-top 6.5rem
-      // animation: showup 1s forwards
       animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
     p
-      opacity: 0;
+      opacity 0
       color white
-      animation: opacityto1 0.5s 0.5s forwards
+      animation: opacityto1 0.5s 0.5s ease
     .action-button
       opacity: 0;
       color white
@@ -195,7 +196,7 @@ export default {
       transition border-color .3s ease
       box-sizing border-box
       border: 2px solid white
-      animation: opacityto1 0.5s 1s forwards
+      animation: opacityto1 0.5s 1s ease
 
       &:hover
         background-color black
