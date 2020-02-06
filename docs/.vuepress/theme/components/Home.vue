@@ -190,6 +190,7 @@ export default {
       background linear-gradient(45deg, #b3feff, #ffa9ab)
       font-family algerian
       margin-top 6.5rem
+      overflow hidden
       animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
     p
       opacity 0
@@ -228,7 +229,7 @@ export default {
   .home
     .hero
       h1
-        font-size 6rem
+        font-size 5rem
     .feature
       flex-direction column
       img 
