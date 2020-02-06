@@ -34,10 +34,10 @@ hideLastUpdated: True
         </div>
       </div>
       <div class="my-msgs-container">
-        <div class="my-msg" v-for="msg in topMsgs">
+        <div class="my-msg" v-for="(msg, ind) in topMsgs">
           <div class="my-msg__head">
               <span class="my-msg__status">{{ msg.status }}</span>
-              <span class="my-msg__date">📅 {{ msg.formatDay }}</span>
+              <span class="my-msg__date" @click="delMsg(ind)">📅 {{ msg.formatDay }}</span>
           </div>  
           <div class="my-msg__body">
               <p class="my-msg__msg">{{ msg.msg }}</P>
@@ -56,15 +56,16 @@ import axios from 'axios'
 export default {
   data() {
     return {
-      step: 20,
-      page: 1,
-      showBtn: false,
+      count: 0, // 记录点击的次数
+      step: 20, // 每一页显示的动态条数
+      page: 1, // 显示的页数
+      showBtn: false, // 控制是否显示加载按钮，当全部加载出来的时候消失
       newMsg: {
         date: '',
         msg: '',
         status: ''
-      },
-      msgs: [],
+      }, // 新动态的格式
+      msgs: [], // 存从服务器获得的动态
       options: ['😄', '😎', '😫', '😏', '😡', '😨' ],
     } 
   },
@@ -93,9 +94,9 @@ export default {
 
     uploadMsg(data) {
       axios({
-            method: 'post',
-            url: 'https://www.xerrors.fun:8001/api/zone/upload',
-            data: data
+        method: 'post',
+        url: 'https://www.xerrors.fun:8001/api/zone/upload',
+        data: data
       }).then(res=>{
         // console.log(res)
         // 本地改变数据
@@ -108,6 +109,48 @@ export default {
       .catch(function (error) {
         console.log(error);
       })
+    },
+
+    delMsg(ind) {
+      if (this.count < 10) {
+        this.count += 1
+        return
+      }
+
+      this.$prompt('先告诉我 Token 是啥😇', '提示', {
+          confirmButtonText: 'Yaeh',
+          cancelButtonText: 'Nope',
+          inputPattern: /^[A-Za-z0-9]{5,13}$/,
+          inputErrorMessage: 'Token 格式不正确😕'
+        }).then(({ value }) => {
+          // 创建临时变量
+          var temp = {
+            data: ind,
+            token: value
+          }
+          // 发起 axios 请求
+          axios({
+            method: 'post',
+            url: 'https://www.xerrors.fun:8001/api/zone/delete',
+            data: temp
+          }).then(res=>{
+            // 本地改变数据
+            if (res.data.code != 200 ) {
+              this.$message.error(res.data.message);
+            } else {
+              this.msgs.splice(ind, 1);
+            }
+          })
+          .catch(function (error) {
+            console.log(error);
+          })
+        }).catch(() => {
+          this.$message({
+            type: 'info',
+            message: '🥱不告诉算了。。。'
+          });       
+        });
+      this.count = 0;
     },
 
     getTopKMsgs(num) {
