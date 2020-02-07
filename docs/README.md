@@ -1,6 +1,6 @@
 ---
 home: true
-heroText: Xerrors
+heroText: XERRORS
 tagline: LOVE AND PEACE
 permalink: /
 actionText: ABOUT

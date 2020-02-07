@@ -173,11 +173,6 @@ export default {
 
 <style lang="stylus" scoped>
 // 为了不打扰前面的，我们在这里修改
-@font-face {
-  font-family:"algerian";
-  font-display: swap;
-  src:url('/fonts/Algerian-Regular.ttf');
-}
 .home
   .hero
     h1
