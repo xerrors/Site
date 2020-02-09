@@ -1,5 +1,7 @@
 ## 个人小破站
 
+[![Run on Repl.it](https://repl.it/badge/github/Xerrors/Site)](https://repl.it/github/Xerrors/Site)
+
 基于 Vuepress
 
 由 Element UI 改善界面
