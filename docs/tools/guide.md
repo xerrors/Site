@@ -6,7 +6,8 @@ hideLastUpdated: True
 
 <template>
   <div class="my-guide-container">
-    <el-tabs v-model="activeName" type="card">
+    <loading v-if='loading'></loading>
+    <el-tabs v-else v-model="activeName" type="card">
       <el-tab-pane v-for="(tab, ind1) in tabs" :key="ind1" :label="tab.label" :name="tab.name">
         <div v-for="(myClass, ind2) in tab.classes" :key="ind2">
           <div class="my-class-title">{{ myClass.title }}</div>
@@ -28,10 +29,13 @@ hideLastUpdated: True
 </template>
 
 <script>
+import Loading from '@theme/user-components/Loading.vue'
 import axios from 'axios'
 export default {
+  components: { Loading },
   data() {
     return {
+      loading: true,
       activeName: 'one',
       tabs: []
     };
@@ -85,7 +89,7 @@ export default {
       .then(res=>{
         // console.log(res);
         this.tabs = res.data.tabs;
-        console.log(res.data);
+        this.loading = false
       })
       .catch(function (error) {
         console.log(error);
@@ -138,7 +142,7 @@ export default {
     padding: .4rem 1rem;
     margin: 1rem 0 0;
     font-weight: 600;
-    background: linear-gradient(0deg,#e4e4e4 40%,#fff 0);
+    background: linear-gradient(0deg, rgba(228, 228, 228, 0.5) 40%,#fff 0);
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;

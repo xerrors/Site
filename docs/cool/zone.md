@@ -33,7 +33,8 @@ hideLastUpdated: True
           <el-button @click="submit">发布 🚀</el-button>
         </div>
       </div>
-      <div class="my-msgs-container">
+      <loading v-if='loading'></loading>
+      <div v-else class="my-msgs-container">
         <div class="my-msg" v-for="(msg, ind) in topMsgs">
           <div class="my-msg__head">
               <span class="my-msg__status">{{ msg.status }}</span>
@@ -52,10 +53,12 @@ hideLastUpdated: True
 
 <script>
 import axios from 'axios'
-
+import Loading from '@theme/user-components/Loading.vue'
 export default {
+  components: { Loading },
   data() {
     return {
+      loading: true,
       count: 0, // 记录点击的次数
       step: 20, // 每一页显示的动态条数
       page: 1, // 显示的页数
@@ -86,6 +89,7 @@ export default {
           item.date = new Date(Date.parse(item.date))
         }
         this.msgs = res.data.data;
+        this.loading = false
       })
       .catch(function (error) {
         console.log(error);
