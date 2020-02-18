@@ -73,11 +73,10 @@
       </div>
       <div v-show="isBlog" class="my-menu">
         <div class="my-menu__item">
-          <h4 style="margin-top: 0;">目录</h4>
+          <h4 style="margin-top: 0; color: #121314">目录</h4>
             <a
               v-for="menu in renderMenus"
               :href="$page.path + '#' + menu.slug"
-              style="line-height: 1rem; display: block; color: #777;"
               :class="{
                 'my-menu__lv2': menu.level===2,
                 'my-menu__lv3': menu.level===3,
@@ -103,7 +102,6 @@ export default {
       return this.$page.headers
     },
     isBlog () {
-      // console.log(this.$page)
       // 判断这篇文章是不是博客
       if (this.$page.frontmatter.tag) {  
         return this.$page.frontmatter.tag == 'blog' || 'blog' == this.$page.frontmatter.tag[0]
@@ -264,7 +262,6 @@ function flatten (items, res) {
 @require '../styles/wrapper.styl'
 
 .my-main
-  // 刨坑保留
   max-width 70rem
   min-height 90vh
   margin 0 auto
@@ -291,17 +288,21 @@ function flatten (items, res) {
   margin-left 1rem
   width 250px
   color #777
+  &__lv2, &__lv3
+    display block
   &__lv3
     margin-top 8px
+    color rgb(118, 130, 142)
     padding-left 1rem
     &::before
-      content: '· '
+      content: '- '
   &__lv2
     margin-top 16px
+    color rgb(44, 62, 80)
   &__item
     position fixed
-    max-width 250px
-    min-width 250px
+    width 250px
+    margin-top 2rem
     // background white
     padding 1rem
     // box-shadow 0 1px 2px 0 rgba(34,36,38,0.15)

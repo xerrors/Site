@@ -5,7 +5,7 @@ module.exports = {
   ],
   title: 'Xerrors',
   description: 'Xerrors playground',
-  permalink: "/:year/:month/:day/:slug",
+  permalink: "/:year/:month-:day-:slug",
   themeConfig: {
     sidebar: false,
     github: "https://github.com/Xerrors/Site",
