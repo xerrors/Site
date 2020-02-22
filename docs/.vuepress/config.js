@@ -18,7 +18,7 @@ module.exports = {
       { text: '🤪 动态', link: '/zone/' },  
       {
         text: '🔨 工具',
-        items: [    
+        items: [
           { text: '🚥 导航', link: '/guide/' },
           { text: '🔐 寻密', link: '/tools/findpwd.html' },
           { text: '🔗 友链', link: '/tools/links.html' }

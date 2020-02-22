@@ -38,8 +38,9 @@ hideLastUpdated: True
         <div class="my-msg" v-for="(msg, ind) in topMsgs">
           <div class="my-msg__head">
               <span class="my-msg__status">{{ msg.status }}</span>
-              <span class="my-msg__date" @click="delMsg(ind)">📅 {{ msg.formatDay }}</span>
-          </div>  
+              <span class="my-msg__date" @click="delMsg(ind)">{{ msg.formatDay }}</span>
+              <div class="btn-love" :class="{'love-active': msg.active}" @click="love(ind)"></div>
+          </div>
           <div class="my-msg__body">
               <p class="my-msg__msg">{{ msg.msg }}</P>
           </div>  
@@ -81,12 +82,18 @@ export default {
   },
 
   methods: {
+    love(ind) {
+      this.msgs[ind].active = true
+      this.$message('英雄所见略同！')
+    },
     getMsgs() {
       axios.get('https://www.xerrors.fun:8001/api/zone/getData')
       .then(res=>{
         // console.log(res);
         for (var item of res.data.data) {
           item.date = new Date(Date.parse(item.date))
+          // ! 暂时本地保存骗一骗
+          item.active = false
         }
         this.msgs = res.data.data;
         this.loading = false
@@ -251,32 +258,95 @@ export default {
     display inline-block
     float right
 
+temp-color=#f0f2f5
 .my-msgs-container
   width 100%
+  position relative
+  &::before
+    content: '';
+    width: 2px;
+    height: 100%;
+    background: temp-color;
+    position: absolute;
 
   .my-msg
     margin-bottom 2.5rem
-    border 1px solid #d1d5da
     border-radius 3px
+    padding-left 2rem
+    &::before
+      z-index: 3;
+      content: '';
+      position: absolute;
+      left: -6px;
+      background: #797777;
+      height: 10px;
+      margin-top: 11px;
+      border-radius: 100%;
+      width: 10px;
+      border: 2px solid white;
 
-    // test
-    
     &__head
+      position relative
       padding 0.5rem
-      background-color #f6f8fa
-      border-bottom: 1px solid #d1d5da
-      /* display flex
-      align-items center */
+      background-color temp-color
+      &::before
+        position: absolute;
+        right: 100%;
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 10px 18px 10px 0;
+        border-width: 10px 15px 10px 0;
+        border-color: transparent temp-color transparent transparent;
+    &__body
+      border 1px solid temp-color
+      letter-spacing 1px
 
     &__status
       margin 0 0.5rem
 
     &__date
       margin 0 0.5rem
-      float right
     
     &__body
       padding 1rem
+
+.btn-love {
+  position: absolute;
+  right: 0;
+  top: -10px;
+  display: inline-block;
+  background: url(http://src.xerrors.fun/blog/20200222/xHqDqd9ROBhI.png) 0 0 no-repeat;
+  background-size: 2900%;
+  height: 60px;
+  cursor: pointer;
+  width: 60px;
+}
+
+.btn-love.love-active{
+  -webkit-animation: heart-burst steps(28) 0.8s 1 both;
+          animation: heart-burst steps(28) 0.8s 1 both;
+}
+
+@-webkit-keyframes heart-burst {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+@keyframes heart-burst {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
 
 .page-guide-btn {
   text-align: center;
