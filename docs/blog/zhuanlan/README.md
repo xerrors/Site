@@ -18,7 +18,7 @@ hideLastUpdated: True
         <p class="zl-item__info">共 {{ item.num }} 篇 · 🕓 {{ item.date }}</p>
       </div>
       <div v-if="item.showDetail" class="zl-item__pages">
-        <div style="font-size: .9rem; color: #666;">{{ item.decription }}</div>
+        <div style="letter-spacing: 1px; line-height: 1.7;">{{ item.decription }}</div>
         <el-divider></el-divider>
         <div v-for="(page, ind) in item.pages" class="animated faster slideInDown">
           <el-link :underline="false" :href="page.path" type="primary"
