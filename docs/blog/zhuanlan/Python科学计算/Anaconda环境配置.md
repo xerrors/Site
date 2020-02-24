@@ -1,5 +1,5 @@
 ---
-title: "Python 基础篇"
+title: "Anaconda 环境配置"
 date: 2020-02-24 15:35:52
 permalink: /python-sci/anaconda-env
 tag: 
