@@ -55,6 +55,10 @@
         />
       </Page>
     </div>
+    
+    <div class="footer">
+      Copyright © 2019-2020 ❤️ Xerrors | 皖 ICP 备 19016269 号
+    </div>
   </div>
 </template>
 
@@ -253,6 +257,13 @@ export default {
 
 .nav-dropdown {
   color:  #2c3e50;
+}
+
+.footer {
+  padding: 2.5rem;
+  border-top: 1px solid #DCDFE6;
+  text-align: center;
+  color: lighten(#2c3e50, 25%)foot;
 }
 
 @media (max-width: 410px){

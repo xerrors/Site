@@ -49,15 +49,8 @@
     </div>
 
     <Content class="theme-default-content custom"/>
-  </main>
-  <div
-      class="footer"
-      v-if="data.footer"
-    >
-      <!--<el-divider>{{ data.footer }}</el-divider>-->
-      {{ data.footer }}
+    </main>
   </div>
-</div>
 </template>
 
 <script>
@@ -162,12 +155,6 @@ export default {
     .my-text-box
       text-align: left
       width 50%
-
-.footer
-  padding 2.5rem
-  border-top 1px solid $borderColor
-  text-align center
-  color lighten($textColor, 25%)
 </style>
 
 

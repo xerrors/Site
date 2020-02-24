@@ -18,7 +18,4 @@ features:
 - image: /ills/share.svg
   title: 分享自己的快乐
   details: 当有开心的事情的时候，记得分享；
-
-
-footer: Copyright © 2019-present ❤️ Xerrors | 皖 ICP 备 19016269 号
 ---
