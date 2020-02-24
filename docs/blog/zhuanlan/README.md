@@ -63,6 +63,15 @@ export default {
       showDetail: false,
       num: 0,
       pages: []
+    }, {
+      cover: "http://src.xerrors.fun/blog/20200203/pa71gYHVDFVO.png",
+      link: "python-sci",
+      decription: "持续开辟新坑，这次所涉及到的是 Python 科学计算领域，参考书籍是《Python 科学计算（第二版）》张若愚著，为之后的科研研究铺路。需要一定的Python基础，如果Python基础不够扎实的话，可以参考另外一个专栏 《Python 快速扫盲》",
+      title: "Python 科学计算",
+      date: "2020-02-24",
+      showDetail: false,
+      num: 0,
+      pages: []
     }]
     var temp = this.$site.pages
     // 筛选标签中带有 zhuanlan 标志的文章
