@@ -64,7 +64,7 @@ export default {
       num: 0,
       pages: []
     }, {
-      cover: "http://src.xerrors.fun/blog/20200203/pa71gYHVDFVO.png",
+      cover: "http://src.xerrors.fun/blog/20200224/xyfxYSdci11r.png",
       link: "python-sci",
       decription: "持续开辟新坑，这次所涉及到的是 Python 科学计算领域，参考书籍是《Python 科学计算（第二版）》张若愚著，为之后的科研研究铺路。需要一定的Python基础，如果Python基础不够扎实的话，可以参考另外一个专栏 《Python 快速扫盲》",
       title: "Python 科学计算",
