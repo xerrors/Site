@@ -106,9 +106,9 @@ export default {
       border-radius 4px
       transition background-color .1s ease
       box-sizing border-box
-      border-bottom 1px solid darken($accentColor, 10%)
+      // border-bottom 1px solid darken($accentColor, 10%)
       &:hover
-        background-color lighten($accentColor, 10%)
+        // background-color lighten($accentColor, 10%)
   .features
     // border-top 1px solid $borderColor
     // padding 1.2rem 0
