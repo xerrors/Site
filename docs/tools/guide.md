@@ -8,9 +8,14 @@ hideLastUpdated: True
   <div class="my-guide-container">
     <loading v-if='loading'></loading>
     <el-tabs v-else v-model="activeName" type="card">
+      <!-- 不同的面板 -->
       <el-tab-pane v-for="(tab, ind1) in tabs" :key="ind1" :label="tab.label" :name="tab.name">
         <div v-for="(myClass, ind2) in tab.classes" :key="ind2">
-          <div class="my-class-title">{{ myClass.title }}</div>
+          <!-- 标题 -->
+          <div class="my-class-title" @click="addLink(ind1, ind2)">
+            {{ myClass.title }}
+          </div>
+          <!-- 链接小卡片 -->
           <div class="my-classes-box">
             <a :href="link.link" v-for="(link, ind3) in myClass.links" :key="ind3" target="_blank">
               <div class="my-link-box">
@@ -18,9 +23,6 @@ hideLastUpdated: True
                 <div style="font-size: smaller; color: #8f8f8f; text-overflow: ellipsis;">{{ link.description }}</div>
               </div>
             </a>
-            <div class="my-link-box" @click="addLink(ind1, ind2)">
-              添加链接
-            </div>
           </div>
         </div>
       </el-tab-pane>
@@ -37,12 +39,16 @@ export default {
     return {
       loading: true,
       activeName: 'one',
-      tabs: []
+      tabs: [],
+      count: 0
     };
   },
 
   methods: {
     addLink(ind1, ind2) {
+      if (this.count++ < 10) {
+        return
+      }
       var tmplink = {
         ind1: ind1,
         ind2: ind2,
