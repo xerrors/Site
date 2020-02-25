@@ -112,17 +112,14 @@ export default {
     isBlog () {
       // 判断是否是博客文章
       if (this.$page.frontmatter.tag) {  
-        return this.$page.frontmatter.tag.includes('blog') && !this.$page.frontmatter.hideContent
+        return this.$page.frontmatter.tag.includes('blog')
       }
       return false
     },
 
     shouContent () {
       // 判断是否显示目录
-      if (this.$page.frontmatter.tag) {  
-        return this.$page.frontmatter.tag.includes('blog') && !this.$page.frontmatter.hideContent
-      }
-      return false
+      return !this.$page.frontmatter.hideContent
     },
 
     showFooter () {
