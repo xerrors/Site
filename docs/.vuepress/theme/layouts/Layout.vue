@@ -232,8 +232,10 @@ export default {
   height: 100vh;
   min-height: 42rem;
   max-height: 70rem;
+  /* background-color: #028080; */
+  /* background-image: linear-gradient(116deg,#028080 5%,#931c1e 95%); */
   background-color: #028080;
-  background-image: linear-gradient(116deg,#028080 5%,#931c1e 95%);
+  background-image: linear-gradient(180deg, #028080 0%, #373737 50%, #931c1e 100%);
   /* background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); */
   background-size: 400% 400vh;
   animation: gradientBG 20s ease infinite;
