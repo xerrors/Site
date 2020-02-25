@@ -1,7 +1,7 @@
 module.exports = {
   head: [
     ['link', { rel: 'manifest', href: '/manifest.json' }],
-    ['link', { rel: 'apple-touch-icon', href: '/favicon.png' }],
+    ['link', { rel: 'apple-touch-icon', href: '/favicon.ico' }],
   ],
   title: 'Xerrors',
   description: 'Xerrors playground',

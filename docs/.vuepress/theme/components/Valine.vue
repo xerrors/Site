@@ -1,6 +1,11 @@
 <template>
   <div style="background: white;">
     <section class="page-edit">
+      <span class="leancloud-visitors" data-flag-title="Your Article Title">
+        <i class="el-icon-view" style="margin-right: 3px;"/>
+        <span class="leancloud-visitors-count"></span>
+        <span>次浏览</span>
+      </span>
       <div id="vcomments"></div>
     </section>
   </div>
@@ -46,3 +51,8 @@ export default {
   }
 }
 </script>
+
+<style lang="stylus" scoped>
+.leancloud-visitors
+  display none
+</style>
