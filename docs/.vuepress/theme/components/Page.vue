@@ -74,14 +74,14 @@
       <div v-show="isBlog" class="my-menu">
         <div class="my-menu__item">
           <h4 style="margin-top: 0; color: #121314">目录</h4>
-            <a
-              v-for="menu in renderMenus"
-              :href="$page.path + '#' + menu.slug"
-              :class="{
-                'my-menu__lv2': menu.level===2,
-                'my-menu__lv3': menu.level===3,
-              }">
-              {{ menu.title }}</a>
+          <a
+            v-for="menu in renderMenus"
+            :href="$page.path + '#' + menu.slug"
+            :class="{
+              'my-menu__lv2': menu.level===2,
+              'my-menu__lv3': menu.level===3,
+            }">
+            {{ menu.title }}</a>
         </div>
       </div>
     </div>
