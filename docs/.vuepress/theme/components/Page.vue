@@ -1,9 +1,9 @@
 <template>
   <main class="page" :class="{'need-zoom': isBlog}">
     <slot name="top"/>
-    <!--<div class="my-top-box" style="height: 5rem;"></div>-->
     <div class="my-main">
-      <div class="my-main-left" :class="{'notBlog':!isBlog}">
+      <div :class="mainClass">
+        <!-- 文章标题区域 -->
         <div ref="title" class="my-title-box" v-if="isBlog">
           <h3 style="text-align: center;">{{ this.$page.title }}</h3>
           <div style="text-align: center; color: #A0A0A0; font-size: 14px;">
@@ -98,9 +98,25 @@ export default {
   props: ['sidebarItems'],
   components: { Valine },
   computed: {
+    mainClass () {
+      return {
+        "my-main-left": true,
+        'notBlog': !this.isBlog,
+        'theme-paper': this.$page.frontmatter.tag && this.$page.frontmatter.tag.includes('碎碎念')
+       }
+    },
     renderMenus() {
       return this.$page.headers
     },
+
+    isBlog () {
+      // 判断是否是博客文章
+      if (this.$page.frontmatter.tag) {  
+        return this.$page.frontmatter.tag.includes('blog') && !this.$page.frontmatter.hideContent
+      }
+      return false
+    },
+
     shouContent () {
       // 判断是否显示目录
       if (this.$page.frontmatter.tag) {  
@@ -138,13 +154,6 @@ export default {
       } else if (prev) {
         return prev
       }
-      // if (prev === false) {
-      //   return
-      // } else if (prev) {
-      //   return resolvePage(this.$site.pages, prev, this.$route.path)
-      // } else {
-      //   return resolvePrev(this.$page, this.sidebarItems)
-      // }
     },
 
     next () {
@@ -318,6 +327,11 @@ function flatten (items, res) {
   display block
   background #f0f2f5
   min-height 100vh
+
+.theme-paper
+  background-image: url(http://src.xerrors.fun/paper.png);
+  font-family: monospace;
+  font-size: 19px;
 
 .page-edit
   @extend $wrapper
