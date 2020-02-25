@@ -49,6 +49,7 @@ export default {
       if (this.count++ < 10) {
         return
       }
+      this.count = 0
       var tmplink = {
         ind1: ind1,
         ind2: ind2,
