@@ -71,7 +71,7 @@
         </div>
         <valine></valine>
       </div>
-      <div v-show="shouContent" class="my-menu">
+      <div v-show="isBlog" class="my-menu">
         <div class="my-menu__item">
           <h4 style="margin-top: 0; color: #121314">目录</h4>
             <a
@@ -115,11 +115,6 @@ export default {
         return this.$page.frontmatter.tag.includes('blog')
       }
       return false
-    },
-
-    shouContent () {
-      // 判断是否显示目录
-      return !this.$page.frontmatter.hideContent
     },
 
     showFooter () {
