@@ -30,11 +30,15 @@ hideLastUpdated: True
           欢迎互加友链😎
         </el-card>
     </div>
+    <valine></valine>
   </div>
 </template>
 
 <script>
+import Valine from '@theme/components/Valine.vue'
+
 export default {
+  components: { Valine },
   data() {
     return {
       links: [
