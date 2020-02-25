@@ -325,6 +325,10 @@ function flatten (items, res) {
   font-family: monospace;
   font-size: 18px;
   color: black;
+  .content__default
+    ol, p, ul
+      line-height 2
+      text-indent 40px
 
 .page-edit
   @extend $wrapper
