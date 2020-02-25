@@ -321,9 +321,10 @@ function flatten (items, res) {
   min-height 100vh
 
 .theme-paper
-  background-image: url(http://src.xerrors.fun/paper.png);
+  background-image: url("http://src.xerrors.fun/blog/20200225/csqcyra3l81V.png");
   font-family: monospace;
-  font-size: 19px;
+  font-size: 18px;
+  color: black;
 
 .page-edit
   @extend $wrapper
