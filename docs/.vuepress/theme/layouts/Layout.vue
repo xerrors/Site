@@ -237,7 +237,7 @@ export default {
   background-color: #028080;
   background-image: linear-gradient(180deg, #028080 0%, #373737 50%, #931c1e 100%);
   /* background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); */
-  background-size: 400% 400vh;
+  background-size: 100% 400vh;
   animation: gradientBG 20s ease infinite;
   z-index: -1;
 }
@@ -280,13 +280,13 @@ export default {
 
 @keyframes gradientBG {
 	0% {
-		background-position: 0% 50%;
+		background-position: 50% 0%;
 	}
 	50% {
-		background-position: 100% 50%;
+		background-position: 50% 100%;
 	}
 	100% {
-		background-position: 0% 50%;
+		background-position: 50% 0%;
 	}
 }
 </style>
