@@ -40,7 +40,7 @@ export default {
         path: path,
         visitor: true,
         avatar: 'mm',
-        placeholder: 'write here'
+        placeholder: '在这写吧~'
       });
     }
   }
