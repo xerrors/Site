@@ -43,7 +43,7 @@
         </div>
         <valine></valine>
       </div>
-      <div v-show="isBlog && !hideContent" class="my-menu">
+      <div v-if="isBlog && !hideContent" class="my-menu">
         <div class="my-menu__item">
           <h4 style="margin-top: 0; color: #121314">目录</h4>
           <a
