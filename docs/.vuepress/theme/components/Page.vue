@@ -324,7 +324,10 @@ function flatten (items, res) {
   background-image: url("http://src.xerrors.fun/blog/20200225/csqcyra3l81V.png");
   font-family: monospace;
   font-size: 18px;
-  color: black;
+  color: black
+  margin 0 auto
+  .my-menu
+    display none
   .content__default
     ol, p, ul
       line-height 2
