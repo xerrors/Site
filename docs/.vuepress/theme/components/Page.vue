@@ -81,9 +81,11 @@ export default {
     },
 
     hideContent() {
-      return
-          this.$page.frontmatter.tag &&
-          this.$page.frontmatter.tag.includes("碎碎念")
+      // 判断是否隐藏目录
+      if (this.$page.frontmatter.tag) {
+          return this.$page.frontmatter.tag.includes("碎碎念")
+      }
+      return false
     },
 
     renderMenus() {
