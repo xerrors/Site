@@ -43,7 +43,7 @@
         </div>
         <valine></valine>
       </div>
-      <div v-show="isBlog" class="my-menu">
+      <div v-show="isBlog && !hideContent" class="my-menu">
         <div class="my-menu__item">
           <h4 style="margin-top: 0; color: #121314">目录</h4>
           <a
@@ -79,6 +79,13 @@ export default {
           this.$page.frontmatter.tag.includes("碎碎念")
       };
     },
+
+    hideContent() {
+      return
+          this.$page.frontmatter.tag &&
+          this.$page.frontmatter.tag.includes("碎碎念")
+    },
+
     renderMenus() {
       return this.$page.headers;
     },
@@ -323,10 +330,6 @@ function flatten(items, res) {
   font-size: 18px;
   color: black;
   margin: 0 auto;
-
-  .my-menu {
-    display: none;
-  }
 
   .content__default {
     ol, p, ul {
