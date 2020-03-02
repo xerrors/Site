@@ -14,7 +14,7 @@ categories:
 
 ## Vue 相关
 
-### 配置代理转发
+### 1. 配置代理转发
 
 ````js
 module.exports = {
@@ -50,7 +50,7 @@ PS：这里有一个很大的缺点，当你的`api`或者其他的一些配置�
 
 > 这个的参考源我之前保存的被我弄丢了，不过网上一搜一大堆，也就不存在侵不侵权了吧。
 
-### mount 时访问 Vuex
+### 2. mount 时访问 Vuex
 
 在使用`state`里面的数据的时候，无论是在 `data`里面使用，还是在`mounted`里面使用都会出现无法获取`state`里面数据的情况。
 
@@ -132,7 +132,7 @@ computed: {
 }
 ```
 
-### 在 js 文件中访问 vuex 的状态
+### 3. 在 js 文件中访问 vuex 的状态
 
 这一听就是基本功不扎实，碰到这种情况，第一时间就是去[官网](https://vuex.vuejs.org/zh/guide/)，不过很遗憾，没找到。原本我记得是有的，可能官方更新给修改了（果然我还是太菜了），官网找不到那就Google呗，找到了。
 
@@ -165,6 +165,150 @@ console.log(store.state.count)// 2
 ```
 
 这里需要注意的是那里的`'./store.js`是相对地址，要注意下自己的路径不要选错了'，另外如果是刚加载的时候，state里面还没有数据，如果直接调用可能会出现错误，需要进行判断是否为空之后再使用。
+
+### 4. el-upload 组件内的按钮强制为选择文件
+
+#### 原因分析
+
+我需要实现的需求是这样的，一个上传身份证照片的表单项目：
+
+```js
+<el-form-item label="身份证照片" prop='ID_pics'>
+  <el-upload
+    action="http://xxx.xxx.xxx.xxx/v2"
+    :auto-upload="false"
+    :limit="3"
+    :on-change="handleChangeLicense"
+    :on-exceed="handleExceed"
+    :file-list="license"
+    multiple>
+    <el-button size="small" type="primary">选择文件</el-button>
+    <el-button size="small" type="primary" @click="uploadIDPic">点击上传</el-button>
+    <div slot="tip" class="el-upload__tip">身份证正面以及背面，只能上传jpg/png文件</div>
+  </el-upload>
+</el-form-item>
+```
+
+预期效果如下：
+
+![预期效果](http://src.xerrors.fun/blog/20200301/bIiuGvvCuz9u.png)
+
+问题出现了！！！这个时候两个按钮点击之后都是选择打开文件。
+
+#### 解决办法
+
+> 参考：[Element UI 官网 upload 组件](https://element.eleme.cn/#/zh-CN/component/upload#slot)
+>
+> 这里是官方对于`upload`的两个插槽的介绍
+
+**Slot**
+
+| name        | 说明                 |
+| :---------- | :------------------- |
+| **trigger** | 触发文件选择框的内容 |
+| tip         | 提示说明文字         |
+
+所以我们的解决办法是在第一个上面添加一个插槽，也就是把两个按钮变成这样：
+
+```js
+<el-button slot="trigger" size="small" type="primary">选择文件</el-button>
+<el-button
+	size="small"
+	style="margin-left: 10px"
+	type="primary"
+	@click="uploadIDPic">
+    点击上传
+</el-button>
+```
+
+不知道为什么，修改之后边距就消失了，所以需要指定一下。
+
+### 5. el-upload 上传 formData 数据
+
+这里依然时使用上面的上传组件出现的问题，这里着重于说一点：后端要求的是把照片存成数组形式，但是我把数据传到后端之后，一直提示不是数组类型。接近于崩溃啊，期间查了各种资料，也让我对文件上传有了更加深刻的认识。
+
+这里推荐一个大佬的文章：
+
+[使用ElementUI和Axios以formData格式提交带有文件的表单的错误示范及分析解决@segmentfault](https://segmentfault.com/a/1190000015368701)
+
+如果你跟我一样需要手动上传并且要求类型是`formData`形式的话，看完上面那篇文章你基本上就算是解决问题。
+
+那么问题来了，既然上面的文章已经讲的那么清楚了，我的为啥还是有问题？？？问题的关键在于，文中举得例子是单个文件的情况，到了我这里是多个文件，这不就出问题了嘛！
+
+```js
+// template 部分
+<el-form-item label="营业执照" prop="license">
+  <el-upload
+    action="http://xxx.xxx.xxx.xxx/v2" // 手动上传，这里可空，但必须有
+    :auto-upload="false"
+    :on-change="handleChangeLicense"
+    :file-list="licenses"
+    multiple>
+    <el-button slot="trigger" size="small" type="primary">选择文件</el-button>
+    <el-button size="small" style="margin-left: 10px" type="primary" @click="uploadLicense">点击上传</el-button>
+  </el-upload>
+</el-form-item>
+
+// javascript 部分
+handleChangeLicense (file, filelist) {
+  // 注意这里是使用map得到文件里面的raw文件
+  this.license = filelist.map(i => i.raw)
+},
+
+uploadLicense () {
+  // 上传营业执照
+  const formData = new FormData()
+  formData.append('imgs[]', this.license) // imgs[] 后端就是这么命名的
+  formData.append('others', this.others) // 其他参数，不是重点
+  return new Promise((resolve, reject) => {
+    uploadPics(formData).then(res => {
+      console.log(res)
+      resolve()
+    }).catch(err => {
+      reject(err)
+    })
+  })
+},
+```
+
+上面的写法看似人畜无害，但是每次向后端同学发送请求都会得到**无情的拒绝**。
+
+#### 解决办法
+
+但是！！！后来我偶然的在`postman`生成的文档里面看到`fetch`的写法：
+
+```js
+var formdata = new FormData();
+formdata.append("others", "123456");
+formdata.append("imgs[]", fileInput.files[0], "/file1.png");
+formdata.append("imgs[]", fileInput.files[0], "/file2.png");
+```
+
+虽然我没学过`fetch`，但是我也好奇为什么两个文件要分两次放到`formdata`里面，所以我就抱着试一试的态度使用`for...of...`依次放进去。
+
+```js
+// 上下文同上
+const formData = new FormData()
+for (var file of this.license) {
+  formData.append('imgs[]', file)
+}
+```
+
+然后就好了。。。。
+
+具体的原因我也找到了一个博客说的挺对的：
+
+> 参考：[formData 添加数组@CSDN]()
+>
+> 把数组直接append到FormData对象中，post的请求会把数组拼接成一个字符串发送给服务器，又不想在服务器端截取字符串。
+>
+> 解决方案：遍历数组把数组项依次append添加到FormData对象，服务器端就可以获取数组了。
+
+#### 总结
+
+所以问题的关键就在于向`formdata`里面存放数组的时候要依次放进去。
+
+
 
 ## 基础问题
 
