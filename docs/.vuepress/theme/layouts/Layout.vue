@@ -57,8 +57,9 @@
     </div>
     
     <div class="footer">
-      Copyright © 2019-2020 ❤️ Xerrors | 皖 ICP 备 19016269 号 <br>
-      <a href="https://me.csdn.net/jaykm">CSND</a> | 
+      Copyright © 2019-2020 ❤️ Xerrors <br>
+      <a href="http://www.beian.miit.gov.cn">皖 ICP 备 19016269 号</a><br>
+      <a href="https://me.csdn.net/jaykm">CSND</a> &nbsp;  
       <a href="https://github.com/Xerrors">GitHub</a>
     </div>
   </div>
