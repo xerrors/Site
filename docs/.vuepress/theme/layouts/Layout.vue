@@ -57,7 +57,7 @@
     </div>
     
     <div class="footer">
-      Copyright © 2019-2020 ❤️ Xerrors <br>
+      Copyright © 2019-2020 ❤️ Xerrors<br>
       <a href="http://www.beian.miit.gov.cn">皖 ICP 备 19016269 号</a><br>
       <a href="https://me.csdn.net/jaykm">CSND</a> &nbsp;  
       <a href="https://github.com/Xerrors">GitHub</a>
@@ -266,10 +266,15 @@ export default {
 
 .footer {
   padding: 2.5rem;
+  line-height: 2;
   border-top: 1px solid #DCDFE6;
   text-align: center;
   background: #f0f2f5;
   /* color: lighten(#2c3e50, 25%)foot; */
+}
+
+.footer a {
+  color: #5e6261;
 }
 
 @media (max-width: 410px){
