@@ -38,6 +38,8 @@ $$P_{t}(i \Rightarrow j)=\left\{\begin{array}{ll}
 e^{-\frac{j(j)}{t}, f(i)} & \text { other }
 \end{array}\right.$$
 
+![mark](http://src.xerrors.fun/blog/20200323/lQKsFgHswh3S.png)
+
 如果新解 j 被接受，则以解 j 代替解i，否则继续保持解 i 。重复该过程，直到在该控制参数 t 下达到平衡。
 
 与退火过程中的温度T缓慢下降相对应，在进行足够多的状态转移之后，控制参数t要缓慢下降，并在每个参数t下，重复以上过程，直到控制参数 t 降低到足够小为止。最终得到的是该组合优化问题的一个最优解
@@ -64,6 +66,8 @@ e^{-\frac{j(j)}{t}, f(i)} & \text { other }
     1 & ; \Delta f<0 \\
     e^{-\frac{\Delta f}{t}} & ; \text {other}
     \end{array}\right.$$
+
+    ![mark](http://src.xerrors.fun/blog/20200323/wJQKqmdWLHAz.png)
 
 ### 2. 网上的办法
 
