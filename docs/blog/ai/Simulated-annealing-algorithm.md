@@ -33,7 +33,10 @@ categories:
 
 在求解组合优化问题时，首先给定一个比较大的t值，这相当于一个比较高的温度T。随机给定一个问题的解i，作为问题的初始解。在给定的 t 下，随机产生一个问题的解 j ，j ∈ N(i)，其中 N(i) 是 i 的邻域。从解 i 到新解 j 的转移概率，按照 Metropolis 准则确定：
 
-$$P_{t}(i \Rightarrow j)=\left\{\begin{array}{ll} {1} & f(j)<f(i) \\ e^{-\frac{f(j)-f(i)}{t}} & other \end{array}\right.$$
+$$P_{t}(i \Rightarrow j)=\left\{\begin{array}{ll}
+1 & f(j)<f(i) \\
+e^{-\frac{j(j)}{t}, f(i)} & \text { other }
+\end{array}\right.$$
 
 如果新解 j 被接受，则以解 j 代替解i，否则继续保持解 i 。重复该过程，直到在该控制参数 t 下达到平衡。
 
@@ -57,7 +60,10 @@ $$P_{t}(i \Rightarrow j)=\left\{\begin{array}{ll} {1} & f(j)<f(i) \\ e^{-\frac{f
 
 5. 新解的接受准则: 
 
-    $$A_{t}=\left\{\begin{array}{cc} 1 & ; \Delta f<0 \\ e^{-\frac{\Delta f}{t}} & ; other \end{array}\right.$$
+    $$A_{t}=\left\{\begin{array}{cc}
+    1 & ; \Delta f<0 \\
+    e^{-\frac{\Delta f}{t}} & ; \text {other}
+    \end{array}\right.$$
 
 ### 2. 网上的办法
 
