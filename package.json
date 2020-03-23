@@ -25,7 +25,8 @@
     "axios": "^0.19.0",
     "express": "^4.17.1",
     "vue-particles": "^1.0.9",
-    "vuepress": "^1.2.0"
+    "vuepress": "^1.2.0",
+    "vuepress-plugin-mathjax": "^1.2.8"
   },
   "scripts": {
     "deploy": "bash deploy.sh"

@@ -35,7 +35,12 @@ module.exports = {
         margin: 16
       }
     },
-    'vuepress-plugin-smooth-scroll':{}
+    'vuepress-plugin-smooth-scroll':{},
+    'vuepress-plugin-mathjax': {
+      macros: {
+        '\\Z': '\\mathbb{Z}',
+      },
+    }
   },
   configureWebpack: {
     resolve: {

@@ -25,7 +25,7 @@ categories:
 
 ## 模拟退火算法
 
-![Untitled/Untitled.png](http://src.xerrors.fun/blog/20200323/d4ukj7kp959Y.png)
+![mark](http://src.xerrors.fun/blog/20200323/d4ukj7kp959Y.png)
 
 组合优化问题与固体退火过程的类比
 
