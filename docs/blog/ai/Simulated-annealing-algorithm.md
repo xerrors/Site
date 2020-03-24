@@ -89,7 +89,6 @@ Created on Mon Mar 23 21:38:00 2020
 import numpy as np
 import matplotlib.pyplot as plt
 
-
 len_plot = []
 
 city_map = np.array([
@@ -110,8 +109,6 @@ def calc_len(path):
     length = city_map[0, path[0]] + city_map[path[-1], 0]
     for i in range(len(path) - 1):  
         length += city_map[path[i], path[i+1]]
-    len_plot.append(length)
-    print("Length: {:.3f}, path: {}".format(length, path))
     return length
 
 def get_2_randint():
@@ -144,6 +141,8 @@ def main():
         new_len = calc_len(TSP_path)
         dE = new_len - ori_len
         if judge(dE, tmp):
+            print("Length: {:.3f}, path: {}".format(new_len, TSP_path))
+            len_plot.append(new_len)
             ori_len = new_len
             tmp = tmp * alpha
         else:
@@ -154,7 +153,7 @@ main()
 
 运行结果：
 
-![mark](http://src.xerrors.fun/blog/20200323/Csbi69RT1sCC.png)
+![mark](http://src.xerrors.fun/blog/20200324/O7ResxCjIC44.png)
 
 ### 3. 老师教的方法
 
