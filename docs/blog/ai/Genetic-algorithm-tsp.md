@@ -1,7 +1,7 @@
 ---
 title: 	遗传算法 - TSP旅行商问题求解
 permalink: Genetic-algorithm-tsp
-date: 2020-03-23 22:50:46
+date: 2020-03-29 22:50:46
 tag: 
  - blog
  - 人工智能
