@@ -327,9 +327,9 @@ function flatten(items, res) {
 }
 
 .theme-paper {
-  background-image: url('http://src.xerrors.fun/blog/20200225/csqcyra3l81V.png');
-  font-family: monospace;
-  font-size: 18px;
+  font-family: serif;
+  font-size: 17px;
+  padding: 3rem;
   color: black;
   margin: 0 auto;
 
