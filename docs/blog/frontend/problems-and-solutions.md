@@ -373,3 +373,29 @@ for (let [key, value] of Object.entries(object1)) {
 // "b: 42"
 // order is not guaranteed
 ```
+
+## 环境配置问题
+
+### 更新yarn时错误：
+
+#### 问题描述
+
+```sh
+Err:6 https://dl.yarnpkg.com/debian stable InRelease
+  The following signatures were invalid: EXPKEYSIG 23E7166788B63E1E Yarn Packaging <yarn@dan.cx>
+Reading package lists... Done
+W: An error occurred during the signature verification. The repository is not updated and the previous index files will be used. GPG error: https://dl.yarnpkg.com/debian stable InRelease: The following signatures were invalid: EXPKEYSIG 23E7166788B63E1E Yarn Packaging <yarn@dan.cx>
+W: Failed to fetch https://dl.yarnpkg.com/debian/dists/stable/InRelease  The following signatures were invalid: EXPKEYSIG 23E7166788B63E1E Yarn Packaging <yarn@dan.cx>
+W: Some index files failed to download. They have been ignored, or old ones used instead.
+```
+
+#### 错误原因
+
+是  GPG key 过期了，需要更新。
+
+#### 解决办法
+
+直接更新 GPG key：`curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -`
+
+参考：[Filed to fatch upgrades](https://www.reddit.com/r/pop_os/comments/f08aky/failed_to_fetch_updates/)
+
