@@ -4,7 +4,7 @@ permalink: /music
 hideLastUpdated: True
 # layout: Music
 ---
-
+<!-- 暂时不打算实现 -->
 <template>
   <div style="padding: 100px 0;">
     <music></music>

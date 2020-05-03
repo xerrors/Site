@@ -3,7 +3,7 @@ title: "博客"
 permalink: "blog"
 hideLastUpdated: True
 ---
-<!--参考大佬的界面 https://xin-tan.com/guide/-->  
+<!--参考大佬的界面 https://xin-tan.com/guide/  暂时 404 了，作者更新网站地址为 https://xxoo521.com/ 不知道是不是放弃vuepress了  -->  
 <!-- > 最近更新 👇 -->
 
 <template>
@@ -17,7 +17,7 @@ hideLastUpdated: True
             :class="{ 'select-tag': tag == selectedTag, 'normal-tag': tag != selectedTag }"
             @click="myFlitter( tag )"
             v-for="tag in tags"
-            style="margin: 5px;">{{ tag }}</div>
+            style="margin: 5px;">{{ tag=='blog'?'全部':tag }}</div>
         </div>
       </div>
       <el-divider></el-divider>
@@ -28,7 +28,7 @@ hideLastUpdated: True
             <span class="this-tag"
               v-for="item in post.frontmatter.tag"
               @click="myFlitter( item )"
-              >{{ item }}</span>
+              ><span v-if="item !== 'blog'">{{ item }}</span></span>
           </div>
           <div class="bottom clearfix">
             <br>

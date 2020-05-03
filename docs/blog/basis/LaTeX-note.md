@@ -4,7 +4,7 @@ permalink: LaTeX-note
 date: 2019-10-15 19:45:23
 tag: 
  - blog
- - LaTeX
+ - 工具
  - 基础
 categories:
  - 基础
