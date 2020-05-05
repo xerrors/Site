@@ -19,13 +19,13 @@ categories:
 
 检查现在的 Python 版本
 
-~~~bash
+```bash
 # 查看默认 Python 版本
 $ python --version
 
 # 查看 Python3 版本
 $ python3 --version
-~~~
+```
 
 ## Pwntools 安装
 
