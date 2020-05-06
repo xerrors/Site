@@ -146,8 +146,10 @@ export default {
           this.node = H.shift()
           this.count += 1
           if (this.count > 10000 || !this.node) {
-              console.log('Can not found!')
-              break
+              this.$alert('Can not found!')
+              this.loading = false
+              this.reset()
+              return
           }
       }
       this.needreset = true
