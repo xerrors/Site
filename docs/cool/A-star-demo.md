@@ -27,92 +27,98 @@ categories:
 </template>
 
 <script>
+// 构建节点类
 class Node {
-    constructor(path, pre_chain, to) {
-        this.path = path;
-        this.index = path.indexOf(9);
-        this.chain = Array.from(pre_chain)
-        this.chain.push(this.calcId(path))
-        this.to = to
-    }
+  // 构造器
+  constructor(path, pre_chain, to) {
+    this.path = path;
+    this.index = path.indexOf(9);
+    this.chain = Array.from(pre_chain)
+    this.chain.push(this.calcId(path)) // 这个在计算的时候并没有什么用途，只是方便演示
+    this.to = to
+  }
+  // 激励函数，计算所有节点的曼哈顿距离
+  calcValue() {
+    let sum = new Number();
+    this.path.map((i, j) => {
+      sum += Math.abs(Math.floor((i - 1) / 3) - Math.floor((this.to[j] - 1) / 3)) +
+        Math.abs((i - 1) % 3 - (this.to[j] - 1) % 3);
+    });
+    return sum;
+  }
+  // 用字符串来存储路径减少空间的使用（貌似用处不大）
+  calcId(path) {
+    let id = '';
+    path.map(item => {
+      id += item
+    });
+    return id;
+  }
 
-    calcValue() {
-        let sum = new Number();
-        this.path.map((i, j) => {
-            sum += Math.abs(Math.floor((i - 1) / 3) - Math.floor((this.to[j] - 1) / 3)) + 
-                   Math.abs((i - 1) % 3 - (this.to[j] - 1) % 3);
-        });
-        return sum;
+  exchange(ch) {
+    let new_path = Array.from(this.path)
+    var temp = new_path[this.index];
+    new_path[this.index] = new_path[ch];
+    new_path[ch] = temp;
+    if (!cantor(new_path)) {
+      return false
     }
+    // console.log(new_path)
+    return new_path;
+  }
 
-    calcId(path) {
-        let id = '';
-        path.map(item => {
-            id += item
-        });
-        return id;
-    }
+  // 接下来四个是对不可达的判定
 
-    exchange(ch) {
-        let new_path = Array.from(this.path)
-        var temp = new_path[this.index];
-        new_path[this.index] = new_path[ch];
-        new_path[ch] = temp;
-        if (!cantor(new_path)) {
-            return false
-        }
-        // console.log(new_path)
-        return new_path;
+  moveUp() {
+    if (this.index < 3) {
+      return false
     }
+    return this.exchange(this.index - 3)
+  }
 
-    moveUp() {
-        if (this.index < 3) {
-            return false
-        }
-        return this.exchange(this.index - 3)
+  moveDown() {
+    if (this.index > 5) {
+      return false
     }
+    return this.exchange(this.index + 3)
+  }
 
-    moveDown() {
-        if (this.index > 5) {
-            return false
-        }
-        return this.exchange(this.index + 3)
+  moveLeft() {
+    if (this.index % 3 == 0) {
+      return false
     }
+    return this.exchange(this.index - 1)
+  }
 
-    moveLeft() {
-        if (this.index % 3 == 0) {
-            return false
-        }
-        return this.exchange(this.index - 1)
+  moveRight() {
+    if (this.index % 3 == 2) {
+      return false
     }
-
-    moveRight() {
-        if (this.index % 3 == 2) {
-            return false
-        }
-        return this.exchange(this.index + 1)
-    }
+    return this.exchange(this.index + 1)
+  }
 }
+
+// 计算康拓展开
 var state = Array(362880).fill(false)
 function cantor(path) {
-    const fac = [1, 1, 2, 6, 24, 120, 720, 5040, 40320]
-    let sum = 0;
-    for (var i = 0; i < 9; i++) {
-        let t = 0;
-        for (var j = i + 1; j < 9; j++) {
-            if (path[j] < path[i]) {
-                t++;
-            }
-        }
-        sum += t * fac[8 - i];
+  const fac = [1, 1, 2, 6, 24, 120, 720, 5040, 40320]
+  let sum = 0;
+  for (var i = 0; i < 9; i++) {
+    let t = 0;
+    for (var j = i + 1; j < 9; j++) {
+      if (path[j] < path[i]) {
+        t++;
+      }
     }
-    if (state[sum] == true) {
-        return false;
-    }
-    else {
-        state[sum] = true;
-        return true;
-    }
+    sum += t * fac[8 - i];
+  }
+  if (state[sum] == true) {
+    return false;
+  }
+  else {
+    state[sum] = true;
+    return true;
+  }
 }
 
 export default {
@@ -121,41 +127,48 @@ export default {
       node: '',
       loading: false,
       count: 0,
-      from : '234159768',
-      to : '123456789',
+      from: '234159768',
+      to: '123456789',
       map: '',
       needreset: false
     }
   },
   methods: {
-    start () {
+    start() {
       this.loading = true
       let temp_path
-      
+
       var H = [new Node(this.from.split('').map(item => eval(item)), [], this.to)]
       this.node = H.shift()
+      // 对不可达点进行判定
+      if (this.node.calcValue() % 2 != 0) {
+        this.$alert('Can not found!')
+        this.loading = false
+        this.reset()
+        return
+      }
       this.count = 0
       while (this.node.calcValue() != 0) {
-          if (temp_path = this.node.moveUp()) { H.push(new Node(temp_path, this.node.chain, this.to)) }
-          if (temp_path = this.node.moveDown()) { H.push(new Node(temp_path, this.node.chain, this.to)) }
-          if (temp_path = this.node.moveLeft()) { H.push(new Node(temp_path, this.node.chain, this.to)) }
-          if (temp_path = this.node.moveRight()) { H.push(new Node(temp_path, this.node.chain, this.to)) }
-          H.sort((i, j) => {
-              return i.calcValue() - j.calcValue()
-          })
-          this.node = H.shift()
-          this.count += 1
-          if (this.count > 10000 || !this.node) {
-              this.$alert('Can not found!')
-              this.loading = false
-              this.reset()
-              return
-          }
+        if (temp_path = this.node.moveUp()) { H.push(new Node(temp_path, this.node.chain, this.to)) }
+        if (temp_path = this.node.moveDown()) { H.push(new Node(temp_path, this.node.chain, this.to)) }
+        if (temp_path = this.node.moveLeft()) { H.push(new Node(temp_path, this.node.chain, this.to)) }
+        if (temp_path = this.node.moveRight()) { H.push(new Node(temp_path, this.node.chain, this.to)) }
+        H.sort((i, j) => {
+          return i.calcValue() - j.calcValue()
+        })
+        this.node = H.shift()
+        this.count += 1
+        if (this.count > 10000 || !this.node) {
+          this.$alert('Can not found!')
+          this.loading = false
+          this.reset()
+          return
+        }
       }
       this.needreset = true
       this.loading = false
     },
-    demoAnimate () {
+    demoAnimate() {
       if (!this.node) {
         this.$message('请先计算')
         return
@@ -168,9 +181,9 @@ export default {
           this.map = this.node.chain[i]
         }
         i++
-      },200)
+      }, 200)
     },
-    reset () {
+    reset() {
       this.needreset = false
       this.node = ''
       this.count = 0
@@ -178,16 +191,16 @@ export default {
       this.map = this.from.split('').map(item => eval(item))
       state = Array(362880).fill(false)
     },
-    confirm () {
+    confirm() {
       // 判断格式是否正确
-      if(this.from.length !== 9 || this.to.length !== 9) {
+      if (this.from.length !== 9 || this.to.length !== 9) {
         this.$message('请检查输入')
       } else {
         this.reset()
       }
     }
   },
-  mounted () {
+  mounted() {
     this.map = this.from
   }
 }
