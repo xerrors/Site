@@ -156,7 +156,8 @@ export default {
         if (temp_path = this.node.moveRight()) { H.push(new Node(temp_path, this.node.chain, this.to)) }
         H.sort((i, j) => {
           // 懒得实现优先队列，直接使用了排序算法，有待改进
-          return (i.calcValue() + i.chain.length) - (j.calcValue() + j.chain.length)
+          // return (i.calcValue() + i.chain.length) - (j.calcValue() + j.chain.length)
+          return i.calcValue() - j.calcValue()
         })
         this.node = H.shift()
         this.count += 1
@@ -240,6 +241,8 @@ export default {
 </style>
 
 ## 1. A* 算法的 JavaScript 实现
+
+[Codepen](https://codepen.io/xerrors/pen/pojaJKY) 在线编辑上面的演示程序
 
 A* 算法是一种启发式搜索算法，[这篇文章](https://blog.csdn.net/hitwhylz/article/details/23089415)介绍的算是挺容易理解的了，本篇文章侧重于实战部分，理论部分参考上面那篇文章。
 
@@ -392,245 +395,9 @@ moveRight() {
 }
 ```
 
-剩下的部分可以在下面的代码里面看到。
+剩下的部分可以在这里测试
 
-## 4. 此页面源码
-
-### HTML
-
-```html
-<template>
-  <div class="main">
-    <el-button @click="start" v-loading="loading" :disabled='needreset'>开始计算</el-button>
-    <el-button @click="demoAnimate" :disabled='!needreset'>动画演示</el-button>
-    <el-button @click="reset">重置</el-button><br/>
-    <p>{{ count }}次检索 - {{ node ? node.chain.length : '0' }} 步</p>
-    <el-input v-model='from' class='map-input'></el-input>
-    <el-input v-model='to' class='map-input'></el-input>
-    <el-button @click="confirm">确定</el-button>
-    <div class='map'>
-      <div :class="{ item: true, end: i == 9 }" v-for="i in map"> {{ i }}</div>
-    </div>
-  </div>
-</template>
-```
-
-### JavaScript
-
-```js
-// 构建节点类
-class Node {
-  // 构造器
-  constructor(path, pre_chain, to) {
-    this.path = path;
-    this.index = path.indexOf(9);
-    this.chain = Array.from(pre_chain)
-    this.chain.push(this.calcId(path)) // 这个在计算的时候并没有什么用途，只是方便演示
-    this.to = to
-  }
-  // 激励函数，计算所有节点的曼哈顿距离
-  calcValue() {
-    let sum = new Number();
-    this.path.map((i, j) => {
-      sum += Math.abs(Math.floor((i - 1) / 3) - Math.floor((this.to[j] - 1) / 3)) +
-        Math.abs((i - 1) % 3 - (this.to[j] - 1) % 3);
-    });
-    return sum;
-  }
-  // 用字符串来存储路径减少空间的使用（貌似用处不大）
-  calcId(path) {
-    let id = '';
-    path.map(item => {
-      id += item
-    });
-    return id;
-  }
-
-  exchange(ch) {
-    let new_path = Array.from(this.path)
-    var temp = new_path[this.index];
-    new_path[this.index] = new_path[ch];
-    new_path[ch] = temp;
-    if (!cantor(new_path)) {
-      return false
-    }
-    // console.log(new_path)
-    return new_path;
-  }
-
-  // 接下来四个是对不可达的判定
-
-  moveUp() {
-    if (this.index < 3) {
-      return false
-    }
-    return this.exchange(this.index - 3)
-  }
-
-  moveDown() {
-    if (this.index > 5) {
-      return false
-    }
-    return this.exchange(this.index + 3)
-  }
-
-  moveLeft() {
-    if (this.index % 3 == 0) {
-      return false
-    }
-    return this.exchange(this.index - 1)
-  }
-
-  moveRight() {
-    if (this.index % 3 == 2) {
-      return false
-    }
-    return this.exchange(this.index + 1)
-  }
-}
-
-// 计算康拓展开
-var state = Array(362880).fill(false)
-function cantor(path) {
-  const fac = [1, 1, 2, 6, 24, 120, 720, 5040, 40320]
-  let sum = 0;
-  for (var i = 0; i < 9; i++) {
-    let t = 0;
-    for (var j = i + 1; j < 9; j++) {
-      if (path[j] < path[i]) {
-        t++;
-      }
-    }
-    sum += t * fac[8 - i];
-  }
-  if (state[sum] == true) {
-    return false;
-  }
-  else {
-    state[sum] = true;
-    return true;
-  }
-}
-
-export default {
-  data() {
-    return {
-      node: '',
-      loading: false,
-      count: 0,
-      from: '234159768',
-      to: '123456789',
-      map: '',
-      needreset: false
-    }
-  },
-  methods: {
-    start() {
-      this.loading = true
-      let temp_path
-
-      var H = [new Node(this.from.split('').map(item => eval(item)), [], this.to)]
-      this.node = H.shift()
-      // 对不可达点进行判定
-      if (this.node.calcValue() % 2 != 0) {
-        this.$alert('Can not found!')
-        this.loading = false
-        this.reset()
-        return
-      }
-      this.count = 0
-      while (this.node.calcValue() != 0) {
-        // 分别对四个方向进行试探
-        if (temp_path = this.node.moveUp()) { H.push(new Node(temp_path, this.node.chain, this.to)) }
-        if (temp_path = this.node.moveDown()) { H.push(new Node(temp_path, this.node.chain, this.to)) }
-        if (temp_path = this.node.moveLeft()) { H.push(new Node(temp_path, this.node.chain, this.to)) }
-        if (temp_path = this.node.moveRight()) { H.push(new Node(temp_path, this.node.chain, this.to)) }
-        H.sort((i, j) => {
-          // 懒得实现优先队列，直接使用了排序算法，有待改进
-          return (i.calcValue() + i.chain.length) - (j.calcValue() + j.chain.length)
-        })
-        this.node = H.shift()
-        this.count += 1
-        if (this.count > 10000 || !this.node) {
-          // 当达到一定次数之后会停止遍历
-          this.$alert('Can not found!')
-          this.loading = false
-          this.reset()
-          return
-        }
-      }
-      this.needreset = true
-      this.loading = false
-    },
-    demoAnimate() {
-      if (!this.node) {
-        this.$message('请先计算')
-        return
-      }
-      var i = 0
-      this.intervalID = setInterval(() => {
-        if (i >= this.node.chain.length) {
-          window.clearInterval(this.intervalID)
-        } else {
-          this.map = this.node.chain[i]
-        }
-        i++
-      }, 200)
-    },
-    reset() {
-      this.needreset = false
-      this.node = ''
-      this.count = 0
-      window.clearInterval(this.intervalID)
-      this.map = this.from.split('').map(item => eval(item))
-      state = Array(362880).fill(false)
-    },
-    confirm() {
-      // 判断格式是否正确
-      if (this.from.length !== 9 || this.to.length !== 9) {
-        this.$message('请检查输入')
-      } else {
-        this.reset()
-      }
-    }
-  },
-  mounted() {
-    this.map = this.from
-  }
-}
-```
-
-### CSS
-
-```stylus
-.main
-  width 500px
-  text-align center
-  margin 0 auto
-  padding-top 50px
-
-.map-input
-  display inline-block
-  width 110px
- 
-.map
-  width 312px
-  height 312px
-  border 2px solid black
-  display flex
-  flex-wrap wrap
-  margin 30px auto
-  .item
-    height 100px
-    width 100px
-    font-size 30px
-    text-align center
-    line-height 100px
-    background #80fff5
-    border 2px solid black
-  .end
-    background #80d4ff
-```
+https://codepen.io/xerrors/pen/pojaJKY
 
 ## 参考资料
 
