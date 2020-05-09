@@ -8,7 +8,7 @@ module.exports = {
   permalink: "/:year/:month-:day-:slug",
   themeConfig: {
     sidebar: false,
-    github: "https://github.com/Xerrors/Site",
+    github: "https://github.com/Xerrors/",
     logo: '/avatar.jpg',
     lastUpdated: '修改于',
     search: false,

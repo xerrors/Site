@@ -16,7 +16,7 @@
         {{ data.tagline || $description || 'Welcome to your VuePress site' }}
       </p>
 
-      <p
+      <!-- <p
         class="action"
         v-if="data.actionText && data.actionLink"
       >
@@ -24,7 +24,7 @@
           class="action-button"
           :item="actionLink"
         />
-      </p>
+      </p> -->
     </header>
 
     <div

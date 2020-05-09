@@ -33,7 +33,7 @@
       <SearchBox v-else-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false"/>
       <NavLinks class="can-hide"/>
       <!-- 在这里添加了Girhub的 LOGO 比文字好看些 还是给隐藏了吧 -->
-      <!-- <a 
+      <a 
         :href="githubLink" 
         class="can-hide"
         style="display: flex; align-items: center; margin-left: 10px;">
@@ -43,7 +43,7 @@
           type="image/svg+xml" 
           style="width: 1.4rem; height: 1.4rem;"
           />
-      </a> -->
+      </a>
     </div>
   </header>
 </template>
