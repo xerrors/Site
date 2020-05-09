@@ -145,19 +145,21 @@ export default {
 }
 
 .my-class-title {
-    width: 4rem;
-    padding: .4rem 1rem;
-    margin: 1rem 0 0;
-    font-weight: 600;
-    background: linear-gradient(0deg, rgba(228, 228, 228, 0.5) 40%,#fff 0);
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  letter-spacing: 2px;
+  width: 5rem;
+  text-align: center;
+  padding: .4rem 1rem;
+  margin: 1rem 0 0;
+  font-weight: 600;
+  background: linear-gradient(0deg, rgba(228, 228, 228, 0.5) 40%,#fff 0);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .my-link-box {
-  width: 8.3rem;
+  width: 10rem;
   height: 4rem;
   margin: 0.4rem;
   background-color: #fcfcfc;
