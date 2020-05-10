@@ -12,6 +12,9 @@ cd ~/Site
 # 确保脚本抛出遇到的错误
 set -e
 
+git add -A
+git commit -m $message
+
 # 生成静态文件
 vuepress build docs
 
@@ -26,7 +29,7 @@ echo " "
 cd -
 
 git add -A
-git commit -m $message
+git commit -m 'dist'
 
 git push -f git@e.coding.net:Xerrors/Site.git master
 
