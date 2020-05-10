@@ -199,8 +199,7 @@ export default {
 }
 </script>
 
-
-<style>
+<style lang="stylus" scoped>
 /* 隐藏滚动条 */ 
 ::-webkit-scrollbar {
   width: 0.4rem !important;
@@ -278,7 +277,9 @@ export default {
 .footer a {
   color: white;
   font-weight: 300;
-  font-size: 14spx;
+  font-size: 14px;
+  border-bottom: 1px solid $accentColor;
+  padding: 2px 0;
 }
 
 @media (max-width: 410px){
