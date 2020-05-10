@@ -1,7 +1,7 @@
 ---
 home: true
 heroText: XERRORS
-tagline: LOVE AND PEACE
+tagline: 对艺术的追求是一种生活方式
 permalink: /
 actionText: ABOUT
 actionLink: https://github.com/Xerrors
