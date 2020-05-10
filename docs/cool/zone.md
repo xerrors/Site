@@ -8,7 +8,7 @@ hideLastUpdated: True
     <div>
       <div class="my-head">
         <!-- <h3 class="my-head__title">动态</h3> -->
-        <img class="my-head__svg" :src="$withBase('/svg/zone-bg.svg')" type="image/svg+xml" draggable="false"/>
+        <img class="my-head__svg" :src="$withBase('/ills/zone-bg.svg')" type="image/svg+xml" draggable="false"/>
       </div>
       <div class="my-input">
         <div class="my-input__content">

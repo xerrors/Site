@@ -5,7 +5,7 @@ hideLastUpdated: True
 <template>
   <div style='margin-top: 100px;'>
     <el-image class='my-title-img'
-      :src="$withBase('/svg/password.svg')"
+      :src="$withBase('/ills/password.svg')"
       draggable="false"></el-image>
     <br>
     <br>
