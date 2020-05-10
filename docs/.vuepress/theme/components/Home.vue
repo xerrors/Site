@@ -230,17 +230,16 @@ export default {
     padding-left 1.5rem
     padding-right 1.5rem
     .hero
-      h1, .description, .action
-        margin 1.2rem auto
+      h1
+        margin-top 7rem
       .description
         font-size 15px
       .action-button
         font-size 1rem
         padding 0.6rem 1.2rem
     .featureflex-direction column
-      // add style of my-title-box
       h2
-        font-size 1.25rem
+        font-size 1.2rem
 
 @keyframes showup {
   0% {
