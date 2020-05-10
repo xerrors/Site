@@ -45,7 +45,7 @@ export default {
         path: path,
         visitor: true,
         avatar: 'mm',
-        placeholder: '在这写吧~'
+        placeholder: '感谢您的建议或者鼓励~'
       });
     }
   }
