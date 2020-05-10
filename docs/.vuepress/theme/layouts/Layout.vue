@@ -199,7 +199,7 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
+<style lang="stylus">
 /* 隐藏滚动条 */ 
 ::-webkit-scrollbar {
   width: 0.4rem !important;
