@@ -308,6 +308,7 @@ temp-color=#f0f2f5
 
     &__date
       margin 0 0.5rem
+      font-weight 600
     
     &__body
       padding 1rem
