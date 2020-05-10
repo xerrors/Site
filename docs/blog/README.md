@@ -151,8 +151,7 @@ export default {
 }
 </script>
 
-
-<style scoped>
+<style lang="stylus" scoped>
 .my-tag-box {
   /* height: 100px; */
   display: flex;
@@ -195,8 +194,8 @@ export default {
 
 .this-tag:hover {
   cursor: pointer;
-  color: black;
-  border-bottom: 1px dotted black;
+  color: $accentColor;
+  border-bottom: 1px dotted $accentColor;
 }
 
 .read-more {
