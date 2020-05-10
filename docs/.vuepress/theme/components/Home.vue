@@ -212,12 +212,15 @@ export default {
     .hero
       h1
         font-size 4rem
+        margin-top 7rem
       .description
         font-size 16px
     .feature
       flex-direction column
+      h2
+        font-size 1.2rem
       img 
-        margin 3rem auto
+        margin 0 auto
       .my-text-box
         width 80%
         text-align center
