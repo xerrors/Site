@@ -105,7 +105,7 @@ export default {
         line-height 1.7rem
         position relative
         border-bottom none
-        font-weight 400
+        font-weight 600
         margin-bottom 0
         padding 0 1.5rem 0 1.25rem
         &:hover

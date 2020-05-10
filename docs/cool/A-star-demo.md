@@ -212,7 +212,6 @@ export default {
 
 <style lang="stylus" scoped>
 .main
-  width 500px
   text-align center
   margin 0 auto
   padding-top 50px
