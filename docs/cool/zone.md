@@ -302,6 +302,7 @@ temp-color=#f0f2f5
     &__body
       border 1px solid temp-color
       letter-spacing 1px
+      padding 0 1rem
 
     &__status
       margin 0 0.5rem
@@ -309,9 +310,6 @@ temp-color=#f0f2f5
     &__date
       margin 0 0.5rem
       font-weight 600
-    
-    &__body
-      padding 1rem
 
 .btn-love {
   position: absolute;
