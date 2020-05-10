@@ -6,7 +6,7 @@
         <!-- 文章标题区域 -->
         <div ref="title" class="my-title-box" v-if="isBlog">
           <h3 style="text-align: center;">{{ this.$page.title }}</h3>
-          <div style="text-align: center; color: #A0A0A0; font-size: 14px;">
+          <div style="text-align: center; color: #655e5e; font-size: 14px;">
             <!-- 标题下面的信息栏 -->
             <span class="leancloud-visitors" data-flag-title="Your Article Title">
               <span>{{ formatDate(this.$page.frontmatter.date) }} &ensp;</span>
@@ -282,12 +282,19 @@ function flatten(items, res) {
 
   &__lv2, &__lv3 {
     display: block;
+    vertical-align: middle;
+    line-height: 17px;
+    color: #655e5e;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #655e5e;
   }
 
   &__lv3 {
     margin-top: 8px;
-    color: rgb(118, 130, 142);
     padding-left: 1rem;
+    font-weight: 400;
+    font-size: 12px;
 
     &::before {
       content: '- ';
@@ -296,16 +303,15 @@ function flatten(items, res) {
 
   &__lv2 {
     margin-top: 16px;
-    color: rgb(44, 62, 80);
+    font-weight: 600;
+    font-size: 13px;
   }
 
   &__item {
     position: fixed;
     width: 250px;
     margin-top: 2rem;
-    // background white
     padding: 1rem;
-    // box-shadow 0 1px 2px 0 rgba(34,36,38,0.15)
   }
 }
 

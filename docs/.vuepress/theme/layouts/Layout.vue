@@ -270,12 +270,15 @@ export default {
   line-height: 2;
   border-top: 1px solid #DCDFE6;
   text-align: center;
-  background: #f0f2f5;
+  background: #292525;
+  color: white;
   /* color: lighten(#2c3e50, 25%)foot; */
 }
 
 .footer a {
-  color: #5e6261;
+  color: white;
+  font-weight: 300;
+  font-size: 14spx;
 }
 
 @media (max-width: 410px){

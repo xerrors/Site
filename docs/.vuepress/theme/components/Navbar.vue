@@ -36,14 +36,15 @@
       <a 
         :href="githubLink" 
         class="can-hide"
+        target="_blank"
         style="display: flex; align-items: center; margin-left: 10px;">
         <img 
           class="my-svg" 
-          :src="$withBase('/svg/github.svg')" 
-          type="image/svg+xml" 
+          :src="$withBase('/github.png')" 
           style="width: 1.4rem; height: 1.4rem;"
           />
       </a>
+      
     </div>
   </header>
 </template>
@@ -110,6 +111,7 @@ $navbar-horizontal-padding = 1.5rem
   line-height $navbarHeight - 1.4rem
   a, span, img
     display inline-block
+    font-weight 600
   .logo
     height $navbarHeight - 1.4rem
     min-width $navbarHeight - 1.4rem
