@@ -172,6 +172,7 @@ export default {
   color: white;
   background: #282C34;
   border-color: #282C34;
+  font-size: 14px;
 }
 
 .select-tag {
