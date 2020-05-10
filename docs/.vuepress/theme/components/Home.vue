@@ -123,7 +123,7 @@ export default {
     // box-shadow 0 1px 2px 0 rgba(0,0,0,.05)
     padding 2rem 0
     box-shadow: 0 2px 12px 0 rgba(0,0,0,0.1);
-    margin 20rem 0 10rem 0
+    margin 7rem 0 10rem 0
     border-radius 5px
     background white
     animation: showup 0.5s 2s forwards
@@ -211,7 +211,9 @@ export default {
   .home
     .hero
       h1
-        font-size 5rem
+        font-size 4rem
+      .description
+        font-size 16px
     .feature
       flex-direction column
       img 
@@ -228,7 +230,7 @@ export default {
       h1, .description, .action
         margin 1.2rem auto
       .description
-        font-size 1.2rem
+        font-size 15px
       .action-button
         font-size 1rem
         padding 0.6rem 1.2rem

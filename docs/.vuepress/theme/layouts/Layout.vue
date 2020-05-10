@@ -230,21 +230,22 @@ export default {
 .my-bg-home {
   position: absolute;
   width: 100%;
-  height: 100vh;
-  min-height: 42rem;
-  max-height: 70rem;
-  /* background-color: #028080; */
-  /* background-image: linear-gradient(116deg,#028080 5%,#931c1e 95%); */
+  height: 42rem;
   background-color: #028080;
-  background-image: linear-gradient(180deg, #028080 0%, #373737 50%, #931c1e 100%);
-  /* background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); */
-  background-size: 100% 400vh;
-  animation: gradientBG 20s ease infinite;
+  background-image: url(http://src.xerrors.fun/img20200511020201.jpg)
+  animation: gradientBG 40s ease-in-out infinite;
   z-index: -1;
+  &::before {
+    content ''
+    width 100%
+    height 100%
+    position absolute
+    background #00000055
+  }
 }
 
 .my-nav-home {
-  background-color: rgba(256, 256, 256, 0);
+  background-color: #292525;
   color: white;
   border: 0;
 }
