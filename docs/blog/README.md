@@ -163,16 +163,15 @@ export default {
   padding: 0.3rem .5rem;
   display: inline-block;
   cursor: pointer;
-  font-size: 1rem;
   transition: all 0.5s ease;
   border-radius: 3px;
+  font-size: 14px;
 }
 
 .my-tags:hover {
   color: white;
   background: #282C34;
   border-color: #282C34;
-  font-size: 14px;
 }
 
 .select-tag {
