@@ -206,8 +206,8 @@ export default {
   .home
     .hero
       h1
-        font-size 4rem
-        margin-top 7rem
+        font-size 2.5rem
+        margin-top 6rem
       .description
         font-size 16px
     .feature
