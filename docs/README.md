@@ -1,6 +1,6 @@
 ---
 home: true
-heroText: XERRORS
+heroText: X-ERRORS
 tagline: 对艺术的追求是一种生活方式
 permalink: /
 actionText: ABOUT

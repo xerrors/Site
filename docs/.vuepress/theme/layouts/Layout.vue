@@ -230,10 +230,10 @@ export default {
 .my-bg-home {
   position: absolute;
   width: 100%;
-  height: 42rem;
+  height: 32rem;
   background-color: #028080;
   background-image: url(http://src.xerrors.fun/img20200511020201.jpg)
-  animation: gradientBG 40s ease-in-out infinite;
+  animation: gradientBG 80s ease-in-out infinite;
   z-index: -1;
   &::before {
     content ''

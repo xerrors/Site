@@ -165,12 +165,7 @@ export default {
     h1
       opacity: 0
       font-weight 500
-      font-size: 10rem
-      color: #0d302c;
-      outline: 2px solid black;
-      outline-offset: -11px;
-      background linear-gradient(45deg, #b3feff, #ffa9ab)
-      font-family algerian
+      color: white
       margin-top 6.5rem
       overflow hidden
       animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
