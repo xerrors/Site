@@ -235,6 +235,7 @@ export default {
   background-color: #028080;
   background-image: url(http://src.xerrors.fun/img20200511020201.jpg)
   animation: gradientBG 80s ease-in-out infinite;
+  background-size: 150%;
   z-index: -1;
   &::before {
     content ''
@@ -284,10 +285,9 @@ export default {
   padding: 2px 0;
 }
 
-@media (max-width: 410px){
+@media (max-width: 750px){
   .my-bg-home {
-    min-height: 30rem;
-    max-height: 50rem;
+    background-size: 300%;
   }
 }
 

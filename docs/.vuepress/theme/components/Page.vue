@@ -5,7 +5,7 @@
       <div :class="mainClass">
         <!-- 文章标题区域 -->
         <div ref="title" class="my-title-box" v-if="isBlog">
-          <h3 style="text-align: center;">{{ this.$page.title }}</h3>
+          <h1 style="text-align: center;">{{ this.$page.title }}</h1>
           <div style="text-align: center; color: #655e5e; font-size: 14px;">
             <!-- 标题下面的信息栏 -->
             <span class="leancloud-visitors" data-flag-title="Your Article Title">
