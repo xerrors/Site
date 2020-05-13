@@ -8,7 +8,7 @@
           <h1 style="text-align: center;">{{ this.$page.title }}</h1>
           <div style="text-align: center; color: #655e5e; font-size: 14px;">
             <!-- 标题下面的信息栏 -->
-            <span class="leancloud-visitors" data-flag-title="Your Article Title">
+            <span class="leancloud-visitors" :data-flag-title="$page.title">
               <span>{{ formatDate(this.$page.frontmatter.date) }} &ensp;</span>
               <i class="el-icon-view" style="margin-right: 3px;" />
               <span class="leancloud-visitors-count"></span>

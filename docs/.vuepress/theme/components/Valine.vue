@@ -1,7 +1,7 @@
 <template>
   <div style="background: white;">
     <section class="page-edit">
-      <span class="leancloud-visitors" data-flag-title="Your Article Title">
+      <span class="leancloud-visitors" :data-flag-title="$page.title">
         <i class="el-icon-view" style="margin-right: 3px;"/>
         <span class="leancloud-visitors-count"></span>
         <span>次浏览</span>
