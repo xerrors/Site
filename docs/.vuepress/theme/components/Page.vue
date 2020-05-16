@@ -5,8 +5,8 @@
       <div :class="mainClass">
         <!-- 文章标题区域 -->
         <div ref="title" class="my-title-box" v-if="isBlog">
-          <h1 style="text-align: center;">{{ this.$page.title }}</h1>
-          <div style="text-align: center; color: #655e5e; font-size: 14px;">
+          <h2>{{ this.$page.title }}</h2>
+          <div style="color: #655e5e; font-size: 14px;">
             <!-- 标题下面的信息栏 -->
             <span class="leancloud-visitors" :data-flag-title="$page.title">
               <span>{{ formatDate(this.$page.frontmatter.date) }} &ensp;</span>
@@ -256,8 +256,10 @@ function flatten(items, res) {
 }
 
 .my-title-box {
-  padding-top: 1.5rem;
-  margin: 0rem auto -2rem auto;
+    margin: 0 auto -2rem auto;
+    max-width: 740px;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #e1e2e3;
 }
 
 .notBlog {
