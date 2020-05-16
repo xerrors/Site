@@ -316,7 +316,7 @@ temp-color=#f0f2f5
   right: 0;
   top: -10px;
   display: inline-block;
-  background: url(http://src.xerrors.fun/blog/20200222/xHqDqd9ROBhI.png) 0 0 no-repeat;
+  background: url(https://xerrors.oss-cn-shanghai.aliyuncs.com/blog/20200222/xHqDqd9ROBhI.png) 0 0 no-repeat;
   background-size: 2900%;
   height: 60px;
   cursor: pointer;

@@ -46,7 +46,7 @@ categories:
 
 遗传算法的控制参数包括**群体规模**N、**算法停止准则**以及**交配概率pc**和**变异概率pm**
 
-![mark](http://src.xerrors.fun/blog/20200329/u4EV0dkTilkL.png)
+![mark](https://xerrors.oss-cn-shanghai.aliyuncs.com/blog/20200329/u4EV0dkTilkL.png)
 
 **遗传算法的主要特点**
 
@@ -119,7 +119,7 @@ $$P\left(x_{i}\right)=\frac{f\left(x_{i}\right)}{\sum_{j=1}^{N} f\left(x_{j}\rig
 
 一点交叉（Single-point Crossover）是最基础的一种交叉方式。从交配池中随机选择两个个体，然后随机选择一个交叉点，该点前后的两个个体的部分结构进行互换，并生成两个新的个体。Holland教授曾指出，一点交叉算子不利于长距模式的保留和重组，而且位串末尾的重要基因总是被交换，因此在实际应用中采用的并不多。
 
-![mark](http://src.xerrors.fun/blog/20200329/2UEz73of4gP0.png)
+![mark](https://xerrors.oss-cn-shanghai.aliyuncs.com/blog/20200329/2UEz73of4gP0.png)
 
 图片源自@[算法爱好者](https://mp.weixin.qq.com/s/VKU7UQ2iYzGfnbk41ltdBA)
 
@@ -129,7 +129,7 @@ $$P\left(x_{i}\right)=\frac{f\left(x_{i}\right)}{\sum_{j=1}^{N} f\left(x_{j}\rig
 
 两点交叉（Two-point Crossover）的操作与一点交叉类似，只是设置了两个交叉点，将两个交叉点之间的串互相交换。
 
-![mark](http://src.xerrors.fun/blog/20200329/qz7AGoyI5YIs.png)
+![mark](https://xerrors.oss-cn-shanghai.aliyuncs.com/blog/20200329/qz7AGoyI5YIs.png)
 
 图片源自@[算法爱好者](https://mp.weixin.qq.com/s/VKU7UQ2iYzGfnbk41ltdBA)
 
@@ -328,7 +328,7 @@ if __name__ == '__main__':
 
 结果总是在8700-9200之间，效果不错，但是还有待改进。
 
-![mark](http://src.xerrors.fun/blog/20200329/iUhPth063Y8d.png)
+![mark](https://xerrors.oss-cn-shanghai.aliyuncs.com/blog/20200329/iUhPth063Y8d.png)
 
 ## 4. 遗传算法的优缺点
 

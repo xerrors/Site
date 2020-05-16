@@ -28,23 +28,23 @@ hideLastUpdated: true
 
 *申请的步骤* 👇
 
-![mark](http://src.xerrors.fun/blog/20200224/nbX77fQ1IfOd.png)
+![mark](https://xerrors.oss-cn-shanghai.aliyuncs.com/blog/20200224/nbX77fQ1IfOd.png)
 
-![mark](http://src.xerrors.fun/blog/20200224/m878qH4RtaAO.png)
+![mark](https://xerrors.oss-cn-shanghai.aliyuncs.com/blog/20200224/m878qH4RtaAO.png)
 
 续约的步骤* 👇
 
-![mark](http://src.xerrors.fun/blog/20200224/R5buXiBoaDEL.png)
+![mark](https://xerrors.oss-cn-shanghai.aliyuncs.com/blog/20200224/R5buXiBoaDEL.png)
 
 关于PyCharm，这里推荐下载的是 PyCharm for Anaconda，优点就是安装好了插件，毕竟对于新手来说装插件也是个让人头疼的事情。注意：即使下载这个版本也需要单独下载Anaconda3。
 
-![image-20200224083611726](http://src.xerrors.fun/blog/20200224/oUswrUDxTHub.png)
+![image-20200224083611726](https://xerrors.oss-cn-shanghai.aliyuncs.com/blog/20200224/oUswrUDxTHub.png)
 
 ### 1.2 Anaconda3
 
 到这里下载 [Anaconda3](https://www.anaconda.com/distribution/#download-section)，不推荐下载2.x的版本，毕竟官方已经不再支持了。
 
-![anaconda3](http://src.xerrors.fun/blog/20200224/exWL0aa9kVsa.png)
+![anaconda3](https://xerrors.oss-cn-shanghai.aliyuncs.com/blog/20200224/exWL0aa9kVsa.png)
 
 
 
@@ -56,11 +56,11 @@ hideLastUpdated: true
 
 双击安装Anaconda，在这里可以选择 All Users。
 
-![安装](http://src.xerrors.fun/blog/20200224/9PmqTRUMFYtG.png)
+![安装](https://xerrors.oss-cn-shanghai.aliyuncs.com/blog/20200224/9PmqTRUMFYtG.png)
 
-![mark](http://src.xerrors.fun/blog/20200224/DhKqKwJnc01g.png)
+![mark](https://xerrors.oss-cn-shanghai.aliyuncs.com/blog/20200224/DhKqKwJnc01g.png)
 
-![mark](http://src.xerrors.fun/blog/20200224/dRjLLugWQxHq.png)
+![mark](https://xerrors.oss-cn-shanghai.aliyuncs.com/blog/20200224/dRjLLugWQxHq.png)
 
 也建议将 Anaconda 添加到系统路径里面，这样就可以在终端里面调用了。
 
@@ -68,20 +68,20 @@ hideLastUpdated: true
 
 双击安装，没啥好说的。
 
-![mark](http://src.xerrors.fun/blog/20200224/P83hCUcaS9TP.png)
+![mark](https://xerrors.oss-cn-shanghai.aliyuncs.com/blog/20200224/P83hCUcaS9TP.png)
 
-![mark](http://src.xerrors.fun/blog/20200224/OVYsFQaDBlqK.png)
+![mark](https://xerrors.oss-cn-shanghai.aliyuncs.com/blog/20200224/OVYsFQaDBlqK.png)
 
 ## 3. 配置PyCharm
 
 
 在 pycharm 里面创建一个项目，然后点击：File->Default Setting->Project Interpreter，然后点击 **Add**
 
-![mark](http://src.xerrors.fun/blog/20200224/YE7uzUwYcoiA.png)
+![mark](https://xerrors.oss-cn-shanghai.aliyuncs.com/blog/20200224/YE7uzUwYcoiA.png)
 
 注意这里，我们选择的是 System Interpreter，而不是上面的 Conda，然后找到你的 Anaconda 的文件路径就可以了。
 
-![mark](http://src.xerrors.fun/blog/20200224/kMk1x3odtA9C.png)
+![mark](https://xerrors.oss-cn-shanghai.aliyuncs.com/blog/20200224/kMk1x3odtA9C.png)
 
 找到对应的文件之后 ok 即可。
 

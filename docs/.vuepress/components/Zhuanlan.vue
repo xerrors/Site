@@ -29,7 +29,7 @@ export default {
   },
   mounted () {
     this.zhuanlan = [{
-      cover: "http://src.xerrors.fun/blog/20200104/ovQBUxdx1Gsp.jpg?imageslim",
+      cover: "https://xerrors.oss-cn-shanghai.aliyuncs.com/blog/20200104/ovQBUxdx1Gsp.jpg?imageslim",
       link: "python-base",
       title: "Python 简单讲解",
       date: "2019-10-07",

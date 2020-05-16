@@ -46,7 +46,7 @@ export default {
   },
   mounted () {
     this.zhuanlan = [{
-    //   cover: "http://src.xerrors.fun/blog/20200224/xyfxYSdci11r.png",
+    //   cover: "https://xerrors.oss-cn-shanghai.aliyuncs.com/blog/20200224/xyfxYSdci11r.png",
     //   link: "python-sci",
     //   decription: "持续开辟新坑，这次所涉及到的是 Python 科学计算领域，参考书籍是《Python 科学计算（第二版）》张若愚著，为之后的科研研究铺路。需要一定的Python基础，如果Python基础不够扎实的话，可以参考另外一个专栏 《Python 快速扫盲》",
     //   title: "Python 科学计算",
@@ -55,7 +55,7 @@ export default {
     //   num: 0,
     //   pages: []
     // }, {
-      cover: "http://src.xerrors.fun/blog/20200203/t7wXD6CoQdbk.png",
+      cover: "https://xerrors.oss-cn-shanghai.aliyuncs.com/blog/20200203/t7wXD6CoQdbk.png",
       link: "compile",
       decription: "这个专栏涉及到词法分析器以及语法分析器的构建，从 flex 开始讲起，直到后面的 bison 来构造语法分析器，一步一个脚印来将自己学习的知识应用到实践中去；",
       title: "编译原理：语法分析与词法分析",
@@ -64,7 +64,7 @@ export default {
       num: 0,
       pages: []
     }, {
-      cover: "http://src.xerrors.fun/blog/20200203/pa71gYHVDFVO.png",
+      cover: "https://xerrors.oss-cn-shanghai.aliyuncs.com/blog/20200203/pa71gYHVDFVO.png",
       link: "python-base",
       decription: "这个专栏主要从Python的几个基础的地方来阐述，理解难度很低，并且可帮助有C语言基础的同学快速掌握Python的基础语法知识以及用法，平时写一些字符串处理脚本还是没有问题的；与此同时，该内容也可以帮助学习更深层次的Python的时候，打下一个基础。",
       title: "Python 快速扫盲",

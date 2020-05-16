@@ -179,7 +179,7 @@ export default {
 
 规则2：如果长脖子且是食草动物，可推出**长颈鹿**；
 
-![](http://src.xerrors.fun/img20200511154255.png)
+![](https://xerrors.oss-cn-shanghai.aliyuncs.com/img20200511154255.png)
 
 ## 2. 知识库
 
@@ -187,9 +187,9 @@ export default {
 
 为了方便大家理解这些特征跟序号的对应关系，大家看图：
 
-![](http://src.xerrors.fun/img20200511213415.png)
+![](https://xerrors.oss-cn-shanghai.aliyuncs.com/img20200511213415.png)
 
-![](http://src.xerrors.fun/img20200511213715.png)
+![](https://xerrors.oss-cn-shanghai.aliyuncs.com/img20200511213715.png)
 
 ### 保存规则
 
@@ -282,7 +282,7 @@ activate (ind) {
 
 用户的输入条件是：「长脖子、有毛、有蹄」，在顺序遍历规则的时候，第一条规则的条件中，不满足食草动物的条件，所以不能推导出是长颈鹿；当遍历到第二条规则的时候虽然已经推导出是食草动物，但是由于已经遍历完成，所以无法得到该动物是长颈鹿。所以对于所有的规则，应当满足**拓扑序列**。这里所有的规则正好是满足拓扑序列的。
 
-![图示](http://src.xerrors.fun/img20200511115652.png)
+![图示](https://xerrors.oss-cn-shanghai.aliyuncs.com/img20200511115652.png)
 
 ### 交互逻辑
 
@@ -311,7 +311,7 @@ activate (ind) {
 </template>
 ```
 
-![](http://src.xerrors.fun/img20200511162235.png)
+![](https://xerrors.oss-cn-shanghai.aliyuncs.com/img20200511162235.png)
 
 用户的逻辑就是点击上面的条件可以「选中」该条件或者「取消选中」，然后系统会根据用户的选择给出推论，同时会将推导的过程放在最后面显示出来。[点此](https://www.xerrors.fun/Animal-Identification-Expert-System/) 体验
 

@@ -25,7 +25,7 @@ categories:
 
 ## 模拟退火算法
 
-![mark](http://src.xerrors.fun/blog/20200323/d4ukj7kp959Y.png)
+![mark](https://xerrors.oss-cn-shanghai.aliyuncs.com/blog/20200323/d4ukj7kp959Y.png)
 
 组合优化问题与固体退火过程的类比
 
@@ -38,7 +38,7 @@ $$P_{t}(i \Rightarrow j)=\left\{\begin{array}{ll}
 e^{-\frac{j(j)}{t}, f(i)} & \text { other }
 \end{array}\right.$$
 
-![mark](http://src.xerrors.fun/blog/20200323/lQKsFgHswh3S.png)
+![mark](https://xerrors.oss-cn-shanghai.aliyuncs.com/blog/20200323/lQKsFgHswh3S.png)
 
 如果新解 j 被接受，则以解 j 代替解i，否则继续保持解 i 。重复该过程，直到在该控制参数 t 下达到平衡。
 
@@ -67,7 +67,7 @@ e^{-\frac{j(j)}{t}, f(i)} & \text { other }
     e^{-\frac{\Delta f}{t}} & ; \text {other}
     \end{array}\right.$$
 
-    ![mark](http://src.xerrors.fun/blog/20200323/wJQKqmdWLHAz.png)
+    ![mark](https://xerrors.oss-cn-shanghai.aliyuncs.com/blog/20200323/wJQKqmdWLHAz.png)
 
 ### 2. 网上的办法
 
@@ -153,7 +153,7 @@ main()
 
 运行结果：
 
-![mark](http://src.xerrors.fun/blog/20200324/O7ResxCjIC44.png)
+![mark](https://xerrors.oss-cn-shanghai.aliyuncs.com/blog/20200324/O7ResxCjIC44.png)
 
 ### 3. 老师教的方法
 
@@ -244,7 +244,7 @@ main()
 
 运行结果：
 
-![mark](http://src.xerrors.fun/blog/20200323/r6Tz7dFqdInX.png)
+![mark](https://xerrors.oss-cn-shanghai.aliyuncs.com/blog/20200323/r6Tz7dFqdInX.png)
 
 ## 参考资料
 

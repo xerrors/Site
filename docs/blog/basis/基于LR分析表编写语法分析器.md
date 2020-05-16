@@ -36,11 +36,11 @@ PS：从这一篇文章起，每个标题前面加上一个标号，哈哈哈哈
 
 还好只有两个非终结符，文法也有很多，所以下一步就是画状态转移图和LR分析表了。
 
-![mark](http://src.xerrors.fun/blog/20200108/4ByjrSQ4bvLM.png?imageslim)
+![mark](https://xerrors.oss-cn-shanghai.aliyuncs.com/blog/20200108/4ByjrSQ4bvLM.png?imageslim)
 
 通过上面的转移图可以看出，在状态4同时存在移入和规约两个状态，所以我们要使用`SLR(1)`，如结果所示：
 
-![mark](http://src.xerrors.fun/blog/20200108/13NvNqgiQAmU.png?imageslim)
+![mark](https://xerrors.oss-cn-shanghai.aliyuncs.com/blog/20200108/13NvNqgiQAmU.png?imageslim)
 
 有了图和表之后我们按照理论就很好分析了。我们函数的主题就是一个`while`循环，当遇到指定的符号的时候执行相应的动作。
 

@@ -269,7 +269,7 @@ int main() {
 
 前面的检验都没有什么问题，直到最后的时候，我对一个特殊值进行检验，`- 2^32 ` 这个数是在int 的表示范围的，所以就用这个数表示一下，但是，当输出的时候就出现了意外。两次`printf`函数，结构是一样的，输出形式是一样的，但是结果却不一样。
 
-![mark](http://src.xerrors.fun/blog/20191024/j9rRPvKnwkcY.png?imageslim)
+![mark](https://xerrors.oss-cn-shanghai.aliyuncs.com/blog/20191024/j9rRPvKnwkcY.png?imageslim)
 
 具体原因不清楚！没搞懂
 

@@ -191,7 +191,7 @@ console.log(store.state.count)// 2
 
 预期效果如下：
 
-![预期效果](http://src.xerrors.fun/blog/20200301/bIiuGvvCuz9u.png)
+![预期效果](https://xerrors.oss-cn-shanghai.aliyuncs.com/blog/20200301/bIiuGvvCuz9u.png)
 
 问题出现了！！！这个时候两个按钮点击之后都是选择打开文件。
 

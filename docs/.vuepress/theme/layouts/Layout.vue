@@ -233,7 +233,7 @@ export default {
   width: 100%;
   height: 32rem;
   background-color: #028080;
-  background-image: url(http://src.xerrors.fun/img20200511020201.jpg)
+  background-image: url(https://xerrors.oss-cn-shanghai.aliyuncs.com/img20200511020201.jpg)
   animation: gradientBG 80s ease-in-out infinite;
   background-size: 150%;
   z-index: -1;
