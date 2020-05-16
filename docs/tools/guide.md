@@ -129,15 +129,11 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="stylus" scoped>
 .my-classes-box {
   padding: 1rem;
   display: flex;
   flex-wrap: wrap;
-  a {
-    text-decoration: none;
-    display: block;
-  };
 }
 
 .my-classes-box a:hover {
@@ -172,17 +168,34 @@ export default {
   justify-content: center;
   flex-direction: column;
   transition:all 0.2s;
+  &:first-child {
+    color: $accentColor;
+  }
 }
 
 .my-link-box:hover {
   transform: scale(1.05);
 }
+
+@media (max-width: $MQMobile) {
+  .my-class-title {
+    margin: 1rem auto;
+  }
+  .my-classes-box {
+    padding: 0;
+    flex-direction: column
+    .my-link-box {
+      width: auto;
+      margin-top: 8px;
+    }
+  }
+}
 </style>
 
-<style>
+<style lang="stylus">
 .el-tabs--card>.el-tabs__header .el-tabs__item.is-active {
   border-bottom-color: #fff;
-  /* color: red; */
+  color: $accentColor;
   font-weight: 600;
 }
 </style>

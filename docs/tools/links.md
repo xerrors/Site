@@ -85,8 +85,7 @@ export default {
 
     .link-card
       width 13rem
-      height 20rem
-      margin 1rem
+      margin 1rem 1rem 1rem 0
       display flex
       justify-content center
 
@@ -112,9 +111,10 @@ export default {
         transform:rotate(-1deg);
         text-decoration none
         
-@media (max-width: 600px)
+@media (max-width: $MQMobile)
   .my-links
     flex-direction column
     .link-card
-      margin 1rem auto
+      width: auto;
+      margin: 1rem 0;
 </style>

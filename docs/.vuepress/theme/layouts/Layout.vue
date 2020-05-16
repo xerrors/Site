@@ -234,7 +234,7 @@ export default {
   height: 32rem;
   background-color: #028080;
   background-image: url(https://xerrors.oss-cn-shanghai.aliyuncs.com/img20200511020201.jpg)
-  animation: gradientBG 80s ease-in-out infinite;
+  animation: gradientBG 60s linear infinite;
   background-size: 150%;
   z-index: -1;
   &::before {
@@ -285,9 +285,10 @@ export default {
   padding: 2px 0;
 }
 
-@media (max-width: 750px){
+@media (max-width: $MQNarrow){
   .my-bg-home {
-    background-size: 300%;
+    background-size: auto 100%;
+    animation: none;
   }
 }
 

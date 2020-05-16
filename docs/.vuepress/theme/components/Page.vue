@@ -256,10 +256,8 @@ function flatten(items, res) {
 }
 
 .my-title-box {
-    margin: 0 auto -2rem auto;
-    max-width: 740px;
-    padding: 1.5rem 0;
-    border-bottom: 1px solid #e1e2e3;
+  @extend $wrapper;
+  border-bottom: 1px solid #e1e2e3;
 }
 
 .notBlog {
@@ -335,16 +333,20 @@ function flatten(items, res) {
 }
 
 .theme-paper {
+  @extend $wrapper;
+  lo-ft-size = 17px
   font-family: serif;
   font-size: 17px;
-  padding: 3rem;
   color: black;
   margin: 0 auto;
+  .my-title-box {
+    text-align: center;
+  } 
 
   .content__default {
     ol, p, ul {
       line-height: 2;
-      text-indent: 40px;
+      text-indent: 2 * (lo-ft-size + 1);
     }
   }
 }
@@ -399,6 +401,9 @@ function flatten(items, res) {
 }
 
 @media (max-width: $MQMobile) {
+  .theme-paper {
+    lo-ft-size = 16px
+  }
   .page-edit {
     .edit-link {
       margin-bottom: 0.5rem;
