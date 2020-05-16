@@ -5,3 +5,5 @@ package-lock.json
 
 .vscode
 Node
+
+docs/.vuepress/dist
