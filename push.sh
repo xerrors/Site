@@ -14,6 +14,8 @@ git add -A
 
 {
     git commit -m $message
+} || {
+    echo "commit tree is clean"
 }
 
 git push -f git@e.coding.net:Xerrors/Site.git master
