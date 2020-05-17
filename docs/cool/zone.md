@@ -128,11 +128,11 @@ export default {
         return
       }
 
-      this.$prompt('先告诉我 Token 是啥😇', '提示', {
+      this.$prompt('先告诉我口令是啥 😇', '提示', {
           confirmButtonText: 'Yaeh',
           cancelButtonText: 'Nope',
           inputPattern: /^[A-Za-z0-9]{5,13}$/,
-          inputErrorMessage: 'Token 格式不正确😕'
+          inputErrorMessage: '口令格式不正确😕'
         }).then(({ value }) => {
           // 创建临时变量
           var temp = {
