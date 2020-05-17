@@ -144,13 +144,13 @@ for {printf("line%d:(for,)\n", line);}
 
 在 Windows 平台下使用的是 win-flex （在文件所在的路径下执行下面的命令）
 
-```cmd
+```sh
 win_flex test.lex 
 ```
 
 然后就会得到 `lex.yy.c` 再然后编译一下就可以了
 
-```cmd
+```sh
 gcc lex.yy.c
 ```
 

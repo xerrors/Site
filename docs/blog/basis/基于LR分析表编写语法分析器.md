@@ -176,7 +176,7 @@ a1 + (a2)
 
 ### 执行结果
 
-```raw
+```
 a1 + (a2)
 Syntax analysis is right
 ```

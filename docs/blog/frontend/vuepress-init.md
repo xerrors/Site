@@ -43,7 +43,7 @@ yarn init -y
 
 按照以下文件结构创建文件以及文件夹
 
-```raw
+```
 .
 ├─ docs
 │  ├─ README.md

@@ -56,7 +56,7 @@ learning(name)
 ```
 
 两段代码都可以实现输出 
-```raw
+```
 I want to learn reverse!!!
 Xerrors start to learn reverse!
 ```
