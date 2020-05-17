@@ -9,10 +9,10 @@
           <div style="color: #655e5e; font-size: 14px;">
             <!-- 标题下面的信息栏 -->
             <span class="leancloud-visitors" :data-flag-title="$page.title">
+              <span>作者：{{ this.$page.author || '黄玉川' }}</span> &ensp;
               <span>{{ formatDate(this.$page.frontmatter.date) }} &ensp;</span>
               <i class="el-icon-view" style="margin-right: 3px;" />
               <span class="leancloud-visitors-count"></span>
-              <span>次浏览</span>
             </span>
           </div>
         </div>
@@ -213,7 +213,7 @@ export default {
     formatDate(date) {
       date = new Date(date);
 
-      return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
+      return `${date.getFullYear()} 年 ${date.getMonth() + 1} 月 ${date.getDate()} 日`;
     }
   }
 };
