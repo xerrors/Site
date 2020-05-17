@@ -20,7 +20,7 @@ hideLastUpdated: True
           </el-input>
         </div>
         <div class="my-input__select">
-          <el-select v-model="newMsg.status" placeholder="😏">
+          <el-select v-model="newMsg.status" placeholder="😋">
             <el-option
               v-for="item in options"
               :key="item"
@@ -70,7 +70,7 @@ export default {
         status: ''
       }, // 新动态的格式
       msgs: [], // 存从服务器获得的动态
-      options: ['😄', '😎', '😫', '😡', '😨' ],
+      options: ['😂', '🥰', '😒', '😡', '🙄', '😁', '😭', '😵' ],
     } 
   },
 
@@ -182,7 +182,7 @@ export default {
         return 
       }
 
-      return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`
+      return `${date.getFullYear()} 年 ${date.getMonth() + 1} 月 ${date.getDate()} 日`
     },
 
     loadMore() {
