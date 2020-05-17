@@ -131,7 +131,6 @@ export default {
 
 <style lang="stylus" scoped>
 .my-classes-box {
-  padding: 1rem;
   display: flex;
   flex-wrap: wrap;
 }
@@ -145,7 +144,7 @@ export default {
   width: 5rem;
   text-align: center;
   padding: .4rem 1rem;
-  margin: 1rem 0 0;
+  margin: 1rem 0;
   font-weight: 600;
   background: linear-gradient(0deg, rgba(228, 228, 228, 0.5) 40%,#fff 0);
   -webkit-user-select: none;
@@ -155,9 +154,10 @@ export default {
 }
 
 .my-link-box {
-  width: 10rem;
+  width: 8.7rem;
   height: 4rem;
-  margin: 0.4rem;
+  /* margin: 0.4rem; */
+  margin: 0 0.4rem 0.6rem 0
   background-color: #fcfcfc;
   border: 1px solid #f1f1f1;
   border-radius: 3px;
