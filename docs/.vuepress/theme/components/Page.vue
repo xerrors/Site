@@ -9,7 +9,7 @@
           <div style="color: #655e5e; font-size: 14px;">
             <!-- 标题下面的信息栏 -->
             <span class="leancloud-visitors" :data-flag-title="$page.title">
-              <span>作者：{{ this.$page.author || '黄玉川' }}</span> &ensp;
+              <span>作者：{{ this.$page.author || '玉川' }}</span> &ensp;
               <span>{{ formatDate(this.$page.frontmatter.date) }} &ensp;</span>
               <i class="el-icon-view" style="margin-right: 3px;" />
               <span class="leancloud-visitors-count"></span>
@@ -44,10 +44,13 @@
         <valine></valine>
       </div>
       <div v-if="isBlog && !hideContent" class="my-main-right">
-        <div class="right-item">
-          暂时不知道用来干啥
+        <div style="font-size:14px">
+          <a href="https://me.csdn.net/jaykm" target="_blank">CSND</a> &nbsp;  
+          <a href="https://github.com/Xerrors" target="_blank">GitHub</a> &nbsp; 
+          <a href="https://juejin.im/user/5c17f022f265da616c65862f" target="_blank">掘金</a> &nbsp; 
+          <a href="mailto:xerrors@163.com">邮件</a>
         </div>
-        <div class="my-menu right-item">
+        <div class="my-menu">
           <h4 style="margin-top: 0; color: #121314">目录</h4>
           <a
             v-for="menu in renderMenus"
@@ -269,7 +272,7 @@ function flatten(items, res) {
   margin: 0 auto;
 }
 
-.my-main-left, .right-item {
+.my-main-left, .my-main-right>* {
   background-color: white;
   box-shadow: 0 1px 2px 0 rgba(34, 36, 38, 0.15);
 }  
@@ -284,11 +287,11 @@ function flatten(items, res) {
   margin-left: 1rem;
   width: 250px;
 
-  .right-item + .right-item {
-    margin-top: 1rem;
+  div + div {
+    margin-top: 0.6rem;
   }
 
-  .right-item {
+  >* {
     padding: 1rem;
   }
 
