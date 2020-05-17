@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
+# 用于我的服务器的自动化部署
 
 cd ~/Site
 
