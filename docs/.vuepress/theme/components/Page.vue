@@ -43,8 +43,11 @@
         </div>
         <valine></valine>
       </div>
-      <div v-if="isBlog && !hideContent" class="my-menu">
-        <div class="my-menu__item">
+      <div v-if="isBlog && !hideContent" class="my-main-right">
+        <div class="right-item">
+          暂时不知道用来干啥
+        </div>
+        <div class="my-menu right-item">
           <h4 style="margin-top: 0; color: #121314">目录</h4>
           <a
             v-for="menu in renderMenus"
@@ -253,6 +256,8 @@ function flatten(items, res) {
   min-height: 90vh;
   margin: 0 auto;
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .my-title-box {
@@ -264,63 +269,68 @@ function flatten(items, res) {
   margin: 0 auto;
 }
 
+.my-main-left, .right-item {
+  background-color: white;
+  box-shadow: 0 1px 2px 0 rgba(34, 36, 38, 0.15);
+}  
+
 .my-main-left {
   position: relative;
   max-width: 53rem;
-  background-color: white;
-  box-shadow: 0 1px 2px 0 rgba(34, 36, 38, 0.15);
   padding-bottom: 2rem;
 }
 
-.my-menu {
-  position: absolute;
-  top: 0;
-  right: 0;
+.my-main-right {
   margin-left: 1rem;
   width: 250px;
-  color: #777;
 
-  &__lv2, &__lv3 {
-    display: block;
-    vertical-align: middle;
-    line-height: 17px;
-    color: #655e5e;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    color: #655e5e;
+  .right-item + .right-item {
+    margin-top: 1rem;
   }
 
-  &__lv3 {
-    margin-top: 8px;
-    padding-left: 1rem;
-    font-weight: 400;
-    font-size: 12px;
-
-    &::before {
-      content: '- ';
-    }
-  }
-
-  &__lv2 {
-    margin-top: 16px;
-    font-weight: 600;
-    font-size: 13px;
-  }
-
-  &__item {
-    position: fixed;
-    width: 250px;
-    margin-top: 2rem;
+  .right-item {
     padding: 1rem;
+  }
+
+  .my-menu {
+    position: sticky;
+    top: 70px;
+
+    &__lv2, &__lv3 {
+      display: block;
+      vertical-align: middle;
+      line-height: 17px;
+      color: #655e5e;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: #655e5e;
+    }
+
+    &__lv3 {
+      margin-top: 8px;
+      padding-left: 1rem;
+      font-weight: 400;
+      font-size: 13px;
+
+      &::before {
+        content: '- ';
+      }
+    }
+
+    &__lv2 {
+      margin-top: 16px;
+      font-weight: 600;
+      font-size: 14px;
+    }
   }
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 1100px) {
   .my-main-left {
     margin: 0 auto;
   }
 
-  .my-menu {
+  .my-main-right {
     display: none;
   }
 }
