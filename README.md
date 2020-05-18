@@ -1,4 +1,6 @@
-![](https://xerrors.oss-cn-shanghai.aliyuncs.com/imgs/20200516230711.png)
+![预览](https://xerrors.oss-cn-shanghai.aliyuncs.com/imgs/20200518221933.png)
+
+[在线预览](https://www.xerrors.fun)
 
 ## 个人小破站
 
