@@ -7,7 +7,8 @@ const modeOptions = {
         '--bg-color' : '#f4f4f4',
         '--card-color' : '#ffffff',
         '--border-color' : '#e5e5e5',
-        '--box-shadow' : 'rgba(34, 36, 38, 0.15)'
+        '--box-shadow' : 'rgba(34, 36, 38, 0.15)',
+        '--mask-color' : 'rgba(255,255,255,0.9)'
     },
     dark: {      
         '--main-color' : '#f94135',
@@ -17,7 +18,8 @@ const modeOptions = {
         '--bg-color' : '#171514',
         '--card-color' : '#232222',
         '--border-color' : '#373737',
-        '--box-shadow' : 'rgba(34, 36, 38, 0.15)'
+        '--box-shadow' : 'rgba(34, 36, 38, 0.15)',
+        '--mask-color' : 'rgba(0,0,0,0.9)'
     }
   }
   

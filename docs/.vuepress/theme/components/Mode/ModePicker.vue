@@ -2,7 +2,7 @@
 <!-- https://github.com/vuepress-reco/vuepress-theme-reco/blob/develop/packages/vuepress-theme-reco/components/Mode/ModePicker.vue -->
 <template>
   <div class="mode-options">
-    <h4 class="title">Choose mode</h4>
+    <h4 class="title">切换主题</h4>
     <ul class="color-mode-options">
       <li
         v-for="(mode, index) in modeOptions"
@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import applyMode from './applyMode'
+import applyMode from './applyMode.js'
 export default {
   name: 'ModeOptions',
   data () {

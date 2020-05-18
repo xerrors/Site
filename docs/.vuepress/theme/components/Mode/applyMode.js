@@ -5,8 +5,9 @@ function render (mode) {
   const options = modeOptions[mode]
   for (const k in options) {
     rootElement.style.setProperty(k, options[k])
-  }  
-  // console.log(rootElement)
+  }
+  document.getElementsByTagName('body')[0].className = mode + '-mode'
+  console.log(document.getElementsByTagName('body')[0].className)
 }
 
 /**

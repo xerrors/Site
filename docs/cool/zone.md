@@ -234,9 +234,6 @@ export default {
 <style lang="stylus" scoped>
 .my-head
   width 100%
-  // border 1px solid #d1d5da 
-  // display flex
-  // justify-content space-between
 
   &__svg
     height 15rem
@@ -283,7 +280,7 @@ temp-color=var(--bg-color)
       margin-top: 11px;
       border-radius: 100%;
       width: 10px;
-      border: 2px solid white;
+      border: 2px solid var(--border-color);
 
     &__head
       position relative
@@ -380,6 +377,6 @@ temp-color=var(--bg-color)
 }
 
 .el-message-box__wrapper {
-  background: rgba(0,0,0,0.9);
+  background: var(--mask-color);
 }
 </style>
