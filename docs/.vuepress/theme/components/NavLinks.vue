@@ -122,9 +122,9 @@ export default {
     line-height 1.4rem
     color inherit
     // &:hover
-    //   color $accentColor
+    //   color $lightMainColor
     // &:hover, &.router-link-active
-    //   color $accentColor
+    //   color $lightMainColor
   .nav-item
     position relative
     display inline-block
@@ -143,9 +143,9 @@ export default {
 @media (min-width: $MQMobile)
   .nav-links a
     &:hover, &.router-link-active
-      // color $textColor
+      // color $lightRegularText
   .nav-item > a:not(.external)
     &:hover, &.router-link-active
       // margin-bottom -2px
-      // border-bottom 2px solid lighten($accentColor, 8%)
+      // border-bottom 2px solid lighten($lightMainColor, 8%)
 </style>

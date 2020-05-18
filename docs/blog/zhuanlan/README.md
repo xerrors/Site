@@ -119,7 +119,7 @@ export default {
     padding-right 1rem
     float right
     font-size 15px
-    color #6c757d
+    color $lightSecondaryText
   &__pages
     padding-bottom 2rem
     padding-left 1.5rem

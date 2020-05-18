@@ -6,7 +6,7 @@
         <!-- 文章标题区域 -->
         <div ref="title" class="my-title-box" v-if="isBlog">
           <h2>{{ this.$page.title }}</h2>
-          <div style="color: #655e5e; font-size: 14px;">
+          <div class="my-title-info">
             <!-- 标题下面的信息栏 -->
             <span class="leancloud-visitors" :data-flag-title="$page.title">
               <span>作者：{{ this.$page.author || '玉川' }}</span> &ensp;
@@ -51,7 +51,7 @@
           <a href="mailto:xerrors@163.com">邮件</a>
         </div>
         <div class="my-menu">
-          <h4 style="margin-top: 0; color: #121314">目录</h4>
+          <h4 style="margin-top: 0;">目录</h4>
           <a
             v-for="menu in renderMenus"
             :href="$page.path + '#' + menu.slug"
@@ -265,7 +265,11 @@ function flatten(items, res) {
 
 .my-title-box {
   @extend $wrapper;
-  border-bottom: 1px solid #e1e2e3;
+  border-bottom: 1px solid $lightBorder;
+  .my-title-info {
+    color $lightSecondaryText
+  }
+    
 }
 
 .notBlog {
@@ -273,14 +277,15 @@ function flatten(items, res) {
 }
 
 .my-main-left, .my-main-right>* {
-  background-color: white;
-  box-shadow: 0 1px 2px 0 rgba(34, 36, 38, 0.15);
+  background-color: $lightCard;
+  box-shadow: 0 1px 2px 0 $lightShadow;
 }  
 
 .my-main-left {
   position: relative;
   max-width: 53rem;
   padding-bottom: 2rem;
+  width: 100%;
 }
 
 .my-main-right {
@@ -303,10 +308,9 @@ function flatten(items, res) {
       display: block;
       vertical-align: middle;
       line-height: 17px;
-      color: #655e5e;
+      color: lighten($lightPrimaryText, 20%);
       text-overflow: ellipsis;
       white-space: nowrap;
-      color: #655e5e;
     }
 
     &__lv3 {
@@ -339,9 +343,9 @@ function flatten(items, res) {
 }
 
 .page {
-  padding-bottom: 2rem;
+  padding: 4.5rem 0 2rem 0;
   display: block;
-  background: #f0f2f5;
+  background: $lightBg;
   min-height: 100vh;
 }
 
@@ -350,7 +354,6 @@ function flatten(items, res) {
   lo-ft-size = 17px
   font-family: serif;
   font-size: 17px;
-  color: black;
   margin: 0 auto;
   .my-title-box {
     text-align: center;
@@ -374,7 +377,7 @@ function flatten(items, res) {
     display: inline-block;
 
     a {
-      color: lighten($textColor, 25%);
+      color: lighten($lightRegularText, 25%);
       margin-right: 0.25rem;
     }
   }
@@ -385,12 +388,12 @@ function flatten(items, res) {
 
     .prefix {
       font-weight: 500;
-      color: lighten($textColor, 25%);
+      color: lighten($lightRegularText, 25%);
     }
 
     .time {
       font-weight: 400;
-      color: #aaa;
+      color: lighten($lightRegularText, 25%);
     }
   }
 }

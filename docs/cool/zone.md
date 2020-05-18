@@ -258,7 +258,7 @@ export default {
     display inline-block
     float right
 
-temp-color=#f0f2f5
+temp-color=$lightBg
 .my-msgs-container
   width 100%
   position relative
@@ -309,7 +309,7 @@ temp-color=#f0f2f5
 
     &__date
       margin 0 0.5rem
-      font-weight 600
+      font-weight 500
 
 .btn-love {
   position: absolute;
@@ -344,27 +344,5 @@ temp-color=#f0f2f5
   100% {
     background-position: right;
   }
-}
-
-
-.page-guide-btn {
-  text-align: center;
-  margin: 30px 0;
-}
-
-.page-guide-btn div {
-  display: inline-block;
-  color: black;
-  background-color: white;
-  padding: 0.6rem 1.2rem;
-  transition: all 0.3s ease;
-  box-sizing: border-box;
-  border: 1px solid black;
-  border-radius: 3px;
-}
-
-.page-guide-btn div:hover {
-  background-color: #f5f5f5;
-  cursor: pointer;
 }
 </style>

@@ -19,8 +19,8 @@ hideLastUpdated: True
           <div class="my-classes-box">
             <a :href="link.link" v-for="(link, ind3) in myClass.links" :key="ind3" target="_blank">
               <div class="my-link-box">
-                <div style="margin-bottom: 5px;">{{ link.name }}</div>
-                <div style="font-size: smaller; color: #8f8f8f; text-overflow: ellipsis;">{{ link.description }}</div>
+                <div class="my-link-box__name">{{ link.name }}</div>
+                <div class="my-link-box__description">{{ link.description }}</div>
               </div>
             </a>
           </div>
@@ -146,7 +146,7 @@ export default {
   padding: .4rem 1rem;
   margin: 1rem 0;
   font-weight: 600;
-  background: linear-gradient(0deg, rgba(228, 228, 228, 0.5) 40%,#fff 0);
+  background: linear-gradient(0deg, rgba(228, 228, 228, 0.5) 40%,rgba(0,0,0,0) 0);
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -158,8 +158,8 @@ export default {
   height: 4rem;
   /* margin: 0.4rem; */
   margin: 0 0.4rem 0.6rem 0
-  background-color: #fcfcfc;
-  border: 1px solid #f1f1f1;
+  background-color: $lightBg;
+  border: 1px solid $lightBorder;
   border-radius: 3px;
   text-align: center;
   white-space: nowrap;
@@ -168,8 +168,16 @@ export default {
   justify-content: center;
   flex-direction: column;
   transition:all 0.2s;
-  &:first-child {
-    color: $accentColor;
+
+  &__name {
+    color: $lightMainColor;
+    margin-bottom: 5px;
+  }
+
+  &__description {
+    font-size: smaller; 
+    color: $lightSecondaryText; 
+    text-overflow: ellipsis;
   }
 }
 
@@ -181,7 +189,7 @@ export default {
   .my-class-title {
     margin: 1rem auto;
   }
-  .my-classes-box {
+  .my-classes-box {    
     padding: 0;
     flex-direction: column
     .my-link-box {
@@ -194,8 +202,8 @@ export default {
 
 <style lang="stylus">
 .el-tabs--card>.el-tabs__header .el-tabs__item.is-active {
-  border-bottom-color: #fff;
-  color: $accentColor;
+  border-bottom-color: $lightCard;
+  color: $lightMainColor;
   font-weight: 600;
 }
 </style>

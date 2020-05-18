@@ -96,36 +96,13 @@ export default {
       max-width 35rem
       font-size 1.6rem
       line-height 1.3
-      color lighten($textColor, 40%)
-    .action-button
-      display inline-block
-      font-size 1.2rem
-      color #fff
-      background-color $accentColor
-      padding 0.8rem 1.6rem
-      border-radius 4px
-      transition background-color .1s ease
-      box-sizing border-box
-      // border-bottom 1px solid darken($accentColor, 10%)
-      &:hover
-        // background-color lighten($accentColor, 10%)
   .features
-    // border-top 1px solid $borderColor
-    // padding 1.2rem 0
     margin-top 2.5rem
-    // display flex
-    // flex-wrap wrap
-    // align-items flex-start
-    // align-content stretch
-    // justify-content space-between
-
-    // added below
-    // box-shadow 0 1px 2px 0 rgba(0,0,0,.05)
     padding 2rem 0
     box-shadow: 0 2px 12px 0 rgba(0,0,0,0.1);
     margin 7rem 0 10rem 0
     border-radius 5px
-    background white
+    background $lightCard
     animation: showup 0.5s 2s forwards
   .feature
     flex-grow 1
@@ -148,10 +125,7 @@ export default {
       font-weight 500
       border-bottom none
       padding-bottom 0
-      color lighten($textColor, 10%)
-    p
-      color lighten($textColor, 25%)
-    // add style of my-title-box
+      color lighten($lightRegularText, 10%)
     .my-text-box
       text-align: left
       width 50%
@@ -162,45 +136,23 @@ export default {
 // 为了不打扰前面的，我们在这里修改
 .home
   .hero
+    color white
     h1
       opacity: 0
       font-weight 500
-      color: white
       margin-top 6.5rem
       overflow hidden
       animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-    p
+    p.description
       opacity 0
-      color white
-      animation: opacityto1 0.5s 0.5s ease forwards
-    .action-button
-      opacity: 0;
-      color white
-      outline: 1px solid white;
-      outline-offset: -.4rem;
-      background-color black
-      padding 0.5rem 5rem
-      border-radius 0
-      transition: border-color .2s cubic-bezier(0, 0.58, 0, 0.79);
-      box-sizing border-box
-      // border: 1px solid white
-      font-weight 300
-      font-family monospace
-      letter-spacing 8px
-      animation: opacityto1 0.5s 1s ease forwards
-
-      // &:hover
-      //   background-color black
-      //   border-color black
-
-    .description
+      animation: opacityto1 0.5s 0.5s ease forwards    
       font-size 1.2rem
       font-weight 300
       font-family monospace
       letter-spacing 8px
-.nav-bar {
-  background-color: white;
-}
+
+.nav-bar
+  background-color: $lightCard
 
 @media (max-width: 700px)
   .home

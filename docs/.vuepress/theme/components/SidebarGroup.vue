@@ -97,7 +97,7 @@ export default {
       border-left none
 
 .sidebar-heading
-  color $textColor
+  color $lightRegularText
   transition color .15s ease
   cursor pointer
   font-size 1.1em
@@ -117,10 +117,10 @@ export default {
   &.clickable
     &.active
       font-weight 600
-      color $accentColor
-      border-left-color $accentColor
+      color $lightMainColor
+      border-left-color $lightMainColor
     &:hover
-      color $accentColor
+      color $lightMainColor
 
 .sidebar-group-items
   transition height .1s ease-out

@@ -39,9 +39,6 @@
     <Home v-if="$page.frontmatter.home"/>
 
     <div v-else>
-      <!-- 为了正常显示文章详情，所以在顶部加一个填充 -->
-      <div style="height: 4.5rem; width: 100%; background: #f0f2f5;"></div>
-
       <Page
         :sidebar-items="sidebarItems"
       >
@@ -204,18 +201,18 @@ export default {
 /* 隐藏滚动条 */ 
 ::-webkit-scrollbar {
   width: 0.4rem !important;
-  width: 0.4rem !important;
+  height: 0.4rem !important;
+  cursor: pointer;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #f2f2f2;
-  border-radius: 0.25rem;
+  background-color: $lightSecondaryText;
+  border-radius: 3px;
   transition: .3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #c2c2c2;
-  cursor: pointer;
+  background-color: darken($lightBorder, 30%);
 }
 
 /**修改选中的颜色以及背景 */
@@ -232,7 +229,7 @@ export default {
   position: absolute;
   width: 100%;
   height: 32rem;
-  background-color: #028080;
+  background-color: $darkNavColor;
   background-image: url(https://xerrors.oss-cn-shanghai.aliyuncs.com/img20200511020201.jpg)
   animation: gradientBG 60s linear infinite;
   background-size: 150%;
@@ -247,7 +244,7 @@ export default {
 }
 
 .my-nav-home {
-  background-color: #292525;
+  background-color: $darkNavColor;
   color: white;
   border: 0;
 }
@@ -257,22 +254,22 @@ export default {
 }
 
 .my-nav {
-  background-color: white;
+  background-color: $lightCard;
   /*box-shadow: 0 1px 2px 0 rgba(34,36,38,.15);*/
-	box-shadow: 0 1px 12px 0 rgba(0,0,0,.05);
+	border-bottom: 1px solid $lightBorder
   transition: all 0.5s ease;
 }
 
 .nav-dropdown {
-  color:  #2c3e50;
+  color:  $lightRegularText;
 }
 
 .footer {
   padding: 2.5rem;
   line-height: 2;
-  border-top: 1px solid #DCDFE6;
+  border-top: 1px solid $lightBorder;
   text-align: center;
-  background: #292525;
+  background: $darkNavColor;
   color: white;
   /* color: lighten(#2c3e50, 25%)foot; */
 }
@@ -281,7 +278,7 @@ export default {
   color: white;
   font-weight: 300;
   font-size: 14px;
-  border-bottom: 1px solid $accentColor;
+  border-bottom: 1px solid $lightMainColor;
   padding: 2px 0;
 }
 

@@ -40,9 +40,6 @@ hideLastUpdated: True
   <el-button ref="copyButton" data-clipboard-target="copyInput">复制</el-button> -->
 </template>
 
-
-
-
 <style>
 .my-title-img {
   width: 20rem; 
@@ -56,7 +53,6 @@ hideLastUpdated: True
   border: none;
   background: none;
   cursor: pointer;
-  color: #46bd87;
 }
 </style>
 

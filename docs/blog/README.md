@@ -166,29 +166,24 @@ export default {
   transition: all 0.5s ease;
   border-radius: 3px;
   font-size: 14px;
+  color: $lightSecondaryText;
 }
 
-.my-tags:hover {
-  color: white;
-  background: #282C34;
-  border-color: #282C34;
-}
-
-.select-tag {
-  color: white;
-  background: #282C34;
-  border-color: #282C34;
+.my-tags:hover, .select-tag {
+  color: $lightRegularText;
+  font-weight: 600;
 }
 
 .my-card {
   animation: showup .6s forwards;
-  border-bottom: 1px solid #f2f2f2;
+  border-bottom: 1px solid $lightBorder;
   padding: 1rem 0;
   .page-title .el-link {
     transition all .2s
+    color: $lightPrimaryText
     &:hover {
-      color: $accentColor;
-      border-left: 2px solid $accentColor;
+      color: $lightMainColor;
+      border-left: 2px solid $lightMainColor;
       padding-left: 9px;
       transition: all .3s;
     }
@@ -197,46 +192,23 @@ export default {
 
 .this-tag {
   font-size: small;
-  color: #777;
+  color: $lightSecondaryText;
   margin-left: 10px;
   /* background: linear-gradient(120deg,#fff 50%,#f1f6f5 0); */
 }
 
 .this-tag:hover {
   cursor: pointer;
-  color: $accentColor;
-  border-bottom: 1px dotted $accentColor;
+  color: $lightMainColor;
+  border-bottom: 1px dotted $lightMainColor;
 }
 
 .read-more {
   float: right;
-  background: #f2f2f2;
+  background: $lightBg;
   padding: 3px 10px;
   border-radius: 3px;
 }
-
-.page-guide-btn {
-  text-align: center;
-  margin: 30px 0;
-  animation: showup 1s forwards;
-}
-
-.page-guide-btn div {
-  display: inline-block;
-  color: black;
-  background-color: white;
-  padding: 0.6rem 1.2rem;
-  transition: all 0.3s ease;
-  box-sizing: border-box;
-  border: 1px solid black;
-  border-radius: 3px;
-}
-
-.page-guide-btn div:hover {
-  background-color: #f5f5f5;
-  cursor: pointer;
-}
-
 
 @keyframes showup {
   0% {
@@ -247,5 +219,27 @@ export default {
     transform: translateY(0);
     opacity: 1;
   }
+}
+</style>
+
+<style lang="stylus">
+.page-guide-btn {
+  text-align: center;
+  margin: 30px 0;
+  animation: showup 1s forwards;
+}
+
+.page-guide-btn div {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  border: 1px solid $lightBorder;
+  border-radius: 3px;
+}
+
+.page-guide-btn div:hover {
+  background-color: lighten($lightBg, 50%);
+  cursor: pointer;
 }
 </style>
