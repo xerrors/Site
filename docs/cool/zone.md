@@ -348,6 +348,34 @@ temp-color=$lightBg
 </style>
 
 <style lang="stylus">
+.el-textarea__inner, .el-input__inner, .el-button {
+  background-color: inherit
+  border: 1px solid $lightBorder
+  color $lightPrimaryText
+}
+
+.el-textarea__inner:hover, .el-input__inner:hover, .el-button:hover {
+  border: 1px solid darken($lightBorder, 10%)
+}
+
+.el-textarea_inner:focus {
+  outline: -webkit-focus-ring-color auto 1px;
+}
+
+.el-button:hover {
+  background-color: darken($lightCard, 25%)
+  color: lighten($lightSecondaryText, 25%)
+}
+
+.el-popper {
+  background: $lightCard;
+  border: 1px solid $lightBg;
+}
+
+.el-select-dropdown__item.hover, .el-select-dropdown__item:hover {
+  background: darken($lightCard, 20%);
+}
+
 .el-message-box__wrapper {
   background: rgba(0,0,0,0.9);
 }
