@@ -23,7 +23,7 @@ export default {
   },
   methods: {
     lookup(item) {
-      console.log(item)
+      // console.log(item)
       item.showDetail = !item.showDetail
     }
   },

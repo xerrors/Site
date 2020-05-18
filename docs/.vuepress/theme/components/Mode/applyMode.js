@@ -6,7 +6,7 @@ function render (mode) {
   for (const k in options) {
     rootElement.style.setProperty(k, options[k])
   }  
-  console.log(rootElement)
+  // console.log(rootElement)
 }
 
 /**
@@ -16,7 +16,6 @@ function render (mode) {
  */
 export default function applyMode (mode) {
   if (mode !== 'auto') {
-    console.log(mode, 'ser')
     render(mode)
     return
   }

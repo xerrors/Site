@@ -9,7 +9,7 @@
 
 服务端 Nginx
 
-后端接口基于 [Nodejs](https://github.com/nodejs/node)
+后端接口使用的是 [Nodejs](https://github.com/nodejs/node)
 
 评论以及访问统计，基于 [LeanCloud](https://leancloud.cn/)
 
