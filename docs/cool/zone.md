@@ -347,8 +347,7 @@ temp-color=$lightBg
 }
 </style>
 
-<style lang="stylus">
-
+<style lang="stylus"></style>
 .el-message-box__wrapper {
   background: rgba(0,0,0,0.9);
 }
