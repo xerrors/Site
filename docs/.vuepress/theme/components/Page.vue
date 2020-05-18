@@ -308,7 +308,7 @@ function flatten(items, res) {
       display: block;
       vertical-align: middle;
       line-height: 17px;
-      color: lighten($lightPrimaryText, 20%);
+      color: $lightSecondaryText;
       text-overflow: ellipsis;
       white-space: nowrap;
     }
@@ -406,7 +406,7 @@ function flatten(items, res) {
   .inner {
     min-height: 2rem;
     margin-top: 0;
-    border-top: 1px solid $borderColor;
+    border-top: 1px solid $lightBorder;
     padding-top: 1rem;
     overflow: auto; // clear float
   }

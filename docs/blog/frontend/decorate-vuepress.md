@@ -234,7 +234,7 @@ html, body {
   ...
   // background-color #fff
   ...
-  // border-bottom 1px solid $borderColor
+  // border-bottom 1px solid $lightBorder
 ```
 
 这下就大功告成啦！！！

@@ -180,7 +180,7 @@ export default {
   padding: 1rem 0;
   .page-title .el-link {
     transition all .2s
-    color: $lightPrimaryText
+    color: darken($lightPrimaryText, 10%)
     &:hover {
       color: $lightMainColor;
       border-left: 2px solid $lightMainColor;
@@ -208,6 +208,7 @@ export default {
   background: $lightBg;
   padding: 3px 10px;
   border-radius: 3px;
+  color: $lightRegularText;
 }
 
 @keyframes showup {
@@ -239,7 +240,11 @@ export default {
 }
 
 .page-guide-btn div:hover {
-  background-color: lighten($lightBg, 50%);
+  background-color: darken($lightBg, 50%);
   cursor: pointer;
+}
+
+.el-divider {
+  background-color: $lightBorder
 }
 </style>

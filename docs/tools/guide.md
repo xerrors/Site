@@ -146,7 +146,6 @@ export default {
   padding: .4rem 1rem;
   margin: 1rem 0;
   font-weight: 600;
-  background: linear-gradient(0deg, rgba(228, 228, 228, 0.5) 40%,rgba(0,0,0,0) 0);
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -201,9 +200,20 @@ export default {
 </style>
 
 <style lang="stylus">
+.el-tabs--card>.el-tabs__header .el-tabs__item{
+  border-left-color: $lightBg
+}
+
 .el-tabs--card>.el-tabs__header .el-tabs__item.is-active {
-  border-bottom-color: $lightCard;
-  color: $lightMainColor;
-  font-weight: 600;
+    color: $lightMainColor;
+    font-weight: 600;
+  }
+
+.el-tabs--card>.el-tabs__header .is-top {
+  border-bottom-color $lightBg
+}
+
+.el-tabs--card>.el-tabs__header .el-tabs__nav {
+  border: 1px solid $lightBg
 }
 </style>

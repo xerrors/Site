@@ -1,5 +1,5 @@
 <template>
-  <div style="background: white;">
+  <div>
     <section class="page-edit">
       <span class="leancloud-visitors" :data-flag-title="$page.title">
         <i class="el-icon-view" style="margin-right: 3px;"/>
