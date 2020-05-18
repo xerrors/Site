@@ -200,20 +200,28 @@ export default {
 </style>
 
 <style lang="stylus">
-.el-tabs--card>.el-tabs__header .el-tabs__item{
-  border-left-color: $lightBg
+.el-tabs--card>.el-tabs__header .el-tabs__item.is-active {
+  border-bottom: none
+  color: $lightMainColor;
+  font-weight: 600;
 }
 
-.el-tabs--card>.el-tabs__header .el-tabs__item.is-active {
-    color: $lightMainColor;
-    font-weight: 600;
+.el-tabs--card>.el-tabs__header {
+  border-bottom: 1px solid $lightBg;
+  .el-tabs__item {
+    border-left-color: $lightBg
+    color: $lightSecondaryText
+    &:hover {
+      color: $lightMainColor;
+    }
   }
-
-.el-tabs--card>.el-tabs__header .is-top {
-  border-bottom-color $lightBg
 }
 
 .el-tabs--card>.el-tabs__header .el-tabs__nav {
-  border: 1px solid $lightBg
+  border: 1px solid $lightBg;
+  border-bottom: none;
+}
+
+.el-tabs--card>.el-tabs__header .is-top {
 }
 </style>
