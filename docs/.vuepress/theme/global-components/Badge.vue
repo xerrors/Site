@@ -38,7 +38,8 @@ export default {
   &.error
     background-color #DA5961 //#f66
   &.warning, &.warn, &.yellow
-    background-color darken(#ffe564, 35%)
+    background-color #ffe564
+    // background-color darken(#ffe564, 35%)
   & + &
     margin-left 5px
 </style>

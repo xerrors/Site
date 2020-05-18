@@ -166,24 +166,25 @@ export default {
   transition: all 0.5s ease;
   border-radius: 3px;
   font-size: 14px;
-  color: $lightSecondaryText;
+  color: var(--secondary-text);
 }
 
 .my-tags:hover, .select-tag {
-  color: $lightRegularText;
+  color: var(--regular-text);
   font-weight: 600;
 }
 
 .my-card {
   animation: showup .6s forwards;
-  border-bottom: 1px solid $lightBorder;
+  border-bottom: 1px solid var(--border-color);
   padding: 1rem 0;
   .page-title .el-link {
     transition all .2s
-    color: darken($lightPrimaryText, 10%)
+    color: var(--primary-text)
+    /* color: darken(var(--primary-text), 10%) */
     &:hover {
-      color: $lightMainColor;
-      border-left: 2px solid $lightMainColor;
+      color: var(--main-color);
+      border-left: 2px solid var(--main-color);
       padding-left: 9px;
       transition: all .3s;
     }
@@ -192,23 +193,23 @@ export default {
 
 .this-tag {
   font-size: small;
-  color: $lightSecondaryText;
+  color: var(--secondary-text);
   margin-left: 10px;
   /* background: linear-gradient(120deg,#fff 50%,#f1f6f5 0); */
 }
 
 .this-tag:hover {
   cursor: pointer;
-  color: $lightMainColor;
-  border-bottom: 1px dotted $lightMainColor;
+  color: var(--main-color);
+  border-bottom: 1px dotted var(--main-color);
 }
 
 .read-more {
   float: right;
-  background: $lightBg;
+  background: var(--bg-color);
   padding: 3px 10px;
   border-radius: 3px;
-  color: $lightRegularText;
+  color: var(--regular-text);
 }
 
 @keyframes showup {
@@ -235,16 +236,17 @@ export default {
   padding: 0.6rem 1.2rem;
   transition: all 0.3s ease;
   box-sizing: border-box;
-  border: 1px solid $lightBorder;
+  border: 1px solid var(--border-color);
   border-radius: 3px;
 }
 
 .page-guide-btn div:hover {
-  background-color: darken($lightBg, 50%);
+  background-color: var(--bg-color)
+  /* background-color: darken(var(--bg-color), 50%); */
   cursor: pointer;
 }
 
 .el-divider {
-  background-color: $lightBorder
+  background-color: var(--border-color)
 }
 </style>

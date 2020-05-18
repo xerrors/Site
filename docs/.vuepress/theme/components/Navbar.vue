@@ -26,6 +26,7 @@
         'max-width': linksWrapMaxWidth + 'px'
       } : {}"
     >
+      <Mode />
       <AlgoliaSearchBox
         v-if="isAlgoliaSearch"
         :options="algolia"
@@ -54,9 +55,10 @@ import AlgoliaSearchBox from '@AlgoliaSearchBox'
 import SearchBox from '@SearchBox'
 import SidebarButton from '@theme/components/SidebarButton.vue'
 import NavLinks from '@theme/components/NavLinks.vue'
+import Mode from '@theme/components/Mode'
 
 export default {
-  components: { SidebarButton, NavLinks, SearchBox, AlgoliaSearchBox },
+  components: { SidebarButton, NavLinks, SearchBox, AlgoliaSearchBox, Mode },
 
   data () {
     return {
@@ -121,7 +123,7 @@ $navbar-horizontal-padding = 1.5rem
   .site-name
     font-size 1.3rem
     font-weight 600
-    color $lightRegularText
+    color var(--regular-text)
     position relative
   .links
     padding-left 1.5rem

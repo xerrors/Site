@@ -265,9 +265,9 @@ function flatten(items, res) {
 
 .my-title-box {
   @extend $wrapper;
-  border-bottom: 1px solid $lightBorder;
+  border-bottom: 1px solid var(--border-color);
   .my-title-info {
-    color $lightSecondaryText
+    color var(--secondary-text)
   }
     
 }
@@ -277,8 +277,8 @@ function flatten(items, res) {
 }
 
 .my-main-left, .my-main-right>* {
-  background-color: $lightCard;
-  box-shadow: 0 1px 2px 0 $lightShadow;
+  background-color: var(--card-color);
+  box-shadow: 0 1px 2px 0 var(--box-shadow);
 }  
 
 .my-main-left {
@@ -308,7 +308,7 @@ function flatten(items, res) {
       display: block;
       vertical-align: middle;
       line-height: 17px;
-      color: $lightSecondaryText;
+      color: var(--secondary-text);
       text-overflow: ellipsis;
       white-space: nowrap;
     }
@@ -345,7 +345,7 @@ function flatten(items, res) {
 .page {
   padding: 4.5rem 0 2rem 0;
   display: block;
-  background: $lightBg;
+  background: var(--bg-color);
   min-height: 100vh;
 }
 
@@ -377,7 +377,8 @@ function flatten(items, res) {
     display: inline-block;
 
     a {
-      color: lighten($lightRegularText, 25%);
+      // color: lighten(var(--regular-text), 25%);
+      color var(--regular-text)
       margin-right: 0.25rem;
     }
   }
@@ -388,12 +389,14 @@ function flatten(items, res) {
 
     .prefix {
       font-weight: 500;
-      color: lighten($lightRegularText, 25%);
+      // color: lighten(var(--regular-text), 25%);
+      color var(--regular-text)
     }
 
     .time {
       font-weight: 400;
-      color: lighten($lightRegularText, 25%);
+      // color: lighten(var(--regular-text), 25%);
+      color var(--regular-text)
     }
   }
 }
@@ -406,7 +409,7 @@ function flatten(items, res) {
   .inner {
     min-height: 2rem;
     margin-top: 0;
-    border-top: 1px solid $lightBorder;
+    border-top: 1px solid var(--border-color);
     padding-top: 1rem;
     overflow: auto; // clear float
   }

@@ -206,13 +206,14 @@ export default {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: $lightSecondaryText;
+  background-color: var(--secondary-text);
   border-radius: 3px;
   transition: .3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: darken($lightBorder, 30%);
+  background-color: var(--border-color)
+  // background-color: darken(var(--border-color), 30%);
 }
 
 /**修改选中的颜色以及背景 */
@@ -254,20 +255,20 @@ export default {
 }
 
 .my-nav {
-  background-color: $lightCard;
+  background-color: var(--card-color);
   /*box-shadow: 0 1px 2px 0 rgba(34,36,38,.15);*/
-	border-bottom: 1px solid $lightBorder
+	border-bottom: 1px solid var(--border-color)
   transition: all 0.5s ease;
 }
 
 .nav-dropdown {
-  color:  $lightRegularText;
+  color:  var(--regular-text);
 }
 
 .footer {
   padding: 2.5rem;
   line-height: 2;
-  border-top: 1px solid $lightBorder;
+  border-top: 1px solid var(--border-color);
   text-align: center;
   background: $darkNavColor;
   color: white;
@@ -278,7 +279,7 @@ export default {
   color: white;
   font-weight: 300;
   font-size: 14px;
-  border-bottom: 1px solid $lightMainColor;
+  border-bottom: 1px solid var(--main-color);
   padding: 2px 0;
 }
 

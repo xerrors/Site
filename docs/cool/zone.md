@@ -258,7 +258,7 @@ export default {
     display inline-block
     float right
 
-temp-color=$lightBg
+temp-color=var(--bg-color)
 .my-msgs-container
   width 100%
   position relative
@@ -350,12 +350,13 @@ temp-color=$lightBg
 <style lang="stylus">
 .el-textarea__inner, .el-input__inner, .el-button {
   background-color: inherit
-  border: 1px solid $lightBorder
-  color $lightPrimaryText
+  border: 1px solid var(--border-color)
+  color var(--primary-text)
 }
 
 .el-textarea__inner:hover, .el-input__inner:hover, .el-button:hover {
-  border: 1px solid darken($lightBorder, 10%)
+  /* border: 1px solid darken(var(--border-color), 10%) */
+  border: 1px solid var(--border-color)
 }
 
 .el-textarea_inner:focus {
@@ -363,17 +364,19 @@ temp-color=$lightBg
 }
 
 .el-button:hover {
-  background-color: darken($lightCard, 25%)
-  color: lighten($lightSecondaryText, 25%)
+  /* background-color: darken(var(--card-color), 25%); */
+  background-color: var(--card-color)
+  color: var(--secondary-text);
 }
 
 .el-popper {
-  background: $lightCard;
-  border: 1px solid $lightBg;
+  background: var(--card-color);
+  border: 1px solid var(--bg-color);
 }
 
 .el-select-dropdown__item.hover, .el-select-dropdown__item:hover {
-  background: darken($lightCard, 20%);
+  background: var(--card-color)
+  /* background: darken(var(--card-color), 20%); */
 }
 
 .el-message-box__wrapper {

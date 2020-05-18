@@ -157,8 +157,8 @@ export default {
   height: 4rem;
   /* margin: 0.4rem; */
   margin: 0 0.4rem 0.6rem 0
-  background-color: $lightBg;
-  border: 1px solid $lightBorder;
+  background-color: var(--bg-color);
+  border: 1px solid Border;
   border-radius: 3px;
   text-align: center;
   white-space: nowrap;
@@ -169,13 +169,11 @@ export default {
   transition:all 0.2s;
 
   &__name {
-    color: $lightMainColor;
     margin-bottom: 5px;
   }
 
   &__description {
     font-size: smaller; 
-    color: $lightSecondaryText; 
     text-overflow: ellipsis;
   }
 }
@@ -202,26 +200,23 @@ export default {
 <style lang="stylus">
 .el-tabs--card>.el-tabs__header .el-tabs__item.is-active {
   border-bottom: none
-  color: $lightMainColor;
+  color: var(--main-color);
   font-weight: 600;
 }
 
 .el-tabs--card>.el-tabs__header {
-  border-bottom: 1px solid $lightBg;
+  border-bottom: 1px solid var(--bg-color);
   .el-tabs__item {
-    border-left-color: $lightBg
-    color: $lightSecondaryText
+    border-left-color: var(--bg-color)
+    color: var(--secondary-text);
     &:hover {
-      color: $lightMainColor;
+      color: var(--main-color);
     }
   }
 }
 
 .el-tabs--card>.el-tabs__header .el-tabs__nav {
-  border: 1px solid $lightBg;
+  border: 1px solid var(--bg-color);
   border-bottom: none;
-}
-
-.el-tabs--card>.el-tabs__header .is-top {
 }
 </style>

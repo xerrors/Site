@@ -12,3 +12,7 @@
 后端接口基于 [Nodejs](https://github.com/nodejs/node)
 
 评论以及访问统计，基于 [LeanCloud](https://leancloud.cn/)
+
+配色方案参考：[少数派](https://sspai.com)
+
+亮色 / 暗色切换 参考 Vuepress 主题[vuepress-theme-reco](https://github.com/vuepress-reco/vuepress-theme-reco)

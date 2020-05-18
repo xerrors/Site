@@ -109,14 +109,14 @@ export default {
         margin-bottom 0
         padding 0 1.5rem 0 1.25rem
         &:hover
-          color $lightMainColor
+          color var(--main-color)
         &.router-link-active
-          color $lightMainColor
+          color var(--main-color)
           &::after
             content ""
             width 0
             height 0
-            border-left 5px solid $lightMainColor
+            border-left 5px solid var(--main-color)
             border-top 3px solid transparent
             border-bottom 3px solid transparent
             position absolute
@@ -168,10 +168,11 @@ export default {
       position absolute
       top 100%
       right 0
-      background-color $lightCard
+      background-color var(--card-color)
       padding 0.6rem 0
-      border 1px solid $lightBorder
-      border-bottom-color darken($lightBorder, 10%)
+      border 1px solid var(--border-color)
+      // border-bottom-color darken(var(--border-color), 10%)
+      border-bottom-color var(--border-color)
       text-align left
       border-radius 0.25rem
       white-space nowrap

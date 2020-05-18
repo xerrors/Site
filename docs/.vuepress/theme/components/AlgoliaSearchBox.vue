@@ -84,16 +84,16 @@ export default {
       .ds-suggestions
         margin-top 0
       .ds-suggestion
-        border-bottom 1px solid $lightBorder
+        border-bottom 1px solid var(--border-color)
     .algolia-docsearch-suggestion--highlight
       color #2c815b
     .algolia-docsearch-suggestion
-      border-color $lightBorder
+      border-color var(--border-color)
       padding 0
       .algolia-docsearch-suggestion--category-header
         padding 5px 10px
         margin-top 0
-        background $lightMainColor
+        background var(--main-color)
         color #fff
         font-weight 600
         .algolia-docsearch-suggestion--highlight
@@ -103,21 +103,21 @@ export default {
       .algolia-docsearch-suggestion--title
         font-weight 600
         margin-bottom 0
-        color $lightRegularText
+        color var(--regular-text)
       .algolia-docsearch-suggestion--subcategory-column
         vertical-align top
         padding 5px 7px 5px 5px
-        border-color $lightBorder
+        border-color var(--border-color)
         background #f1f3f5
         &:after
           display none
       .algolia-docsearch-suggestion--subcategory-column-text
         color #555
     .algolia-docsearch-footer
-      border-color $lightBorder
+      border-color var(--border-color)
     .ds-cursor .algolia-docsearch-suggestion--content
       background-color #e7edf3 !important
-      color $lightRegularText
+      color var(--regular-text)
 
 @media (min-width: $MQMobile)
   .algolia-search-wrapper

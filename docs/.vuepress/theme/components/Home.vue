@@ -102,7 +102,7 @@ export default {
     box-shadow: 0 2px 12px 0 rgba(0,0,0,0.1);
     margin 7rem 0 10rem 0
     border-radius 5px
-    background $lightCard
+    background var(--card-color)
     animation: showup 0.5s 2s forwards
   .feature
     flex-grow 1
@@ -125,7 +125,8 @@ export default {
       font-weight 500
       border-bottom none
       padding-bottom 0
-      color lighten($lightRegularText, 10%)
+      // color lighten(var(--regular-text), 10%)
+      color var(--regular-text)
     .my-text-box
       text-align: left
       width 50%
@@ -152,7 +153,7 @@ export default {
       letter-spacing 8px
 
 .nav-bar
-  background-color: $lightCard
+  background-color: var(--card-color)
 
 @media (max-width: 700px)
   .home
