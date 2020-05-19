@@ -18,3 +18,25 @@
 配色方案参考：[少数派](https://sspai.com)
 
 亮色 / 暗色切换 参考 Vuepress 主题[vuepress-theme-reco](https://github.com/vuepress-reco/vuepress-theme-reco)
+
+目前所支持的 frontmatter，当然还有官方支持的用法。
+
+```yaml
+title: title here
+permalink: /permalink-here
+date: 2020-05-19 02:37:45
+cover: https://xerrors.oss-cn-shanghai.aliyuncs.com/imgs/20200519142253.png
+author: 玉川
+tag: 
+ - blog
+categories:
+ - Note
+zhuanlan: python-base
+prev:
+  title: "title"
+  path: /python-str/
+next:
+  title: "path"
+  path: /python-lib/
+hideComment: true || false
+```

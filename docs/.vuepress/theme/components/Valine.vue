@@ -1,11 +1,6 @@
 <template>
   <div>
     <section class="page-edit">
-      <span class="leancloud-visitors" :data-flag-title="$page.title">
-        <i class="el-icon-view" style="margin-right: 3px;"/>
-        <span class="leancloud-visitors-count"></span>
-        <span>次浏览</span>
-      </span>
       <div id="vcomments"></div>
     </section>
   </div>
@@ -40,8 +35,7 @@ export default {
         el: '#vcomments',
         appId: 'lBKeuOkAPgfaieov6tJObJyA-gzGzoHsz',// your appId
         appKey: 'g73DyYQYwPKg3hOwwf9lRY9i', // your appKey
-        notify: false,
-        verify: false,
+        serverURLs: 'https://www.xerrors.fun/',
         path: path,
         visitor: true,
         avatar: 'mm',

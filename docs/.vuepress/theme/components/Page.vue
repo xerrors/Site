@@ -8,7 +8,7 @@
           <h2>{{ this.$page.title }}</h2>
           <div class="my-title-info">
             <!-- 标题下面的信息栏 -->
-            <span class="leancloud-visitors" :data-flag-title="$page.title">
+            <span :id="$page.path" class="leancloud-visitors" :data-flag-title="$page.title">
               <span>作者：{{ this.$page.author || '玉川' }}</span> &ensp;
               <span>{{ formatDate(this.$page.frontmatter.date) }} &ensp;</span>
               <i class="el-icon-view" style="margin-right: 3px;" />
@@ -41,7 +41,7 @@
             </span>
           </p>
         </div>
-        <valine></valine>
+        <valine v-if="!hideComment"></valine>
       </div>
       <div v-if="isBlog && !hideContent" class="my-main-right">
         <div style="font-size:14px">
@@ -79,7 +79,7 @@ export default {
     mainClass() {
       return {
         "my-main-left": true,
-        notBlog: !this.isBlog,
+        "notBlog": !this.isBlog,
         "theme-paper":
           this.$page.frontmatter.tag &&
           this.$page.frontmatter.tag.includes("碎碎念")
@@ -92,6 +92,10 @@ export default {
           return this.$page.frontmatter.tag.includes("碎碎念")
       }
       return false
+    },
+
+    hideComment() {
+      return this.$page.frontmatter.hideComment
     },
 
     renderMenus() {
@@ -125,7 +129,7 @@ export default {
       if (typeof this.$site.themeConfig.lastUpdated === "string") {
         return this.$site.themeConfig.lastUpdated;
       }
-      return "Last Updated";
+      return "修改于";
     },
 
     prev() {
@@ -133,6 +137,7 @@ export default {
       if (prev === false) {
         return;
       } else if (prev) {
+        prev.path = checkPath(prev.path)
         return prev;
       }
     },
@@ -143,48 +148,10 @@ export default {
       if (next === false) {
         return;
       } else if (next) {
+        next.path = checkPath(next.path)
         return next;
       }
-      // if (next === false) {
-      //   return
-      // } else if (next) {
-      //   this.$router.push(next)
-      //   return resolvePage(this.$site.pages, next, this.$route.path)
-      // } else {
-      //   return resolveNext(this.$page, this.sidebarItems)
-      // }
     },
-
-    editLink() {
-      if (this.$page.frontmatter.editLink === false) {
-        return;
-      }
-      const {
-        repo,
-        editLinks,
-        docsDir = "",
-        docsBranch = "master",
-        docsRepo = repo
-      } = this.$site.themeConfig;
-
-      if (docsRepo && editLinks && this.$page.relativePath) {
-        return this.createEditLink(
-          repo,
-          docsRepo,
-          docsDir,
-          docsBranch,
-          this.$page.relativePath
-        );
-      }
-    },
-
-    editLinkText() {
-      return (
-        this.$themeLocaleConfig.editLinkText ||
-        this.$site.themeConfig.editLinkText ||
-        `Edit this page`
-      );
-    }
   },
 
   methods: {
