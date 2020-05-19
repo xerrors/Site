@@ -137,7 +137,7 @@ export default {
       if (prev === false) {
         return;
       } else if (prev) {
-        prev.path = checkPath(prev.path)
+        prev.path = this.checkPath(prev.path)
         return prev;
       }
     },
@@ -148,13 +148,16 @@ export default {
       if (next === false) {
         return;
       } else if (next) {
-        next.path = checkPath(next.path)
+        next.path = this.checkPath(next.path)
         return next;
       }
     },
   },
 
   methods: {
+    checkPath(path) {
+      return path.endsWith('/') ? path : path + '/'
+    },
     createEditLink(repo, docsRepo, docsDir, docsBranch, path) {
       const bitbucket = /bitbucket.org/;
       if (bitbucket.test(repo)) {
