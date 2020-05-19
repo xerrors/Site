@@ -2,6 +2,7 @@
 title: "优先权法和轮转法进程调度算法"
 date: 2020-05-19 02:11:52
 permalink: /SchedulingAlgorithm
+cover: https://xerrors.oss-cn-shanghai.aliyuncs.com/imgs/20200519193721.png
 tag: 
  - blog
  - Python

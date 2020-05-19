@@ -12,8 +12,6 @@ categories:
  - Note
 ---
 
-![](https://xerrors.oss-cn-shanghai.aliyuncs.com/imgs/20200519142253.png)
-
 ## 1. 前言
 
 随着各个系统都加入了「亮色/暗色模式」切换，Chrome 和 Edge 浏览器也支持了根据系统切换主题，作为互联网前沿的弄潮儿（没错，说你呢），咱们也要追上潮流不是，所以通过这篇文章你可以学习到如何在自己的 Vuepress 博客里面使用暗色模式。[预览](https://www.xerrors.fun)
