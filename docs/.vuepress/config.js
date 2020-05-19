@@ -4,7 +4,7 @@ module.exports = {
     ['link', { rel: 'apple-touch-icon', href: '/favicon.ico' }],
   ],
   title: 'Xerrors',
-  description: 'Xerrors playground',
+  description: 'Xerrors 个人博客',
   permalink: "/:year/:month-:day-:slug",
   themeConfig: {
     sidebar: false,
@@ -32,7 +32,8 @@ module.exports = {
     '@vuepress/medium-zoom': {
       selector: '.need-zoom :not(a) > img',
       options: {
-        margin: 16
+        margin: 16,
+        background: 'rgba(0,0,0,0.7)'
       }
     },
     'vuepress-plugin-smooth-scroll':{},

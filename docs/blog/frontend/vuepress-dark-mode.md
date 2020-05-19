@@ -612,31 +612,32 @@ $ yarn add vue-click-outside -D
 ```vue
 <template>
   <header class="navbar">
-    ……前部分省略
+    <!-- 前部分省略 -->
     <div
       class="links"
       :style="linksWrapMaxWidth ? {
         'max-width': linksWrapMaxWidth + 'px'
       } : {}"
     >
-    <Mode />     // 搁这儿呢~ template 里就添加一行~
+    <Mode />     <!-- 搁这儿呢~ template 里就添加一行~ -->
     <AlgoliaSearchBox
       v-if="isAlgoliaSearch"
       :options="algolia"
     />
-    ……后半部分省略 
+    <!-- 后半部分省略 -->
     </div>
   </header>
 </template>
 
 <script>
-……
+/* 前部分省略 */
 import Mode from '@theme/components/Mode' // 引入
 
 export default {
   components: { SidebarButton, NavLinks, SearchBox, AlgoliaSearchBox, Mode },
-  ……
+  // 不想关的省略了
 }
+</script>
 ```
 
 经过上面的修改之后，幸运的话，应该就可以是实现基本的亮色暗色主题的切换了。如果不是那么幸运的话，要多多在 devtools 里面调试，然后找到问题的源头，加油。
@@ -798,7 +799,7 @@ export default ({
 
 [3] [实践：拆解深色模式 文本配色 - 站酷 (ZCOOL)](https://www.zcool.com.cn/article/ZMTAxMjAxNg==.html)
 
-[4] [UX/UI 設計師的 iOS 13 攻略 - Medium](UX/UI 設計師的 iOS 13 攻略 - Medium)
+[4] [UX/UI 設計師的 iOS 13 攻略 - Medium](https://medium.com/uxabc/ios-13-8227dc9bcbb8)
 
 [5] [少数派 - 高效工作，品质生活](https://sspai.com/)
 
