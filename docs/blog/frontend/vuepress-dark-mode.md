@@ -2,7 +2,7 @@
 title: 给 Vuepress 添加暗色夜间模式
 permalink: /vuepress-dark-mode
 date: 2020-05-19 02:37:45
-cover: https://xerrors.oss-cn-shanghai.aliyuncs.com/imgs/20200519141759.png
+cover: https://xerrors.oss-cn-shanghai.aliyuncs.com/imgs/20200519142253.png
 tag: 
  - blog
  - Vuepress
@@ -12,7 +12,7 @@ categories:
  - Note
 ---
 
-![](https://xerrors.oss-cn-shanghai.aliyuncs.com/imgs/20200519141759.png)
+![](https://xerrors.oss-cn-shanghai.aliyuncs.com/imgs/20200519142253.png)
 
 ## 1. 前言
 
