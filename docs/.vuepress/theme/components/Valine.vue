@@ -29,7 +29,6 @@ export default {
   methods: {
     initValine () {
       let path = location.origin + location.pathname
-      // vuepress打包后变成的HTML不知为什么吞掉此处的绑定`:id="countId"`
       document.getElementsByClassName('leancloud-visitors')[0].id = path
       this.valine.init({
         el: '#vcomments',
