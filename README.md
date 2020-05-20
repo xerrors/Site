@@ -22,6 +22,7 @@
 目前所支持的 frontmatter，当然还有官方支持的用法。
 
 ```yaml
+---
 title: title here
 permalink: /permalink-here
 date: 2020-05-19 02:37:45
@@ -39,4 +40,5 @@ next:
   title: "path"
   path: /python-lib/
 hideComment: true || false
+---
 ```
