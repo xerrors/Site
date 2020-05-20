@@ -35,7 +35,6 @@ export default {
         el: '#vcomments',
         appId: 'lBKeuOkAPgfaieov6tJObJyA-gzGzoHsz',// your appId
         appKey: 'g73DyYQYwPKg3hOwwf9lRY9i', // your appKey
-        serverURLs: 'https://www.xerrors.fun/',
         path: path,
         visitor: true,
         avatar: 'mm',
