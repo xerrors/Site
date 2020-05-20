@@ -189,7 +189,7 @@ export default {
 }
 </script>
 
-<style lang="styus" scoped>
+<style lang="stylus" scoped>
 .item-box
   user-select none
   display flex
