@@ -2,6 +2,7 @@
 title: 动物识别专家系统
 permalink: /Animal-Identification-Expert-System
 date: 2020-05-11 10:20:17
+cover: https://xerrors.oss-cn-shanghai.aliyuncs.com/imgs/20200521105108.png
 tag: 
  - blog
  - 算法
