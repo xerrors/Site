@@ -49,7 +49,7 @@ class Process:
         Process.pid += 1
     
     def __lt__(self, other):
-        return self.priority < other.priority
+        return self.priority > other.priority
 ```
 
 ### 随机生成进程
@@ -125,14 +125,14 @@ def rotation(p):
             print('进程{}还需时间：{}'.format(item.pid, item.time))
         if current_process.time == 0:
             if len(p):
-                current_process = p.pop()
+                current_process = p.pop(0)
             else:
                 return counter
         else:
             if current_process.used == rotation_time_length:
                 current_process.used = 0
                 p.append(current_process)
-                current_process = p.pop()
+                current_process = p.pop(0)
 ```
 
 ## 完整代码
@@ -151,7 +151,7 @@ class Process:
         Process.pid += 1
     
     def __lt__(self, other):
-        return self.priority < other.priority
+        return self.priority > other.priority
 
 
 def priority(p):
@@ -199,14 +199,14 @@ def rotation(p):
             print('进程{}还需时间：{}'.format(item.pid, item.time))
         if current_process.time == 0:
             if len(p):
-                current_process = p.pop()
+                current_process = p.pop(0)
             else:
                 return counter
         else:
             if current_process.used == rotation_time_length:
                 current_process.used = 0
                 p.append(current_process)
-                current_process = p.pop()
+                current_process = p.pop(0)
 
 def main():
     method = input("\n>>> 进程调度算法.\nA. 优先权算法\tB. 轮转算法\n> ")
