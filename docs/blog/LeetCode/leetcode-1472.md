@@ -11,7 +11,9 @@ categories:
  - Note 
 ---
 
-预览你有一个只支持单个标签页的 浏览器 ，最开始你浏览的网页是 homepage ，你可以访问其他的网站 url ，也可以在浏览历史中后退 steps 步或前进 steps 步。
+## 1. 题目
+
+你有一个只支持单个标签页的 浏览器 ，最开始你浏览的网页是 homepage ，你可以访问其他的网站 url ，也可以在浏览历史中后退 steps 步或前进 steps 步。
 
 <!-- more -->
 
@@ -27,7 +29,7 @@ categories:
 
 输入：
 
-```
+```python
 ["BrowserHistory","visit","visit","visit","back","back","forward","visit","forward","back","back"]
 [["leetcode.com"],["google.com"],["facebook.com"],["youtube.com"],[1],[1],[1],["linkedin.com"],[2],[2],[7]]
 输出：
@@ -37,7 +39,7 @@ categories:
 
 解释：
 
-```
+```c
 BrowserHistory browserHistory = new BrowserHistory("leetcode.com");
 browserHistory.visit("google.com");       // 你原本在浏览 "leetcode.com" 。访问 "google.com"
 browserHistory.visit("facebook.com");     // 你原本在浏览 "google.com" 。访问 "facebook.com"
