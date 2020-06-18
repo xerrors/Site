@@ -2,6 +2,7 @@
 title: LeetCode 1472. 设计浏览器历史记录
 permalink: /leetcode/design-browser-history/
 date: 2020-06-18 21:33:33
+cover: https://xerrors.oss-cn-shanghai.aliyuncs.com/imgs/20200618215245.png
 tag: 
  - blog
  - LeetCode
