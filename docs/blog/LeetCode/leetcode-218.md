@@ -20,10 +20,7 @@ categories:
 
 <!-- more -->
 
-![](https://xerrors.oss-cn-shanghai.aliyuncs.com/imgs/20200620153720.png)
-
-![](https://xerrors.oss-cn-shanghai.aliyuncs.com/imgs/20200620153734.png)
-
+![](https://xerrors.oss-cn-shanghai.aliyuncs.com/imgs/20200620154703.png)
 
 
 例如，图A中所有建筑物的尺寸记录为：`[ [2 9 10], [3 7 15], [5 12 12], [15 20 10], [19 24 8] ] `。
