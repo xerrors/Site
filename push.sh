@@ -18,13 +18,13 @@ git add -A
     echo "commit tree is clean"
 }
 
-git push -f git@e.coding.net:Xerrors/Site.git master
+git push git@e.coding.net:Xerrors/Site.git master
 
 echo " "
 echo "  >>> 成功将整体文件上传到 腾讯云 [ git@e.coding.net:Xerrors/Site.git ]"
 echo " "
 
-git push -f git@github.com:Xerrors/Site.git master
+git push git@github.com:Xerrors/Site.git master
 
 echo " "
 echo "  >>> 成功将资源文件上传到 GitHub [ git@github.com:Xerrors/Site.git ]"
