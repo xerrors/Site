@@ -45,7 +45,7 @@
       </div>
       <div v-if="isBlog && !hideContent" class="my-main-right">
         <div style="font-size:14px">
-          <a href="https://me.csdn.net/jaykm" target="_blank">CSND</a> &nbsp;  
+          <a href="https://me.csdn.net/jaykm" target="_blank">CSDN</a> &nbsp;  
           <a href="https://github.com/Xerrors" target="_blank">GitHub</a> &nbsp; 
           <a href="https://juejin.im/user/5c17f022f265da616c65862f" target="_blank">掘金</a> &nbsp; 
           <a href="mailto:xerrors@163.com">邮件</a>
