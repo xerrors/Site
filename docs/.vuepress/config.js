@@ -20,7 +20,7 @@ module.exports = {
         text: '🔨 工具',
         items: [
           { text: '🚥 导航', link: '/guide/' },
-          { text: '🔗 友链', link: '/tools/links.html' },
+          { text: '🔗 友链', link: '/links/' },
         ]
       }
     ]

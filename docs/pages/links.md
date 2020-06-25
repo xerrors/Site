@@ -1,6 +1,6 @@
 ---
 title: 友链
-permalink: /links
+permalink: links
 hideLastUpdated: True
 ---
 
