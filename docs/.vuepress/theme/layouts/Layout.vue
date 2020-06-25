@@ -56,7 +56,7 @@
     <div class="footer">
       © 2019-2020 ❤️ Xerrors<br>
       <a href="http://www.beian.miit.gov.cn" target="_blank">皖 ICP 备 19016269 号</a><br>
-      <a href="https://me.csdn.net/jaykm" target="_blank">CSND</a> &nbsp;  
+      <a href="https://me.csdn.net/jaykm" target="_blank">CSDN</a> &nbsp;  
       <a href="https://github.com/Xerrors" target="_blank">GitHub</a> &nbsp; 
       <a href="https://juejin.im/user/5c17f022f265da616c65862f" target="_blank">掘金</a><br>
       <a href="mailto:xerrors@163.com">发送邮件</a>
