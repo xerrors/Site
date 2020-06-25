@@ -36,7 +36,7 @@
   "scripts": {
     "deploy": "bash deploy.sh",
     "serve": "vuepress dev docs --temp .temp",
-    "docs:build": "vuepress build docs --cache .cache",
+    "docs:build": "vuepress build docs",
     "push": "bash push.sh"
   }
 }
