@@ -210,5 +210,3 @@ FLOAT {DIGIT}[.]{DIGIT}
 .      { yyerror("Mystery character"); }
 %%
 ```
-
-
