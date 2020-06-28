@@ -15,9 +15,7 @@ yarn docs:build
 cd docs/.vuepress/dist
 cp -r ./* /www/wwwroot/www.xerrors.fun
 
-echo " "
-echo "  >>> 成功将资源文件复制到网站根目录 /www/wwwroot/www.xerrors.fun/"
-echo " "
+echo -e "\n\t* 成功将资源文件复制到网站根目录 访问：https://www.xerrors.fun\n"
 
 cd ~/Node
 
