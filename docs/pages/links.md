@@ -8,7 +8,7 @@ hideLastUpdated: True
   <div>
     <h3>友链</h3>
     <p>
-      请按照格式申请友链，并确保你的网站已经添加本站为友链，友链申请方式：在下方评论区留言。格式如下：
+      请按照格式申请友链，并确保你的网站已经添加本站为友链，友链申请方式：发送邮件到 xerrors@163.com。格式如下：
       <div style="border: 1px solid #f3f3f3; border-radius: 3px; padding: 2rem; font-weight: 600;">
         "title": "Xerrors",<br>
         "avatar": "https://www.xerrors.fun/avatar.jpg",<br>
@@ -71,6 +71,12 @@ export default {
           "avatar": "https://tcrusher.github.io/uploads/avatar.jpg",
           "site": "http://tcrusher.github.io/",
           "description": "淡泊以明志、宁静以致远"
+        },
+        {
+          "title": "pxxyyz",
+          "avatar": "https://cdn.jsdelivr.net/gh/pxxyyz/blog-file/photo/logo.png",
+          "site": "https://pxxyyz.com",
+          "description": "秃头怪的自娱自乐"
         }
       ]
     }
