@@ -4,6 +4,8 @@
 
 ## 个人小破站
 
+> 📢 新版的网站的设计稿已经设计完成，等待 Vue3 以及 VitePress 的正式发布就开始开发；更加舒适的外观，更加丰富的功能，更加方便的操作，希望我能够有时间做成主题发布出去！
+
 
 基于 [Vuepress](https://github.com/vuejs/vuepress)
 
