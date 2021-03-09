@@ -49,34 +49,16 @@ export default {
           "description": "敬畏代码，敬畏技术"
         },
         {
-          "title": "兰州小红鸡",
-          "avatar": "https://me.idealli.com/images/head.png",
-          "site": "https://me.idealli.com/",
-          "description": "代码记录成长"
-        },
-        {
-          "title": "故事胶片",
-          "avatar": "https://toc.lieme.cn/img/avatar.gif",
-          "site": "https://toc.lieme.cn/",
-          "description": "用胶片定格故事的乐趣"
-        },
-        {
           "title": "mghio",
           "avatar": "https://i.loli.net/2020/01/12/8qITJvhw2R9HN7M.png",
           "site": "https://www.mghio.cn",
           "description": "JAVA 搬运工 & 终身学习者"
         },
         {
-          "title": "tcrush",
-          "avatar": "https://tcrusher.github.io/uploads/avatar.jpg",
-          "site": "http://tcrusher.github.io/",
-          "description": "淡泊以明志、宁静以致远"
-        },
-        {
-          "title": "pxxyyz",
-          "avatar": "https://cdn.jsdelivr.net/gh/pxxyyz/blog-file/photo/logo.png",
-          "site": "https://pxxyyz.com",
-          "description": "秃头怪的自娱自乐"
+          "title": "姜小白",
+          "avatar": "https://picsum.photos/id/1010/367/267",
+          "site": "https://whitejiang.gitee.io",
+          "description": "业精于勤，行成于思。" 
         }
       ]
     }

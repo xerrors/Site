@@ -2,8 +2,7 @@
 title: Pwn 入门（ret2addr)
 permalink: pwn-ret2addr
 date: 2019-09-15 11:20:45
-tag: 
- - blog
+tags: 
  - Pwn
  - 网安
 categories: 基础
@@ -82,7 +81,7 @@ echo 0 > /proc/sys/kernel/randomize_va_space
 
 - 此时ESP指向了所希望的 shellcode 的位置，也就是我们的自定义代码的位置。
 
-  ```sh
+  ```shell
   gdb-peda$ print $esp
   0xffffcf80
   ```
