@@ -1,12 +1,21 @@
 ![预览](https://xerrors.oss-cn-shanghai.aliyuncs.com/imgs/20200518221933.png)
 
-[在线预览](https://www.xerrors.fun)
 
-## 个人小破站
+## 📢 News
 
-> 📢 新版的网站的设计稿已经设计完成，等待 Vue3 以及 VitePress 的正式发布就开始开发；更加舒适的外观，更加丰富的功能，更加方便的操作，希望我能够有时间做成主题发布出去！ [项目地址 @Xerrors/Gourd](https://github.com/Xerrors/Gourd)
+个人博客已经迁移到新的项目：Meco，基于 vuepress v2 开发，更好的 vue3 和 vite 支持，同时还提供了 flask 的后端支持以及后台管理系统 ！！！！！
 
-可惜，导师给安排了任务~拖到春节去开发新版本
+[博客项目地址 @Xerrors/Meco](https://github.com/Xerrors/Meco)
+
+[后台管理系统 @Xerrors/Meco-MS](https://github.com/Xerrors/Meco-MS)
+
+[后端项目地址 @Xerrors/Meco-Server](https://github.com/Xerrors/Meco-Server)
+
+
+
+## 介绍
+
+**NOTICE**: 此项目已经使用[新项目](https://github.com/Xerrors/Meco)代替，所以此项目不再更新，不再提供任何支持！
 
 
 基于 [Vuepress](https://github.com/vuejs/vuepress)
