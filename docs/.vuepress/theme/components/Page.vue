@@ -81,15 +81,15 @@ export default {
         "my-main-left": true,
         "notBlog": !this.isBlog,
         "theme-paper":
-          this.$page.frontmatter.tag &&
-          this.$page.frontmatter.tag.includes("碎碎念")
+          this.$page.frontmatter.tags &&
+          this.$page.frontmatter.tags.includes("碎碎念")
       };
     },
 
     hideContent() {
       // 判断是否隐藏目录
-      if (this.$page.frontmatter.tag) {
-          return this.$page.frontmatter.tag.includes("碎碎念")
+      if (this.$page.frontmatter.tags) {
+          return this.$page.frontmatter.tags.includes("碎碎念")
       }
       return false
     },
@@ -103,11 +103,8 @@ export default {
     },
 
     isBlog() {
-      // 判断是否是博客文章
-      if (this.$page.frontmatter.tag) {
-        return this.$page.frontmatter.tag.includes("blog");
-      }
-      return false;
+      console.log(this.$page.frontmatter.categories)
+      return this.$page.frontmatter.categories;
     },
 
     showFooter() {

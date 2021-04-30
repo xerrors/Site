@@ -17,16 +17,16 @@ hideLastUpdated: True
             :class="{ 'select-tag': tag == selectedTag, 'normal-tag': tag != selectedTag }"
             @click="myFlitter( tag )"
             v-for="tag in tags"
-            style="margin: 5px;">{{ tag=='blog'?'全部':tag }}</div>
+            style="margin: 5px;">{{ tag=='all'?'全部':tag }}</div>
         </div>
       </div>
       <el-divider></el-divider>
       <div class="my-card" :body-style="{ padding: '5px' }" v-for="(post, index) in topPublishPosts">
         <div>
           <span class="page-title"><el-link :underline="false" :href="post.path" type="primary"><strong>{{ post.title }}</strong></el-link></span>
-          <div v-if="post.frontmatter.tag" style="display: inline-block; float: right;">
+          <div v-if="post.frontmatter.tags" style="display: inline-block; float: right;">
             <span class="this-tag"
-              v-for="item in post.frontmatter.tag"
+              v-for="item in post.frontmatter.tags"
               @click="myFlitter( item )"
               ><span v-if="item !== 'blog'">{{ item }}</span></span>
           </div>
@@ -54,22 +54,21 @@ export default {
     return {
       step: 12,
       posts: [],
-      tags: [],
+      tags: ['all'],
       page: 1,
       num: 0,
       showBtn: true,
-      selectedTag: "blog"
+      selectedTag: "all"
     }
   },
 
   mounted() {
     this.posts = []
     var temp = this.$site.pages
-    // 筛选标签中带有 blog 标志的文章
 
     for (var i = 0; i < temp.length; i++) {
-      if (temp[i].frontmatter.tag) {
-        var tempTag = temp[i].frontmatter.tag
+      if (temp[i].frontmatter.tags) {
+        var tempTag = temp[i].frontmatter.tags
         for (var j = 0; j < tempTag.length; j++){
           var isInTags = false
           for (var k = 0; k < this.tags.length; k++){
@@ -81,7 +80,7 @@ export default {
             this.tags.push(tempTag[j])
           }
         }
-        if (tempTag == 'blog' || 'blog' == tempTag[0]){
+        if (temp[i].frontmatter.categories){
           this.posts.push(temp[i])
         }
       }
@@ -130,20 +129,27 @@ export default {
       this.selectedTag = tag
       this.page = 1
       this.posts = []
-      var temp = this.$site.pages
+      if (this.selectedTag == 'all') {
+        this.posts = this.$site.pages
+      }
+      else {
+        var temp = this.$site.pages
 
-      for (var i = 0; i < temp.length; i++) {
-        if (temp[i].frontmatter.tag) {
-          var tempTag = temp[i].frontmatter.tag
+        for (var i = 0; i < temp.length; i++) {
+          if (temp[i].frontmatter.tags) {
+            var tempTag = temp[i].frontmatter.tags
 
-          for (var j = 0; j < tempTag.length; j++) {
-            if (tempTag[j] === tag) {
-              this.posts.push(temp[i])
-              break
+            for (var j = 0; j < tempTag.length; j++) {
+              if (tempTag[j] === tag) {
+                this.posts.push(temp[i])
+                break
+              }
             }
           }
         }
       }
+
+      
       // console.log(this.posts)
       this.num = this.posts.length
     }
